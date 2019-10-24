@@ -13,10 +13,11 @@ The course will be a mixture of lecture and in-class collaborative coding, with 
 
 ### Instructor
 * [Joey Lee](https://www.jk-lee.com) (github: @joeyklee // joeyklee@nyu.edu ) 
+* [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // ) 
 
 ### Time
-* DAY H:MM to H:MM
-* ROOM ##
+* MONDAY 6:30PM to 9:30PM
+* ROOM TBD
 * MMM. DD - MMM. DD
 * 7 meetings // 2 Point Course
 
@@ -82,23 +83,23 @@ Using Web Services (OAuth, Facebook, Twitter, etc)
 
 | GO TO  |  DATE  | THEME | NOTES |
 | :----         |  ----  | ---- | ---- |
-| WEEK 1        |  TBA   |       |      |
-| WEEK 2        |  TBA   |       |      |
-| WEEK 3        |  TBA   |       |      |
-| WEEK 4        |  TBA   |       |      |
-| WEEK 5        |  TBA   |       |      |
-| WEEK 6        |  TBA   |       |      |
+| WEEK 1        |  TBA   | Web foundations      |      |
+| WEEK 2        |  TBA   | Front-end Foundations      |      |
+| WEEK 3        |  TBA   | Back-end Foundations      |      |
+| WEEK 4        |  TBA   | Databases      |      |
+| WEEK 5        |  TBA   | Synthesis 1      |      |
+| WEEK 6        |  TBA   | Synthesis 2      |      |
 | WEEK 7        |  TBA   |   Final Class    |      |
 
 ## Materials
 
-## Week 1 
-## Week 2 
-## Week 3
-## Week 4
-## Week 5
-## Week 6
-## Week 7
+## Week 1: Web Foundations
+## Week 2: Front-end Foundations
+## Week 3: Back-end Foundations
+## Week 4: Databases
+## Week 5: Synthesis 1
+## Week 6: Synthesis 2
+## Week 7: Final
 
 
 
