@@ -16,9 +16,9 @@ The course will be a mixture of lecture and in-class collaborative coding, with 
 * [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // ) 
 
 ### Time
-* MONDAY 6:30PM to 9:30PM
+* MONDAY 6:30PM to 9:00PM
 * ROOM TBD
-* MMM. DD - MMM. DD
+* JAN. 27 - MAR. 23
 * 7 meetings // 2 Point Course
 
 ### Office Hours
@@ -83,13 +83,13 @@ Using Web Services (OAuth, Facebook, Twitter, etc)
 
 | GO TO  |  DATE  | THEME | NOTES |
 | :----         |  ----  | ---- | ---- |
-| WEEK 1        |  TBA   | Web foundations      |      |
-| WEEK 2        |  TBA   | Front-end Foundations      |      |
-| WEEK 3        |  TBA   | Back-end Foundations      |      |
-| WEEK 4        |  TBA   | Databases      |      |
-| WEEK 5        |  TBA   | Synthesis 1      |      |
-| WEEK 6        |  TBA   | Synthesis 2      |      |
-| WEEK 7        |  TBA   |   Final Class    |      |
+| WEEK 01 |  JAN 27   | Web foundations      |      |
+| WEEK 02 |  FEB 03   | Front-end Foundations      |      |
+| WEEK 03 |  FEB 10   | Back-end Foundations      |      |
+| WEEK 04 |  FEB 24   | Databases      |      |
+| WEEK 05 |  MAR 02   | Synthesis 1      |      |
+| WEEK 06 |  MAR 09   | Synthesis 2      |      |
+| WEEK 07 |  MAR 23   | Final Class    |      |
 
 ## Materials
 
