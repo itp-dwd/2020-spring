@@ -29,7 +29,7 @@ The course will be a mixture of lecture and in-class collaborative coding, with 
 
 
 [**Link to the course listing**<br> **Category**: 2 Point, All, Elective<br>
-**Tags**: web development, javascript, nodejs, express, full stack | <br>]()
+**Tags**: web development, javascript, nodejs, express, full stack <br>]()
 
 
 
@@ -83,22 +83,108 @@ Using Web Services (OAuth, Facebook, Twitter, etc)
 
 | GO TO  |  DATE  | THEME | NOTES |
 | :----         |  ----  | ---- | ---- |
-| WEEK 01 |  JAN 27   | Web foundations      |      |
-| WEEK 02 |  FEB 03   | Front-end Foundations      |      |
-| WEEK 03 |  FEB 10   | Back-end Foundations      |      |
-| WEEK 04 |  FEB 24   | Databases      |      |
-| WEEK 05 |  MAR 02   | Synthesis 1      |      |
-| WEEK 06 |  MAR 09   | Synthesis 2      |      |
-| WEEK 07 |  MAR 23   | Final Class    |      |
+| WEEK 01 |  JAN 27   | Web foundations      |   n/a   |
+| WEEK 02 |  FEB 03   | Front-end Foundations      |   n/a   |
+| WEEK 03 |  FEB 10   | Back-end Foundations      |   n/a   |
+| WEEK 04 |  FEB 24   | Databases & Deployment  |   n/a   |
+| WEEK 05 |  MAR 02   | Synthesis 1      |   n/a   |
+| WEEK 06 |  MAR 09   | Synthesis 2      |   n/a   |
+| WEEK 07 |  MAR 23   | Final Class    |   n/a   |
 
 ## Materials
 
 ## Week 1: Web Foundations
+
+### Lecture
+* Course overview & logistics
+* Web Foundations:
+  * in concept
+  * in practice
+
+### Studio
+* warm up
+
+### Assignment
+* Part 0: Setup your development environment
+  * Git/Github
+  * Command-line tools
+  * Install node.js
+* Part 1: TBD
+* Part 2: TBD
+* Deploy to Glitch
+
+***
 ## Week 2: Front-end Foundations
+
+### Lecture
+* Focus on the "front-end":
+  * HTML5: HTML, CSS, JavaScript
+  * Layout: DOM and CSS
+  * CSS Best practices using BEM
+  * Adding Interactivity with Javascript
+
+### Studio:
+
+### Assignment
+* Assignment 2
+* Deploy to Glitch
+
+***
 ## Week 3: Back-end Foundations
-## Week 4: Databases
+
+### Lecture
+* Focus on the "back-end":
+  * Programming a server Node.js
+  * Making programming a server easier with Express.js
+  * Client-server communication: AJAX, RESTful APIs
+
+### Studio
+### Assignment
+* Assignment 3
+* Deploy to Glitch
+
+***
+## Week 4: Databases & Deployment
+
+### Lecture
+* Databases
+  * Persisting data with a NoSQL database (as opposed to SQL databases like PostGres or SQLite)
+    * NEDB
+    * MongoDB
+  * CRUD
+* Deployment
+  * Platform as a service (PaaS), virtual machines, 
+
+### Studio
+### Assignment
+* Assignment 4
+* Deploy to Glitch
+
+***
 ## Week 5: Synthesis 1
+
+### Lecture
+* Authentication, Logins, HTTPS 
+* External APIs and network requests
+* Putting it all together
+
+### Studio
+### Assignment
+* Assignment 5
+* Deploy to Glitch
+
+***
 ## Week 6: Synthesis 2
+
+### Lecture
+* Putting it all together
+
+### Studio
+### Assignment
+* Assignment 5
+* Deploy to Glitch
+
+***
 ## Week 7: Final
 
 
