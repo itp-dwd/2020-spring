@@ -1,7 +1,7 @@
 # Dynamic Web Development
 **NYU, Interactive Telecommunications Program, Spring 2020**
 
-**work in progress - plz ignore**
+**work in progress**
 
 ## Course Description
 
@@ -112,7 +112,7 @@ In order to achieve these objectives, students will spend the semester building,
 
 ### Studio
 ### Assignment
-* Build on your previous werk.
+* Build on your previous work.
 * Create an API using Express.js. 
 * Use AJAX to fetch data from your API.
 * Update your HTML with the fetched data.
@@ -158,14 +158,19 @@ In order to achieve these objectives, students will spend the semester building,
 
 ### Studio
 ### Assignment
-* Assignment 5
-* Deploy to Glitch
+* Final project!
+* Documentation your project. Include
+   * Title
+   * Brief written description
+   * Visual Documentation: deployment, images, video, etc.
+   * References: links to related projects, code samples, etc.
+   * Source code (please cite your sources in the code comments)
 
 ***
 ## Week 7: Final
 
 * Next Steps
-* Student presentations
+* Final project presentations
 
 <!-- 
 
