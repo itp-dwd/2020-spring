@@ -21,6 +21,10 @@ By the end of the class, you should have a solid understanding of the following 
 * Building APIs - How to build your own APIs and make the data available to client applications.
 * Deploying full stack applications - Deploying applications using Platforms-as-a-Service (PaaS) with Git/Github and Glitch.
 
+## Outcomes
+
+In order to achieve these objectives, students will spend the semester building, refactoring, getting feedback and interating on, one project throughout the course. The interactive web application will require students to exercise each of the key skills taught throughout this course as well as equip students with the skills to continue developing new dynamic web applications after the course. 
+
 ## Details
 
 ### Instructor
