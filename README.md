@@ -32,53 +32,6 @@ The course will be a mixture of lecture and in-class collaborative coding, with 
 **Tags**: web development, javascript, nodejs, express, full stack <br>]()
 
 
-
-<!-- 
-
-Students will create and using Application Programming Interfaces (APIs), interfacing with 
-
-NOTES:
- This course will provide a framework for learning how to develop and program web applications. It will focus on server side development using JavaScript, Node.js with the Express framework, and the MongoDB database on cloud based infrastructure. Additional topics will include login and session management, web services and APIs, and will lightly touch on front-end web development. The course will be a mixture of lecture and in-class collaborative coding, with weekly programming and reading homework. 
-
-## Week 1
-> Introduction: Client-Server, TCP/IP, DNS, HTTP, Servers and Servers, Node.js, Basic Web Server, HTML, CSS, the JavaScript DOM, and git
-
-* Node.js, VPS, and Basic HTTP Server Notes
-* HTML Basics
-* CSS Basics
-* JavaScript DOM
-* git Basics
-
-## Week 2
-> Webservers with Node and Express
-Express Basics and HTML Forms
-
-
-## Week 3
-> Using Express Templates and Databases
-Express Templates
-Data Storage
-
-## Week 4
-> AJAX with JQuery, Using Simple Web Services
-
-
-## Week 5
-> Final Project Proposals
-Cookies, Sessions, Logins, and HTTPS
-HTTPS File Uploads
-Creating Node Packages
-
-## Week 6
-> Final Project Workshop and Additional Topics
-Using Web Services (OAuth, Facebook, Twitter, etc)
-
-## Week 7
-> Final Project Presentations: Expect Guests
-
-
- -->
-
 ## Schedule
 
 | GO TO  |  DATE  | THEME | NOTES |
@@ -187,6 +140,53 @@ Using Web Services (OAuth, Facebook, Twitter, etc)
 ***
 ## Week 7: Final
 
+* Next Steps
+* Student presentations
+
+<!-- 
+
+Students will create and using Application Programming Interfaces (APIs), interfacing with 
+
+NOTES:
+ This course will provide a framework for learning how to develop and program web applications. It will focus on server side development using JavaScript, Node.js with the Express framework, and the MongoDB database on cloud based infrastructure. Additional topics will include login and session management, web services and APIs, and will lightly touch on front-end web development. The course will be a mixture of lecture and in-class collaborative coding, with weekly programming and reading homework. 
+
+## Week 1
+> Introduction: Client-Server, TCP/IP, DNS, HTTP, Servers and Servers, Node.js, Basic Web Server, HTML, CSS, the JavaScript DOM, and git
+
+* Node.js, VPS, and Basic HTTP Server Notes
+* HTML Basics
+* CSS Basics
+* JavaScript DOM
+* git Basics
+
+## Week 2
+> Webservers with Node and Express
+Express Basics and HTML Forms
+
+
+## Week 3
+> Using Express Templates and Databases
+Express Templates
+Data Storage
+
+## Week 4
+> AJAX with JQuery, Using Simple Web Services
+
+
+## Week 5
+> Final Project Proposals
+Cookies, Sessions, Logins, and HTTPS
+HTTPS File Uploads
+Creating Node Packages
+
+## Week 6
+> Final Project Workshop and Additional Topics
+Using Web Services (OAuth, Facebook, Twitter, etc)
+
+## Week 7
+> Final Project Presentations: Expect Guests
+
+ -->
 
 
 <br>
