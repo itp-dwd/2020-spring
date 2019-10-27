@@ -129,7 +129,7 @@ By the end of the class, you should have a solid understanding of the following 
 ## Week 5: Synthesis 1
 
 ### Lecture
-* Authentication, Logins, HTTPS 
+* Sessions/Cookies, Authentication, Logins, HTTPS 
 * External APIs and network requests
 * Putting it all together
 
