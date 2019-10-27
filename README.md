@@ -9,6 +9,18 @@
 
 The course will be a mixture of lecture and in-class collaborative coding, with weekly programming and reading homework. 
 
+## Objectives:
+(forked from Sam Slover's API of you class)
+By the end of the class, you should have a solid understanding of the following concepts:
+
+* Full-Stack Javascript - Familiarity with both client-side and server-side Javascript.
+* Designing Data-Driven Applications- How to design and build a 'full-stack' data application.
+* Using APIs - How to interact with and use an API from within your client application.
+* Structuring Data - How to intelligently structure data.
+* Storing Data - How to build systems to store your own data.
+* Building APIs - How to build your own APIs and make the data available to client applications.
+* Deploying full stack applications - Deploying applications using Platforms-as-a-Service (PaaS) with Git/Github and Glitch.
+
 ## Details
 
 ### Instructor
