@@ -25,7 +25,7 @@ By the end of the class, you should have a solid understanding of the following 
 
 ### Instructor
 * [Joey Lee](https://www.jk-lee.com) (github: @joeyklee // joeyklee@nyu.edu ) 
-* [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // ) 
+* [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // cassie.tarakajian@nyu.edu ) 
 
 ### Time
 * MONDAY 6:30PM to 9:00PM
@@ -36,8 +36,8 @@ By the end of the class, you should have a solid understanding of the following 
 ### Office Hours
 * By Appointment - DAY & DAY, H:MM-H:MMpm
 * Room: ITP FLOOR or ITP RESIDENT'S OFFICE
-* PLEASE SIGN UP: 📅 [Google Calendar Link]()
-* If you can't make those times, please send me an email and we can chat at another time or via video conference.
+* PLEASE SIGN UP: 📅 [Cassie](https://calendar.google.com/calendar/selfsched?sstoken=UU1sWVF3by0wR2lQfGRlZmF1bHR8YjhkY2IyODcxNDk3ODRhNzI1OTkyN2JiMDY3ODFmNWI) or [Joey]()
+* If you can't make those times, please send either of us an email and we can chat at another time or via video conference.
 
 
 [**Link to the course listing**<br> **Category**: 2 Point, All, Elective<br>
