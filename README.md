@@ -78,9 +78,9 @@ In order to achieve these objectives, students will spend the semester building,
   * Git/Github
   * Command-line tools
   * Install node.js
-* Part 1: TBD
-* Part 2: TBD
-* Deploy to Glitch
+* Part 1: Create a simple webpage using HTML. It could be a point and click game, a quiz, a choose-your-own-adventure story, fiction, poetry, or art. 
+* Part 2: Create a Node.js HTTP server to serve your file(s). 
+* Part 3: Deploy to Glitch by importing from GitHub
 
 ***
 ## Week 2: Front-end Foundations
