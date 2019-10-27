@@ -79,8 +79,9 @@ In order to achieve these objectives, students will spend the semester building,
   * Command-line tools
   * Install node.js
 * Part 1: Create a simple webpage using HTML. It could be a point and click game, a quiz, a choose-your-own-adventure story, fiction, poetry, or art. 
-* Part 2: Create a Node.js HTTP server to serve your file(s). 
-* Part 3: Deploy to Glitch by importing from GitHub
+* Part 2: Create a Node.js HTTP server to serve your file(s).
+* Part 3: Push your project to a repository on GitHub
+* Part 4: Deploy to Glitch by importing from GitHub
 
 ***
 ## Week 2: Front-end Foundations
@@ -95,8 +96,10 @@ In order to achieve these objectives, students will spend the semester building,
 ### Studio:
 
 ### Assignment
-* Assignment 2
-* Deploy to Glitch
+* Add interactivity using JavaScript to your Week 1 assignment. Feel free to use "vanilla" JavaScript or to use p5.js.
+* Add styling using CSS and BEM conventions.
+* Push your project to a repository on GitHub
+* Deploy to Glitch by importing from GitHub
 
 ***
 ## Week 3: Back-end Foundations
