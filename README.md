@@ -112,7 +112,10 @@ In order to achieve these objectives, students will spend the semester building,
 
 ### Studio
 ### Assignment
-* Assignment 3
+* Build on your previous werk.
+* Create an API using Express.js. 
+* Use AJAX to fetch data from your API.
+* Update your HTML with the fetched data.
 * Deploy to Glitch
 
 ***
@@ -129,8 +132,9 @@ In order to achieve these objectives, students will spend the semester building,
 
 ### Studio
 ### Assignment
-* Assignment 4
-* Deploy to Glitch
+* Building on your previous assignment, add persistent data using a database.
+* (Using templates?)
+* Deploy to Heroku
 
 ***
 ## Week 5: Synthesis 1
@@ -144,6 +148,7 @@ In order to achieve these objectives, students will spend the semester building,
 ### Assignment
 * Assignment 5
 * Deploy to Glitch
+* Note: Make sure you do not commit your API Keys to GitHub!!!
 
 ***
 ## Week 6: Synthesis 2
