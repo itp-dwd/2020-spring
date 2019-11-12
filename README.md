@@ -28,10 +28,19 @@ In order to achieve these objectives, students will spend the semester building,
 ## Details
 
 ### Instructor
-* [Joey Lee](https://www.jk-lee.com) (github: @joeyklee // joeyklee@nyu.edu ) 
-* [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // cassie.tarakajian@nyu.edu ) 
+* Section 001 - [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // cassie.tarakajian@nyu.edu )
+* Section 002 - [Joey Lee](https://www.jk-lee.com) (github: @joeyklee // joeyklee@nyu.edu ) 
+
 
 ### Time
+
+#### Section 001 - w/ Cassie
+* MONDAY 6:30PM to 9:00PM
+* ROOM TBD
+* JAN. 27 - MAR. 23
+* 7 meetings // 2 Point Course
+
+#### Section 002 - w/ Joey
 * MONDAY 6:30PM to 9:00PM
 * ROOM TBD
 * JAN. 27 - MAR. 23
@@ -40,12 +49,14 @@ In order to achieve these objectives, students will spend the semester building,
 ### Office Hours
 * By Appointment - DAY & DAY, H:MM-H:MMpm
 * Room: ITP FLOOR or ITP RESIDENT'S OFFICE
-* PLEASE SIGN UP: 📅 [Cassie](https://calendar.google.com/calendar/selfsched?sstoken=UU1sWVF3by0wR2lQfGRlZmF1bHR8YjhkY2IyODcxNDk3ODRhNzI1OTkyN2JiMDY3ODFmNWI) or [Joey]()
+* PLEASE SIGN UP: 📅 
+  * [Cassie](https://calendar.google.com/calendar/selfsched?sstoken=UU1sWVF3by0wR2lQfGRlZmF1bHR8YjhkY2IyODcxNDk3ODRhNzI1OTkyN2JiMDY3ODFmNWI)
+  * [Joey](https://calendar.google.com/calendar/selfsched?sstoken=UUluV2hDekNIMzVEfGRlZmF1bHR8NjZjMzBlNTU5OGFiNTk4OWJiZDY1Y2E2YTc2MTkzYzQ)
 * If you can't make those times, please send either of us an email and we can chat at another time or via video conference.
 
 
 [**Link to the course listing**<br> **Category**: 2 Point, All, Elective<br>
-**Tags**: web development, javascript, nodejs, express, full stack <br>]()
+**Tags**: web development, javascript, nodejs, express, full stack <br>](https://itp.nyu.edu/registration/CourseInfo.php?course_id=778)
 
 
 ## Schedule
