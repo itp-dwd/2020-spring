@@ -28,19 +28,19 @@ In order to achieve these objectives, students will spend the semester building,
 ## Details
 
 ### Instructor
-* Section 001 - [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // cassie.tarakajian@nyu.edu )
-* Section 002 - [Joey Lee](https://www.jk-lee.com) (github: @joeyklee // joeyklee@nyu.edu ) 
+* Section 001 - [Joey Lee](https://www.jk-lee.com) (github: @joeyklee // joeyklee@nyu.edu ) 
+* Section 002 - [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // cassie.tarakajian@nyu.edu )
 
 
 ### Time
 
-#### Section 001 - w/ Cassie
+#### Section 001 - w/ Joey
 * MONDAY 6:30PM to 9:00PM
 * ROOM TBD
 * JAN. 27 - MAR. 23
 * 7 meetings // 2 Point Course
 
-#### Section 002 - w/ Joey
+#### Section 002 - w/ Cassie
 * MONDAY 6:30PM to 9:00PM
 * ROOM TBD
 * JAN. 27 - MAR. 23
