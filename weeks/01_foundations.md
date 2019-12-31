@@ -18,6 +18,7 @@
 - How to run a node script from the command line
 
 ## Using the command line
+- TODO: how do you use unix on Windows??
 - Using git
 - Moving around directories
 
