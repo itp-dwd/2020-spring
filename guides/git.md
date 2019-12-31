@@ -8,19 +8,28 @@ Git is a versioning system. GitHub is popular public site for hosting git reposi
 git init
 git add [FILES TO ADD TO GIT]
 git commit -m "[COMMIT MESSAGE]"
-git remote add -u origin [REMOTE GITHUB REPO]
+git remote add -u origin [REMOTE GITHUB REPO URL]
 git push origin master
 ```
+
+This creates a __local__ git repository.
+
+Note that the files to add to git can be a list, i.e. `file1.js README.md`, or a directory, i.e. `src`, or `.` for all files in your root directory.
+
+See [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/). 
 				
 then when we are ready to edit and make changes and save them we use the following:
 ```sh
+git add .
 git commit -m "[MESSAGE]"
+```
+
+to push our new changes to our __remote__ repository on GitHub, we run the following
+```
 git push origin master
 ```
-				
-That will ensure that we have a stored copy of the previous versions of the files along with our new changes on GitHub and in our local GIT repos.
 
-If we want our repo to be used elsewhere, perhaps on our server, we do the following:
+If we want to pull a local version of our repo to different place, i.e. a server connected to the Internet, or we want a local version of a repo we've found on GitHub, run the following command
 
 ```sh
 git clone [REMOTE GITHUB REPO]
@@ -32,7 +41,7 @@ Any time we have new changes to we can pull them down with
 git pull origin master
 ```
 				
-One handy feature of git is to have it ignore certain files and directories that you don't want included in a repo. To use this, simply create and add a file called .gitignore to your repository and in the file list the files and directories you don't want included. This is especially important when using node config files. Here is a sample .gitignore file:
+One handy feature of git is to have it ignore certain files and directories that you don't want included in a repo. To use this, simply create and add a file called `.gitignore` to your repository and in the file list the files and directories you don't want included. This is especially important when using node config files. Here is a sample .gitignore file:
 
 ```
 .DS_Store
