@@ -120,6 +120,7 @@ In order to achieve these objectives, students will spend the semester building,
   * Programming a server Node.js
   * Making programming a server easier with Express.js
   * Client-server communication: AJAX, RESTful APIs
+  * Making API requests with Postman
 
 ### Studio
 ### Assignment
