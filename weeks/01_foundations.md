@@ -8,6 +8,7 @@
 - Using VSCode
 
 ## Using Git and GitHub
+- Installing git (how does this work on Windows??)
 - Initializing a Git repository
 - [Coding Train - Git and GitHub for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
 - Documentation for deploying to Glitch.com from GitHub
