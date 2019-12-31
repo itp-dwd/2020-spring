@@ -19,7 +19,7 @@ By the end of the class, you should have a solid understanding of the following 
 * Structuring Data - How to intelligently structure data.
 * Storing Data - How to build systems to store your own data.
 * Building APIs - How to build your own APIs and make the data available to client applications.
-* Deploying full stack applications - Deploying applications using Platforms-as-a-Service (PaaS) with Git/Github and Glitch.
+* Deploying full stack applications - Deploying applications using Platforms-as-a-Service (PaaS) with Git/GitHub, Glitch, and Heroku.
 
 ## Outcomes
 
