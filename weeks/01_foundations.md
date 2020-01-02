@@ -47,7 +47,7 @@ Notes
 
 
 ## Introduction
-This week, we will be 
+This week, we will be starting out journey as developers of the web. We will go through a quick history of the web and where are are today.  
 
 
 ### Outcomes & Goals
@@ -64,15 +64,23 @@ Students will walk away with a deeper understanding of:
 ## Topics
 <!-- This section can have many subheaders (h3's). This should list all of the topic areas, (e.g. Git, Using the command line), with links to guides and references.  -->
 
-### Topic 1
+### A Short History of the Web
 
 TBD
 
-### Topic 2
+### Modern Web Applications
 
 TBD
 
-### Topic 3
+### A Separation of Concerns
+
+TBD
+
+### Development Tools
+
+TBD
+
+### Web Development & Creative Practice
 
 TBD
 
