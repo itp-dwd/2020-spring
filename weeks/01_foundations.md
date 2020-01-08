@@ -64,7 +64,7 @@ Students will walk away with a deeper understanding of:
 ## Topics
 <!-- This section can have many subheaders (h3's). This should list all of the topic areas, (e.g. Git, Using the command line), with links to guides and references.  -->
 
-### A Short History of the Web
+### How the Internet Works
 
 TBD
 
