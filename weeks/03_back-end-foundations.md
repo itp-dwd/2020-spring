@@ -28,17 +28,65 @@ Students will walk away with a deeper understanding of:
 
 ## Topics
 
-### Topic 1
+### JavaScript in the Browser vs Node
+- Node
+  - In a nutshell:
+    - same language, different capabilities 
+    - you *could* use any language (Python, Ruby, C++) on your computer, but it's nice using the same language for a whole project
+  - No:
+    - `window`, no `document`, no `DOM`, no `canvas` (therefore no p5.js!)
+  - Benefits:
+    - Access to the file system
+    - (potentially) faster computation
+  - You should know:
+    - Node can be used for lots of things not just as a server. You can use it to crunch data, 
+- Browser
+  - In a nutshell:
+    - Only JavaScript runs in a browser, so you don't have other options
+  - No:
+    -  file system (your computer's files) access
+    -  
 
-TBD
+### Diving in to Node.js 
+- `require()` vs. `import` 
+  - there are 2 ways to import packages but depends on the version of Node.js you're using. For usage of `import` please use Node.js version >=12. 
+- `fs`
+- `path`
+- `http`
+- Code runs from top to bottom.
+- how to debug? ==> lots of console.log() :) 
 
-### Topic 2
+### Node with Express
+- Why use express on top of Node? To create a web server
+  - you can technically create one using just the `http` module, but it's a lot of code.
+    - TODO: example code
+  - Here's some examples of other web server code:
+    - Ruby: https://blog.appsignal.com/2016/11/23/ruby-magic-building-a-30-line-http-server-in-ruby.html
+- Serving different HTML files based on a route
+  - getting the correct path w/ `path.resolve(__dirname, 'views') + 'about.html'` 
+  - convention: `views` directory
 
-TBD
+### Building APIs with Express & the basics of CRUD
+- API that we are building towards: Todo App? Tarot or Astrology related?
+- How to build APIs with express:
+  - `app.get`
+  - `app.post`
+  - `app.put`
+  - `app.delete`
+- `requests` and `response` ==> (res, req)
+- Dynamic routes
+  - url params
+  - query params
+- Storing/updating json object on the server
+- Writing files to the server
+- maybe for later: node-fetch/isomorphic fetch or external API requests from the server
 
-### Topic 3
+### Interfacing with your API
 
-TBD
+- Quick intro to cURL
+- Introduction to Postman
+- using `fetch` to grab data
+- render to front end using template strings
 
 ### What we are not covering
 
@@ -74,7 +122,9 @@ TBD
 
 ### Vocabulary (example)
 * term:
-  * def...
+  * route:
+    * ...
+  * 
 
 ## Studio Exercise Descriptions
 Descriptions of each exercise or phase of class. Similar to pacing but with more description of steps.
