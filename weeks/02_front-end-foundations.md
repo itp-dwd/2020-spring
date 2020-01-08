@@ -49,9 +49,8 @@ TBD
 NOTE: It should be noted that we are covering foundational knowledge of client side web development with HTML5. This is by no means a comprehensive deep dive into the intricacies and wonders of client side programming with HTML5, single page web applications, and front-end frameworks like Vue.js and React.js or build tools like Parcel and Webpack. Additionally we do not cover browser extensions or bookmarklets which are very exciting, but outside the scope of this course. 
 
 Topics we are not covering, but are of importance:
-* ...
-* ...
-* ...
+* CSS Frameworks (i.e. Bootstrap, Semantic UI, Material)
+* Front End JavaScript Frameworks (React, Vue, Angular)
 
 
 ## Pacing / Duration
