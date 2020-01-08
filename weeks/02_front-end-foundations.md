@@ -40,8 +40,10 @@ TBD
 TBD
 
 ### JavaScript
-
-TBD
+- Connecting p5.js
+- Event binding / Event firing/listening
+- Handling forms
+- 
 
 
 ### What we are not covering
@@ -54,6 +56,7 @@ Topics we are not covering, but are of importance:
 
 
 ## Pacing / Duration
+- :30 Questions
 <!-- Number of total hours the class session will take. Please try to take into account transition time between instruction and hands on exercises if any prep is necessary. -->
 
 - Break down of the class schedule example: 

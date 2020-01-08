@@ -135,6 +135,7 @@ Topics we are not covering, but are of importance:
 
 ## Studio Exercise Descriptions
 <!-- Descriptions of each exercise or phase of class. Similar to pacing but with more description of steps. -->
+- Setting up development environment
 
 ### Using a text editor
 - Using VSCode
