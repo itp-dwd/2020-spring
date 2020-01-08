@@ -14,22 +14,22 @@ git push origin master
 
 This creates a __local__ git repository.
 
-Note that the files to add to git can be a list, i.e. `file1.js README.md`, or a directory, i.e. `src`, or `.` for all files in your root directory.
-
-See [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/). 
+Note that the [FILES TO ADD TO GIT] can be a list, i.e. `app.js README.md`, or a directory, i.e. `src`, or all of the files in your root directory. i.e. `.`.
 				
 then when we are ready to edit and make changes and save them we use the following:
 ```sh
 git add .
-git commit -m "[MESSAGE]"
+git commit -m "[COMMIT MESSAGE]"
 ```
+
+How do you write a good [COMMIT MESSAGE]? See [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/). 
 
 to push our new changes to our __remote__ repository on GitHub, we run the following
 ```
 git push origin master
 ```
 
-If we want to pull a local version of our repo to different place, i.e. a server connected to the Internet, or we want a local version of a repo we've found on GitHub, run the following command
+If we want to pull a local version of our repo to different place, i.e. a server on a hosting service, or we want a local version of a repo we've found on GitHub, run the following command
 
 ```sh
 git clone [REMOTE GITHUB REPO]
