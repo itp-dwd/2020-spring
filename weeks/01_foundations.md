@@ -65,29 +65,33 @@ Students will walk away with a deeper understanding of:
 <!-- This section can have many subheaders (h3's). This should list all of the topic areas, (e.g. Git, Using the command line), with links to guides and references.  -->
 
 ### How the Internet Works
+- the Internet infrastructure
+- Simplest concept: there's a computer and it has some code on it that tells it how to send and receive information (e.g. html files, images, videos, emails, etc).  
 
-TBD
 
 ### Modern Web Applications
+- front end vs back end vs database vs hosting vs database hosting
+- why build we build web applications / why not?
+- what is a web *application* vs a website? (e.g. having database vs just static pages)
 
-TBD
-
-### A Separation of Concerns
-
-TBD
 
 ### Development Tools
-
-TBD
+- VSCode 
+- showing hidden files and folders
+- Command line (in VSCode vs Terminal application)
+- Git (why?)
+- HTML (using an index.html, linking to other files, using file urls)
+- Node.js (vs Browser, and why it exists)
+- `npm`
+- Express, serving files
 
 ### Web Development & Creative Practice
-
-TBD
-
+- how do different people use web development as part of their careers?
+- guest speakers??
+- web applications have many different uses and goals
+- Profession web development vs using web development as a creative tool
 
 ### What we are not covering
-
-NOTE: ...
 
 Topics we are not covering, but are of importance:
 * ...
@@ -97,6 +101,12 @@ Topics we are not covering, but are of importance:
 
 ## Pacing / Duration
 <!-- Number of total hours the class session will take. Please try to take into account transition time between instruction and hands on exercises if any prep is necessary. -->
+- :15 Introductions
+- :15 Expectations, Logistics, Syllabus
+- :15 Introduction to the Internet and Modern Web Development
+- :45 Development Tools and Installation
+- :45 Your first Node/Express application, pushing to GitHub
+- :15 Deployment and documentation expectations (README, GitHub, Glitch)
 
 - Break down of the class schedule example: 
   - :15 Overview, context, examples and vocabulary 
