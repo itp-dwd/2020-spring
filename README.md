@@ -83,7 +83,7 @@ In order to achieve these objectives, students will spend the semester building,
 | A5 |  MAR 09   | TBD      |   n/a   |
 | FINAL PROJECT & PRESENTATION |  MAR 23   | Final Project  |   n/a   |
 
-All Assignments should be submitted to your respective section:
+📨All Assignments should be submitted to your respective section:
 * Section 1:
   * [Joey](https://forms.gle/GkLsRM581kfyHg6W6)
 * Section 2:
