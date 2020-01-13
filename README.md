@@ -32,15 +32,26 @@ In order to achieve these objectives, students will spend the semester building,
 
 ## Details
 
+| Details | Section 1 | Section 2 |
+| :-----   | -------  | --------   |      
+| Instructor| [Joey Lee](https://jk-lee.com) | [Cassie Tarakajian](https://cassietarakajian.com/) |
+| Instructor Email | joeyklee@nyu.edu |  cassie.tarakajian@nyu.edu |
+| Instructor Github | [@joeyklee](https://github.com/joeyklee) |  [@catarak](https://github.com/catarak) |
+| Class Day | Monday   | Monday     |  
+| Class Time      | 6:30 - 9:00 | 6:30 - 9:00 |
+| Class Room      | TBD         | TBD       |
+| Class Dates     | Jan. 27 - Mar. 23 | Jan. 27 - Mar. 23 |
 
-### Section 1 - w/ Joey Lee
+
+
+<!-- ### Section 1 - w/ Joey Lee
 * **Info**:
   * MONDAY 6:30PM to 9:00PM
   * ROOM TBD
   * JAN. 27 - MAR. 23
   * 7 meetings, 2 Point Course
 * **Instructor**: 
-  * [Joey Lee](https://www.jk-lee.com) (github: @joeyklee // joeyklee@nyu.edu ) 
+  * 
 
 
 ### Section 2 - w/ Cassie Tarakajian
@@ -50,7 +61,7 @@ In order to achieve these objectives, students will spend the semester building,
   * JAN. 27 - MAR. 23
   * 7 meetings // 2 Point Course
 * **Instructor**: 
-  * [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // cassie.tarakajian@nyu.edu )
+  * [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // cassie.tarakajian@nyu.edu ) -->
 
 
 ### Office Hours
