@@ -85,9 +85,9 @@ In order to achieve these objectives, students will spend the semester building,
 
 📨All Assignments should be submitted to your respective section:
 * Section 1:
-  * [Joey](https://forms.gle/GkLsRM581kfyHg6W6)
+  * [Joey's Section - Assignment Submission Form](https://forms.gle/GkLsRM581kfyHg6W6)
 * Section 2:
-  * [Cassie](https://forms.gle/pzxHjZtq1iP5WAyv9)
+  * [Cassie's Section - Assignment Submission Form](https://forms.gle/pzxHjZtq1iP5WAyv9)
 
 
 
