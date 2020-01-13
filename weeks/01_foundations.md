@@ -1,5 +1,6 @@
 # Week 01: Web Foundations
 
+
 ## Essential Questions
 
 - What are web applications?
@@ -16,13 +17,24 @@ This week, we will be starting out journey as developers of the web. We will go 
 
 ### Outcomes & Goals
 
-In this class we will be:
-* gaining an appreciation for the web as a platform for making things
-* setting up our development tools
-* creating our very first webpages from scratch
+This week your goal is to be able to speak to these following points:
 
-Students will walk away with a deeper understanding of:
-* the key concepts of "the web"
+* Development environment:
+  * Git/Github:
+    * What is Git, What is Github, and how it relates to web/software development
+    * How to track changes with git
+  * Commandline:
+    * Basics of of the commandline: how to navigate between folders, how to create files, how to create folders.
+    * Using the commandline to: install opensource software, set up git locally, connect to a local git repository to a remote github repository, set up a simple Node.js project with npm. 
+* Server-side:
+  * What is Node.js, express.js, and how they relate to eachother.
+  * What is **npm**, what is a `package.json`, how they are related, and why they are important
+  * How to install node.js dependencies using npm.
+  * What it means to serve *static* files using a web server and where to put your application's user interface views.
+* Client-side:
+  * How to make an HTML page
+  * The components of an HTML page
+  * The importance of Semantic tags
 
 
 ## Topics
