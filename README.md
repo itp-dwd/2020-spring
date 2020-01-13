@@ -61,6 +61,7 @@ In order to achieve these objectives, students will spend the semester building,
 
 ## Schedule
 
+### Meetings
 | GO TO  |  DATE  | THEME | NOTES |
 | :----         |  ----  | ---- | ---- |
 | WEEK 01 |  JAN 27   | Web foundations      |   n/a   |
@@ -70,6 +71,25 @@ In order to achieve these objectives, students will spend the semester building,
 | WEEK 05 |  MAR 02   | Synthesis 1      |   n/a   |
 | WEEK 06 |  MAR 09   | Synthesis 2      |   n/a   |
 | WEEK 07 |  MAR 23   | Final Class    |   n/a   |
+
+### Assignments
+
+| ASSIGNMENT  |  DUE DATE  | TITLE | NOTES |
+| :----         |  ----  | ---- | ---- |
+| A1 |  FEB 03   | Your first web server      |   n/a   |
+| A2 |  FEB 10   | TBD      |   n/a   |
+| A3 |  FEB 24   | TBD      |   n/a   |
+| A4 |  MAR 02   | TBD  |   n/a   |
+| A5 |  MAR 09   | TBD      |   n/a   |
+| FINAL PROJECT & PRESENTATION |  MAR 23   | Final Project  |   n/a   |
+
+All Assignments should be submitted to your respective section:
+* Section 1:
+  * [Joey](https://forms.gle/GkLsRM581kfyHg6W6)
+* Section 2:
+  * [Cassie](https://forms.gle/pzxHjZtq1iP5WAyv9)
+
+
 
 ## Materials
 
