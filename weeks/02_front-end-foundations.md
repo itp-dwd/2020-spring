@@ -139,3 +139,39 @@ TBD
 <!-- Include any sources cited, but not directly linked in the unit. -->
 
 TBD
+
+<!-- 
+### Lecture
+* Focus on the "front-end":
+  * HTML5: HTML, CSS, JavaScript
+  * Layout: DOM and CSS
+  * CSS Best practices using BEM
+  * Adding Interactivity with Javascript
+
+### Studio:
+
+### Assignment
+* Add interactivity using JavaScript to your Week 1 assignment. Feel free to use "vanilla" JavaScript or to use p5.js.
+* Add styling using CSS and BEM conventions.
+* Push your project to a repository on GitHub
+* Deploy to Glitch by importing from GitHub
+ -->
+
+
+ <!-- 
+ 
+ ### Lecture
+* Focus on the "back-end":
+  * Programming a server Node.js
+  * Making programming a server easier with Express.js
+  * Client-server communication: AJAX, RESTful APIs
+  * Making API requests with Postman
+
+### Studio
+### Assignment
+* Build on your previous work.
+* Create an API using Express.js. 
+* Use AJAX to fetch data from your API.
+* Update your HTML with the fetched data.
+* Deploy to Glitch
+  -->

@@ -91,118 +91,22 @@ In order to achieve these objectives, students will spend the semester building,
 
 
 
-## Materials
+## Overview
 
 ## Week 1: Web Foundations
 
-### Lecture
-* Course overview & logistics
-* Web Foundations:
-  * in concept
-  * in practice
-
-### Studio
-* warm up
-
-### Assignment
-* Part 0: Setup your development environment
-  * Git/Github
-  * Command-line tools
-  * Install node.js
-* Part 1: Create a simple webpage using HTML. It could be a point and click game, a quiz, a choose-your-own-adventure story, fiction, poetry, or art. 
-* Part 2: Create a Node.js HTTP server to serve your file(s).
-* Part 3: Push your project to a repository on GitHub
-* Part 4: Deploy to Glitch by importing from GitHub
-
-***
 ## Week 2: Front-end Foundations
 
-### Lecture
-* Focus on the "front-end":
-  * HTML5: HTML, CSS, JavaScript
-  * Layout: DOM and CSS
-  * CSS Best practices using BEM
-  * Adding Interactivity with Javascript
-
-### Studio:
-
-### Assignment
-* Add interactivity using JavaScript to your Week 1 assignment. Feel free to use "vanilla" JavaScript or to use p5.js.
-* Add styling using CSS and BEM conventions.
-* Push your project to a repository on GitHub
-* Deploy to Glitch by importing from GitHub
-
-***
 ## Week 3: Back-end Foundations
 
-### Lecture
-* Focus on the "back-end":
-  * Programming a server Node.js
-  * Making programming a server easier with Express.js
-  * Client-server communication: AJAX, RESTful APIs
-  * Making API requests with Postman
-
-### Studio
-### Assignment
-* Build on your previous work.
-* Create an API using Express.js. 
-* Use AJAX to fetch data from your API.
-* Update your HTML with the fetched data.
-* Deploy to Glitch
-
-***
 ## Week 4: Databases & Deployment
 
-### Lecture
-* Databases
-  * Persisting data with a NoSQL database (as opposed to SQL databases like PostGres or SQLite)
-    * NEDB
-    * MongoDB
-  * CRUD
-* Deployment
-  * Platform as a service (PaaS), virtual machines, 
-
-### Studio
-### Assignment
-* Building on your previous assignment, add persistent data using a database.
-* (Using templates?)
-* Deploy to Heroku
-
-***
 ## Week 5: Synthesis 1
 
-### Lecture
-* Sessions/Cookies, Authentication, Logins, HTTPS 
-* External APIs and network requests
-* Putting it all together
-
-### Studio
-### Assignment
-* Assignment 5
-* Deploy to Glitch
-* Note: Make sure you do not commit your API Keys to GitHub!!!
-
-***
 ## Week 6: Synthesis 2
 
-### Lecture
-* Putting it all together
-
-### Studio
-### Assignment
-* Final project!
-* Documentation your project. Include
-   * Title
-   * Brief written description
-   * Visual Documentation: deployment, images, video, etc.
-   * References: links to related projects, code samples, etc.
-   * Source code (please cite your sources in the code comments)
-
-***
 ## Week 7: Final
 
-* Next Steps
-* Final project presentations
 
 <!-- 
 

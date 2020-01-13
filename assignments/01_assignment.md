@@ -2,7 +2,10 @@
 
 ## Briefing
 
-Your task this week is to build a static web server to serve up a website about X.
+Your task this week is to code from scratch a static web server to serve up a website you build about X. 
+
+The goal of this assignment is to begin your practice of web development and to begin learning the syntax related to server-side JavaScript, HTML, and version control with Git.
+
 
 In this assignment you will be:
 1. writing your first server-side JavaScript using node.js and express.js to serve up a static HTML webpage.
