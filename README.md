@@ -64,24 +64,24 @@ In order to achieve these objectives, students will spend the semester building,
 ### Meetings
 | GO TO  |  DATE  | THEME | NOTES |
 | :----         |  ----  | ---- | ---- |
-| WEEK 01 |  JAN 27   | Web foundations      |   n/a   |
-| WEEK 02 |  FEB 03   | Front-end Foundations      |   n/a   |
-| WEEK 03 |  FEB 10   | Back-end Foundations      |   n/a   |
-| WEEK 04 |  FEB 24   | Databases & Deployment  |   n/a   |
-| WEEK 05 |  MAR 02   | Synthesis 1      |   n/a   |
-| WEEK 06 |  MAR 09   | Synthesis 2      |   n/a   |
-| WEEK 07 |  MAR 23   | Final Class    |   n/a   |
+| [WEEK 01](weeks/01_foundations.md) |  JAN 27   | Web foundations      |   n/a   |
+| [WEEK 02](weeks/02_front-end-foundations.md) |  FEB 03   | Front-end Foundations      |   n/a   |
+| [WEEK 03](weeks/03_back-end-foundations.md) |  FEB 10   | Back-end Foundations      |   n/a   |
+| [WEEK 04](weeks/04_databases.md) |  FEB 24   | Databases & Deployment  |   n/a   |
+| [WEEK 05](weeks/05_synthesis-01.md) |  MAR 02   | Synthesis 1      |   n/a   |
+| [WEEK 06](weeks/06_synthesis-02.md) |  MAR 09   | Synthesis 2      |   n/a   |
+| [WEEK 07](weeks/07_final.md) |  MAR 23   | Final Class    |   n/a   |
 
 ### Assignments
 
 | ASSIGNMENT  |  DUE DATE  | TITLE | NOTES |
 | :----         |  ----  | ---- | ---- |
-| A1 |  FEB 03   | Your first web server      |   n/a   |
-| A2 |  FEB 10   | TBD      |   n/a   |
-| A3 |  FEB 24   | TBD      |   n/a   |
-| A4 |  MAR 02   | TBD  |   n/a   |
-| A5 |  MAR 09   | TBD      |   n/a   |
-| FINAL PROJECT & PRESENTATION |  MAR 23   | Final Project  |   n/a   |
+| [A1](assignments/01_assignment.md) |  FEB 03   | Your first web server      |   n/a   |
+| [A2](assignments/02_assignment.md) |  FEB 10   | TBD      |   n/a   |
+| [A3](assignments/03_assignment.md) |  FEB 24   | TBD      |   n/a   |
+| [A4](assignments/04_assignment.md) |  MAR 02   | TBD  |   n/a   |
+| [A5](assignments/05_assignment.md) |  MAR 09   | TBD      |   n/a   |
+| [FINAL PROJECT & PRESENTATION](assignments/06_final-project.md) |  MAR 23   | Final Project  |   n/a   |
 
 📨All Assignments should be submitted to your respective section:
 * Section 1:
