@@ -71,8 +71,7 @@ The results look the same as above:
 ]
 ```
 
-
-## POST
+## General notes on POST, PUT, and Delete
 
 To send data over the wire using `curl` you can typically will:
 1. include the `-H` header flag, followed by a definitiion of the content type which can be
@@ -87,6 +86,39 @@ To send data over the wire using `curl` you can typically will:
    - '{"name":"winnie", "favoriteFood":"honey"}' 
    - 'name=winnie&favoriteFood=honey' 
    - '<data><name>winnie</name><favoriteFood>honey</favoriteFood></data>' 
+
+In Addition, for any request that needs authentication, you can add your authorization as a header flag `-H` :
+  - `Authorization: Basic username:password`
+  - `Authorization: Token yourAuthToken`
+
+OR you can use the `-u` flag followed by your username`. When you send your request, you will be prompted for your password. This isn't the best way to handle things since it will force you to type your password in each time which is not good practice for testing. This might look something like:
+
+If `joeyklee` is my username...
+* Step 1:
+  ```sh
+  curl -X POST \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json' \
+  -u joeyklee \
+  -d '{"title":"Hello world"}' https://jsonplaceholder.typicode.com/posts
+  ```
+* STEP 2: type in your password
+  ```sh
+  Enter host password for user 'joeyklee':
+  ```
+* Step 3: the server will send back the results:
+  ```json
+  {
+    "title": "Hello world",
+    "id": 101
+  }
+  ```
+
+For the POST, PUT, and DELETE examples here, you will not need to authenticate, HOWEVER, most times when interacting with an API that allows you to create, update, or delete data will require you to authenticate using and API key, token, or username/password (though usually username/password is insecure!).
+
+## POST
+
+The POST data to your API and database, you can use the `-X` flag specifying the `POST` method.
 
 ### POST: JSON
 
@@ -116,6 +148,16 @@ This will return:
 }
 ```
 
+In a more typical situation in which this POST request were to require authenticaiton, and our `token` was `abc123`, our `curl` request would look something like:
+
+```sh
+curl -X POST \
+-H 'Content-Type: application/json' \
+-H 'Accept: application/json'  \
+-H 'Authorization: Token abc123' \
+-d '{"userId":9999, "title":"I love plants", "body": "Here is a story about my love for plants..." }' \
+https://jsonplaceholder.typicode.com/posts
+```
 
 
 ### POST: URLencoded
@@ -161,18 +203,62 @@ https://jsonplaceholder.typicode.com/posts
 ```
 
 
+
 ## PUT
 
+### PUT: JSON
+
+The mechanics of the `PUT` request are almost identical to the POST request parameters except that instead of `-X POST`, you will be using `-x PUT` AND you the URL will be pointed to the specific item you want to update. 
+
+Remember, the `PUT` requests are used to update an existing document in your database. 
+
+For these examples, let's update the post with the `id:1` and change the `title` and `body`:
+
 ```sh
-curl -X PUT 
+curl -X PUT -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{"userId":9999,"title":"Hello World", "body":"I love New York"}' https://jsonplaceholder.typicode.com/posts/1
 ```
+
+Or written with linebreaks:
+```sh
+curl -X PUT \
+-H 'Content-Type: application/json' \
+-H 'Accept: application/json' \
+-d '{"userId":9999, "title":"Hello World", "body":"I love New York"}' \
+https://jsonplaceholder.typicode.com/posts/1
+```
+
+This will return:
+```json
+{
+  "userId": 9999,
+  "title": "Hello World",
+  "body": "I love New York",
+  "id": 1
+}
+```
+
+
 
 ## DELETE
 
+Like the `PUT` request, a delete request will usually specify which document id you want to delete. In this case, if you wanted to delete the post with `id:1`, you could do:
+
 ```sh
-curl -X DELETE
+curl -X DELETE https://jsonplaceholder.typicode.com/posts/1
 ```
 
+ NOTE: different APIs will return different messages when something is deleted. In this case you will get back an empty json object:
+
+```json
+{}
+```
+
+Again, in a more typical situation in which this DELETE request were to require authenticaiton, and our `token` was `abc123`, our `curl` request would look something like:
+```sh
+curl -X DELETE \
+-H 'Authorization: Token abc123' \
+https://jsonplaceholder.typicode.com/posts/1
+```
 
 
 ## References:
