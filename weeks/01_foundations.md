@@ -1,7 +1,7 @@
 # Week 01: Web Foundations
 
 ## Slides
-* ↳ [Link to Week 1 Slides: Web Foundations]()
+* ↳ [Link to Week 1 Slides: Web Foundations](https://docs.google.com/presentation/d/1XIUdrdMb3u-Duhg9I7kL0kJz1uhQUeRylDFYlX5dfeg/edit?usp=sharing)
 
 
 ## About
@@ -51,7 +51,7 @@ This week your goal is to be able to speak to these following points:
 - How does communication work across the internet?
  -->
 
- 
+
 
 ## Schedule
 <!-- Number of total hours the class session will take. Please try to take into account transition time between instruction and hands on exercises if any prep is necessary. -->
