@@ -1,33 +1,3 @@
-# Commandline guide
-
-Adapted from https://www.git-tower.com/blog/command-line-cheat-sheet/
-
-## Directories
-
-| command | description | example |
-| :--- | --- | --- |
-| `pwd` | display the current working directory | `$ pwd`
-| `cd </path/to/directory>` | change to another directory | `$ cd ~/Desktop`
-| `ls` | list all files in a the current directory | `$ ls`
-| `ls -1` | list all files in a the current directory separated by a linebreak | `$ ls -1`
-| `ls -1a` | list all files in the current directory separated by a linebreak including the hidden files | `$ ls -1a`
-| `mkdir </path/to/directory>` | create a new directory | `$ mkdir ~/Desktop/myNewFolder`
-
-
-## Files
-
-
-## Network
-
-
-## Permissions
-
-
-
-## References
-* https://www.git-tower.com/blog/command-line-cheat-sheet/
-* 
-
 # An introduction to the command line
 
 You're probably familiar with interacting with you computer using its Graphical User Interface, or GUI. If you want to open an application, say Firefox, you might find a graphical icon that represents the browser, use your mouse to hover over it, and double click on the icon to open the application. This is, in fact, how you do most of the actions on your computer, interacting with icons, or dropdown menus, or other visual elements.
@@ -171,18 +141,29 @@ which doesn't exist. (2) and (6) are *absolute paths*, which do not depend on th
 
 ## Common commands
 
-| Command      | Description                                                                              |
-| ------------ | ---------------------------------------------------------------------------------------- |
-| pwd          | Returns the path to the current directory.                                               |
-| ls           | Lists the contents of the current directory. Also takes a path as an argument to list the contents of specified directory. |
-| mkdir        | Creates a directory with a given path.                                                   |
-| cat          | Prints the contents of a file at a given path. If multiple files are given, the output is concatenated together. |
-| cp <src_path> <dest_path> | Copies the contents of a file to a new one with a different name. |
+| Command      | Description                                | Example      |
+| ------------ | -------------------------------------------|------------- |
+| `pwd`        | Returns the path to the current directory. | `$ pwd`      |
+| `ls`         | Lists the contents of the current directory. | `$ ls`     |
+| `ls <path/to/directory>` | Lists the contents of the given directory. | `$ ls /Users/ctarakajian` |
+| `ls -1` | list all files in a the current directory separated by a linebreak | `$ ls -1` |
+| `ls -1a` | list all files in the current directory separated by a linebreak including the hidden files | `$ ls -1a` |
+| `mkdir <path/to/directory>` | Creates a directory with a given path. | `$ mkdir /Users/ctarakajian/dwd` |
+| `cat <path/to/file>` | Prints the contents of a file. If multiple files are given, the output is concatenated together. | `$ cat ~/dwd/README.md` |
+| `cp <src/path> <dest/path>` | Copies the contents of a file to a new one with a different name. | `$ cp ~/one.js ~/two.js` |
 
 ## DON'T BLINDLY RUN COMMANDS THAT YOU FIND ON THE INTERNET
 
 Don't blindly copy and paste commands into the terminal that you found on Stack Overflow, especially ones that contain `sudo` or `rm`. This is a great way to mess up your computer! Take a moment to try to understand what is happening, or why someone is suggesting it, or look at a few different suggestions before choosing one.
 
+## Network
+
+
+## Permissions
+
+
 ## Further Reading
 
 The command line is extremely powerful, and this is just an introduction! There's so much more to learn and explore. It's personally one of my favorite tools, as I feel like it gives me insight into how computers work at a lower level, and makes me feel like a hacker.
+
+* Cheat Sheet: https://www.git-tower.com/blog/command-line-cheat-sheet/
