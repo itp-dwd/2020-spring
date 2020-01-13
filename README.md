@@ -9,6 +9,11 @@
 
 The course will be a mixture of lecture and in-class collaborative coding, with weekly programming and reading homework. 
 
+## Code of Conduct
+
+* ↳ [Read the Code Of Conduct here](/CODEOFCONDUCT.md)
+
+
 ## Objectives:
 (forked from Sam Slover's API of you class)
 By the end of the class, you should have a solid understanding of the following concepts:
@@ -27,24 +32,26 @@ In order to achieve these objectives, students will spend the semester building,
 
 ## Details
 
-### Instructor
-* Section 001 - [Joey Lee](https://www.jk-lee.com) (github: @joeyklee // joeyklee@nyu.edu ) 
-* Section 002 - [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // cassie.tarakajian@nyu.edu )
+
+### Section 1 - w/ Joey Lee
+* **Info**:
+  * MONDAY 6:30PM to 9:00PM
+  * ROOM TBD
+  * JAN. 27 - MAR. 23
+  * 7 meetings, 2 Point Course
+* **Instructor**: 
+  * [Joey Lee](https://www.jk-lee.com) (github: @joeyklee // joeyklee@nyu.edu ) 
 
 
-### Time
+### Section 2 - w/ Cassie Tarakajian
+* **Info**:
+  * MONDAY 6:30PM to 9:00PM
+  * ROOM TBD
+  * JAN. 27 - MAR. 23
+  * 7 meetings // 2 Point Course
+* **Instructor**: 
+  * [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // cassie.tarakajian@nyu.edu )
 
-#### Section 001 - w/ Joey
-* MONDAY 6:30PM to 9:00PM
-* ROOM TBD
-* JAN. 27 - MAR. 23
-* 7 meetings // 2 Point Course
-
-#### Section 002 - w/ Cassie
-* MONDAY 6:30PM to 9:00PM
-* ROOM TBD
-* JAN. 27 - MAR. 23
-* 7 meetings // 2 Point Course
 
 ### Office Hours
 * By Appointment - DAY & DAY, H:MM-H:MMpm
@@ -62,6 +69,7 @@ In order to achieve these objectives, students will spend the semester building,
 ## Schedule
 
 ### Meetings
+
 | GO TO  |  DATE  | THEME | NOTES |
 | :----         |  ----  | ---- | ---- |
 | [WEEK 01](weeks/01_foundations.md) |  JAN 27   | Web foundations      |   n/a   |
