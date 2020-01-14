@@ -1,5 +1,18 @@
 # Week 02: Front-end Foundations
 
+## Slides
+* ↳ [Link to Week 1 Slides: Web Foundations](https://docs.google.com/presentation/d/1XIUdrdMb3u-Duhg9I7kL0kJz1uhQUeRylDFYlX5dfeg/edit?usp=sharing)
+
+## About
+
+This week, we will be focusing on the *design* and *development* **process** and **syntax** of building front-end user interfaces and web sites. 
+
+Emphasis this week will be on exploring frontend web development in the service of translating web designs to code. 
+
+
+
+*** 
+
 ## Exercises To Do Before Class
 <!-- What materials (readings, tasks, exercises) should students complete before class to be prepared for the lesson. -->
 
