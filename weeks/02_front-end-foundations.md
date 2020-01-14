@@ -7,6 +7,7 @@
 * Basic HTML File: https://www.taniarascia.com/basic-html5-file/
 * Design for Developers: https://www.taniarascia.com/design-for-developers/
 * You don't need a CSS Framework: https://www.taniarascia.com/you-dont-need-a-framework/
+* CSS: An Art, A Science, a Nightmare (Everything you should know): https://www.taniarascia.com/overview-of-css-concepts/
 
 ## Essential Questions
 
