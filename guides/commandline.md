@@ -2,6 +2,9 @@
 
 Adapted from https://www.git-tower.com/blog/command-line-cheat-sheet/
 
+![Screenshot of macOS terminal window](/assets/commandline-01.png)
+
+
 ## Directories
 
 | command | description | example |
