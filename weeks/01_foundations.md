@@ -22,12 +22,12 @@ This week your goal is to be able to speak to these following points:
     * What is Git? What is Github? and how do they relate to web/software development?
     * How does git track changes in files? What are the commands to add and commit commit changes to files?
     * How do you connect your local git repository to the remote git repository?
-  * Commandline:
-    * Basics of of the commandline: how to navigate between folders, how to create files, how to create folders.
-    * Using the commandline to: install opensource software, set up git locally, connect to a local git repository to a remote github repository, set up a simple Node.js project with npm. 
+  * Command line:
+    * Basics of of the command line: how to navigate between folders, how to create files, how to create folders.
+    * Using the command line to: install open source software, set up git locally, connect to a local git repository to a remote github repository, set up a simple Node.js project with npm. 
 * **Server-side**:
   * server-side JavaScript with Node.js:
-    * What is Node.js, express.js, and how they relate to eachother.
+    * What is Node.js, express.js, and how they relate to each other.
     * What is **npm**, what is a `package.json`, how they are related, and why they are important
     * How to install node.js dependencies using npm.
   * concepts:
@@ -85,6 +85,7 @@ This week your goal is to be able to speak to these following points:
 ### How the Internet Works
 - the Internet infrastructure
 - Simplest concept: there's a computer and it has some code on it that tells it how to send and receive information (e.g. html files, images, videos, emails, etc).  
+- IP addresses, ports, etc.
 
 
 ### Modern Web Applications
