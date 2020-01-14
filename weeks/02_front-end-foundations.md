@@ -31,8 +31,10 @@ This week your goal is to be able to speak to these following points:
     * What are the basic components of a style guide?
     * Why is a style guide important for web design and development?
 * **Frontend Web Development**:
+  * The Browser:
+    * 
   * HTML:
-    * What is HTML? 
+    * What is HTML? and what is the DOM?
     * What is the primary purpose of HTML?
     * Why is it important to use semantically meaningful tag names?
     * How do you translate the content of web designs into HTML?
@@ -40,12 +42,81 @@ This week your goal is to be able to speak to these following points:
     * What is CSS?
     * What is the primary purpose of CSS?
     * How do you translate the layout and styles of web designs into CSS? And how do you effectively apply CSS `classes` and `ids` to HTML to best achieve the specifications of a web design?
+    * What is the BEM convention for CSS? Why are CSS conventions helpful?
   * JavaScript
     * What is JavaScript?
     * What is the primary purpose of client side JavaScript?
-    * 
+    * How can you select HTML elements with JavaScript? What is the roll of CSS classes and ids in this context?
+
+<!-- 
+## Essential Questions
+
+- How does the web browser work?
+- What is the DOM? 
+  - Why is it important to use semantically relevant tags instead of just "divs"?
+- What are events? What are event listeners?
+- How do we handle user inputs using HTML Forms? 
+- What are the unique roles of HTML, CSS, and JavaScript?
+- What does it mean to be "asynchronous" in development? How and why is this relevant for web development?
+- What are JavaScript Array functions and how can they be used to achieve different tasks?
+
+ -->
+
+ ## Pacing / Duration
+- :30 Review & Questions
+- :30 Web Designing
+- :XX Topic
+- :XX Topic
+- :XX Topic
+
+## Materials Needed
+
+* Laptop & Power charger
+* **Text Editor** (VS Code):
+  * [VS Code - Visual Studio Code](https://code.visualstudio.com/)
+* **Web browser** (chrome or firefox preferred, but safari is ok): as a developer, you should be testing with multiple browsers! Please make sure to have both Chrome and Firefox at least.
+  * [Chrome Download](https://www.google.com/chrome/)
+  * [Firefox Download](https://www.mozilla.org/en-US/firefox/new/)
+* **GitHub Account**:
+  * [Sign up with Github.com](https://github.com/)
+  * [Student Developer Pack](https://education.github.com/pack)
+* **Glitch Account**:
+  * [Sign up with Glitch.com](https://glitch.com/)
+  
+
+## Topics
+
+### Web Design(ing)
+
+Building front end web applications is about addressing both the **visual design** of the client facing interface and the **functionality** of the web application. 
+
+In this class, we briefly introduce you to the the basic process and components of web design and then address how these designs come to materialize through code.
+
+#### Research: User Resarch, Defining Requirements, Moodboards, and Inspiration
+
+**Research**: Before anything else, any and every good design process will begin with **research**. Researach about your users, their needs, their desires, their pain points, their delights, what motivates them, what inspires them, what scares them, what keeps them engaged, what truly benefits them, and so on. 
+
+**Requirements**: Your research will inform **the requirements** for your application. Does your design need to be interactive or is it a passive interaction? Does the subject warrant a certain color palette? Do certain typographic considerations need to be made based on your users or based on the briefing from your client or company's style guide? Does your site need to allow people to log-in to a service? Do you need to display data on the site? Based on questions such as these, you will define a requirements list of what **features** and **functionality** the front-end of your site/application will need. You can also add your own "nice-to-haves" section!
+
+**Moodboards & Inspiration**: Simultaneously while you're researching and defining and refining your requirements, it helps to being collecting materials that can inform your web application's design concept. You can use services like [Are.na]() or [Pinterest]() or just use a folder full of images to collect inspiration of websites, images, interaction types, typography, colors, layouts, etc that might come to influence your visual design.
+
+#### Sketching
 
 
+
+#### Wireframing
+
+#### Visual Designing
+
+#### Style Guide
+
+
+### Front End Development & HTML5
+
+
+
+***
+***
 *** 
 
 ## Exercises To Do Before Class
@@ -57,32 +128,6 @@ This week your goal is to be able to speak to these following points:
 * You don't need a CSS Framework: https://www.taniarascia.com/you-dont-need-a-framework/
 * CSS: An Art, A Science, a Nightmare (Everything you should know): https://www.taniarascia.com/overview-of-css-concepts/
 
-## Essential Questions
-
-- How does the web browser work?
-- What is the DOM? 
-  - Why is it important to use semantically relevant tags instead of just "divs"?
-- What are events? What are event listeners?
-- How do we handle user inputs using HTML Forms? 
-- What are the unique roles of HTML, CSS, and JavaScript?
-- What does it mean to be "asynchronous" in development? How and why is this relevant for web development?
-- What is the CSS BEM system? and why is this important/helpful?
-- What are JavaScript Array functions and how can they be used to achieve different tasks?
-
-
-## Introduction
-This week, we will be focusing our attention on the "front-end" of web applications. 
-
-
-### Outcomes & Goals
-
-In this class we will be:
-* Learning about HTML5
-
-Students will walk away with a deeper understanding of:
-*  the DOM
-*  CSS 
-*  client-side JavaScript
 
 
 ## Topics
@@ -148,21 +193,6 @@ Topics we are not covering, but are of importance:
 * Front End JavaScript Frameworks (React, Vue, Angular)
 
 
-## Pacing / Duration
-- :30 Questions
-<!-- Number of total hours the class session will take. Please try to take into account transition time between instruction and hands on exercises if any prep is necessary. -->
-
-- Break down of the class schedule example: 
-  - :15 Overview, context, examples and vocabulary 
-  - :20 Instruction & hands on exercise 
-  - :15 Wrap-up discussion & sharing, reflection or journal and next steps
-
-## Materials Needed
-<!-- What hardware, software, or other materials will students or teachers need for lessons. -->
-
-* Laptop & Power charger
-* Text Editor (VS Code)
-* Web browser (chrome or firefox preferred, but safari is ok)
 
 
 ### Vocabulary (example)
