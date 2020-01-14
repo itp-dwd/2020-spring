@@ -9,6 +9,41 @@ This week, we will be focusing on the *design* and *development* **process** and
 
 Emphasis this week will be on exploring frontend web development in the service of translating web designs to code. 
 
+### Outcomes & Goals
+
+This week your goal is to be able to speak to these following points:
+
+* **Web Design(ing)**:
+  * Sketching: 
+    * Why is it important to sketch while designing for the web (and in general)?
+  * Wireframing: 
+    * What is a wireframe? Why are they important for the web design process?
+    * What is a lo-fidelity wireframe?
+    * What is a hi-fidelity wireframe?
+    * What are ways to make wireframes?
+    * What are best practices for wireframing?
+  * Visual Design:
+    * What is a lo-fidelity design?
+    * What is a hi-fidelity design?
+    * What is a click dummy? 
+  * Style Guide:
+    * What is a style guide?
+    * What are the basic components of a style guide?
+    * Why is a style guide important for web design and development?
+* **Frontend Web Development**:
+  * HTML:
+    * What is HTML? 
+    * What is the primary purpose of HTML?
+    * Why is it important to use semantically meaningful tag names?
+    * How do you translate the content of web designs into HTML?
+  * CSS:
+    * What is CSS?
+    * What is the primary purpose of CSS?
+    * How do you translate the layout and styles of web designs into CSS? And how do you effectively apply CSS `classes` and `ids` to HTML to best achieve the specifications of a web design?
+  * JavaScript
+    * What is JavaScript?
+    * What is the primary purpose of client side JavaScript?
+    * 
 
 
 *** 
