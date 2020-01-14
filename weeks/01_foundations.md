@@ -3,8 +3,22 @@
 ## Slides
 * ↳ [Link to Week 1 Slides: Web Foundations](https://docs.google.com/presentation/d/1XIUdrdMb3u-Duhg9I7kL0kJz1uhQUeRylDFYlX5dfeg/edit?usp=sharing)
 
+## Exercises To Do Before Class
+<!-- What materials (readings, tasks, exercises) should students complete before class to be prepared for the lesson. -->
+* Fill out the appropriate form based on your section:
+  * Joey: 
+  * Cassie:
 
-## About
+### Essential Questions
+
+- What are web applications?
+- Why build web applications? Why to not build web applications? 
+- What is the internet?
+- What is a server? How is is different from a platforms-as-a-service? 
+- What do we mean when we say the front-end (client side) vs. the back-end (server side) vs. devOps?
+- How does communication work across the internet?
+
+## Introduction
 
 This week, we will be starting out journey as developers of the web. 
 
@@ -25,64 +39,16 @@ This week your goal is to be able to speak to these following points:
   * Command line:
     * Basics of of the command line: how to navigate between folders, how to create files, how to create folders.
     * Using the command line to: install open source software, set up git locally, connect to a local git repository to a remote github repository, set up a simple Node.js project with npm. 
-* **Server-side**:
-  * server-side JavaScript with Node.js:
-    * What is Node.js, express.js, and how they relate to each other.
-    * What is **npm**, what is a `package.json`, how they are related, and why they are important
-    * How to install node.js dependencies using npm.
-  * concepts:
-    * What does it mean to serve *static* files using a web server? 
-    * Can you clearly delineate between your server-side code and your client-side code? Explain how they are different.
-    * Can you explain the difference between a server (code), server (machine), and server (the service)? 
 * **Client-side**:
   * How to make an HTML page
   * The components of an HTML page
   * The importance of semantically meaningful HTML
   * Why do we need a server to serve up your HTML page?
 
-<!-- 
-### Essential Questions
-
-- What are web applications?
-- Why build web applications? Why to not build web applications? 
-- What is the internet?
-- What is a server? How is is different from a platforms-as-a-service? 
-- What do we mean when we say the front-end (client side) vs. the back-end (server side) vs. devOps?
-- How does communication work across the internet?
- -->
-
-
-
-## Schedule
-<!-- Number of total hours the class session will take. Please try to take into account transition time between instruction and hands on exercises if any prep is necessary. -->
-- :15 Introductions
-- :15 Expectations, Logistics, Syllabus
-- :15 Introduction to the Internet and Modern Web Development
-- :45 Development Tools and Installation
-- :45 Your first Node/Express application, pushing to GitHub
-- :15 Deployment and documentation expectations (README, GitHub, Glitch)
-
-
-## Materials Needed
-<!-- What hardware, software, or other materials will students or teachers need for lessons. -->
-
-* Laptop & Power charger
-* **Text Editor** (VS Code):
-  * [VS Code - Visual Studio Code](https://code.visualstudio.com/)
-* **Web browser** (chrome or firefox preferred, but safari is ok): as a developer, you should be testing with multiple browsers! Please make sure to have both Chrome and Firefox at least.
-  * [Chrome Download](https://www.google.com/chrome/)
-  * [Firefox Download](https://www.mozilla.org/en-US/firefox/new/)
-* **GitHub Account**:
-  * [Sign up with Github.com](https://github.com/)
-  * [Student Developer Pack](https://education.github.com/pack)
-* **Glitch Account**:
-  * [Sign up with Glitch.com](https://glitch.com/)
-
-
 ## Topics
-<!-- This section can have many subheaders (h3's). This should list all of the topic areas, (e.g. Git, Using the command line), with links to guides and references.  -->
-
 ### How the Internet Works
+- What is the Internet? A global network of computers connected to each other. This is different from the World Wide Web (WWW), which is the collection of information that can be accessed via the Internet. 
+- How do computers communicate with each other? Using HTTP (Hyper-Text Transfer Protocol), it's the language that computers speak to each other on the Internet. 
 - the Internet infrastructure
 - Simplest concept: there's a computer and it has some code on it that tells it how to send and receive information (e.g. html files, images, videos, emails, etc).  
 - IP addresses, ports, etc.
@@ -118,18 +84,37 @@ Topics we are not covering, but are of importance:
 * ...
 
 
+## Pacing / Duration
+<!-- Number of total hours the class session will take. Please try to take into account transition time between instruction and hands on exercises if any prep is necessary. -->
+- :15 Introductions
+- :15 Expectations, Logistics, Syllabus
+- :15 Introduction to the Internet and Modern Web Development
+- :45 Development Tools and Installation
+- :45 Your first website, pushing to GitHub, deploying to Glitch
+- :15 Deployment and documentation expectations (README, GitHub, Glitch)
 
 
-### Exercises To Do Before Class
-<!-- What materials (readings, tasks, exercises) should students complete before class to be prepared for the lesson. -->
+## Materials Needed
+<!-- What hardware, software, or other materials will students or teachers need for lessons. -->
 
-* Fill out the appropriate form based on your section:
-  * Joey: 
-  * Cassie:
+* Laptop & Power charger
+* **Text Editor** (VS Code):
+  * [VS Code - Visual Studio Code](https://code.visualstudio.com/)
+* **Web browser** (Chrome or Firefox preferred, but safari is ok): as a developer, you should be testing with multiple browsers! Please make sure to have both Chrome and Firefox at least.
+  * [Chrome Download](https://www.google.com/chrome/)
+  * [Firefox Download](https://www.mozilla.org/en-US/firefox/new/)
+* **GitHub Account**:
+  * [Sign up with Github.com](https://github.com/)
+  * [Student Developer Pack](https://education.github.com/pack)
+* **Glitch Account**:
+  * [Sign up with Glitch.com](https://glitch.com/)
+* **GitHub Desktop**
+  * [Download](https://desktop.github.com/)
 
 ### Vocabulary (example)
-* term:
-  * def...
+* Internet: a global network of computers connected to each other
+* IP Address: short for Internet protocol address, a unique of the form **nnn.nnn.nnn.nnn** where nnn is a number from 0-255.
+* World Wide Web (WWW): the collection of information that can be accessed via the Internet. 
 
 ## Studio Exercise Descriptions
 <!-- Descriptions of each exercise or phase of class. Similar to pacing but with more description of steps. -->
@@ -162,10 +147,7 @@ Topics we are not covering, but are of importance:
 
 ## References
 <!-- Include any sources cited, but not directly linked in the unit. -->
-
-TBD
-
-
+* [How Does the Internet Work?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
 
 
 <!-- 
