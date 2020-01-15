@@ -435,16 +435,71 @@ You can see the other absolute and relative units at the [W3 Schools Link on CSS
 Flexbox! This is going to be the main focus of our discussion on CSS layouts. Why? Because, flexbox is:
 
 * well supported across browsers,
-* not hacky (e.g. like using floats)
+* not hacky (e.g. using floats -- float:left, float:right, etc -- can be tricky)
 * and it's well documented with lots of examples and resources to draw from. 
 
-<!-- ##### display:flex
+##### **Flexbox essentials 1: what you need to know**:
 
-##### flex-direction: row
+* `display:flex` 
+  * sets the parent DOM element as a **flexbox** container. By default, if the `flex-direction` property is not set, your DOM element will be set to  `flex-direction:row`.
+* `flex-direction: (row|column)` 
+  * a flexbox container can organize it's child elements either **horizontally** as a `row` or **vertically** as a `column`. Setting the `row` or `column` defines the **main axis**. How the child elements are **aligned** or **justified** will depend on the the **main axis**. 
+* The power of flexbox container lies in it's ability to:
+  * **justify** how those child elements are distributed *along the defined main axis* and to
+  * * **align** the child elements *perpendicular to the defined main axis* (aka the **cross axis**).
 
-##### flex-direction: column -->
+Let's take a look at what this means. 
 
-> For flex-direction:row;
+When your parent flexbox container is set to: `flex-direction:row`, 
+* your **main axis** is going in the *horizontal* direction
+* your **cross axis** is going in the *vertical* direction
+* This means that:
+  * `justify-content:(flex-start | flex-end | center | space-between | space-around | justify-between)` will change how your items are distributed *horizontally*. In the gif below, the content is justified with space between each item. 
+  * `align-items:(flex-start | flex-end | center | space-between | space-around | justify-between)` will change how your your items are distributed *vertically*. In the gif below, the items are switching between `flex-start` (the the vertical start of the row) and `flex-end` (the vertical end of the row).
+  
+  ![](../assets/week03-css-flex-02.gif)
+
+When your parent flexbox container is set to: `flex-direction:column`, 
+* your **main axis** is going in the *vertical* direction
+* your **cross axis** is going in the *horizontal* direction
+* This means that:
+  * `justify-content:(flex-start | flex-end | center | space-between | space-around | justify-between)` will change how your items are distributed *vertically*. In the gif below, the content is justified with space between each item. 
+  * `align-items:(flex-start | flex-end | center | space-between | space-around | justify-between)` will change how your your items are distributed *horizontally*. In the gif below, the items are switching between `flex-start` (the the horizontal start of the column) and `flex-end` (the horizontal end of the column).
+  
+  ![](../assets/week03-css-flex-03.gif)
+
+##### Flexbox essentials 2: also good to know**
+
+You can get pretty far by knowing what is in the [flexbox essential 1 section](#flexbox-essentials-1-what-you-need-to-know), however, there's more! 
+
+**What if I want my elements to wrap in a flex container?**
+
+You can specify: `flex-wrap: (nowrap | wrap | wrap-reverse)` on your flex container.
+
+A flex container knows when it's child elements have wrapped onto multiple rows or columns. When you are working with flex containers where elements are **wrapping** onto **multiple** rows or columns, you will have to use **align-content** & **justify-content** appropriately depending on what you've defined as your **main axis**. 
+
+As we did above, let's look at what happens when we change our **main axis** but change how the **align-content** property.
+
+When your parent flexbox container is set to: `flex-direction:row`, 
+* your **main axis** is going in the *horizontal* direction
+* your **cross axis** is going in the *vertical* direction
+* This means that:
+  * `align-content:(stretch | flex-start | flex-end | center | space-between | space-around | justify-between)` will change how each row of content is distributed within the flex container.
+  
+  ![](../assets/week03-css-flex-04.gif)
+
+When your parent flexbox container is set to: `flex-direction:column`, 
+* your **main axis** is going in the *vertical* direction
+* your **cross axis** is going in the *horizontal* direction
+* This means that:
+  * `align-content:(stretch | flex-start | flex-end | center | space-between | space-around | justify-between)` will change how each column of content is distributed within the flex container.
+  
+  ![](../assets/week03-css-flex-05.gif)
+
+
+
+
+<!-- > For flex-direction:row;
 > 
 > align-content determines the spacing between lines (multi row), while align-items determines how the items as a whole are aligned VERTICALLY within the container. When there is only one line, align-content has no effect.
 > 
@@ -510,7 +565,7 @@ When we have `*-content`, then we are talking about how to handly **multi-line**
 
 ```css
 `(align|justify)-content: (flex-start|flex-end|center|space-between|space-around|justify-between)`
-```
+``` -->
 
 Flexbox references:
 * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
