@@ -438,7 +438,9 @@ Flexbox! This is going to be the main focus of our discussion on CSS layouts. Wh
 * not hacky (e.g. using floats -- float:left, float:right, etc -- can be tricky)
 * and it's well documented with lots of examples and resources to draw from. 
 
-##### **Flexbox essentials 1: what you need to know**:
+##### Flexbox essentials: parents of the flex
+
+##### Flexbox essentials 1: what you need to know:
 
 * `display:flex` 
   * sets the parent DOM element as a **flexbox** container. By default, if the `flex-direction` property is not set, your DOM element will be set to  `flex-direction:row`.
@@ -468,7 +470,7 @@ When your parent flexbox container is set to: `flex-direction:column`,
   
   ![](../assets/week03-css-flex-03.gif)
 
-##### Flexbox essentials 2: also good to know**
+##### Flexbox essentials 2: also good to know
 
 You can get pretty far by knowing what is in the [flexbox essential 1 section](#flexbox-essentials-1-what-you-need-to-know), however, there's more! 
 
@@ -480,7 +482,8 @@ A flex container knows when it's child elements have wrapped onto multiple rows 
 
 As we did above, let's look at what happens when we change our **main axis** but change how the **align-content** property.
 
-When your parent flexbox container is set to: `flex-direction:row`, 
+When your parent flexbox container is set to: `flex-direction:row`, and `flex-wrap: wrap`:
+
 * your **main axis** is going in the *horizontal* direction
 * your **cross axis** is going in the *vertical* direction
 * This means that:
@@ -488,7 +491,8 @@ When your parent flexbox container is set to: `flex-direction:row`,
   
   ![](../assets/week03-css-flex-04.gif)
 
-When your parent flexbox container is set to: `flex-direction:column`, 
+When your parent flexbox container is set to: `flex-direction:column`, and `flex-wrap: wrap`: 
+
 * your **main axis** is going in the *vertical* direction
 * your **cross axis** is going in the *horizontal* direction
 * This means that:
@@ -496,80 +500,35 @@ When your parent flexbox container is set to: `flex-direction:column`,
   
   ![](../assets/week03-css-flex-05.gif)
 
+##### Flexbox essentials 3: children of the flex
+
+So far we've been talking specifically about the flex container -- the parent -- and we've seen how setting different properties on the parent container affect the children elements within it. 
+
+It turns out that the children of a flex container can take on special properties that affect their **size**, **order**, and **position**.
+
+* **properties that affect flexbox children's size**
+  * `flex-grow: <integer>`
+  * `flex-shrink: <integer>`
+  * `flex-basis: ( rem| % | auto)`
+
+* **properties that affect flexbox children's order**
+  * `order: <integer>`
+
+* **properties that affect flexbox children's position**
+  * `align-self: (auto | flex-start | flex-end | center | baseline | stretch);`
+
+See: [CSS Tricks - A Guide to Flexbox, "Properties of the Children"](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to see how these properties of flexbox children take shape.
 
 
+##### Quick flexbox reference: flexbox layouts
 
-<!-- > For flex-direction:row;
-> 
-> align-content determines the spacing between lines (multi row), while align-items determines how the items as a whole are aligned VERTICALLY within the container. When there is only one line, align-content has no effect.
-> 
-> For flex-direction: column;
-> 
-> align-content determines the spacing between columns (multi column), while align-items determines how the items as a whole are aligned HORIZONTALLY within the container. When there is only one line, align-content has no effect.
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>    
-    <style>
-      
-      div {
-        border:1px solid black;
-      }
-      #flexRowExample{
-        width:100%;
-        height: 200px;
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-      }
-      
-      #flexColumnExample{
-        width:100%;
-        height: 200px;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-      }
-    </style>
-    <meta charset="utf-8" />
-
-  </head>
-  <body>
-    <h2> flex-direction:row with align-items:center</h2>
-    <div id="flexRowExample">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-    <h2> flex-direction:column with align-items:center</h2>
-    <div id="flexColumnExample">
-      <div>A</div>
-      <div>B</div>
-      <div>C</div>
-    </div>
-  </body>
-</html>
-```
-
-![Screenshot of how defining the main axis changes what the align-items property does to the child items](/assets/week03-css-flex-01.png)
+* [vertically centering things](https://editor.p5js.org/joeyklee/sketches/4pHlQa7KT)
+* [the holy grail](https://editor.p5js.org/joeyklee/sketches/pl_3cVLuM)
 
 
-When we have `*-items`, then we are talking about how to handle the items on a **single-line**:
-
-```css
-`(align|justify)-items: (flex-start|flex-end|center|space-between|space-around|justify-between)`
-```
-
-When we have `*-content`, then we are talking about how to handly **multi-line** flexbox content:
-
-```css
-`(align|justify)-content: (flex-start|flex-end|center|space-between|space-around|justify-between)`
-``` -->
-
-Flexbox references:
-* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
+##### Flexbox references:
+* [CSS Tricks - A Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Flexbox Froggy Game](https://flexboxfroggy.com/)
 
 
 
