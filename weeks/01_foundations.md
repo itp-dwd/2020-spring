@@ -111,6 +111,7 @@ Applications that are running on a computer, that are waiting for HTTP requests 
 
 We will eventually be creating web servers that run on our own computers. How do we access them from a browser? Your local computer has a special IP address, **127.0.0.1**, which is aliased to "localhost". When we create these web servers, we'll give them a specific port too, usually something like 8000 or 8080.
 
+
 #### References
 * https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm
 * https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work
@@ -118,16 +119,26 @@ We will eventually be creating web servers that run on our own computers. How do
 
 
 ### Modern Web Applications
-- How are web applications structured? 
-  - Front end - Code that runs in the browser. Typically consists of writing HTML, CSS, and JavaScript, creating interfaces for users to interact with
-  - Back end - Code that runs on a server. This code consists of working with data and business logic. Could work in a variety of languages (in this class, JS running using Node.js), and interact with databases (in this class, MongoDB).
-  - DevOps - 
-- front end vs back end vs database vs hosting vs database hosting
-- why build we build web applications / why not?
-- what is a web *application* vs a website? (e.g. having database vs just static pages)
+Web applications have lots of different components, but they are primarily composed of:
+- Front end: Also known as client side code, this is the code that runs within a browser, which includes HTML, CSS, JavaScript, and media. This code is sent from a web server but is not executed there. 
+- Back end: Also known as server-side code, this is the code that runs on a hardware server connected to the Internet. This code could be Python, Ruby, Rust, Haskell, etc. but in the context of this class is JavaScript running in Node.js.
+- Database: This stores and persists your website's data. This can be a lot of information! The back end will typically fetch a portion of this data to send to the front end (e.g. if you went to the Wikipedia page for "Capybara", the backend would fetch the "Capybara" entry in the database and nothing else). In this class we will be using MongoDB. 
+
+TODO insert a diagram, probably create one because none of the ones on the internet are good. 
+
+When we create web applications, we run and test these different components on our local computer. When we are happy with what we have and ready to put it on the internet, we need to transfer this code to a computer that can serve files to the internet. This process is called **deployment**. Many companies provide servers that you can transfer your website files to, this is called **hosting**. These companies include Digital Ocean, AWS, and Google; for this class we will be using Glitch.com and Heroku. 
 
 
 ### Development Tools
+In order to create websites and web applications, we use different tools to write, test, and deploy our code. These are called **development tools**. There are many different choices of tools; however, the ones we will go over in this class are used by many professional web developers and are the preferred tools of your instructors Cassie and Joey.
+
+#### Text Editor
+A text editor is an application in which you can create and edit text files. It's different from an application like Microsoft Word, in that it's specifically for writing code, rather than English. It's the place you write your HTML/JS/etc. files. 
+
+In this class we will be using [VSCode](https://code.visualstudio.com/). It comes with a ton of features to make writing code easier, including tons of syntax highlighting and tons of extensions. 
+
+#### Version Control
+
 - Development tools are applications that you work with in order to create web applications. 
 - VSCode 
 - showing hidden files and folders
