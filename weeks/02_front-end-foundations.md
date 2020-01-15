@@ -371,6 +371,8 @@ The point of the above exercise is to see how HTML can be nested within tags to 
 
 We know that our page has some structure that is semantically meaningful, but to our website viewers, they just see the content we've provided to them in the rawest form. What if we wanted to create our own layout, apply styling to the links and titles, add new typography, and make some better color choices? That's where CSS comes in. Read on for more.
 
+NOTE: explore defining the HTML structure before putting too much or any CSS onto the page. A well structured HTML page will naturally reveal the architecture it is meant to showcase. 
+
 ### CSS
 
 > Cassie's experience learning CSS: "CSS is poorly designed, but you learn a few hacks to make it work for you."
@@ -423,10 +425,68 @@ The units you'll likely use most:
 | :---- | ---         | --- |
 | `px` | absolute pixel units | `div { width: 32px; height: 32px }` |
 | `rem` | relative units to the font-size of the root element |  `div { width: 2rem; height: 2rem }` |
+| `%` | percentages |  `div { width: 50%; height: 50% }` |
 | `vw` | relative to the view width |  `div { width: 100vw; height: 200px }` |
 | `vh` | relative to the view height | `div { width: 100vw; height: 80vh }` |
 
 You can see the other absolute and relative units at the [W3 Schools Link on CSS Units](https://www.w3schools.com/CSSref/css_units.asp)
+
+
+#### HTML default styles and layouts 
+
+Before we continue, I will take a second to explain that your web browser and different HTML elements have **default styles** associated with them.
+
+For example all header tags like `h1`, `h2`, `h3` etc are all `block` level elements and take up 100% of the line that they are on. Other features like `button`s are styled with rounded borders, have a light grey background, and create the illusion of being depressed when clicked. `input` tags also have outlines and white backgrounds by default and sliders also come with their default styles as well. 
+
+Some examples:
+
+* **link tag**: by default they are blue with an underline
+  * <a href="#">I'm a link tag</a>
+* **block quote**: 
+  * <blockquote>Block quotes have a mean left and right margin</blockquote>
+
+You can see a list of those default values at the [W3 Schools - CSS Default Values Reference](https://www.w3schools.com/cssref/css_default_values.asp). 
+
+It's helpful to know that different HTML elements have their default styling and as a result will affect your layout and views if you do not override them. 
+
+If you want to have complete control over the the styles of your HTML elements, you can use the [CSS Normalize](https://necolas.github.io/normalize.css/) package to normalize all the CSS styles of all the HTML elements across different browsers.
+
+
+#### Layouts: `inline` vs `block` Elements
+
+![Illustration of different display properties](https://i.stack.imgur.com/mGTYI.png)
+
+As mentioned above, HTML elements come with default styles. As we begin to talk about layouts in CSS, we start our discussion at `inline` vs `block` level elements. 
+
+In simple terms:
+
+* `display:block`: makes an element a block level element which means it will take up the entire level that it exists on. Headers like `h1` and `h2` tags 
+* `display:inline`: makes the element take up only as much space as the content within it, and it means that any other elements following it will try to fit themselves onto the the same line (assuming they are also `inline` elements). Inline elements like `input`, `button`, `a` tags are are examples of inline elements. The height and width of an`inline` element CANNOT be defined.
+* `display:inline-block`: are similar to `inline` elements in that they only take up as much space as the content within them, HOWEVER, `inline-block` elements can take `height` and `width` definitions. 
+
+A demo of these 3 display properties can be found here:
+
+* ↳ [Block, Inline, Inline-Block Demo](https://editor.p5js.org/joeyklee/sketches/whr4o6F70)
+
+![Screenshot of block, inline, or in-line block display](/assets/week03-css-display-01.png)
+
+In a more realistic scenario, you might want to try to format a page using just block and inline elements, and you'll start to see that, while powerful, you'll start to run into some limits. In the following demo, you'll see some new syntax that we've not talked about including references to:
+
+* `transform: translate(<X>, <Y>)`
+* `margin: 0 auto`
+* pseudo classes for `<a>` tags such as `:active`, `:link`, `:visited`
+* the `::after` pseudo class
+* and `float:left` 
+* `background-image: url()`
+
+See the demo here:
+
+* ↳ [CSS layout using block, inline-block, and float](https://editor.p5js.org/joeyklee/sketches/6pQmvN2Bs)
+
+![CSS layout using block, inline-block, and float](/assets/week03-css-layout-01.png)
+
+What is important to recognize is the existence of these properties and that we use them to create layouts when we're limited with our layout and positioning tools. To get around some of these limitations, there are more advanced and tried and true layout methodologies that you will master on your developer journey. These are `flexbox` and `grid`. In this course will focus on `flexbox`, but `grid` will no doubt be part of your CSS tool set as you continue to learn.
+  
 
 #### Layouts: Flexbox
 
@@ -531,9 +591,47 @@ See: [CSS Tricks - A Guide to Flexbox, "Properties of the Children"](https://css
 * [Flexbox Froggy Game](https://flexboxfroggy.com/)
 
 
+#### Media Queries & Responsive Layouts
+
+![Illustration of Responsive web design across different devices and screen sizes](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F2000%2F1*uCt7-Nb0vv1yrIAFUZpXjQ.jpeg&f=1&nofb=1)
+
+Responsive design, whut whuuuut. In our modern web world, with so many different devices and screen sizes, responsive design is the name of the game. 
+
+Luckily, CSS gives us the ability to apply different styles depending on the size of the screen or the device being used through **media queries**. You can learn more about the intricacies of CSS media queries later on, but for now, here's the general workflow.
+
+For a desktop first layout (as opposed to mobile first):
+
+* Step 1: define your CSS styles as you would normally based on the browser window of your computer. 
+* Step 2: identify **screen size breakpoints** where you've identified where your web page styles start to break down or otherwise look cluttered or for lack of better words, "not good". Common break points:
+  * small devices: < `600px`
+  * small tablets and large phones: `768px`
+  * laptops and big tablets: `992px`
+  * large laptops/large screens: `1200px`
+* Step 3: begin applying **media queries** based on those breakpoints throughout your stylesheet. 
+
+##### Media queries in action: `@media`
+
+The way media queries work is by defining a **lower** and **upper** boundary for the size of screen that your styles should apply to. 
+
+**Changing the typography size:**
+
+* ↳ [CSS Media Query Demo - changing the title size](https://editor.p5js.org/joeyklee/sketches/s-zkOMFOZ)
+
+![CSS Media queries changing the title size](../assets/week03-css-media-queries-01.gif)
 
 
-#### Layouts: Grid
+**Changing the layout:**
+
+* ↳ [CSS Media Query Demo - changing the layout](https://editor.p5js.org/joeyklee/sketches/2qOSdoNzr)
+
+![CSS Media Query Demo - Changing the layout](../assets/week03-css-media-queries-02.gif)
+
+
+#### BEM: 
+
+
+
+#### Supplementary -- Layouts: Grid
 
 ![CSS Grid illustration](https://res.cloudinary.com/practicaldev/image/fetch/s--bS_SjGm5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/4h381z8znyw4w0vcnv8z.png)
 
@@ -643,14 +741,13 @@ Some CSS Grid references:
 #### Units
 
 #### BEM: The Block-Element-Modifier Convention
+-->
 
+#### CSS References:
 * http://learnlayout.com/
 * https://flukeout.github.io/
 * https://flexboxfroggy.com/
 * https://codepip.com/games/grid-garden/ 
-  
-
--->
 
 
 ### JavaScript
