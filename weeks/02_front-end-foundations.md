@@ -238,6 +238,138 @@ More tags and their suggested usage can be found at the [HTML5 Doctor Element In
 
 As we spoke about earlier, the DOM is comprised of objects that are defined by those HTML tags we see above. Your role in creating the structure of an HTML page is to take those tags and to create meaningful "parent and child" relationships between those elements. This means that your role as a front end developer is to think about **meaningful heirarchies** ideally reflect your information architecture and semantically organize your content into the DOM tree.
 
+As you're reading this, you might get the feeling that what goes into an HTML page are pretty arbitrary. It's true that you can pretty much swing however you'd like, but there are some essentials. The boilerplate below has the key components:
+
+This is via [Tania Rascia's Basic HTML5 Skeleton File](https://www.taniarascia.com/basic-html5-file/):
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Add your own title here</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
+```
+Notice we have:
+
+* `<!DOCTYPE html>`: definition specifying `html` as the type of document
+  * `<html lang="en">`: we have the outer-most `html` tag with a specification that this is `en` for english
+    * `<head>`: we have a `head` tag that contains:
+      * `meta` tags describing our page
+      * `title` 
+      * and our css `link` tags that link to our css style sheet
+      * and a css `link` tag to a `favicon` which is the little icon that is shown in your browser tab
+    * `</head>`: closing head tag
+    * `<body>`: we have a `body` tag which is where the rest of our HTML will go:
+      * (this is where all of your HTML would go: the divs, sections, header, main, etc)
+      * at the very end we have our `script` tags
+    * `</body>` : closing body tag
+  * `</html>`: closing html tag
+
+
+Now with this boilerplate, you can start adding the structure and content of the page you'd like to build within the `<body></body>` tags.
+
+Here's a quick example of a basic HTML page:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Add your own title here</title>
+
+    <!-- CSS can be read in via file reference or within the style tags -->
+    <style>
+      body{ 
+        background-color: tomato;
+        color:black;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav>
+          <p>Quick Links</p>
+          <ul>
+            <li> <a href="https://itp.nyu.edu/registration/Schedule.php?year=2019&semester=Fall" target="_blank">ITP Schedule</a></li>
+            <li> <a href="https://tisch.nyu.edu/itp" target="_blank">ITP Home</a></li>
+          </ul>
+        </nav>
+        <!-- header -->
+        <header>
+          <h1>My ITP Favorites</h1>
+          <h2>A webpage for all my ITP favorite things</h2>
+        </header>
+        <!-- main body content -->
+        <main>
+            <!-- section -->
+            <section>
+              <h2>The People of ITP</h2>
+              <ul>
+                <li><a href="https://tisch.nyu.edu/itp/itp-people/faculty" target="_blank">Faculty</a></li>
+                <li><a href="https://tisch.nyu.edu/itp/itp-people/staff" target="_blank">Staff</a></li>
+                <li><a href="https://tisch.nyu.edu/itp/itp-people/alumni" target="_blank">Alums</a></li>
+                <li><a href="https://tisch.nyu.edu/itp/itp-people/current-students" target="_blank">Current Students</a></li>
+                <li><a href="https://tisch.nyu.edu/itp/itp-people/faculty/somethings-in-residence-sirs" target="_blank">Fellows</a></li>
+              </ul>
+            </section>
+            <!-- section -->
+            <section>
+              <h2>My favorite courses at ITP</h2>
+              <!-- article 1 -->
+              <article>
+                <header>
+                  <h3>ICM</h3>
+                </header>
+                <p>I love ICM because the instructors are SO smart and cool and they care about my learning SO much. It's crazy.</p>
+              </article>
+              <!-- article 2 -->
+              <article>
+                <header>
+                  <h3>Dynamic Web</h3>
+                </header>
+                <p>I love Dynamic Web Development because the instructors are SO smart and cool and they care about my learning SO much. It's crazy.</p>
+              </article>
+            </section>
+        </main>  
+    </div>
+    <!-- JavaScript can be read in via file reference or within the script tags -->
+    <script>
+        setInterval( function(){
+            const r = Math.random()*255;
+            const g = Math.random()*255;
+            const b = Math.random()*255;
+            document.body.style.backgroundColor = `rgb( ${r}, ${g}, ${b})`
+        }, 1000)
+    </script>
+  </body>
+</html>
+```
+
+If you copy & paste the above code into a blank text file ==> then save it as `index.html` or `my-itp-page.html` ==> and double-click on that file, you'll see something like this in your browser:
+
+![GIF of the bare bones HTML page created above](../assets/week02-html-02.gif)
+
+The point of the above exercise is to see how HTML can be nested within tags to create relationships between `parent` and `children` tags and how there might also be `sibling` tags, and more. 
+
+We know that our page has some structure that is semantically meaningful, but to our website viewers, they just see the content we've provided to them in the rawest form. What if we wanted to create our own layout, apply styling to the links and titles, add new typography, and make some better color choices? That's where CSS comes in. Read on for more.
 
 ### CSS
 
