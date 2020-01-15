@@ -1,7 +1,7 @@
 # Week 02: Front-end Foundations
 
 ## Slides
-* ↳ [Link to Week 1 Slides: Web Foundations](https://docs.google.com/presentation/d/1XIUdrdMb3u-Duhg9I7kL0kJz1uhQUeRylDFYlX5dfeg/edit?usp=sharing)
+* ↳ [Link to Week 2 Slides: Front end Foundations](#)
 
 ## About
 
@@ -378,7 +378,8 @@ We know that our page has some structure that is semantically meaningful, but to
 Cascading Style Sheets (CSS). It's wonderful, it's horrible, it's the way we apply layout and style to our DOM. Love it or hate it, it's what we've got and frankly, it can feel like magic once you get an handle on it. With CSS you can create delightful animations, fancy hover effects, and dynamic and engaging visual interfaces. The trick is to practice, practice, practice and get a feel for the materiality of CSS as it interacts with HTML and JavaScript.
 
 CSS can be broadly categorized by the properties that affect:
-* layout: where things are on the page
+
+* **layout**: where things are on the page
   * `display`
     * `block`
     * `inline`
@@ -392,7 +393,7 @@ CSS can be broadly categorized by the properties that affect:
     * `relative`
   * margins:
     * `margin`, `margin-top`,`margin-right`, `margin-bottom`, `margin-left`
-* aesthetics: how an element looks
+* **aesthetics**: how an element looks
   * color:
     * `background-color`
     * `border`
@@ -416,23 +417,209 @@ CSS can be broadly categorized by the properties that affect:
     * `border-radius`
 
 Those properties that can take a "length" or "size" value can be styled using different units:
-* most used units:
-  * `px`
-  * `rem`
-  * `vw`
-  * `vh`
-  * `%`
-* For your reference:
-  * `em`
-  * `ch`
-* and you can even use units like:
-  * `cm`
-  * `in`
-  * `mm`
-  * `pt`
-  * `pc`
+
+The units you'll likely use most:
+| unit |  description | example |
+| :---- | ---         | --- |
+| `px` | absolute pixel units | `div { width: 32px; height: 32px }` |
+| `rem` | relative units to the font-size of the root element |  `div { width: 2rem; height: 2rem }` |
+| `vw` | relative to the view width |  `div { width: 100vw; height: 200px }` |
+| `vh` | relative to the view height | `div { width: 100vw; height: 80vh }` |
+
+You can see the other absolute and relative units at the [W3 Schools Link on CSS Units](https://www.w3schools.com/CSSref/css_units.asp)
+
+#### Layouts: Flexbox
+
+![CSS Flexbox Illustration](https://crouhana.com/wp-content/uploads/2016/01/css3-flexbox.jpg)
+
+Flexbox! This is going to be the main focus of our discussion on CSS layouts. Why? Because, flexbox is:
+
+* well supported across browsers,
+* not hacky (e.g. like using floats)
+* and it's well documented with lots of examples and resources to draw from. 
+
+<!-- ##### display:flex
+
+##### flex-direction: row
+
+##### flex-direction: column -->
+
+> For flex-direction:row;
+> 
+> align-content determines the spacing between lines (multi row), while align-items determines how the items as a whole are aligned VERTICALLY within the container. When there is only one line, align-content has no effect.
+> 
+> For flex-direction: column;
+> 
+> align-content determines the spacing between columns (multi column), while align-items determines how the items as a whole are aligned HORIZONTALLY within the container. When there is only one line, align-content has no effect.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>    
+    <style>
+      
+      div {
+        border:1px solid black;
+      }
+      #flexRowExample{
+        width:100%;
+        height: 200px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+      }
+      
+      #flexColumnExample{
+        width:100%;
+        height: 200px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+      }
+    </style>
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <h2> flex-direction:row with align-items:center</h2>
+    <div id="flexRowExample">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h2> flex-direction:column with align-items:center</h2>
+    <div id="flexColumnExample">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+    </div>
+  </body>
+</html>
+```
+
+![Screenshot of how defining the main axis changes what the align-items property does to the child items](/assets/week03-css-flex-01.png)
 
 
+When we have `*-items`, then we are talking about how to handle the items on a **single-line**:
+
+```css
+`(align|justify)-items: (flex-start|flex-end|center|space-between|space-around|justify-between)`
+```
+
+When we have `*-content`, then we are talking about how to handly **multi-line** flexbox content:
+
+```css
+`(align|justify)-content: (flex-start|flex-end|center|space-between|space-around|justify-between)`
+```
+
+Flexbox references:
+* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+
+
+
+#### Layouts: Grid
+
+![CSS Grid illustration](https://res.cloudinary.com/practicaldev/image/fetch/s--bS_SjGm5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/4h381z8znyw4w0vcnv8z.png)
+
+We are not going to go into CSS grid here in detail, but you should know that CSS grid is quite likely going to be part of your future as a web developer. The major innovation of CSS grid is that, for the first time, you can now create 2-D layouts. This is big! With all the other CSS layout properties, we were only given the ability to create 1-D layouts that we puzzeled together in creative ways. Now with `grid` you can:
+
+On your parent element, specify:
+* the number of columns, 
+* the number of rows,
+* the gap between columns,
+* the gap between rows,
+
+And on your children elements, specify:
+* how many columns and rows each child element should fill
+
+In the end, using CSS grid can be verbalized like,
+> "I want a 3 column grid, with 8 rows. 
+> 
+> In the first 2 rows, I want my header to occupy all 3 columns. 
+> 
+> In the next of the 4 rows, I want to have on the left, an area for an aside element that takes up 1 column, and a main element that takes up 2 columns.
+> 
+> Last, I want a footer element that up the last 2 rows and occupies all 3 columns."
+
+![CSS Grid layout](/assets/week03-css-grid-01.png)
+
+In CSS Grid, this would look like:
+
+```html
+<html>
+  </head>
+    <style>
+        *{
+          box-sizing:border-box;
+          margin:0;
+          padding:0;
+        }
+        html, body{
+          width:100%;
+          height:100%;
+        }
+        #app{
+          width:100%;
+          height:100%;
+          display:grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: repeat(8,1fr); /* also: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr */
+          grid-row-gap: 1rem;
+          grid-column-gap: 1rem;
+        }
+        .header{
+          grid-column-start: 1;
+          grid-column-end: 4;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          background-color: blue;
+        }
+        .aside{
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 3;
+          grid-row-end: 7;
+          background-color: yellow;
+        }
+        .main{
+          grid-column-start: 2;
+          grid-column-end: 4;
+          grid-row-start: 3;
+          grid-row-end: 7;
+          background-color: red;
+        }
+        .footer{
+          grid-column-start: 1;
+          grid-column-end: 4;
+          grid-row-start: 7;
+          grid-row-end: 9;
+          background-color: pink;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+    <header class="header"></header>
+    <aside class="aside"></aside>
+    <main class="main"></main>
+    <footer class="footer"></footer>
+    </div>
+  </body>
+</html>
+```
+
+There's a lot more to know about CSS grid, but hopefully you can see how grid can be helpful for creating 2D layouts in the browser.
+
+Some CSS Grid references: 
+* [NYT Open, CSS Grid for Designers](https://open.nytimes.com/css-grid-for-designers-f74a883b98f5)
+* [CSS Grid generator](https://cssgrid-generator.netlify.com/)
+
+
+
+
+<!-- 
 #### Box Model
 
 #### Position
@@ -446,7 +633,10 @@ Those properties that can take a "length" or "size" value can be styled using di
 * http://learnlayout.com/
 * https://flukeout.github.io/
 * https://flexboxfroggy.com/
-* https://codepip.com/games/grid-garden/
+* https://codepip.com/games/grid-garden/ 
+  
+
+-->
 
 
 ### JavaScript
