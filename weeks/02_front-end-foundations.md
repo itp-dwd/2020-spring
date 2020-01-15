@@ -629,7 +629,97 @@ The way media queries work is by defining a **lower** and **upper** boundary for
 
 #### BEM: 
 
+By now you've probably looked a bunch of the CSS code and the HTML and thought, "wow, what a mess!" If you haven't, then kudos, you're like a superhuman. For the rest of us, the HTML/CSS mashup can be tricky to read, write, and maintain. Without best practices and good conventions and otherwise just a compass to follow, the arbitrariness of how to structure and identify HTML elements with CSS can be totally overwhelming and confusing. 
 
+SO, somewhere out there in the big 'ol universe, someone came up with what is called BEM or the Block-Element-Modifier convention for CSS naming and HTML structuring. 
+
+The basic premise is that your frontend is composed of **blocks** of HTML. Within those blocks, you have **elements**. Those **blocks** and **elements** can be given **modifiers** which act add additional styling to that **block** or **element** that is appended to. 
+
+You can read more about how to logically separate out what is a **block** vs an **element** vs a **modifier** at this [Introduction to BEM](http://getbem.com/introduction/).
+
+As a quick example, let's take a look below. You'll notice that:
+* every HTML object receives a `class` name. 
+* a **block** is usually the parent container and is implemented like so: e.g. `class="header"`
+* a **element** is an element that is reliant on the block and is implemented like so: e.g `class="header__title"`
+* a **modifier** is an flag that changes the style of an element or block and is implemented like so: e.g. `class="header__title header__title--pink` or `class="header header--pink`.
+
+We have a header **block**, and a **title** element, with a pink **modifier**.
+```html
+<body>
+  <!-- our block -->
+  <header class="header">
+    <!-- our element with a modifier-->
+    <h1 class="header__title header__title--pink">Vancouver, I love you.</h1>
+  </header>
+</body>
+```
+
+```css
+/* our block is a 200px tall and 100% wide that aligns all the elements to the center */
+.header{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:200px;
+}
+
+/* our &__title element of our header */
+.header__title{
+  font-size: 3rem;
+}
+/* our title modifier */
+.header__title--pink{
+  color:pink;
+}
+```
+
+As outlined beautifully in this article [BEM by example](https://seesparkbox.com/foundry/bem_by_example) is to resist the temptation to create complex nested BEMs with infinity underscores separating elements. (I'll admit I've broken this rule too many times and regret it every single time). Keep your BEM organized and shallow, so you can keep track of the way your styles are being applied, but don't feel like this is a hard and fast rule. Rules are (sometimes) meant to be broken. 
+
+via [BEM by example](https://seesparkbox.com/foundry/bem_by_example) - this example does a good job expressing best practices for shallow naming for BEM. As you see the BEM convention across the web, you'll see that it isn't always so simple to keep things shallow, but you should try!
+```html
+<!-- DO THIS -->
+<figure class="photo">
+  <img class="photo__img" src="me.jpg">
+  <figcaption class="photo__caption">
+    <blockquote class="photo__quote">
+      Look at me!
+    </blockquote>
+  </figcaption>
+</figure>
+
+<style>
+  .photo { }
+  .photo__img { }
+  .photo__caption { }
+  .photo__quote { }
+</style>
+
+
+<!-- DON'T DO THIS -->
+<figure class="photo">
+  <img class="photo__img" src="me.jpg">
+  <figcaption class="photo__caption">
+    <blockquote class="photo__caption__quote"> <!-- never include more than one child element in a class name -->
+      Look at me!
+    </blockquote>
+  </figcaption>
+</figure>
+
+<style>
+  .photo { }
+  .photo__img { }
+  .photo__caption { }
+  .photo__caption__quote { }
+</style>
+```
+
+##### BEM References:
+* [Get BEM](http://getbem.com/introduction/)
+* [Maintainable CSS With BEM](https://www.integralist.co.uk/posts/bem/#4)
+* [‘Why BEM?’ in a nutshell](https://blog.decaf.de/2015/06/24/why-bem-in-a-nutshell/)
+* [BEM by example](https://seesparkbox.com/foundry/bem_by_example)
 
 #### Supplementary -- Layouts: Grid
 
