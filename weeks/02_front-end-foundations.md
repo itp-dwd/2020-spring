@@ -373,6 +373,82 @@ We know that our page has some structure that is semantically meaningful, but to
 
 ### CSS
 
+> Cassie's experience learning CSS: "CSS is poorly designed, but you learn a few hacks to make it work for you."
+
+Cascading Style Sheets (CSS). It's wonderful, it's horrible, it's the way we apply layout and style to our DOM. Love it or hate it, it's what we've got and frankly, it can feel like magic once you get an handle on it. With CSS you can create delightful animations, fancy hover effects, and dynamic and engaging visual interfaces. The trick is to practice, practice, practice and get a feel for the materiality of CSS as it interacts with HTML and JavaScript.
+
+CSS can be broadly categorized by the properties that affect:
+* layout: where things are on the page
+  * `display`
+    * `block`
+    * `inline`
+    * `inline-block`
+    * `flex`
+    * `grid`
+    * `none`
+  * `position`
+    * `fixed`
+    * `absolute`
+    * `relative`
+  * margins:
+    * `margin`, `margin-top`,`margin-right`, `margin-bottom`, `margin-left`
+* aesthetics: how an element looks
+  * color:
+    * `background-color`
+    * `border`
+  * typography:
+    * `color`
+    * `font-family`
+    * `font-size`
+    * `font-weight`
+    * `line-height`
+    * `letter-spacing`
+  * size:
+    * `width`
+    * `max-width`
+    * `min-width`
+    * `height`
+    * `max-height`
+    * `min-height`
+    * `box-sizing`
+    * `padding`, `padding-top`,`padding-right`, `padding-bottom`, `padding-left`
+  * shape:
+    * `border-radius`
+
+Those properties that can take a "length" or "size" value can be styled using different units:
+* most used units:
+  * `px`
+  * `rem`
+  * `vw`
+  * `vh`
+  * `%`
+* For your reference:
+  * `em`
+  * `ch`
+* and you can even use units like:
+  * `cm`
+  * `in`
+  * `mm`
+  * `pt`
+  * `pc`
+
+
+#### Box Model
+
+#### Position
+
+#### Display
+
+#### Units
+
+#### BEM: The Block-Element-Modifier Convention
+
+* http://learnlayout.com/
+* https://flukeout.github.io/
+* https://flexboxfroggy.com/
+* https://codepip.com/games/grid-garden/
+
+
 ### JavaScript
 
 
@@ -406,7 +482,6 @@ We know that our page has some structure that is semantically meaningful, but to
 
 ### CSS
 - CSS is the styling and layout
-- Cassie's experience learning CSS: "CSS is poorly designed, but you learn a few hacks to make it work for you."
 - TODO: Design of website layout that we are working towards (Holy Grail? Other?)
 - Using HTML to include CSS
 - The Box Model
