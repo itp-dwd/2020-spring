@@ -451,6 +451,14 @@ It's helpful to know that different HTML elements have their default styling and
 
 If you want to have complete control over the the styles of your HTML elements, you can use the [CSS Normalize](https://necolas.github.io/normalize.css/) package to normalize all the CSS styles of all the HTML elements across different browsers.
 
+#### The CSS Box Model: Everything is a Box
+
+TODO: TBD
+
+#### CSS Positioning: 
+
+TODO: TBD
+
 
 #### Layouts: `inline` vs `block` Elements
 
@@ -486,7 +494,6 @@ See the demo here:
 ![CSS layout using block, inline-block, and float](/assets/week03-css-layout-01.png)
 
 What is important to recognize is the existence of these properties and that we use them to create layouts when we're limited with our layout and positioning tools. To get around some of these limitations, there are more advanced and tried and true layout methodologies that you will master on your developer journey. These are `flexbox` and `grid`. In this course will focus on `flexbox`, but `grid` will no doubt be part of your CSS tool set as you continue to learn.
-  
 
 #### Layouts: Flexbox
 
@@ -819,19 +826,14 @@ Some CSS Grid references:
 * [CSS Grid generator](https://cssgrid-generator.netlify.com/)
 
 
+#### CSS Recap:
 
-
-<!-- 
-#### Box Model
-
-#### Position
-
-#### Display
-
-#### Units
-
-#### BEM: The Block-Element-Modifier Convention
--->
+* what we learned:
+  * CSS can be broadly categorized by **layout** and **aesthetics**
+  * In HTML everything is a box and CSS is all about styling those boxes(the box model) 
+  * CSS positioning allows us to define whether our "boxes" are positioned absolute, relative, or fixed. 
+  * While there are cases in which absolute positioning and fixed positioning come in handy, we almost always build our our layouts with out "boxes" relative to eachother and as a result we have to figure out ways of achieving complex and beautiful layouts with using any combination of: `display:(block|inline|inline-block|flex|grid)`
+  * BEM is a convention that helps us to keep our CSS and HTML readable and maintainable. 
 
 #### CSS References:
 * http://learnlayout.com/
@@ -865,11 +867,6 @@ Some CSS Grid references:
 ## Topics
 <!-- This section can have many subheaders (h3's). This should list all of the topic areas, (e.g. Git, Using the command line), with links to guides and references.  -->
 
-### HTML & the DOM
-- HTML is the content and structure
-- The DOM 
-- Accessibility and semantic HTML. TODO link to a guide for accessible HTML?
-- Don't know which element to use? See [HTML Doctor](http://html5doctor.com/).
 
 ### CSS
 - CSS is the styling and layout
