@@ -59,9 +59,13 @@ And a nice-to-know: [Date and Time in JavaScript](https://www.taniarascia.com/un
 
 ## Javascript Array Methods:
 
+TBD
+
 * [JavaScript Iteration Methods](https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-iteration-methods)
 
 ## Javascript Object Methods:
+
+TBD
 
 * [Using JavaScript Object Methods](https://www.digitalocean.com/community/tutorials/how-to-use-object-methods-in-javascript)
 * [This, bind, call, and apply in JS](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript)
@@ -69,6 +73,13 @@ And a nice-to-know: [Date and Time in JavaScript](https://www.taniarascia.com/un
 ## Callbacks, Promises and Async/Await
 
 TBD
+
+* [Coding Train: Async/Await -- Part 1](https://www.youtube.com/watch?v=XO77Fib9tSI)
+* [Coding Train: Async/Await -- Part 2](https://www.youtube.com/watch?v=chavThlNz3s)
+* [Coding Train: Async/Await -- Part 3](https://www.youtube.com/watch?v=01RTj1MWec0)
+* [Async/Await](https://javascript.info/async-await)
+* [Modern Aync JS](https://flaviocopes.com/javascript-async-await/)
+* [Promise.all and handling multiple async functions](https://www.taniarascia.com/promise-all-with-async-await/)
 
 
 ## References: JavaScript Foundations
@@ -87,6 +98,15 @@ TBD
 ***
 
 # JavaScript and the DOM
+
+In this section we discuss the wonderful role of JavaScript and its ability to interact with the DOM. This is where we really dive into what it means for JavaScript to not only create the ability for pages to be *interactive*, but also *reactive*. So far, we've been talking mostly about JavaScript as a language, but now it is time to explore the ways in which JavaScript completes the HTML5 trifecta of HTML/CSS/JavaScript.
+
+By mastering JavaScript as a language, understanding how to work with JavaScript in relation to CSS and HTML, and building up your sensibilities for software architectures and JavaScript patterns, you'll be well equipped to approach the development clientside applications with confidence.
+
+Let's begin applying our JavaScript knowledge in relation to interacting to DOM.
+
+
+TBD
 
 ## References: JavaScript and the DOM 
 * understanding events: https://www.digitalocean.com/community/tutorials/understanding-events-in-javascript
@@ -145,6 +165,8 @@ If you copy and paste the above code ito your javascript console, you should see
 ```json
 {"categories":[],"created_at":"2020-01-05 13:42:22.701402","icon_url":"https://assets.chucknorris.host/img/avatar/chuck-norris.png","id":"InbZFgfnQJa_vXsmIS6CeQ","updated_at":"2020-01-05 13:42:22.701402","url":"https://api.chucknorris.io/jokes/InbZFgfnQJa_vXsmIS6CeQ","value":"Particle physicists have finally developed a new atom smasher. It is called Chuck Norris's fist."}
 ```
+
+![](../assets/js__xhr-01.png)
 
 Notice, it took us several dozens of lines of code to make a simple GET request. Lucky for us the **fetch API** provices and easier way to network with the outside world.
 
