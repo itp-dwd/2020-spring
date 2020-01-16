@@ -116,7 +116,7 @@ Topics we are not covering, but are of importance:
 
 > Make your things interactive with JavaScript
 
-* ↳ [CSS Guide](../guides/css-guide.md)
+* ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
 
 
 
