@@ -8,13 +8,22 @@
   - [Introduction: The Basics](#introduction-the-basics)
   - [Javascript Array Methods:](#javascript-array-methods)
   - [Javascript Object Methods:](#javascript-object-methods)
+  - [Callbacks, Promises and Async/Await](#callbacks-promises-and-asyncawait)
   - [References: JavaScript Foundations](#references-javascript-foundations)
 - [JavaScript and the DOM](#javascript-and-the-dom)
   - [References: JavaScript and the DOM](#references-javascript-and-the-dom)
-- [JavaScript and APIs](#javascript-and-apis)
+- [JavaScript Networking, AJAX, talking to APIs, and CORs](#javascript-networking-ajax-talking-to-apis-and-cors)
+  - [Background: XHR: XMLHttpRequest](#background-xhr-xmlhttprequest)
+  - [Fetch API](#fetch-api)
+    - [Fetch: default](#fetch-default)
+    - [Fetch with options: GET, POST, PUT, DELETE](#fetch-with-options-get-post-put-delete)
+  - [A quick note on Axios](#a-quick-note-on-axios)
+  - [CORs: Cross origin Resource Sharing](#cors-cross-origin-resource-sharing)
   - [References: JavaScript and APIs](#references-javascript-and-apis)
-- [The Browser API](#the-browser-api)
-  - [References: The Browser API](#references-the-browser-api)
+- [The Web Platform](#the-web-platform)
+  - [Browser Platform: `localStorage`](#browser-platform-localstorage)
+  - [Browser Platform: Geolocation API](#browser-platform-geolocation-api)
+  - [References: The Web Platform](#references-the-web-platform)
 - [Conclusion & Recap](#conclusion--recap)
 - [Advanced: JavaScript Patterns](#advanced-javascript-patterns)
 - [Advanced: JavaScript Frameworks](#advanced-javascript-frameworks)
@@ -57,6 +66,10 @@ And a nice-to-know: [Date and Time in JavaScript](https://www.taniarascia.com/un
 * [Using JavaScript Object Methods](https://www.digitalocean.com/community/tutorials/how-to-use-object-methods-in-javascript)
 * [This, bind, call, and apply in JS](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript)
 
+## Callbacks, Promises and Async/Await
+
+TBD
+
 
 ## References: JavaScript Foundations
 * [How to Code in JavaScript](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript)
@@ -85,7 +98,75 @@ And a nice-to-know: [Date and Time in JavaScript](https://www.taniarascia.com/un
 ***
 ***
 
-# JavaScript and APIs
+# JavaScript Networking, AJAX, talking to APIs, and CORs
+
+This section is about using client side JavaScript to communicate (aka network) with the outside world. There are a number of ways we can make network connections to servers from our web browser -- e.g. web sockets, webRTC, and HTTP -- but we will focus our attention specifically on communicating over HTTP using **XHR** and its more friendlier API, the **Fetch API**.
+
+In this section you will learn about how you can use JavaScript to communicate with outside servers and APIs from the browser.
+
+## Background: XHR: XMLHttpRequest
+
+> "XMLHttpRequest (XHR) is an API in the form of an object whose methods transfer data between a web browser and a web server." -- [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/XMLHttpRequest)
+
+While most of the time you will not be using the raw XHR or XMLHttpRequest request object and its functions to make network requests, it is important to know that the integration of this feature into web browsers back in the 2000s was a major innovation and game changer for our web experiences using browsers and the ability to network with the outside world.
+
+It is also important to know that the syntax for using the raw XHR request in JavaScript is not as friendly as using the **fetch API** or better yet, the [Axios](https://github.com/axios/axios) library for making HTTP requests.
+
+
+```js
+// Create a new XHR request object
+const xhr = new XMLHttpRequest();
+// Set the options of the request including the METHOD, URL, and if the operation should be Asynchronous or not.
+xhr.open("GET", "https://api.chucknorris.io/jokes/random", true);
+// Here we handle the results of the request.
+// Each XHR request goes through 4 stages,
+// Stage 4 of the .readyState is DONE
+xhr.onload = function (e) {
+  if (xhr.readyState === 4) {
+    // if our request status is 200 - it is a great success!
+    if (xhr.status === 200) {
+      console.log(xhr.responseText);
+    } else {
+      console.error(xhr.statusText);
+    }
+  }
+};
+// Here we do our error handling
+xhr.onerror = function (e) {
+  console.error(xhr.statusText);
+};
+// and FINAlly can SEND the request
+xhr.send(null); 
+```
+* you can see that the `xhr.readyState` has a few specific numbers, lets take a look at what they mean here in the reference on [MDN's guide to the XMLHttpRequest.readyState](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState). As written in the post the `.readyState` value of `4` means that the operation is complete! 
+
+If you copy and paste the above code ito your javascript console, you should see:
+
+```json
+{"categories":[],"created_at":"2020-01-05 13:42:22.701402","icon_url":"https://assets.chucknorris.host/img/avatar/chuck-norris.png","id":"InbZFgfnQJa_vXsmIS6CeQ","updated_at":"2020-01-05 13:42:22.701402","url":"https://api.chucknorris.io/jokes/InbZFgfnQJa_vXsmIS6CeQ","value":"Particle physicists have finally developed a new atom smasher. It is called Chuck Norris's fist."}
+```
+
+Notice, it took us several dozens of lines of code to make a simple GET request. Lucky for us the **fetch API** provices and easier way to network with the outside world.
+
+For more information, see [Flavio Copes's post on XHR](https://flaviocopes.com/xhr/)
+
+## Fetch API
+
+### Fetch: default
+
+TBD
+
+### Fetch with options: GET, POST, PUT, DELETE
+
+TBD
+
+## A quick note on Axios
+
+TBD
+
+## CORs: Cross origin Resource Sharing
+
+TBD
 
 ## References: JavaScript and APIs 
 * https://www.taniarascia.com/how-to-use-the-javascript-fetch-api-to-get-json-data/
@@ -93,11 +174,52 @@ And a nice-to-know: [Date and Time in JavaScript](https://www.taniarascia.com/un
 ***
 ***
 ***
-# The Browser API
+# The Web Platform
 
-## References: The Browser API 
+The Browser is a treasure trove of goodies. It is comprised of many exciting APIs that can be accessed through JavaScript. This section is about the **web platform** that will enable and enhance your users' frontend experiences. 
 
-The Browser is a treasure trove of goodies.
+Below is a (non-exhaustive) list, that you can explore deeper on your frontend development journey:
+
+* [The DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+* [DevTools](https://flaviocopes.com/browser-dev-tools/)
+* [Web API](https://developer.mozilla.org/en-US/docs/Web/API)
+  * Events:
+    * [Scroll events](https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event)
+    * [Drag and Drop](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+    * [Mouse Events](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent)
+    * [Touch Events](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events)
+    * [Keyboard Events](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
+  * [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
+  * [Web Speech Synthesis API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
+  * [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
+  * [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+  * [Web workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+* [Web storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+  * [cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+  * [indexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+  * [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+* Networking:
+  * [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+  * [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+  * [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+  * [web sockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+  * [Stream API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API)
+  * [webRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
+
+  
+In addition adding plugins for the browser in the form of  Bookmarklets and Browser Extensions (commonly referred to as Chrome Extensions) is a very exciting aspect of web development.
+
+From the exciting list of features above, this section will highlight just a few features. The idea is that you should work through these functionalities as they become relevant for your projects. 
+
+## Browser Platform: `localStorage`
+
+TBD
+
+## Browser Platform: Geolocation API
+
+TBD
+
+## References: The Web Platform
 
 * https://www.taniarascia.com/how-to-use-local-storage-with-javascript/
 
