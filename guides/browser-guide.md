@@ -1,6 +1,8 @@
 # The Web Browser Guide
 
+## Table of Contents
 - [The Web Browser Guide](#the-web-browser-guide)
+  - [Table of Contents](#table-of-contents)
   - [How the web browser works](#how-the-web-browser-works)
   - [The Browser API](#the-browser-api)
 

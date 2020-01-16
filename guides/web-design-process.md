@@ -1,6 +1,8 @@
 # Web Design Process Guide
 
+## Table of Contents
 - [Web Design Process Guide](#web-design-process-guide)
+  - [Table of Contents](#table-of-contents)
   - [Web Design(ing)](#web-designing)
   - [Research: User Resarch, Defining Requirements, Moodboards, and Inspiration](#research-user-resarch-defining-requirements-moodboards-and-inspiration)
   - [Sketching](#sketching)

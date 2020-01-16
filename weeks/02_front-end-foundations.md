@@ -119,30 +119,15 @@ Topics we are not covering, but are of importance:
 * ↳ [CSS Guide](../guides/css-guide.md)
 
 
+
+# Bibliography
+
 ## References
 <!-- Include any sources cited, but not directly linked in the unit. -->
 
 TBD
 
-
-
-***
-***
-*** 
-
-
-### CSS TODOS
-- Using HTML to include CSS
-- Using Developer Tools to Debug CSS
-- Nice to think about:
-  - css animations
-  - pseudo-classes
-  - keyframe animations
-
-
-
-
-### Vocabulary (example)
+## Terms
 * DOM:
   * Document Object Model
 * HTML:
@@ -156,17 +141,12 @@ TBD
 * Callback functions:
   * ...
 
-## Studio Exercise Descriptions
 
-TBD
+***
+***
+*** 
 
 
-
-<!-- 
-### Lecture
-* Focus on the "front-end":
-  * HTML5: HTML, CSS, JavaScript
-  * Layout: DOM and CSS
-  * CSS Best practices using BEM
-  * Adding Interactivity with Javascript
- -->
+### CSS TODOS
+- Using HTML to include CSS
+- Using Developer Tools to Debug CSS

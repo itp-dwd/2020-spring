@@ -1,6 +1,8 @@
 # The HTML Guide
 
+## Table of Contents
 - [The HTML Guide](#the-html-guide)
+  - [Table of Contents](#table-of-contents)
   - [Syntax](#syntax)
   - [Structure](#structure)
 

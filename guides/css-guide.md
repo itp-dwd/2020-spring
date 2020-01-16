@@ -1,6 +1,9 @@
 # CSS Guide
 
+## Table of Contents
+
 - [CSS Guide](#css-guide)
+  - [Table of Contents](#table-of-contents)
   - [HTML default styles and layouts](#html-default-styles-and-layouts)
   - [The CSS Box Model: Everything is a Box](#the-css-box-model-everything-is-a-box)
   - [CSS Selectors: naming the DOM with classes and IDs](#css-selectors-naming-the-dom-with-classes-and-ids)
