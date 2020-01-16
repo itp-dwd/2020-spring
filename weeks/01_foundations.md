@@ -135,9 +135,21 @@ In order to create websites and web applications, we use different tools to writ
 #### Text Editor
 A text editor is an application in which you can create and edit text files. It's different from an application like Microsoft Word, in that it's specifically for writing code, rather than English. It's the place you write your HTML/JS/etc. files. 
 
-In this class we will be using [VSCode](https://code.visualstudio.com/). It comes with a ton of features to make writing code easier, including tons of syntax highlighting and tons of extensions. 
+In this class we will be using [VSCode](https://code.visualstudio.com/). It comes with a ton of features to make writing code easier, including tons of syntax highlighting and tons of extensions.
+
+#### Command Line
+Have you ever opened the "Terminal" application (or maybe "Windows Command Prompt") on your computer? This is called a **command line interface**. You're probably used to interacting with your computer using its GUI (Graphical User Interface), made up of icons, windows, dropdown menus, and other visual components, which you use to perform actions on your computer. The command line is a different interface to your computer, in which you can only tell your computer what to do using text commands. Sometimes it can be frustrating to interact with your computer using the command line, but it gives you access to tools you can't use from the GUI. Many of the tools used to create web applications can only be used on the command line, therefore it's important to learn how to use it.
+
+See the [command line guide](../guies/commandline.md) to get starting using the command line.
+
 
 #### Version Control
+When working on a piece of writing, it's common to make many drafts before settling on a final version. The same thing happens when you write software. Version control software keeps track of all of the changes you make, and stores them in a "ledger". It also helps you collaborate with other people—you can see the changes that you made, and ones that another person made. It's a pretty powerful tool, and invaluable when writing code.
+
+The most widely used version control software is **Git**. In this class we will be using git as a command line tool. See [git guide](../guides/git.md) for an in-depth guide to getting started with git.
+
+#### GitHub
+GitHub is a website for hosting and exploring source code. 
 
 - Development tools are applications that you work with in order to create web applications. 
 - VSCode 
