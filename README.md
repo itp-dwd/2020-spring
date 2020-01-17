@@ -95,11 +95,11 @@ In order to achieve these objectives, students will spend the semester building,
 
 | ASSIGNMENT  |  DUE DATE  | TITLE | NOTES |
 | :----         |  ----  | ---- | ---- |
-| [A1](assignments/01_assignment.md) |  FEB 03   | Your first web server      |   n/a   |
-| [A2](assignments/02_assignment.md) |  FEB 10   | TBD      |   n/a   |
-| [A3](assignments/03_assignment.md) |  FEB 24   | TBD      |   n/a   |
-| [A4](assignments/04_assignment.md) |  MAR 02   | TBD  |   n/a   |
-| [A5](assignments/05_assignment.md) |  MAR 09   | TBD      |   n/a   |
+| [A1](assignments/01_assignment.md) |  FEB 03   | Internet Art: Materiality of the web     |   n/a   |
+| [A2](assignments/02_assignment.md) |  FEB 10   | Making & Breaking the Grid: Swiss Poster Design      |   n/a   |
+| [A3](assignments/03_assignment.md) |  FEB 24   | Dynamic Front-end Applications: Advanced Client-side JavaScript and Networking    |   n/a   |
+| [A4](assignments/04_assignment.md) |  MAR 02   | API Love You: Oh CRUD.   |   n/a   |
+| [A5](assignments/05_assignment.md) |  MAR 09   | The API of You: Living forever on the web      |   n/a   |
 | [FINAL PROJECT & PRESENTATION](assignments/06_final-project.md) |  MAR 23   | Final Project  |   n/a   |
 
 📨All Assignments should be submitted to your respective section:
@@ -116,13 +116,13 @@ In order to achieve these objectives, students will spend the semester building,
 
 ## Week 2: Front-end Foundations
 
-## Week 3: Back-end Foundations
+## Week 3: Front-end Applications
 
-## Week 4: Databases & Deployment
+## Week 4: Back-end Foundations
 
-## Week 5: Synthesis 1
+## Week 5: Data Persistence & Databases
 
-## Week 6: Synthesis 2
+## Week 6: Synthesis 
 
 ## Week 7: Final
 

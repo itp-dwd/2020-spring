@@ -1,3 +1,28 @@
+# Assignment 1: Internet Art - The Materiality of the Web
+
+## Briefing
+
+## Requirements
+
+## Submission
+
+**Details:**
+* Due Date: week 2 - Feb 3
+* Your assignment must be turned in BEFORE midnight on Sunday, the day before class, Feb 2.
+
+**📨All Assignments should be submitted to your respective section:**
+* Section 1:
+  * [Joey's Section - Assignment Submission Form](https://forms.gle/GkLsRM581kfyHg6W6)
+* Section 2:
+  * [Cassie's Section - Assignment Submission Form](https://forms.gle/pzxHjZtq1iP5WAyv9)
+
+
+***
+***
+***
+
+(ignore below here)
+
 # Assignment 1: Your first web server
 
 ## Briefing
