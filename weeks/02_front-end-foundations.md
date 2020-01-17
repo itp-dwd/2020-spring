@@ -71,34 +71,34 @@ Topics we are not covering, but are of importance:
 * Front End JavaScript Frameworks (React, Vue, Angular)
 
 
-# Topics
+## Topics
 
-## Part 1: Web Design(ing)
+### Part 1: Web Design(ing)
 
 * ↳[Web Design Process Guide](../guides/web-design-process.md)
 
-## Part 2: Front End Development & HTML5
+### Part 2: Front End Development & HTML5
 
-### The Browser
+#### The Browser
 
 > The browser your portal to exploring and building the web
 
 * ↳ [Browser Guide](../guides/browser-guide.md)
 
-### HTML
+#### HTML
 
 > HTML is the structure and content of the page
 
 * ↳ [HTML Guide](../guides/html-guide.md)
 
-### CSS
+#### CSS
 
 > Cassie's experience learning CSS: "CSS is poorly designed, but you learn a few hacks to make it work for you."
 
 * ↳ [CSS Guide](../guides/css-guide.md)
 
 
-### JavaScript
+#### JavaScript
 
 > Make your things interactive with JavaScript
 
@@ -106,7 +106,7 @@ Topics we are not covering, but are of importance:
 
 
 
-# Bibliography
+## Bibliography
 
 ## References
 <!-- Include any sources cited, but not directly linked in the unit. -->
