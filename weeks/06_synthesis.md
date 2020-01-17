@@ -1,3 +1,18 @@
+# Week 05: Synthesis 1
+
+<!-- 
+
+### Lecture
+* Sessions/Cookies, Authentication, Logins, HTTPS 
+* External APIs and network requests
+* Putting it all together
+
+### Studio
+### Assignment
+* Assignment 5
+* Deploy to Glitch
+* Note: Make sure you do not commit your API Keys to GitHub!!!
+
 # Week 06: Synthesis 2
 
 <!-- 
@@ -15,4 +30,5 @@
    * Source code (please cite your sources in the code comments)
 
 
+ -->
  -->
