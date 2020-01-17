@@ -142,20 +142,22 @@ Have you ever opened the "Terminal" application (or maybe "Windows Command Promp
 
 See the [command line guide](../guies/commandline.md) to get starting using the command line.
 
-
 #### Version Control
 When working on a piece of writing, it's common to make many drafts before settling on a final version. The same thing happens when you write software. Version control software keeps track of all of the changes you make, and stores them in a "ledger". It also helps you collaborate with other people—you can see the changes that you made, and ones that another person made. It's a pretty powerful tool, and invaluable when writing code.
 
 The most widely used version control software is **Git**. In this class we will be using git as a command line tool. See [git guide](../guides/git.md) for an in-depth guide to getting started with git.
 
-#### GitHub
-GitHub is a website for hosting and exploring source code. 
+#### Source Code Hosting
+[GitHub](https://github.com/) is a website for hosting and exploring source code. Many open source projects are hosted on this site, from [VSCode](https://github.com/microsoft/vscode) to [p5.js](https://github.com/processing/p5.js). We'll be using it in this class to host our code (and the git revision history) online. At first, we will use GitHub Desktop to push our **git repository** to GitHub, but mainly we will be using git from the command line.
 
-- Development tools are applications that you work with in order to create web applications. 
-- VSCode 
-- showing hidden files and folders
-- Command line (in VSCode vs Terminal application)
-- Git (why?)
+#### Deployment
+Once we're ready to make our web application public, we can deploy it. This is different from putting your code on GitHub, as this is a site for looking at the course code, versus the application that is created when the source code is executed. For this class we will be using [Glitch](https://glitch.com/) and later on [Heroku](https://www.heroku.com/).
+
+See the [guide to importing a git repository to Glitch](https://help-center.glitch.me/help/import-git/) for a guide to deployment.
+
+**NOTE**: Glitch is also an in browser code editor (like the [p5.js Web Editor](https://editor.p5js.org/)). However, for this class we will be writing all of our code locally, then pushing to GitHub, then importing your GitHub repository to Glitch.
+
+### Your first deployed website
 - HTML (using an index.html, linking to other files, using file urls)
 
 
