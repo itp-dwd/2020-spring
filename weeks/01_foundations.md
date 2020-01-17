@@ -137,6 +137,9 @@ A text editor is an application in which you can create and edit text files. It'
 
 In this class we will be using [VSCode](https://code.visualstudio.com/). It comes with a ton of features to make writing code easier, including tons of syntax highlighting and tons of extensions.
 
+**Introduction Guide**: [Code Academy's Getting Started with VSCode](https://www.codecademy.com/articles/visual-studio-code)
+**Intermediate Guide**: [Flavio Copes's A VSCode Tutorial](https://flaviocopes.com/vscode/)
+
 #### Command Line
 Have you ever opened the "Terminal" application (or maybe "Windows Command Prompt") on your computer? This is called a **command line interface**. You're probably used to interacting with your computer using its GUI (Graphical User Interface), made up of icons, windows, dropdown menus, and other visual components, which you use to perform actions on your computer. The command line is a different interface to your computer, in which you can only tell your computer what to do using text commands. Sometimes it can be frustrating to interact with your computer using the command line, but it gives you access to tools you can't use from the GUI. Many of the tools used to create web applications can only be used on the command line, therefore it's important to learn how to use it.
 
@@ -158,8 +161,50 @@ See the [guide to importing a git repository to Glitch](https://help-center.glit
 **NOTE**: Glitch is also an in browser code editor (like the [p5.js Web Editor](https://editor.p5js.org/)). However, for this class we will be writing all of our code locally, then pushing to GitHub, then importing your GitHub repository to Glitch.
 
 ### Your first deployed website
-- HTML (using an index.html, linking to other files, using file urls)
+Now we're going to walk through creating our first website from scratch!
 
+1. Create a new project folder and open it in VSCode. I have a folder in my home directory called "Development" where all of my code lives, but you can put it wherever works for you.
+```sh
+$ mkdir ~/Development/first-website
+$ cd ~/Development/first-website
+$ code .
+```
+**NOTE**: `code` opens VSCode from the command line. You may have to open VSCode and run "Shell Command: Install 'code' command in PATH".
+2. Create a new file and save it as `index.html`.
+3. Add the following content:
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>Welcome to My Homepage</h1>
+    <p>I hope you have a great day.</p>
+  </body>
+</html>
+```
+4. Save this and go back to your command line
+5. Serve your site locally by running
+```sh
+$ python -m SimpleHTTPServer
+```
+6. Test your site by navigating to http://localhost:8000
+![First Website Preview](../assets/first-website-preview.png)
+7. Initialize your git repository and commit your changes.
+```sh
+$ git init
+$ git add .
+$ git commit -m "Initial commit"
+```
+8. Use GitHub Desktop to push your repository to GitHub.
+![Gif Showing how to connect and push git repository](../assets/github_desktop.gif)
+9. Get your repository's URL
+![First Website GitHub](../assets/first-website-github.png)
+10. Create a "New Project" on Glitch from your git repository URL
+![Cloning git repo to Glitch gif](../assets/glitch_clone.gif)
+11. Click "Show" -> "In a New Window" and you're done!
+![Previewing Glitch project](../assets/glitch_show.gif)
 
 ### Web Development & Creative Practice
 - how do different people use web development as part of their careers?
