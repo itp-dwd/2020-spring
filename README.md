@@ -85,10 +85,10 @@ In order to achieve these objectives, students will spend the semester building,
 | :----         |  ----  | ---- | ---- |
 | [WEEK 01](weeks/01_foundations.md) |  JAN 27   | Web foundations      |   n/a   |
 | [WEEK 02](weeks/02_front-end-foundations.md) |  FEB 03   | Front-end Foundations      |   n/a   |
-| [WEEK 03](weeks/03_back-end-foundations.md) |  FEB 10   | Back-end Foundations      |   n/a   |
-| [WEEK 04](weeks/04_databases.md) |  FEB 24   | Databases & Deployment  |   n/a   |
-| [WEEK 05](weeks/05_synthesis-01.md) |  MAR 02   | Synthesis 1      |   n/a   |
-| [WEEK 06](weeks/06_synthesis-02.md) |  MAR 09   | Synthesis 2      |   n/a   |
+| [WEEK 03](weeks/03_front-end-applications.md) |  FEB 10   | Front-end Applications      |   n/a   |
+| [WEEK 04](weeks/04_back-end-foundations.md) |  FEB 24   | Back-end Foundations  |   n/a   |
+| [WEEK 05](weeks/05_databases.md) |  MAR 02   | Data Persistence & Databases     |   n/a   |
+| [WEEK 06](weeks/06_synthesis.md) |  MAR 09   | Synthesis     |   n/a   |
 | [WEEK 07](weeks/07_final.md) |  MAR 23   | Final Class    |   n/a   |
 
 ### Assignments
