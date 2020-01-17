@@ -7,6 +7,22 @@
 - [JavaScript Foundations](#javascript-foundations)
   - [Introduction: The Basics](#introduction-the-basics)
   - [Javascript Array Methods:](#javascript-array-methods)
+    - [Creation](#creation)
+      - [Creating a new Array: `new Array()`](#creating-a-new-array-new-array)
+      - [Creating a new Array: `[]`](#creating-a-new-array)
+    - [Looping Through Arrays](#looping-through-arrays)
+      - [A "classic" for loop:](#a-%22classic%22-for-loop)
+      - [The "For...Of" loop:](#the-%22forof%22-loop)
+      - [The forEach Loop: `.forEach( callback )`](#the-foreach-loop-foreach-callback)
+    - [Transforming Arrays](#transforming-arrays)
+      - [The map function: `.map( callback )`](#the-map-function-map-callback)
+      - [The filter function: `.filter( callback )`](#the-filter-function-filter-callback)
+      - [The reduce function: `.reduce( callback, ?initialValue )`](#the-reduce-function-reduce-callback-initialvalue)
+    - [Searching Arrays](#searching-arrays)
+      - [The indexOf function: `.indexOf()`](#the-indexof-function-indexof)
+      - [The find function: `.find()`](#the-find-function-find)
+    - [Other Helpful Array Functions](#other-helpful-array-functions)
+      - [`.fill()`](#fill)
   - [Javascript Object Methods:](#javascript-object-methods)
   - [Callbacks, Promises and Async/Await](#callbacks-promises-and-asyncawait)
   - [References: JavaScript Foundations](#references-javascript-foundations)
@@ -54,12 +70,304 @@ You can skip this section if the following topics are familiar or you have a gra
 7. ✅ [JavaScript Arrays](https://www.digitalocean.com/community/tutorials/understanding-arrays-in-javascript) and [Accessing data from JavaScript Arrays](https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-accessor-methods) and [Mutating JavaScript Arrays](https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-mutator-methods)
 8. ✅ [Defining Functions in JavaScript](https://www.digitalocean.com/community/tutorials/how-to-define-functions-in-javascript)
 9. ✅ [JavaScript Classes](https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript) and encapsulating functionality and data.
+10. ✅ Handling [Date and Time in JavaScript](https://www.taniarascia.com/understanding-date-and-time-in-javascript/) or at least being aware of dates in time in computer land.
 
-And a nice-to-know: [Date and Time in JavaScript](https://www.taniarascia.com/understanding-date-and-time-in-javascript/)
+NOTE: While different languages have different syntax for things, you can consider the above list of skills and awarenesses that are generally considered foundational. If you decide to explore other programming languages, you can consider creating your own list of these skills.
 
 ## Javascript Array Methods:
 
-TBD
+This is a primer on JavaScript Array methods that will become part of your JavaScript toolbox. JavaScript **Arrays and Objects** (which we will explore further in the next section) and knowing how to **create**, **read**, and **update** them are absolutely essential for frontend development. 
+
+### Creation
+
+In this section we take a quick look and review of the ways to create an array.
+
+#### Creating a new Array: `new Array()`
+> Creates an empty array
+```js
+const myArray = new Array()
+// console.log(myArray)
+// []
+```
+
+> Creates an array filled with X undefined positions
+```js
+const myArray = new Array(5)
+// console.log(myArray)
+// [undefined, undefined, undefined, undefined, undefined]
+```
+
+#### Creating a new Array: `[]`
+> you can also use the square braces to define and array
+
+```js
+const myArray = [];
+```
+
+> similarly you can define the values in that array
+
+```js
+const myArray = [1, 2, 3,4, 5];
+```
+
+
+### Looping Through Arrays
+
+In this section we take a look at how to loop through an array. We focus specifically on ways to looping through, and not ways of transforming them which we will see in the next section.
+
+
+#### A "classic" for loop:
+> If you've made it this far, you should know how to write "for" loops. 
+
+```js
+const myArray = ['rainbow', 'butterfly', 'cupcake']; 
+
+for(let i = 0; i < myArray.length; i++){
+  console.log(myArray[i])
+}
+```
+
+#### The "For...Of" loop: 
+> The "for...of" loop is a new-ish JavaScript feature that allows you to iterate through values and objects in an array.
+
+```js
+const myArray = ['rainbow', 'butterfly', 'cupcake']; 
+
+for(val of myArray){
+  console.log(val);
+}
+```
+
+
+#### The forEach Loop: `.forEach( callback )`
+> The `.forEach()` function allows you to iterate through all the values or objects in an array.
+
+**where** your `callback(value, ?index, ?array)`:
+
+* value: the value or object in that position of the interation
+* ?index (optional): the index position at that point in the loop iteration
+* ?array (optional): the reference to the array being iterated.
+
+**Option 1: forEach loop with only the `value` specified for iteration**
+
+```js
+const myArray = ['rainbow', 'butterfly', 'cupcake'];
+
+myArray.forEach( item => {
+  console.log(item);
+});
+```
+
+**Option 2: forEach loop with the `value` AND `index` specified for iteration**
+
+```js
+const myArray = ['rainbow', 'butterfly', 'cupcake'];
+
+myArray.forEach( (item, idx) => {
+  console.log( `Index position: ${idx}, for value: ${item}`)
+});
+```
+
+**Option 3: forEach loop with the `value`, `index`, AND `array` specified for iteration**
+
+```js
+const myArray = ['rainbow', 'butterfly', 'cupcake'];
+
+myArray.forEach( (item, idx, arr) => {
+  console.log( `Index position: ${idx}, for value: ${item}, and the value referenced from the array object is: ${arr[idx]}`)
+});
+```
+
+### Transforming Arrays
+
+In this section we will focus on 
+
+#### The map function: `.map( callback )`
+> The map function is probably one of the most commonly used array functions. It is used to **create an array of new values based on an existing array**. The `.map()` function will go through each value or object in an array and expects you to `return` a value for each iteration.
+
+**where** your `callback(value, ?index, ?array)`:
+
+* value: the value or object in that position of the interation
+* ?index (optional): the index position at that point in the loop iteration
+* ?array (optional): the reference to the array being iterated.
+
+```js
+const myArray = ['rainbows', 'butterflies', 'cupcakes'];
+
+const myNewArray = myArray.map( item => {
+  return `I love ${item}`
+})
+
+console.log(myNewArray); // ['I love rainbows', 'I love butterflies', 'I love cupcakes']
+```
+Notice how we `return` a new string in each iteration of the loop. Our `myNewArray` variable now contains the values from the `myArray` array, but with the addition of `I love ...` concatenated with those strings.
+
+#### The filter function: `.filter( callback )`
+> The filter function is another commonly used array function used to return a new array based on conditions that filter out values from the source array.
+> 
+> The values that are returned from the `.filter()` method are those that evaluate to `true`. 
+
+**where** your `callback(value, ?index, ?array)`:
+
+* value: the value or object in that position of the interation
+* ?index (optional): the index position at that point in the loop iteration
+* ?array (optional): the reference to the array being iterated.
+
+```js
+const myArray = ['rainbows', 'butterflies', 'cupcakes'];
+
+// Return any value that DOES NOT EQUAL 'butterflies'
+const myNewArray = myArray.filter( item => {
+  return item !== 'butterflies'
+})
+
+console.log(myNewArray); // [ 'rainbows', 'cupcakes']
+```
+
+A common use case is to filter out objects in an array like so:
+
+```js
+const myArray = [
+  {name: 'Joey', role:'instructor'},
+  {name: 'Cassie': role:'instructor'},
+  {name: 'Winnie', role: 'student'}
+];
+
+// Return any object where the role is 'instructor'
+const myNewArray = myArray.filter( item => {
+  return item.role === 'instructor'
+})
+
+console.log(myNewArray); // [ {name: 'Joey' ,role:'instructor'}, {name: 'Cassie': role:'instructor'}]
+```
+
+#### The reduce function: `.reduce( callback, ?initialValue )`
+> To be honest, the reduce function is conceptually the most challenging and as a result, is not used as often as it probably could be. However, knowing about the reduce function doesn't hurt and may come in handy for a coding interview or for certain tasks. Most likely you'll be able to achieve what you're going for without the use of `.reduce()` but there are times when the reduce function makes the most sense.
+
+
+...**where** your `callback(accumulator, currentValue, ?index, ?array)`:
+
+* accumulator: the value or object that is passed through each iteration and "accumulates" the results of the previous iterations.
+* currentValue: the value or object in that position of the interation
+* ?index (optional): the index position at that point in the loop iteration
+* ?array (optional): the reference to the array being iterated.
+  
+...and your `?initialValue` is an optional value with which you can start accumulating on. This could be a value or an object.
+
+
+
+**Example 1: Simple reduction of text in an array WITHOUT an initial value**
+```js
+const myArray = [ "I", "Love", "You"]
+
+const myNewObject = myArray.reduce( (accumulator, currentValue) => {
+  return accumulator + " " + currentValue
+})
+
+console.log(myNewObject); // "I Love You"
+```
+
+**Example 1.1: Simple reduction of text in an array WITHOUT an initial value**
+```js
+const myArray = [ "I", "Love", "You"]
+
+const myNewObject = myArray.reduce( (accumulator, currentValue) => {
+  return accumulator + " " + currentValue
+}, "Joey")
+
+console.log(myNewObject); // "Joey I Love You"
+```
+
+**Example 2: Simple reduction of numbers to total the array values in an array**
+```js
+const myArray = [ 1, 2, 3]
+
+const total = myArray.reduce( (accumulator, currentValue) => {
+  return accumulator + currentValue
+})
+
+console.log(total); // 6
+```
+
+**Example 3: Reduce an array of objects to an array of specified values**
+```js
+const myArray = [ {gift:'bike'}, {gift:'dog'}, {gift:'color pencils'} ]
+
+const wishList = myArray.reduce( (accumulator, currentValue, idx) => {
+  accumulator[idx] = currentValue.gift
+  return accumulator
+}, [])
+
+console.log(wishList); // [ 'bike', 'dog', 'color pencils' ]
+```
+
+**Example 4: Reduce an array of objects to an object of key, value pairs**
+```js
+const myArray = [ {gift:'bike', price:'350'}, {gift:'dog', price:'0'}, {gift:'color pencils', price:'15'} ]
+
+const wishList = myArray.reduce( (accumulator, currentValue) => {
+  accumulator[currentValue.gift] = currentValue.price;
+  return accumulator
+}, {})
+
+console.log(wishList); // { bike: '350', dog: '0', 'color pencils': '15' }
+```
+
+
+
+
+### Searching Arrays
+
+#### The indexOf function: `.indexOf()`
+> "The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present." - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+
+Sometimes you need to know *where* a value lives within an array. TBD on why this is helpful (TODO)
+
+```js
+const myArray = ['rainbows', 'butterflies', 'cupcakes'];
+
+// Return the index position of the "cupcakes"
+const cupcakesPosition = myArray.indexOf('cupcakes')
+
+console.log(cupcakesPosition); // 2
+```
+
+Similarly see: [`MDN Docs for .findIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+
+
+
+#### The find function: `.find()`
+> "The find() method returns the value of the first element in the provided array that satisfies the provided testing function." - [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+
+Sometimes you want to extract out a value or object from an array. This is useful, for example, if you are requesting data from an API about, let's say weather data, and you want to find a specific object pertaining to a city e.g. "Brookyln". Or in the example below, maybe you want to get the first instance of an object where `role:student` evaluates to true.
+
+```js
+const myArray = [
+  {name: 'Joey', role:'instructor'},
+  {name: 'Cassie': role:'instructor'},
+  {name: 'Winnie', role: 'student'},
+  {name: 'Billie', role: 'student'}
+];
+
+// Return the first object where the role is 'student'
+const myFirstStudent = myArray.find( item => {
+  return item.role === 'student'
+})
+
+console.log(myFirstStudent); // {name: 'Winnie', role: 'student'}
+```
+
+
+### Other Helpful Array Functions
+
+#### `.fill()`
+> fills an array with a given value
+
+```js
+const myArray = new Arr
+const myArray = .fill()
+```
+
 
 * [JavaScript Iteration Methods](https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-iteration-methods)
 
