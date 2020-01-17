@@ -3,8 +3,11 @@
 ## Table of Contents
 - [The HTML Guide](#the-html-guide)
   - [Table of Contents](#table-of-contents)
+  - [Tags and their attributes](#tags-and-their-attributes)
   - [Syntax](#syntax)
   - [Structure](#structure)
+
+## Tags and their attributes
 
 At the most basic level, you can think of HTML as the **content** and **structure** of your user/client facing web page. 
 
