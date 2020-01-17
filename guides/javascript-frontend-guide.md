@@ -78,7 +78,7 @@ TBD
 * [Coding Train: Async/Await -- Part 2](https://www.youtube.com/watch?v=chavThlNz3s)
 * [Coding Train: Async/Await -- Part 3](https://www.youtube.com/watch?v=01RTj1MWec0)
 * [Async/Await](https://javascript.info/async-await)
-* [Modern Aync JS](https://flaviocopes.com/javascript-async-await/)
+* [Modern Async JS](https://flaviocopes.com/javascript-async-await/)
 * [Promise.all and handling multiple async functions](https://www.taniarascia.com/promise-all-with-async-await/)
 
 
@@ -160,7 +160,7 @@ xhr.send(null);
 ```
 * you can see that the `xhr.readyState` has a few specific numbers, lets take a look at what they mean here in the reference on [MDN's guide to the XMLHttpRequest.readyState](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState). As written in the post the `.readyState` value of `4` means that the operation is complete! 
 
-If you copy and paste the above code ito your javascript console, you should see:
+If you copy and paste the above code to your javascript console, you should see:
 
 ```json
 {"categories":[],"created_at":"2020-01-05 13:42:22.701402","icon_url":"https://assets.chucknorris.host/img/avatar/chuck-norris.png","id":"InbZFgfnQJa_vXsmIS6CeQ","updated_at":"2020-01-05 13:42:22.701402","url":"https://api.chucknorris.io/jokes/InbZFgfnQJa_vXsmIS6CeQ","value":"Particle physicists have finally developed a new atom smasher. It is called Chuck Norris's fist."}
@@ -168,7 +168,7 @@ If you copy and paste the above code ito your javascript console, you should see
 
 ![](../assets/js__xhr-01.png)
 
-Notice, it took us several dozens of lines of code to make a simple GET request. Lucky for us the **fetch API** provices and easier way to network with the outside world.
+Notice, it took us several dozens of lines of code to make a simple GET request. Lucky for us the **fetch API** provides and easier way to network with the outside world.
 
 For more information, see [Flavio Copes's post on XHR](https://flaviocopes.com/xhr/)
 
@@ -223,7 +223,7 @@ Below is a (non-exhaustive) list, that you can explore deeper on your frontend d
 * Networking:
   * [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
   * [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-  * [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+  * [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
   * [web sockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
   * [Stream API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API)
   * [webRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
