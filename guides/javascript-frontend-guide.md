@@ -28,7 +28,11 @@
     - [The `Object.keys()` method](#the-objectkeys-method)
     - [The `Object.values()` method](#the-objectvalues-method)
     - [The `Object.entries()` method](#the-objectentries-method)
-    - [This, `bind`, `call`, and `apply` in JS](#this-bind-call-and-apply-in-js)
+  - [JavaScript Scope: A world of functions and scope - Unpacking `this`, `bind`, `apply` and `call`](#javascript-scope-a-world-of-functions-and-scope---unpacking-this-bind-apply-and-call)
+    - [This `this` keyword and implicit context](#this-this-keyword-and-implicit-context)
+    - [Explicitly setting the context of `this`:](#explicitly-setting-the-context-of-this)
+      - [The `.call()` and `.apply()` function methods](#the-call-and-apply-function-methods)
+      - [The `.bind()` function method](#the-bind-function-method)
     - [Reference: JavaScript Object Methods](#reference-javascript-object-methods)
   - [Callbacks, Promises and Async/Await](#callbacks-promises-and-asyncawait)
   - [References: JavaScript Foundations](#references-javascript-foundations)
@@ -437,8 +441,26 @@ console.log(myEntries);
 */
 ```
 
+## JavaScript Scope: A world of functions and scope - Unpacking `this`, `bind`, `apply` and `call`
+> A secret to JavaScript mastery is keeping track of  what `this` is referring to. Is it referring to where you think `this` is referring to? Is it within the function you're calling? Is it referring to the browser? In your JavaScript journey, you'll see that where `this` is referring to can make or break your code!
+> 
+> This section is dedicated to unpacking the `apply`, `bind`, `call` methods to specify where `this` is referring to.
 
-### This, `bind`, `call`, and `apply` in JS
+To be honest, this blog post on [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript) is excellent and does a great job explaining how to consider JavaScript Context and how to address it with those methods.
+
+### This `this` keyword and implicit context
+
+TBD
+
+### Explicitly setting the context of `this`:
+
+TBD
+
+#### The `.call()` and `.apply()` function methods
+
+TBD
+
+#### The `.bind()` function method
 
 TBD
 
