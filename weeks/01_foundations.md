@@ -206,6 +206,9 @@ $ git commit -m "Initial commit"
 11. Click "Show" -> "In a New Window" and you're done!
 ![Previewing Glitch project](../assets/glitch_show.gif)
 
+### HTML
+* ↳ [HTML Guide](../guides/html-guide.md)
+
 ### Web Development & Creative Practice
 - how do different people use web development as part of their careers?
 - guest speakers??

@@ -41,7 +41,7 @@ Here you will:
 
 * you must use BEM conventions to apply CSS classes
 
-### Part 3: Deploymnet
+### Part 3: Deployment
 Your website will be served using a static web server on **Glitch** and will be pulled from a remote Github repository. You will need to practice good git tracking and connect your local git repository to a remote Github Repository. 
 
 You can copy the code from Assignment `01` from last week and put your static HTML, CSS, and JavaScript files into the correct directories. 
