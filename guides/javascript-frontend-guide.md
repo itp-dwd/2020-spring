@@ -531,7 +531,7 @@ TBD
 * [Async/Await](https://javascript.info/async-await)
 * [Modern Async JS](https://flaviocopes.com/javascript-async-await/)
 * [Promise.all and handling multiple async functions](https://www.taniarascia.com/promise-all-with-async-await/)
-
+* [How to promisify an ajax call](https://www.taniarascia.com/how-to-promisify-an-ajax-call/)
 
 ## References: JavaScript Foundations
 * [How to Code in JavaScript](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript)
