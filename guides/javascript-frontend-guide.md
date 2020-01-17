@@ -629,6 +629,39 @@ For more information, see [Flavio Copes's post on XHR](https://flaviocopes.com/x
 
 TBD
 
+Fetch with promises:
+```js
+const url = ""
+fetch(url)
+  .then(result => {
+    return result.json()
+  })
+  .then(result => {
+    console.log(result);
+  })
+  .catch(err => {
+    return err;
+  })
+```
+
+Fetch with async/await:
+```js
+const specialUrl = ""
+// define a custom function to wrap your await
+async function mySpecialRequest(url){
+  try{
+    const data = await fetch(url);
+    const result = await data.json();
+
+    console.log(result);
+  } catch(err){
+    return err;
+  }  
+}
+// call your function
+mySpecialRequest(specialUrl)
+```
+
 ### Fetch with options: GET, POST, PUT, DELETE
 
 TBD
