@@ -6,6 +6,9 @@
 * **Web browser** (chrome or firefox preferred, but safari is ok): as a developer, you should be testing with multiple browsers! Please make sure to have both Chrome and Firefox at least.
   * [Chrome Download](https://www.google.com/chrome/)
   * [Firefox Download](https://www.mozilla.org/en-US/firefox/new/)
+* **Command Line Interface**
+  * On Mac, this is your "Terminal" application.
+  * On Windows, you must set up [Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2)
 * **GitHub Account**:
   * [Sign up with Github.com](https://github.com/)
   * [Student Developer Pack](https://education.github.com/pack)
