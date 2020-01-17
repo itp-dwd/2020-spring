@@ -35,6 +35,10 @@
       - [The `.bind()` function method](#the-bind-function-method)
     - [Reference: JavaScript Object Methods](#reference-javascript-object-methods)
   - [Callbacks, Promises and Async/Await](#callbacks-promises-and-asyncawait)
+    - [Async: Callbacks - the joys and pains of Callbacks](#async-callbacks---the-joys-and-pains-of-callbacks)
+    - [Async: Promises - I promise when I'm done, I'll do whatever you want me to do...](#async-promises---i-promise-when-im-done-ill-do-whatever-you-want-me-to-do)
+    - [Async: Async/Await - Finally asynchronous JavaScript is more readable!](#async-asyncawait---finally-asynchronous-javascript-is-more-readable)
+    - [Reference: Callbacks, Promises, and Async/Await](#reference-callbacks-promises-and-asyncawait)
   - [References: JavaScript Foundations](#references-javascript-foundations)
 - [JavaScript and the DOM](#javascript-and-the-dom)
   - [References: JavaScript and the DOM](#references-javascript-and-the-dom)
@@ -457,10 +461,12 @@ TBD
 TBD
 
 #### The `.call()` and `.apply()` function methods
+> These are one-time use that set the context of `this` per function call.
 
 TBD
 
 #### The `.bind()` function method
+> bind sets the context of `this` to another context. 
 
 TBD
 
@@ -470,8 +476,55 @@ TBD
 
 ## Callbacks, Promises and Async/Await
 
+Much of JavaScript has been design to run asynchonously, meaning that JavaScript is designed to be "non blocking". When a function is fired, it doesn't block the rest of your code until it is finished, but rather will continue to allow the rest of your program to run in the meantime. Making network requests an example of this -- e.g. while your email client is fetching your emails, you can still click around, open sub menus, etc instead of locking up your page.
+
+### Async: Callbacks - the joys and pains of Callbacks
+
+In asynchronous JavaScript, the data or the results from asynchronous functions are passed to a callback function. Callback functions are functions that are defined by you, the programmer, to handle the results of an asynchronous function as you see fit. 
+
+Sometimes it is not possible to avoid using callback functions. Deeply nested callbacks can be a nightmare as communicated in the [Callback Hell Blogpost](http://callbackhell.com/). 
+
+You might be familiar with a callback function that looks like the following. This is an example of an imaginary asynchronous image classification function that takes and image, runs it through an image classification algorithm, and takes an [error first callback function](http://thenodeway.io/posts/understanding-error-first-callbacks/) that passes the results of the image classification as `results` on to the callback. If not error is found, then the results are printed to the console.
+
+```js
+imageClassifier.classify( "MrBubz.jpg", (error, results) => {
+  if(error){
+    console.log(error)
+    return
+  }
+  console.log(results); // dog
+})
+```
+
+It can also be written like this:
+
+```js
+imageClassifier.classify( "MrBubz.jpg", handleResults);
+
+function handleResults( error, results) {
+  if(error){
+    console.log(error)
+    return
+  }
+  console.log(results); // dog
+}
+```
+
+If you're unable to use Promises or Async/Await to keep your code from entering Callback Hell, there are strategies to keeping your code clean such as keeping your code shallow or modularizing. 
+
+However, in recent years, JavaScript has incorporated support for what are known as JavaScript Promises which we will discuss in the next section that help in keeping asynchronous JavaScript code cleaner and more readable. 
+
+We will look at JavaScript Promises in the following sections and their even more friendly syntax `Async/Await`
+
+### Async: Promises - I promise when I'm done, I'll do whatever you want me to do...
+
 TBD
 
+### Async: Async/Await - Finally asynchronous JavaScript is more readable!
+
+TBD
+
+### Reference: Callbacks, Promises, and Async/Await
 * [Coding Train: Async/Await -- Part 1](https://www.youtube.com/watch?v=XO77Fib9tSI)
 * [Coding Train: Async/Await -- Part 2](https://www.youtube.com/watch?v=chavThlNz3s)
 * [Coding Train: Async/Await -- Part 3](https://www.youtube.com/watch?v=01RTj1MWec0)
