@@ -23,7 +23,13 @@
       - [The find function: `.find()`](#the-find-function-find)
     - [Other Helpful Array Functions](#other-helpful-array-functions)
       - [`.fill()`](#fill)
+    - [Reference: JavaScript Array Iteration Methods](#reference-javascript-array-iteration-methods)
   - [Javascript Object Methods:](#javascript-object-methods)
+    - [The `Object.keys()` method](#the-objectkeys-method)
+    - [The `Object.values()` method](#the-objectvalues-method)
+    - [The `Object.entries()` method](#the-objectentries-method)
+    - [This, `bind`, `call`, and `apply` in JS](#this-bind-call-and-apply-in-js)
+    - [Reference: JavaScript Object Methods](#reference-javascript-object-methods)
   - [Callbacks, Promises and Async/Await](#callbacks-promises-and-asyncawait)
   - [References: JavaScript Foundations](#references-javascript-foundations)
 - [JavaScript and the DOM](#javascript-and-the-dom)
@@ -267,15 +273,15 @@ const myNewObject = myArray.reduce( (accumulator, currentValue) => {
 console.log(myNewObject); // "I Love You"
 ```
 
-**Example 1.1: Simple reduction of text in an array WITHOUT an initial value**
+**Example 1.1: Simple reduction of text in an array WITH an initial value**
 ```js
 const myArray = [ "I", "Love", "You"]
 
 const myNewObject = myArray.reduce( (accumulator, currentValue) => {
   return accumulator + " " + currentValue
-}, "Joey")
+}, "New York,")
 
-console.log(myNewObject); // "Joey I Love You"
+console.log(myNewObject); // "New York, I Love You"
 ```
 
 **Example 2: Simple reduction of numbers to total the array values in an array**
@@ -313,10 +319,11 @@ const wishList = myArray.reduce( (accumulator, currentValue) => {
 console.log(wishList); // { bike: '350', dog: '0', 'color pencils': '15' }
 ```
 
-
-
+The best way to getting comfortable with `.reduce()` is to try using it in practice.
 
 ### Searching Arrays
+
+Sometimes you just want to know if a value or object exists in your array. Below are some of the ways of checking and retrieving values or objects from an array.
 
 #### The indexOf function: `.indexOf()`
 > "The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present." - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
@@ -360,21 +367,82 @@ console.log(myFirstStudent); // {name: 'Winnie', role: 'student'}
 
 ### Other Helpful Array Functions
 
+As you can see there are a zillion array functions and tons we didn't cover. For a more comprehensive list, see: [The Front-end Roadmap -- JavaScript Array Methods](https://github.com/itp-dwd/2020-spring/wiki/Front-end-Roadmap)
+
 #### `.fill()`
 > fills an array with a given value
 
 ```js
-const myArray = new Arr
-const myArray = .fill()
+const myArray = new Array(3);
+const myHeartArray = myArray.fill("❤️");
+console.log(myHeartArray); // ["❤️", "❤️", "❤️"]
 ```
 
-
+### Reference: JavaScript Array Iteration Methods
 * [JavaScript Iteration Methods](https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-iteration-methods)
 
 ## Javascript Object Methods:
 
+Everything is an Object in JavaScript! But not all Objects are the same. In this section we discuss JSON Objects that are structured as key/value pairs and how to get at your data living within an Object.
+
+### The `Object.keys()` method
+> You can get back all the keys as an array by calling `Object.keys(yourObject)` on an object.
+
+```js
+const myObject = {
+  streetAddress: "370 Jay Street",
+  city: "Brooklyn",
+  state: "New York",
+  coordinates: [40.693, -73.987]
+}
+const myKeys = Object.keys(myObject)
+console.log(myKeys);
+// [ 'streetAddress', 'city', 'state', 'coordinates' ]
+```
+
+### The `Object.values()` method
+> You can get back all the values as an array by calling `Object.values(yourObject)` on an object.
+
+```js
+const myObject = {
+  streetAddress: "370 Jay Street",
+  city: "Brooklyn",
+  state: "New York",
+  coordinates: [40.693, -73.987]
+}
+const myValues = Object.values(myObject);
+console.log(myValues);
+// [ '370 Jay Street', 'Brooklyn', 'New York', [ 40.693, -73.987 ] ]
+```
+
+### The `Object.entries()` method
+> You can get back an array of arrays that contains `[[yourKey, yourValue], [yourKey, yourValue], [yourKey, yourValue] ]` based on an object.
+
+```js
+const myObject = {
+  streetAddress: "370 Jay Street",
+  city: "Brooklyn",
+  state: "New York",
+  coordinates: [40.693, -73.987]
+}
+const myEntries = Object.entries(myObject);
+console.log(myEntries);
+/*
+[ 
+  [ 'streetAddress', '370 Jay Street' ],
+  [ 'city', 'Brooklyn' ],
+  [ 'state', 'New York' ],
+  [ 'coordinates', [ 40.693, -73.987 ] ] 
+]
+*/
+```
+
+
+### This, `bind`, `call`, and `apply` in JS
+
 TBD
 
+### Reference: JavaScript Object Methods
 * [Using JavaScript Object Methods](https://www.digitalocean.com/community/tutorials/how-to-use-object-methods-in-javascript)
 * [This, bind, call, and apply in JS](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript)
 
