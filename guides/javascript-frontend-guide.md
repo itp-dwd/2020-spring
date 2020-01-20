@@ -656,7 +656,64 @@ You can also construct promises on your own in the case that the asynchronous fu
 
 ### Constructing promises
 
+You can construct promises from asynchronous functions. Occasionally you might have to do this in the case that the API or function you're using does not support promises out of the box. 
 
+To do this, let's take an example of a function that we'll call `loadImage()` that you might have seen in p5.js to load images into your program. What it does is take the **path** to an image, and allows you to use a p5Image object once it has finished loading and passes it to the callback. 
+
+A typical use would look like htis:
+
+```js
+function setup() {
+  createCanvas(400, 400);
+  loadImage('MrBubz.jpg',  img => {
+    image(img, 0,0, 200, 200)
+  })
+}
+```
+
+If we wanted to **promisify** the loadImage() function, we could do something like this:
+
+```js
+function loadImageWithPromise(imageUrl) {
+    return new Promise( (resolve, reject) => {
+      loadImage(imageUrl, img => {    
+      if(img){
+        resolve(img)  
+      } else {
+       reject("image not loading") 
+      }
+    })
+  })
+}
+
+function setup() {
+  createCanvas(400, 400);
+  
+  // with the default loadImage function
+  loadImage('MrBubz.jpg',  img => {
+    image(img, 0,0, 200, 200)
+  })
+  
+  // with our custom promisified version
+  loadImageWithPromise('MrBubz.jpg')
+    .then(result => {
+      image(result, 200, 200, 200, 200);
+    })
+  .catch(err => {
+    console.error(err);
+    return err;
+    })
+}
+```
+
+Notice a few things here:
+
+1. our custom `loadImageWithPromise()` returns a `new Promise()`. 
+2. Our `new Promise()` takes a callback function with two arguments `resolve` or `reject`. 
+3. within the callback function of our `new Promise()` we put in the function we want to "promisify"
+4. We use our `loadImage()` function as usual, BUT instead of drawing the image as we might normally, we **wrap the `img` result in** the `resolve()` function which is what will get passed to `.then()`. 
+
+You can see a working demo here: [Creating a promisified function](https://editor.p5js.org/joeyklee/sketches/qHbnGHrPx)
 
 
 #### Promise chaining `.then()` and `.then()` and `.then()` ...
@@ -707,7 +764,99 @@ There once was a planet named...Tatooine On that planet, there was someone named
 
 ### Async: Async/Await - Finally asynchronous JavaScript is more readable!
 
-TBD
+So we've just seen how promises can clean up our code and improve the readability of our asynchronous JavaScript. Lucky for us, there is now an even cleaner syntax that is becoming the standard for handling asynchronous JavaScript. This syntax is commonly referred to as `async/await`. 
+
+`Async/await` allows you to use the `await` keyword in a `async function()` to mirror what a promise chain would do with `.then()`. Here's what that means:
+
+```js
+const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+const starWarsAPI = "https://swapi.co/api/"
+
+// define the async function
+async function myStoryGenerator(){
+  // async function 1
+  let planet = await fetch(starWarsAPI + "planets/1")
+  planet = await planet.json();
+   // async function 2
+  let person = await fetch(planet.residents[0])
+  person = await person.json();
+   // async function 3
+  let quote = await fetch(ronSwansonAPI)
+  quote = await quote.json();
+
+  const randomStory = `There once was a planet named...${planet.name}. On that planet, there was someone named... ${person.name} who loved to say...${quote[0]}`
+
+  console.log(randomStory);
+
+  return randomStory
+}
+
+// call the function
+myStoryGenerator();
+```
+
+As you can see, our code become much more readable. We can read our code from top to bottom with the `await` keyword indicating that the function being called is asynchronous. 
+
+How might we handle errors here you might ask? Well, lucky for us we can add waht is called the `try...catch` block like so:
+
+
+```js
+const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+const starWarsAPI = "https://swapi.co/api/"
+
+// define the async function
+async function myStoryGenerator(){
+  try{
+     // async function 1
+     let planet = await fetch(starWarsAPI + "planets/1")
+     planet = await planet.json();
+      // async function 2
+     let person = await fetch(planet.residents[0])
+     person = await person.json();
+      // async function 3
+     let quote = await fetch(ronSwansonAPI)
+     quote = await quote.json();
+
+     const randomStory = `There once was a planet named...${planet.name}. On that planet, there was someone named... ${person.name} who loved to say...${quote[0]}`
+
+     console.log(randomStory);
+
+     return randomStory
+  } catch(err){
+    console.error(err);
+    throw new Error(err);
+  }
+  
+}
+
+// call the function
+myStoryGenerator();
+```
+
+What the `try...catch` block does is to try and evaluate everything within the `try` block. If an error arises, then the error gets sent to the `catch` block. We can then handle the error in the `catch` block as we see fit.
+
+Another example you might see a `async/await` function is making asynchronous calls on an event. 
+
+Let's take the case of a button that makes an async call to the `ronSwansonAPI`. Now whenever that button is clicked, a new quote will appear:
+
+```html
+<button id="myButton">Generate Quote</button>
+  <p id="quote"></p>
+  <script>
+    const quoteP = document.querySelector('#quote');
+    const button = document.querySelector('#myButton');
+    button.addEventListener('click', handleClick);
+
+    async function handleClick() {
+      const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+      let quote = await fetch(ronSwansonAPI)
+      quote = await quote.json();
+      quoteP.textContent = quote[0]
+    }
+  </script>
+```
+
+You can see a working demo here: [Async/await demo on button click](https://editor.p5js.org/joeyklee/sketches/WNQVt_zfH)
 
 ### Reference: Callbacks, Promises, and Async/Await
 * [Coding Train: Async/Await -- Part 1](https://www.youtube.com/watch?v=XO77Fib9tSI)
