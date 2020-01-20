@@ -1137,7 +1137,17 @@ In case you're worried about cross-browser and legacy support, it might be worth
 
 ## CORs: Cross origin Resource Sharing
 
-TBD
+CORs - Cross origin resource sharing - is a network security protocol that is set as a standard for ensuring that resources be shared only if they are coming from the same domain. This is the standard way that networking between clients and servers works and often times creates issues when you're trying to communicate with a third-party API from the browser. 
+
+In this blog post, [Flavio Copes explains what CORs is](https://flaviocopes.com/cors/). In your previous JavaScript experience coding in P5, you might have experienced CORs issues trying to communicate with another data API e.g. getting weather data or communicating with the International Space Station API. 
+
+It is important to note that if you are trying to communicate with another 3rd-party API OR your own API and your client is not being served from the same domain, you will either have to:
+1. for communication with a 3rd party API that is blocking CORs: set up your own server to retrieve data from that 3rd party API to be sent to your client 
+2. for communication with your own API: you'll need to enable cors for the API routes you want your client to be able to get data from.
+
+You can read more in this blog post by [Flavio Copes where he explains what CORs is](https://flaviocopes.com/cors/).
+
+
 
 ## References: JavaScript and APIs 
 * https://www.taniarascia.com/how-to-use-the-javascript-fetch-api-to-get-json-data/
