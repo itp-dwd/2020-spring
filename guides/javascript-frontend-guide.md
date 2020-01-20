@@ -46,7 +46,10 @@
   - [References: JavaScript Foundations](#references-javascript-foundations)
 - [JavaScript and the DOM](#javascript-and-the-dom)
     - [Selecting DOM elements](#selecting-dom-elements)
-    - [Updating styles & adding/removing CSS classes](#updating-styles--addingremoving-css-classes)
+    - [Updating the dom: styles & adding/removing CSS classes](#updating-the-dom-styles--addingremoving-css-classes)
+      - [Updating the content of a DOM selection](#updating-the-content-of-a-dom-selection)
+        - [Selected Demos](#selected-demos)
+      - [Updating the style of a DOM element](#updating-the-style-of-a-dom-element)
     - [Event Listeners](#event-listeners)
   - [References: JavaScript and the DOM](#references-javascript-and-the-dom)
 - [JavaScript Networking, AJAX, talking to APIs, and CORs](#javascript-networking-ajax-talking-to-apis-and-cors)
@@ -904,15 +907,188 @@ Let's begin applying our JavaScript knowledge in relation to interacting to DOM.
 
 ### Selecting DOM elements
 
-TBD
+JavaScript in HTML5 is infuses web sites with interactivity. Using the browser's `document` object, you can use JavaScript in the browser to select elements living on the DOM to update styles, handle form submission, add event listeners, and much more. 
 
-### Updating styles & adding/removing CSS classes
+If you want to brush up on terminology, you should read:
+* [Introduction to the DOM](https://www.taniarascia.com/introduction-to-the-dom/)
+* [Understanding the DOM Tree and Nodes](https://www.taniarascia.com/understanding-the-dom-tree-and-nodes/)
 
-TBD
+What we're going to discuss in this section is how to access elements in the DOM and how to traverse the DOM tree:
+* [How to access elements in the DOM](https://www.taniarascia.com/how-to-access-elements-in-the-dom/)
+* [How to traverse the DOM](https://www.taniarascia.com/how-to-traverse-the-dom/)
+
+As noted in [How to access elements in the DOM](https://www.taniarascia.com/how-to-access-elements-in-the-dom/), there are 3 types of selectors -- css id, css class, the name of the tag -- and 5 methods to select those elements based on those selectors.
+
+Gets 	| Selector Syntax 	| Method
+| :--- | --- | --- |
+| ID 	| #demo 	| `document.getElementById()`
+| Class 	| .demo 	| `document.getElementsByClassName()`
+| Tag 	| demo 	| `document.getElementsByTagName()`
+| Selector (single)|  		| `document.querySelector()`
+| Selector (all)|  		| `document.querySelectorAll()`
+
+Important to note that when using these selectors, the number of elements that you're attempting to select matters and will determine if you need to loop through a group of selected elements or just apply your changes to 1 element.
+
+Here's an example that updates the background and border colors color 
+```html
+<div id="demo">
+  <p class="paragraph">1</p>
+  <p class="paragraph">2</p>
+  <p class="paragraph paragraph--border-red">3</p>
+</div>
+
+<script>
+const $demo = document.getElementById("demo");
+$demo.style.backgroundColor = 'black';
+
+const $paragraphs = document.querySelectorAll(".paragraph");
+// looping through each paragraph to apply an orange background
+$paragraphs.forEach(item => {
+  item.style.backgroundColor = 'orange';
+})
+
+const $pRed = document.querySelector(".paragraph--border-red");
+
+$pRed.style.border = '1px solid red';
+
+</script>
+```
+
+See a working demo here: [JS selectors demo](https://editor.p5js.org/joeyklee/sketches/nVMfhYzrS)
+
+### Updating the dom: styles & adding/removing CSS classes
+
+We just saw above how we can:
+1. select DOM elements with JavaScript and 
+2. use the selection as stored in a variable to update their CSS styles. 
+
+In this section we are going to look how to:
+1. Update the content of a DOM element
+2. Change the style of a DOM element(s) based on the addition or removal of a CSS class.
+
+#### Updating the content of a DOM selection
+
+You can update the content of a DOM selection in a number of ways. 
+
+As written in [How to Make Changes to the DOM ](https://www.taniarascia.com/how-to-make-changes-to-the-dom/), we can **create**, **insert**, and **remove** nodes from the DOM. The methods to achieve these are listed below.
+
+* **Creating Nodes:** The methods of creating new DOM nodes can be summarized as:
+
+  | Property/Method | 	Description |
+  | :---            |   ----       |
+  | `createElement()` 	| Create a new element node | 
+  | `createTextNode()` 	| Create a new text node| 
+  | `node.textContent` 	| Get or set the text content of an element node | 
+  | `node.innerHTML` 	| Get or set the HTML content of an element | 
+
+* **Inserting Nodes:** The methods of inserting nodes into the DOM can be summarized as:
+
+  |Property/Method| 	Description|
+  | :---          |     ----     |
+  | `node.appendChild()` 	| Add a node as the last child of a parent element| 
+  | `node.insertBefore()` 	| Insert a node into the parent element before specified sibling node| 
+  | `node.replaceChild() `	| Replace an existing node with a new node| 
+
+* **Removing Nodes:** The methods of removing nodes from the DOM can be summarized as:
+
+  | Method|  	Description| 
+  | :---  | ---          |
+  | `node.removeChild()` 	| Remove child node| 
+  | `node.remove()` 	| Remove node| 
+
+##### Selected Demos
+
+* `.createElement() & .appendChild()`: sometimes you'll need/want to create your DOM nodes in javascript. This is often the case if you're creating [reactive UIs](https://css-tricks.com/reactive-uis-vanillajs-part-1-pure-functional-style/):
+
+```html
+<div id="app">
+</div>
+
+<script>
+  const $app = document.querySelector("#app");
+
+  // create and unordered list:
+  const $myList = document.createElement('ul');
+  //  create 10 list items
+  for(let i =0; i < 10; i++){
+    const $item = document.createElement("li");
+    $item.textContent = `Hi! I'm item #${i}`;
+    // append each list item to the unordered list
+    $myList.appendChild($item);
+  }
+
+  // append the unordered list to the $app dom element
+  $app.appendChild($myList);
+</script>
+```
+
+* `.innerHTML`: innerHTML is an easy way to add HTML to the DOM, however note that this can open up your application for [Cross-site scripting attacks](https://owasp.org/www-community/attacks/xss/).
+
+```html
+  <div id="app">
+  </div>
+
+  <script>
+    const $app = document.querySelector("#app");
+
+    let $listItems = '';
+
+    for (let i = 0; i < 10; i++) {
+      $listItems += `<li>Hi I'm item #:${i}</li>`
+    }
+
+    $app.innerHTML = `
+    <header>
+      <h1>Hello World<h1>
+    </header>
+    <main>
+      <ul>
+      ${$listItems}
+      </ul>
+    </main>
+  `;
+  </script>
+```
+
+* `.textContent`: if you're looking to update the text content of a DOM selection, you can use the `.textContent` property:
+
+```js
+yourDomSelection.textContent = "new text"
+```
+
+For example:
+
+```html
+<p class="message">I'm a <span class="job"></span></p>
+
+<script>
+const $jobSpan = document.querySelector(".job");
+
+// after 2 seconds, set the textContent
+setTimeout( function(){
+  $jobSpan.textContent = "javascript ninja!";
+}, 2000);
+
+</script>
+```
+
+
+
+#### Updating the style of a DOM element
+
+
+* https://www.taniarascia.com/how-to-make-changes-to-the-dom/
 
 ### Event Listeners
 
 TBD
+
+
+```js
+
+```
+
+* https://www.taniarascia.com/understanding-events-in-javascript/
 
 ## References: JavaScript and the DOM 
 * understanding events: https://www.digitalocean.com/community/tutorials/understanding-events-in-javascript
