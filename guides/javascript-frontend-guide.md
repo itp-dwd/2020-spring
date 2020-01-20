@@ -33,6 +33,7 @@
     - [Explicitly setting the context of `this`:](#explicitly-setting-the-context-of-this)
       - [The `.call()` and `.apply()` function methods](#the-call-and-apply-function-methods)
       - [The `.bind()` function method](#the-bind-function-method)
+    - [Arrow functions and `this`](#arrow-functions-and-this)
     - [Reference: JavaScript Object Methods](#reference-javascript-object-methods)
   - [Callbacks, Promises and Async/Await](#callbacks-promises-and-asyncawait)
     - [Async: Callbacks - the joys and pains of Callbacks](#async-callbacks---the-joys-and-pains-of-callbacks)
@@ -266,7 +267,7 @@ console.log(myNewArray); // [ {name: 'Joey' ,role:'instructor'}, {name: 'Cassie'
 * ?index (optional): the index position at that point in the loop iteration
 * ?array (optional): the reference to the array being iterated.
   
-...and your `?initialValue` is an optional value with which you can start accumulating on. This could be a value or an object.
+...and your `?initialValue` is an optional value with which you can start accumulating on. This could be a value or an object. Otherwise, the initial value will begin at the first element in the array.
 
 
 
@@ -331,7 +332,7 @@ The best way to getting comfortable with `.reduce()` is to try using it in pract
 
 ### Searching Arrays
 
-Sometimes you just want to know if a value or object exists in your array. Below are some of the ways of checking and retrieving values or objects from an array.
+Sometimes you just want to know if a value or object exists in your array. Below are some of the ways of checking and retrieving values or objects from an array. This is not an exhaustive list so be sure to look up the other array search functions when you're looking for other solutions for searching values in an array.
 
 #### The indexOf function: `.indexOf()`
 > "The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present." - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
@@ -450,25 +451,81 @@ console.log(myEntries);
 > 
 > This section is dedicated to unpacking the `apply`, `bind`, `call` methods to specify where `this` is referring to.
 
-To be honest, this blog post on [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript) is excellent and does a great job explaining how to consider JavaScript Context and how to address it with those methods.
+To be honest, this blog post on [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript) is excellent and does a great job explaining how to consider JavaScript Context and how to address it with those methods. 
+
+Below are just some notes extracted from the blog post above.
 
 ### This `this` keyword and implicit context
 
-TBD
+As per the blog post on [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript):
+
+>There are four main contexts in which the value of this can be implicitly inferred:
+> * the global context
+>   * when working in the browser: the global context is the `window` object
+>   * when working in node.js: the global context is the `global` object
+> * as a method within an object:
+>   * within an `object`, if `this` is used within a function, it will reference the context of the parent object of that function.
+> * as a constructor on a function or class:
+>   * within the constructor of a function or a class, if `this` is defined within the constructor and a `new` class or function has been created, `this` will be bound to the "bound to any new instance" of that class or function. 
+> * as a DOM event handler:
+>   * within a dom event handler (e.g. `.addEventListener()`), `this` will refer to the targeted element where the event listener has been attached to.  
+
 
 ### Explicitly setting the context of `this`:
 
-TBD
+As per the blog post on [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript):
+
+> In all of the previous examples, the value of this was determined by its context—whether it is global, in an object, in a constructed function or class, or on a DOM event handler. However, using call, apply, or bind, you can explicitly determine what this should refer to.
+
+In order to explicity set the context where `this` is referring to, we have `.call()`, `.apply()`, and `.bind()` functions. 
+
 
 #### The `.call()` and `.apply()` function methods
 > These are one-time use that set the context of `this` per function call.
 
-TBD
+The difference between `.call()` and `.apply()` is that:
+* passing arguments to `.call()` is done by adding additional arguments after the `this` context you're setting.
+* passing arguments to `.apply()` is done by adding those arguments as an array.
+
+For more details please read: [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript)
 
 #### The `.bind()` function method
 > bind sets the context of `this` to another context. 
 
-TBD
+Passing arguments to `.bind()` is achieved the same way as it is done with the `.call()` function.
+
+The `.bind()` method comes in handly 
+
+Aside: You will often see the `.bind()` function used with `React` classes where the methods are explicitly bound to the class like:
+
+```jsx
+class GoButton extends React.Component {
+  constructor(){
+    super();
+    this.name = "GoButton";
+    // NOTE: see how the .handleClick() is bound to this class
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(){
+    console.log(this.name);
+  }
+
+  render(){
+    return (
+      <button onClick={this.handleClick}>{this.name}</button>
+    )
+  }
+}
+
+```
+
+For more details please read: [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript)
+
+### Arrow functions and `this`
+> Arrow functions explicitly set the `this` context to the "next level of execution", meaning that the arrow function (as opposed to using `function(){}`) will set the context of the `this` value to the object or function which is the parent of that arrow function.
+
+For more details please read: [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript)
+
 
 ### Reference: JavaScript Object Methods
 * [Using JavaScript Object Methods](https://www.digitalocean.com/community/tutorials/how-to-use-object-methods-in-javascript)
