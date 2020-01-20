@@ -33,20 +33,31 @@
     - [Explicitly setting the context of `this`:](#explicitly-setting-the-context-of-this)
       - [The `.call()` and `.apply()` function methods](#the-call-and-apply-function-methods)
       - [The `.bind()` function method](#the-bind-function-method)
+    - [Arrow functions and `this`](#arrow-functions-and-this)
     - [Reference: JavaScript Object Methods](#reference-javascript-object-methods)
   - [Callbacks, Promises and Async/Await](#callbacks-promises-and-asyncawait)
     - [Async: Callbacks - the joys and pains of Callbacks](#async-callbacks---the-joys-and-pains-of-callbacks)
     - [Async: Promises - I promise when I'm done, I'll do whatever you want me to do...](#async-promises---i-promise-when-im-done-ill-do-whatever-you-want-me-to-do)
+    - [Using promises](#using-promises)
+    - [Constructing promises](#constructing-promises)
+      - [Promise chaining `.then()` and `.then()` and `.then()` ...](#promise-chaining-then-and-then-and-then)
     - [Async: Async/Await - Finally asynchronous JavaScript is more readable!](#async-asyncawait---finally-asynchronous-javascript-is-more-readable)
     - [Reference: Callbacks, Promises, and Async/Await](#reference-callbacks-promises-and-asyncawait)
   - [References: JavaScript Foundations](#references-javascript-foundations)
 - [JavaScript and the DOM](#javascript-and-the-dom)
+    - [Selecting DOM elements](#selecting-dom-elements)
+    - [Updating styles & adding/removing CSS classes](#updating-styles--addingremoving-css-classes)
+    - [Event Listeners](#event-listeners)
   - [References: JavaScript and the DOM](#references-javascript-and-the-dom)
 - [JavaScript Networking, AJAX, talking to APIs, and CORs](#javascript-networking-ajax-talking-to-apis-and-cors)
   - [Background: XHR: XMLHttpRequest](#background-xhr-xmlhttprequest)
   - [Fetch API](#fetch-api)
     - [Fetch: default](#fetch-default)
     - [Fetch with options: GET, POST, PUT, DELETE](#fetch-with-options-get-post-put-delete)
+      - [GET](#get)
+      - [POST](#post)
+      - [PUT](#put)
+      - [DELETE](#delete)
   - [A quick note on Axios](#a-quick-note-on-axios)
   - [CORs: Cross origin Resource Sharing](#cors-cross-origin-resource-sharing)
   - [References: JavaScript and APIs](#references-javascript-and-apis)
@@ -266,7 +277,7 @@ console.log(myNewArray); // [ {name: 'Joey' ,role:'instructor'}, {name: 'Cassie'
 * ?index (optional): the index position at that point in the loop iteration
 * ?array (optional): the reference to the array being iterated.
   
-...and your `?initialValue` is an optional value with which you can start accumulating on. This could be a value or an object.
+...and your `?initialValue` is an optional value with which you can start accumulating on. This could be a value or an object. Otherwise, the initial value will begin at the first element in the array.
 
 
 
@@ -331,7 +342,7 @@ The best way to getting comfortable with `.reduce()` is to try using it in pract
 
 ### Searching Arrays
 
-Sometimes you just want to know if a value or object exists in your array. Below are some of the ways of checking and retrieving values or objects from an array.
+Sometimes you just want to know if a value or object exists in your array. Below are some of the ways of checking and retrieving values or objects from an array. This is not an exhaustive list so be sure to look up the other array search functions when you're looking for other solutions for searching values in an array.
 
 #### The indexOf function: `.indexOf()`
 > "The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present." - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
@@ -450,25 +461,81 @@ console.log(myEntries);
 > 
 > This section is dedicated to unpacking the `apply`, `bind`, `call` methods to specify where `this` is referring to.
 
-To be honest, this blog post on [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript) is excellent and does a great job explaining how to consider JavaScript Context and how to address it with those methods.
+To be honest, this blog post on [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript) is excellent and does a great job explaining how to consider JavaScript Context and how to address it with those methods. 
+
+Below are just some notes extracted from the blog post above.
 
 ### This `this` keyword and implicit context
 
-TBD
+As per the blog post on [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript):
+
+>There are four main contexts in which the value of this can be implicitly inferred:
+> * the global context
+>   * when working in the browser: the global context is the `window` object
+>   * when working in node.js: the global context is the `global` object
+> * as a method within an object:
+>   * within an `object`, if `this` is used within a function, it will reference the context of the parent object of that function.
+> * as a constructor on a function or class:
+>   * within the constructor of a function or a class, if `this` is defined within the constructor and a `new` class or function has been created, `this` will be bound to the "bound to any new instance" of that class or function. 
+> * as a DOM event handler:
+>   * within a dom event handler (e.g. `.addEventListener()`), `this` will refer to the targeted element where the event listener has been attached to.  
+
 
 ### Explicitly setting the context of `this`:
 
-TBD
+As per the blog post on [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript):
+
+> In all of the previous examples, the value of this was determined by its context—whether it is global, in an object, in a constructed function or class, or on a DOM event handler. However, using call, apply, or bind, you can explicitly determine what this should refer to.
+
+In order to explicity set the context where `this` is referring to, we have `.call()`, `.apply()`, and `.bind()` functions. 
+
 
 #### The `.call()` and `.apply()` function methods
 > These are one-time use that set the context of `this` per function call.
 
-TBD
+The difference between `.call()` and `.apply()` is that:
+* passing arguments to `.call()` is done by adding additional arguments after the `this` context you're setting.
+* passing arguments to `.apply()` is done by adding those arguments as an array.
+
+For more details please read: [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript)
 
 #### The `.bind()` function method
 > bind sets the context of `this` to another context. 
 
-TBD
+Passing arguments to `.bind()` is achieved the same way as it is done with the `.call()` function.
+
+The `.bind()` method comes in handly 
+
+Aside: You will often see the `.bind()` function used with `React` classes where the methods are explicitly bound to the class like:
+
+```jsx
+class GoButton extends React.Component {
+  constructor(){
+    super();
+    this.name = "GoButton";
+    // NOTE: see how the .handleClick() is bound to this class
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(){
+    console.log(this.name);
+  }
+
+  render(){
+    return (
+      <button onClick={this.handleClick}>{this.name}</button>
+    )
+  }
+}
+
+```
+
+For more details please read: [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript)
+
+### Arrow functions and `this`
+> Arrow functions explicitly set the `this` context to the "next level of execution", meaning that the arrow function (as opposed to using `function(){}`) will set the context of the `this` value to the object or function which is the parent of that arrow function.
+
+For more details please read: [This, bind, call, and apply in JavaScript](https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript)
+
 
 ### Reference: JavaScript Object Methods
 * [Using JavaScript Object Methods](https://www.digitalocean.com/community/tutorials/how-to-use-object-methods-in-javascript)
@@ -510,19 +577,297 @@ function handleResults( error, results) {
 }
 ```
 
-If you're unable to use Promises or Async/Await to keep your code from entering Callback Hell, there are strategies to keeping your code clean such as keeping your code shallow or modularizing. 
+If you're unable to use Promises or Async/Await to keep your code from entering "Callback Hell", there are strategies to keeping your code clean such as keeping your code shallow or modularizing. 
 
 However, in recent years, JavaScript has incorporated support for what are known as JavaScript Promises which we will discuss in the next section that help in keeping asynchronous JavaScript code cleaner and more readable. 
 
-We will look at JavaScript Promises in the following sections and their even more friendly syntax `Async/Await`
+We will look at JavaScript Promises in the following sections and their even more "friendly" syntax `Async/Await`
 
 ### Async: Promises - I promise when I'm done, I'll do whatever you want me to do...
 
-TBD
+Promises are a handy way of handling the results of asynchronous javascript functions. As we saw earlier, the javascript way of handling asynchronous functions is through callbacks. Promises offer way of wrapping up callbacks in such a way that allows you to indicate whether a call to an asynchronous function is successful and can be *resolved* or if it has failed and should be *rejected*. 
+
+By structuring asynchronous javascript as a promise, or in other words returning **the result** or **error** of a callback as a javascript Promise, you can clean your javascript code (as we can see in the following sections) and have better control over the flow of your programs (and when they break!).
+
+### Using promises
+
+Most likely, you'll be using promises either with the `.then() / .catch()` syntax or with the `async/await` syntax as we'll see in the next couple sections. 
+
+The way you will know if you can uses promises is if in the documentaiton of whatever function you're trying to use says, "returns a promise". 
+
+In a first example, we can imagine using an function that allows us to classify if an animal might be in an image. In this case let's say our imageClassifer object has a function called `.classify()` that returns a promise. Given an image like this, we can imagine some code that looks like the following:
+
+![Mr Bubz the dog](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.dailymail.co.uk%2Fi%2Fnewpix%2F2018%2F09%2F04%2F15%2F4FAC7F0300000578-0-image-m-30_1536071881101.jpg&f=1&nofb=1)
+
+```js
+imageClassifier.classify( "MrBubz.jpg")
+  .then(result => {
+    console.log(result); // [{label: 'dog', confidence: 0.8}, {label: 'rat', confidence: 0.4}]
+    document.body.textContent = "The animal in the picture looks like a..." + result[0].label;
+  })
+  .catch(err => {
+    console.error(err);
+    return err;
+  })
+
+// returns: The animal in the picture looks like a...dog"
+```
+
+The above demonstrates the `.then()` and `.catch()` syntax for using promises. You can see that there is:
+1. an initial function call 
+2. the `.then()` function is called after the first function returns a promise. `.then()` takes a callback function where the argument **result** is the result of the first function call, in this case, `.classify()`
+3. the end of the promise call is `.catch()` which is used to handle any errors that occur along the promise chain.
+
+The above code snippet using callbacks (if they are supported) might look something like:
+
+```js
+imageClassifier.classify("MrBubz.jpg", (error, result) => {
+  if(error){
+    console.error(error)
+    return error;
+  }
+  document.body.textContent = "The animal in the picture looks like a..." + result[0].label;
+})
+```
+
+Now the above might not look so bad, but imagine, if you wanted to do more with the results of that `.classify()` function. You'd then have to next more callbacks within that callback which could lead to difficulties debugging down the road or result in a messy set of nested callbacks. Promises can help alleviate some of this mess.
+
+Next, let's look at a different real-world example where we make an API call using the `fetch()` function which returns a promise. If this is the case, then you can do something like this:
+
+```js
+const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+
+fetch(ronSwansonAPI)
+  .then(result => {
+    return result.json()
+  })
+  .then(result => {
+    console.log(result)
+  })
+  .catch(err => {
+    console.error(err);
+    return err;
+  })
+
+// log: ["I've cried twice in my life. Once when I was seven and hit by a school bus. And then again when I heard that Li'l Sebastian has passed."]
+```
+
+3 things are happening here:
+
+1. the `fetch()` function returns a promise therefore we can use the `.then()` method to get the results of that GET request.
+2. we `return result.json()`: `result.json()` is a function that also returns a promise. What this does is turn the result object that was returned in the first `fetch` function and turn it into a json object that we can work with. We handle the results in the next `.then()` function.
+3. we include a `.catch()` function at the end to handle the results of any errors that arise within our "promise chain". 
+
+
+You can also construct promises on your own in the case that the asynchronous function you're trying to use does not support Promises out of the box. 
+
+### Constructing promises
+
+You can construct promises from asynchronous functions. Occasionally you might have to do this in the case that the API or function you're using does not support promises out of the box. 
+
+To do this, let's take an example of a function that we'll call `loadImage()` that you might have seen in p5.js to load images into your program. What it does is take the **path** to an image, and allows you to use a p5Image object once it has finished loading and passes it to the callback. 
+
+A typical use would look like htis:
+
+```js
+function setup() {
+  createCanvas(400, 400);
+  loadImage('MrBubz.jpg',  img => {
+    image(img, 0,0, 200, 200)
+  })
+}
+```
+
+If we wanted to **promisify** the loadImage() function, we could do something like this:
+
+```js
+function loadImageWithPromise(imageUrl) {
+    return new Promise( (resolve, reject) => {
+      loadImage(imageUrl, img => {    
+      if(img){
+        resolve(img)  
+      } else {
+       reject("image not loading") 
+      }
+    })
+  })
+}
+
+function setup() {
+  createCanvas(400, 400);
+  
+  // with the default loadImage function
+  loadImage('MrBubz.jpg',  img => {
+    image(img, 0,0, 200, 200)
+  })
+  
+  // with our custom promisified version
+  loadImageWithPromise('MrBubz.jpg')
+    .then(result => {
+      image(result, 200, 200, 200, 200);
+    })
+  .catch(err => {
+    console.error(err);
+    return err;
+    })
+}
+```
+
+Notice a few things here:
+
+1. our custom `loadImageWithPromise()` returns a `new Promise()`. 
+2. Our `new Promise()` takes a callback function with two arguments `resolve` or `reject`. 
+3. within the callback function of our `new Promise()` we put in the function we want to "promisify"
+4. We use our `loadImage()` function as usual, BUT instead of drawing the image as we might normally, we **wrap the `img` result in** the `resolve()` function which is what will get passed to `.then()`. 
+
+You can see a working demo here: [Creating a promisified function](https://editor.p5js.org/joeyklee/sketches/qHbnGHrPx)
+
+
+#### Promise chaining `.then()` and `.then()` and `.then()` ...
+
+If your asynchronous function returns a promise, you can chain together promises to ensure that your asynchronous functions are called in the order you specify. A common case for this might be if you need to make multiple asynchronous API calls and the **order matters**:
+
+```js
+let randomStory = "There once was a planet named..."
+const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+const starWarsAPI = "https://swapi.co/api/"
+
+fetch(starWarsAPI + "planets/1")
+  .then( result => {
+    return result.json()
+  })
+  .then( result => {
+    randomStory += result.name
+    randomStory += " On that planet, there was someone named..."
+
+    return fetch(result.residents[0])
+  })
+  .then(result => {
+    return result.json()
+  })
+  .then(result => {
+    randomStory += result.name
+    randomStory += " who loved to say..."
+
+    return fetch(ronSwansonAPI)
+  })
+  .then( result => {
+    return result.json()
+  })
+  .then( result => {
+    randomStory += result[0]
+    console.log(randomStory)
+  })
+  .catch(err => {
+    console.error(err);
+    return err;
+  });
+```
+
+The result of this will be something like:
+```txt
+There once was a planet named...Tatooine On that planet, there was someone named...Luke Skywalker who loved to say...America: The only country that matters. If you want to experience other ‘cultures,’ use an atlas or a ham radio.
+```
 
 ### Async: Async/Await - Finally asynchronous JavaScript is more readable!
 
-TBD
+So we've just seen how promises can clean up our code and improve the readability of our asynchronous JavaScript. Lucky for us, there is now an even cleaner syntax that is becoming the standard for handling asynchronous JavaScript. This syntax is commonly referred to as `async/await`. 
+
+`Async/await` allows you to use the `await` keyword in a `async function()` to mirror what a promise chain would do with `.then()`. Here's what that means:
+
+```js
+const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+const starWarsAPI = "https://swapi.co/api/"
+
+// define the async function
+async function myStoryGenerator(){
+  // async function 1
+  let planet = await fetch(starWarsAPI + "planets/1")
+  planet = await planet.json();
+   // async function 2
+  let person = await fetch(planet.residents[0])
+  person = await person.json();
+   // async function 3
+  let quote = await fetch(ronSwansonAPI)
+  quote = await quote.json();
+
+  const randomStory = `There once was a planet named...${planet.name}. On that planet, there was someone named... ${person.name} who loved to say...${quote[0]}`
+
+  console.log(randomStory);
+
+  return randomStory
+}
+
+// call the function
+myStoryGenerator();
+```
+
+As you can see, our code become much more readable. We can read our code from top to bottom with the `await` keyword indicating that the function being called is asynchronous. 
+
+How might we handle errors here you might ask? Well, lucky for us we can add waht is called the `try...catch` block like so:
+
+
+```js
+const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+const starWarsAPI = "https://swapi.co/api/"
+
+// define the async function
+async function myStoryGenerator(){
+  try{
+     // async function 1
+     let planet = await fetch(starWarsAPI + "planets/1")
+     planet = await planet.json();
+      // async function 2
+     let person = await fetch(planet.residents[0])
+     person = await person.json();
+      // async function 3
+     let quote = await fetch(ronSwansonAPI)
+     quote = await quote.json();
+
+     const randomStory = `There once was a planet named...${planet.name}. On that planet, there was someone named... ${person.name} who loved to say...${quote[0]}`
+
+     console.log(randomStory);
+
+     return randomStory
+  } catch(err){
+    console.error(err);
+    throw new Error(err);
+  }
+  
+}
+
+// call the function
+myStoryGenerator();
+```
+
+What the `try...catch` block does is to try and evaluate everything within the `try` block. If an error arises, then the error gets sent to the `catch` block. We can then handle the error in the `catch` block as we see fit.
+
+Another example you might see a `async/await` function is making asynchronous calls on an event. 
+
+Let's take the case of a button that makes an async call to the `ronSwansonAPI`. Now whenever that button is clicked, a new quote will appear:
+
+```html
+<button id="myButton">Generate Quote</button>
+  <p id="quote"></p>
+  <script>
+    const quoteP = document.querySelector('#quote');
+    const button = document.querySelector('#myButton');
+    button.addEventListener('click', handleClick);
+
+    async function handleClick() {
+      try{
+        const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+        let quote = await fetch(ronSwansonAPI)
+        quote = await quote.json();
+        quoteP.textContent = quote[0]
+      } catch(err){
+        throw new Error(err);
+      }
+    }
+  </script>
+```
+
+You can see a working demo here: [Async/await demo on button click](https://editor.p5js.org/joeyklee/sketches/WNQVt_zfH)
 
 ### Reference: Callbacks, Promises, and Async/Await
 * [Coding Train: Async/Await -- Part 1](https://www.youtube.com/watch?v=XO77Fib9tSI)
@@ -531,7 +876,7 @@ TBD
 * [Async/Await](https://javascript.info/async-await)
 * [Modern Async JS](https://flaviocopes.com/javascript-async-await/)
 * [Promise.all and handling multiple async functions](https://www.taniarascia.com/promise-all-with-async-await/)
-
+* [How to promisify an ajax call](https://www.taniarascia.com/how-to-promisify-an-ajax-call/)
 
 ## References: JavaScript Foundations
 * [How to Code in JavaScript](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript)
@@ -556,6 +901,16 @@ By mastering JavaScript as a language, understanding how to work with JavaScript
 
 Let's begin applying our JavaScript knowledge in relation to interacting to DOM.
 
+
+### Selecting DOM elements
+
+TBD
+
+### Updating styles & adding/removing CSS classes
+
+TBD
+
+### Event Listeners
 
 TBD
 
@@ -625,21 +980,174 @@ For more information, see [Flavio Copes's post on XHR](https://flaviocopes.com/x
 
 ## Fetch API
 
+Earlier we saw the `fetch` API in the context of showcasing how JavaScript Promises work. By default, the `fetch()` function makes a **GET** AJAX request like we saw above with XHR request. The `fetch()` function however is syntactically much cleaner and easier to read. For these reasons, we use the `fetch()` function to make our network requests from the client side.
+
 ### Fetch: default
 
-TBD
+As noted above, the `fetch()` function by default makes a **GET** request to the given URL. Since the `fetch` function returns a promise, we can strucutre our `fetch()` requests with the `.then()` promise chain or using `async/await`.
+
+**Fetch with promises:**
+```js
+const url = ""
+fetch(url)
+  .then(result => {
+    return result.json()
+  })
+  .then(result => {
+    console.log(result);
+  })
+  .catch(err => {
+    return err;
+  })
+```
+
+**Fetch with async/await:**
+```js
+const specialUrl = ""
+// define a custom function to wrap your await
+async function mySpecialRequest(url){
+  try{
+    const data = await fetch(url);
+    const result = await data.json();
+
+    console.log(result);
+  } catch(err){
+    return err;
+  }  
+}
+// call your function
+mySpecialRequest(specialUrl)
+```
 
 ### Fetch with options: GET, POST, PUT, DELETE
 
-TBD
+The beauty of `fetch()` is displayed when we moved beyond the **GET** request and begin to use other HTTP methods, namely: **POST**, **PUT**, and **DELETE**. The following examples will showcase how to use the `options` parameter to specify the nature of the HTTP request being sent using `fetch()`.
+
+NOTE: usually, **GET**, **POST**, **PUT**, and **DELETE** requests will either require authentication and authorization on behalf of the API you're using. This means that usually you'll be logged into a service so that they know who you are (authentication) and depending on who you are and whether or not you are the owner of certain content or data on the service, you'll be able to see, add, edit, or delete data from that service (authorization). None of the following examples requires authentication or authorization. 
+
+#### GET
+
+Explicitly setting **GET** in the methods property of the options argument
+```js
+async function getUsers(){
+  const usersAPI = "https://jsonplaceholder.typicode.com/users";
+
+  const options = {
+    method:"GET"
+  }
+  
+  let users = await fetch(usersAPI, options);
+  users = await users.json();
+
+  console.log(users);
+}
+getUsers();
+```
+
+#### POST
+
+We can **POST** data to a server using the **POST** method. We can send our data in the **body** property of the options, specifying the **Content-Type** as **application/json** since we're sending JSON data.
+
+```js
+async function postUser(){
+  const usersAPI = "https://jsonplaceholder.typicode.com/users";
+
+  const newUser = {
+    name:"Mr. Bubz",
+    username: "Bubz",
+    email: "mrbubz@mrbubz.net"
+  }
+  
+  const options = {
+    method:"POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newUser)
+  }
+  
+  let newUser = await fetch(usersAPI, options);
+  newUser = await newUser.json();
+
+  console.log(newUser);
+}
+postUser();
+
+```
+
+#### PUT
+
+PUT works similarly to POST, except that in this case, we specify the id of the user in URL parameter to indicate to the API that we want to update the user where the `id:1`.
+
+```js
+async function putUser(){
+  const usersAPI = "https://jsonplaceholder.typicode.com/users/1";
+
+  const updateUser = {
+    name:"Mr. Bubz",
+    username: "Bubz",
+    email: "mrbubz@mrbubz.net"
+  }
+  
+  const options = {
+    method:"PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(updateUser)
+  }
+  
+  let updatedUser = await fetch(usersAPI, options);
+  updatedUser = await updatedUser.json();
+
+  console.log(updatedUser);
+}
+putUser();
+
+```
+
+#### DELETE
+
+In this last example, we specify the DELETE method in our fetch request to indicate to the API that we'd like to DELETE the feature specified in the API url parameter.
+
+```js
+async function deleteUser(){
+  const usersAPI = "https://jsonplaceholder.typicode.com/users/1";
+
+  
+  const options = {
+    method:"DELETE"
+  }
+  
+  let deletedUser = await fetch(usersAPI, options);
+  deletedUser = await deletedUser.json();
+
+  console.log(deletedUser);
+}
+deleteUser();
+```
+
+
 
 ## A quick note on Axios
 
-TBD
+In some cases the `fetch()` function is not supported and as a result, your AJAX requests may not work if you've written all of your requests with that syntax. See: [CanIUse.com results for fetch](https://caniuse.com/#search=fetch) as of the time of this writing, IE11 and Opera Mini do not support fetch at all. There are other 3rd party libraries that ensure that your requests should always behave the same across browsers. While this should be a major concern, it is something to keep in mind. 
+
+In case you're worried about cross-browser and legacy support, it might be worth looking into something like [Axios](https://github.com/axios/axios) which is a promise based HTTP client for the browser and node.js
 
 ## CORs: Cross origin Resource Sharing
 
-TBD
+CORs - Cross origin resource sharing - is a network security protocol that is set as a standard for ensuring that resources be shared only if they are coming from the same domain. This is the standard way that networking between clients and servers works and often times creates issues when you're trying to communicate with a third-party API from the browser. 
+
+In this blog post, [Flavio Copes explains what CORs is](https://flaviocopes.com/cors/). In your previous JavaScript experience coding in P5, you might have experienced CORs issues trying to communicate with another data API e.g. getting weather data or communicating with the International Space Station API. 
+
+It is important to note that if you are trying to communicate with another 3rd-party API OR your own API and your client is not being served from the same domain, you will either have to:
+1. for communication with a 3rd party API that is blocking CORs: set up your own server to retrieve data from that 3rd party API to be sent to your client 
+2. for communication with your own API: you'll need to enable cors for the API routes you want your client to be able to get data from.
+
+You can read more in this blog post by [Flavio Copes where he explains what CORs is](https://flaviocopes.com/cors/).
+
+
 
 ## References: JavaScript and APIs 
 * https://www.taniarascia.com/how-to-use-the-javascript-fetch-api-to-get-json-data/
