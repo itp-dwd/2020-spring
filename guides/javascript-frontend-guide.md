@@ -38,6 +38,9 @@
   - [Callbacks, Promises and Async/Await](#callbacks-promises-and-asyncawait)
     - [Async: Callbacks - the joys and pains of Callbacks](#async-callbacks---the-joys-and-pains-of-callbacks)
     - [Async: Promises - I promise when I'm done, I'll do whatever you want me to do...](#async-promises---i-promise-when-im-done-ill-do-whatever-you-want-me-to-do)
+    - [Using promises](#using-promises)
+    - [Constructing promises](#constructing-promises)
+      - [Promise chaining `.then()` and `.then()` and `.then()` ...](#promise-chaining-then-and-then-and-then)
     - [Async: Async/Await - Finally asynchronous JavaScript is more readable!](#async-asyncawait---finally-asynchronous-javascript-is-more-readable)
     - [Reference: Callbacks, Promises, and Async/Await](#reference-callbacks-promises-and-asyncawait)
   - [References: JavaScript Foundations](#references-javascript-foundations)
@@ -567,15 +570,140 @@ function handleResults( error, results) {
 }
 ```
 
-If you're unable to use Promises or Async/Await to keep your code from entering Callback Hell, there are strategies to keeping your code clean such as keeping your code shallow or modularizing. 
+If you're unable to use Promises or Async/Await to keep your code from entering "Callback Hell", there are strategies to keeping your code clean such as keeping your code shallow or modularizing. 
 
 However, in recent years, JavaScript has incorporated support for what are known as JavaScript Promises which we will discuss in the next section that help in keeping asynchronous JavaScript code cleaner and more readable. 
 
-We will look at JavaScript Promises in the following sections and their even more friendly syntax `Async/Await`
+We will look at JavaScript Promises in the following sections and their even more "friendly" syntax `Async/Await`
 
 ### Async: Promises - I promise when I'm done, I'll do whatever you want me to do...
 
-TBD
+Promises are a handy way of handling the results of asynchronous javascript functions. As we saw earlier, the javascript way of handling asynchronous functions is through callbacks. Promises offer way of wrapping up callbacks in such a way that allows you to indicate whether a call to an asynchronous function is successful and can be *resolved* or if it has failed and should be *rejected*. 
+
+By structuring asynchronous javascript as a promise, or in other words returning **the result** or **error** of a callback as a javascript Promise, you can clean your javascript code (as we can see in the following sections) and have better control over the flow of your programs (and when they break!).
+
+### Using promises
+
+Most likely, you'll be using promises either with the `.then() / .catch()` syntax or with the `async/await` syntax as we'll see in the next couple sections. 
+
+The way you will know if you can uses promises is if in the documentaiton of whatever function you're trying to use says, "returns a promise". 
+
+In a first example, we can imagine using an function that allows us to classify if an animal might be in an image. In this case let's say our imageClassifer object has a function called `.classify()` that returns a promise. Given an image like this, we can imagine some code that looks like the following:
+
+![Mr Bubz the dog](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.dailymail.co.uk%2Fi%2Fnewpix%2F2018%2F09%2F04%2F15%2F4FAC7F0300000578-0-image-m-30_1536071881101.jpg&f=1&nofb=1)
+
+```js
+imageClassifier.classify( "MrBubz.jpg")
+  .then(result => {
+    console.log(result); // [{label: 'dog', confidence: 0.8}, {label: 'rat', confidence: 0.4}]
+    document.body.textContent = "The animal in the picture looks like a..." + result[0].label;
+  })
+  .catch(err => {
+    console.error(err);
+    return err;
+  })
+
+// returns: The animal in the picture looks like a...dog"
+```
+
+The above demonstrates the `.then()` and `.catch()` syntax for using promises. You can see that there is:
+1. an initial function call 
+2. the `.then()` function is called after the first function returns a promise. `.then()` takes a callback function where the argument **result** is the result of the first function call, in this case, `.classify()`
+3. the end of the promise call is `.catch()` which is used to handle any errors that occur along the promise chain.
+
+The above code snippet using callbacks (if they are supported) might look something like:
+
+```js
+imageClassifier.classify("MrBubz.jpg", (error, result) => {
+  if(error){
+    console.error(error)
+    return error;
+  }
+  document.body.textContent = "The animal in the picture looks like a..." + result[0].label;
+})
+```
+
+Now the above might not look so bad, but imagine, if you wanted to do more with the results of that `.classify()` function. You'd then have to next more callbacks within that callback which could lead to difficulties debugging down the road or result in a messy set of nested callbacks. Promises can help alleviate some of this mess.
+
+Next, let's look at a different real-world example where we make an API call using the `fetch()` function which returns a promise. If this is the case, then you can do something like this:
+
+```js
+const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+
+fetch(ronSwansonAPI)
+  .then(result => {
+    return result.json()
+  })
+  .then(result => {
+    console.log(result)
+  })
+  .catch(err => {
+    console.error(err);
+    return err;
+  })
+
+// log: ["I've cried twice in my life. Once when I was seven and hit by a school bus. And then again when I heard that Li'l Sebastian has passed."]
+```
+
+3 things are happening here:
+
+1. the `fetch()` function returns a promise therefore we can use the `.then()` method to get the results of that GET request.
+2. we `return result.json()`: `result.json()` is a function that also returns a promise. What this does is turn the result object that was returned in the first `fetch` function and turn it into a json object that we can work with. We handle the results in the next `.then()` function.
+3. we include a `.catch()` function at the end to handle the results of any errors that arise within our "promise chain". 
+
+
+You can also construct promises on your own in the case that the asynchronous function you're trying to use does not support Promises out of the box. 
+
+### Constructing promises
+
+
+
+
+#### Promise chaining `.then()` and `.then()` and `.then()` ...
+
+If your asynchronous function returns a promise, you can chain together promises to ensure that your asynchronous functions are called in the order you specify. A common case for this might be if you need to make multiple asynchronous API calls and the **order matters**:
+
+```js
+let randomStory = "There once was a planet named..."
+const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+const starWarsAPI = "https://swapi.co/api/"
+
+fetch(starWarsAPI + "planets/1")
+  .then( result => {
+    return result.json()
+  })
+  .then( result => {
+    randomStory += result.name
+    randomStory += " On that planet, there was someone named..."
+
+    return fetch(result.residents[0])
+  })
+  .then(result => {
+    return result.json()
+  })
+  .then(result => {
+    randomStory += result.name
+    randomStory += " who loved to say..."
+
+    return fetch(ronSwansonAPI)
+  })
+  .then( result => {
+    return result.json()
+  })
+  .then( result => {
+    randomStory += result[0]
+    console.log(randomStory)
+  })
+  .catch(err => {
+    console.error(err);
+    return err;
+  });
+```
+
+The result of this will be something like:
+```txt
+There once was a planet named...Tatooine On that planet, there was someone named...Luke Skywalker who loved to say...America: The only country that matters. If you want to experience other ‘cultures,’ use an atlas or a ham radio.
+```
 
 ### Async: Async/Await - Finally asynchronous JavaScript is more readable!
 
