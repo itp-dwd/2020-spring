@@ -45,12 +45,19 @@
     - [Reference: Callbacks, Promises, and Async/Await](#reference-callbacks-promises-and-asyncawait)
   - [References: JavaScript Foundations](#references-javascript-foundations)
 - [JavaScript and the DOM](#javascript-and-the-dom)
+    - [Selecting DOM elements](#selecting-dom-elements)
+    - [Updating styles & adding/removing CSS classes](#updating-styles--addingremoving-css-classes)
+    - [Event Listeners](#event-listeners)
   - [References: JavaScript and the DOM](#references-javascript-and-the-dom)
 - [JavaScript Networking, AJAX, talking to APIs, and CORs](#javascript-networking-ajax-talking-to-apis-and-cors)
   - [Background: XHR: XMLHttpRequest](#background-xhr-xmlhttprequest)
   - [Fetch API](#fetch-api)
     - [Fetch: default](#fetch-default)
     - [Fetch with options: GET, POST, PUT, DELETE](#fetch-with-options-get-post-put-delete)
+      - [GET](#get)
+      - [POST](#post)
+      - [PUT](#put)
+      - [DELETE](#delete)
   - [A quick note on Axios](#a-quick-note-on-axios)
   - [CORs: Cross origin Resource Sharing](#cors-cross-origin-resource-sharing)
   - [References: JavaScript and APIs](#references-javascript-and-apis)
@@ -848,10 +855,14 @@ Let's take the case of a button that makes an async call to the `ronSwansonAPI`.
     button.addEventListener('click', handleClick);
 
     async function handleClick() {
-      const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
-      let quote = await fetch(ronSwansonAPI)
-      quote = await quote.json();
-      quoteP.textContent = quote[0]
+      try{
+        const ronSwansonAPI = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+        let quote = await fetch(ronSwansonAPI)
+        quote = await quote.json();
+        quoteP.textContent = quote[0]
+      } catch(err){
+        throw new Error(err);
+      }
     }
   </script>
 ```
@@ -890,6 +901,16 @@ By mastering JavaScript as a language, understanding how to work with JavaScript
 
 Let's begin applying our JavaScript knowledge in relation to interacting to DOM.
 
+
+### Selecting DOM elements
+
+TBD
+
+### Updating styles & adding/removing CSS classes
+
+TBD
+
+### Event Listeners
 
 TBD
 
@@ -959,11 +980,13 @@ For more information, see [Flavio Copes's post on XHR](https://flaviocopes.com/x
 
 ## Fetch API
 
+Earlier we saw the `fetch` API in the context of showcasing how JavaScript Promises work. By default, the `fetch()` function makes a **GET** AJAX request like we saw above with XHR request. The `fetch()` function however is syntactically much cleaner and easier to read. For these reasons, we use the `fetch()` function to make our network requests from the client side.
+
 ### Fetch: default
 
-TBD
+As noted above, the `fetch()` function by default makes a **GET** request to the given URL. Since the `fetch` function returns a promise, we can strucutre our `fetch()` requests with the `.then()` promise chain or using `async/await`.
 
-Fetch with promises:
+**Fetch with promises:**
 ```js
 const url = ""
 fetch(url)
@@ -978,7 +1001,7 @@ fetch(url)
   })
 ```
 
-Fetch with async/await:
+**Fetch with async/await:**
 ```js
 const specialUrl = ""
 // define a custom function to wrap your await
@@ -998,11 +1021,119 @@ mySpecialRequest(specialUrl)
 
 ### Fetch with options: GET, POST, PUT, DELETE
 
-TBD
+The beauty of `fetch()` is displayed when we moved beyond the **GET** request and begin to use other HTTP methods, namely: **POST**, **PUT**, and **DELETE**. The following examples will showcase how to use the `options` parameter to specify the nature of the HTTP request being sent using `fetch()`.
+
+NOTE: usually, **GET**, **POST**, **PUT**, and **DELETE** requests will either require authentication and authorization on behalf of the API you're using. This means that usually you'll be logged into a service so that they know who you are (authentication) and depending on who you are and whether or not you are the owner of certain content or data on the service, you'll be able to see, add, edit, or delete data from that service (authorization). None of the following examples requires authentication or authorization. 
+
+#### GET
+
+Explicitly setting **GET** in the methods property of the options argument
+```js
+async function getUsers(){
+  const usersAPI = "https://jsonplaceholder.typicode.com/users";
+
+  const options = {
+    method:"GET"
+  }
+  
+  let users = await fetch(usersAPI, options);
+  users = await users.json();
+
+  console.log(users);
+}
+getUsers();
+```
+
+#### POST
+
+We can **POST** data to a server using the **POST** method. We can send our data in the **body** property of the options, specifying the **Content-Type** as **application/json** since we're sending JSON data.
+
+```js
+async function postUser(){
+  const usersAPI = "https://jsonplaceholder.typicode.com/users";
+
+  const newUser = {
+    name:"Mr. Bubz",
+    username: "Bubz",
+    email: "mrbubz@mrbubz.net"
+  }
+  
+  const options = {
+    method:"POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newUser)
+  }
+  
+  let newUser = await fetch(usersAPI, options);
+  newUser = await newUser.json();
+
+  console.log(newUser);
+}
+postUser();
+
+```
+
+#### PUT
+
+PUT works similarly to POST, except that in this case, we specify the id of the user in URL parameter to indicate to the API that we want to update the user where the `id:1`.
+
+```js
+async function putUser(){
+  const usersAPI = "https://jsonplaceholder.typicode.com/users/1";
+
+  const updateUser = {
+    name:"Mr. Bubz",
+    username: "Bubz",
+    email: "mrbubz@mrbubz.net"
+  }
+  
+  const options = {
+    method:"PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(updateUser)
+  }
+  
+  let updatedUser = await fetch(usersAPI, options);
+  updatedUser = await updatedUser.json();
+
+  console.log(updatedUser);
+}
+putUser();
+
+```
+
+#### DELETE
+
+In this last example, we specify the DELETE method in our fetch request to indicate to the API that we'd like to DELETE the feature specified in the API url parameter.
+
+```js
+async function deleteUser(){
+  const usersAPI = "https://jsonplaceholder.typicode.com/users/1";
+
+  
+  const options = {
+    method:"DELETE"
+  }
+  
+  let deletedUser = await fetch(usersAPI, options);
+  deletedUser = await deletedUser.json();
+
+  console.log(deletedUser);
+}
+deleteUser();
+```
+
+
 
 ## A quick note on Axios
 
-TBD
+In some cases the `fetch()` function is not supported and as a result, your AJAX requests may not work if you've written all of your requests with that syntax. See: [CanIUse.com results for fetch](https://caniuse.com/#search=fetch) as of the time of this writing, IE11 and Opera Mini do not support fetch at all. There are other 3rd party libraries that ensure that your requests should always behave the same across browsers. While this should be a major concern, it is something to keep in mind. 
+
+In case you're worried about cross-browser and legacy support, it might be worth looking into something like [Axios](https://github.com/axios/axios) which is a promise based HTTP client for the browser and node.js
 
 ## CORs: Cross origin Resource Sharing
 
