@@ -76,7 +76,7 @@ window.onload = function() {
 ```
 You'll need to call certain code with this event handler, or else it won't work. More on this in a bit.
 
-#### Creating Appending DOM Elements
+#### Creating and Appending DOM Elements
 *Note*: You cannot create or append DOM elements until the website is loaded. Therefore you'll need to wrap all of the code in this section in a `window.onload` handler.
 
 To create a new element, the code looks like
@@ -100,12 +100,17 @@ Often, you don't want to append your new element to the end of your DOM, but in 
 <footer>
 </footer>
 ```
-And you wanted to add a new element to the `#comments` section, the JS is
+And you wanted to add a new element to the `#comments` section, you first need to select the element to append to, using `document.getElementById`:
 ```js
 const commentsContainer = document.getElementById("comments");
 const newComment = document.createElement("li");
 newComment.textContent = "This is an amazing post.";
-
+commentsContainer.appendChild(newComment);
 ```
+Once you selected an element, you can access that elements attributes/properties/methods. This allows you to set, for example, the `textContent` or `innerHTML`, or call methods like `removeChild()`. These depend on the type of HTML element, but you can get the gist from looking at the [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) documentation on MDN (Mozilla Developer Network).
+
+#### Removing Elements
+
+
 
 
