@@ -1,16 +1,3 @@
-
-<style>
-h1{
-  margin-top:60px;
-  margin-bottom:60px;
-}
-
-h2, h3, h4, h5, h6{
-margin-top:36px;
-margin-bottom:36px;
-}
-</style>
-
 # Frontend Javascript Guide
 
 ## About
