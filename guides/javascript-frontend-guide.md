@@ -5,6 +5,7 @@
   - [Table of Contents](#table-of-contents)
   - [About](#about)
 - [JavaScript Foundations](#javascript-foundations)
+  - [Prelude: Including JS files in HTML](#prelude-including-js-files-in-html)
   - [Introduction: The Basics](#introduction-the-basics)
   - [Javascript Array Methods:](#javascript-array-methods)
     - [Creation](#creation)
@@ -89,6 +90,66 @@ This frontend JavaScript guide is a roadmap to having a solid JavaScript foundat
 # JavaScript Foundations
 
 In this section we cover foundational JavaScript knowledge. Note that we assume some prior exposure to JavaScript in this section.
+
+## Prelude: Including JS files in HTML
+
+Before we get started, you will need to know that HTML is the "glue" that brings together all of your HTML5 dependencies. This means your HTML page will allow you to reference external CSS and JavaScript files that your project is built in. 
+
+So, let's say you write your javascript in a file called `main.js`:
+
+```js
+console.log("hello world");
+```
+
+And you have a CSS file called `main.css`:
+
+```css
+
+body{
+  background: pink;
+}
+
+h1 {
+  font-size:36px;
+  color: #333333;
+}
+
+```
+In order to include those files into your `index.html` file, you can reference them like so:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>My Demo Page</title>
+    <!-- Step 1: use the link tag to include css -->
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <header>
+      <h1>I Love You</h1>
+    </header>
+    <!-- Step 2: use the script tag to include css -->
+    <script src="main.js"></script>
+  </body>
+</html>
+```
+
+Notice how:
+
+1. Your CSS is included within the **Head** tag using the `<link href="link/to/your/css/file.css"/>`
+2. Your JavaScript is included within the `<script src="link/to/your/javascript/file.js">` just **before the last body tag**.
+
+You can include as many external CSS and JavaScript files as you'd like, but remember, **order matters**. The order that you include your JS and CSS files matters, so depending on the order of how you include your files will determine which if a JS variable or function is available or if a CSS style will be overridden by another, etc. 
+
+TBD: Also, if you're using external JavaScript files, you'll need to run a local web server. This is covered in [TBD]()
+
 
 ## Introduction: The Basics
 
