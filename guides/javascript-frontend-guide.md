@@ -5,6 +5,7 @@
   - [Table of Contents](#table-of-contents)
   - [About](#about)
 - [JavaScript Foundations](#javascript-foundations)
+  - [Prelude: Including JS files in HTML](#prelude-including-js-files-in-html)
   - [Introduction: The Basics](#introduction-the-basics)
   - [Javascript Array Methods:](#javascript-array-methods)
     - [Creation](#creation)
@@ -89,6 +90,66 @@ This frontend JavaScript guide is a roadmap to having a solid JavaScript foundat
 # JavaScript Foundations
 
 In this section we cover foundational JavaScript knowledge. Note that we assume some prior exposure to JavaScript in this section.
+
+## Prelude: Including JS files in HTML
+
+Before we get started, you will need to know that HTML is the "glue" that brings together all of your HTML5 dependencies. This means your HTML page will allow you to reference external CSS and JavaScript files that your project is built in. 
+
+So, let's say you write your javascript in a file called `main.js`:
+
+```js
+console.log("hello world");
+```
+
+And you have a CSS file called `main.css`:
+
+```css
+
+body{
+  background: pink;
+}
+
+h1 {
+  font-size:36px;
+  color: #333333;
+}
+
+```
+In order to include those files into your `index.html` file, you can reference them like so:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>My Demo Page</title>
+    <!-- Step 1: use the link tag to include css -->
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <header>
+      <h1>I Love You</h1>
+    </header>
+    <!-- Step 2: use the script tag to include css -->
+    <script src="main.js"></script>
+  </body>
+</html>
+```
+
+Notice how:
+
+1. Your CSS is included within the **Head** tag using the `<link href="link/to/your/css/file.css"/>`
+2. Your JavaScript is included within the `<script src="link/to/your/javascript/file.js">` just **before the last body tag**.
+
+You can include as many external CSS and JavaScript files as you'd like, but remember, **order matters**. The order that you include your JS and CSS files matters, so depending on the order of how you include your files will determine which if a JS variable or function is available or if a CSS style will be overridden by another, etc. 
+
+TBD: Also, if you're using external JavaScript files, you'll need to run a local web server. This is covered in [TBD]()
+
 
 ## Introduction: The Basics
 
@@ -1156,7 +1217,7 @@ If you've been coding in p5.js, then you'll have had many experiences building i
 
 In this section we will cover how **to add** and **to handle** events attached to DOM elements. 
 
-The following sections are a summary of the content found in the [Blog Post, Understanding Events in Javascript](https://www.taniarascia.com/understanding-events-in-javascript/)
+The following sections are a summary of the content found in the [Blog Post, Understanding Events in Javascript](https://www.taniarascia.com/understanding-events-in-javascript/). Please read the post for the most detailed explanations and commentary. 
 
 #### Table of common events
 
@@ -1190,15 +1251,75 @@ For your reference the following tables are a selection of events that you will 
 
 #### Event Listeners
 
+DOM elements can "listen" to events like when a user "clicks" or "hovers" over a `<div></div>` or `<button></button` or if they "submit" a `<form></form>`. 
+
+When we refer to javascript **event listeners**, what we are talking about is a DOM element's ability to "listen" to an event that is attached to it. 
+
+Let's take the example of this button here:
+
+```js
+<button id="myButton">Click Me!</button>
+```
+
+This button currently doesn't do a darn thing. It's just a beautiful HTML button that says, "click me." However we can breath some life into it by attaching an event listener to it:
+
+```html
+<button id="myButton">Click Me!</button>
+
+<script>
+const $button = document.querySelector("#myButton");
+
+$button.addEventListener( 'click', handleButtonClick);
+
+function handleButtonClick(event){
+  console.log('button clicked!', event.target);
+}
+</script>
+```
+
+Notice we:
+
+1. select the button using our `.querySelector()` then,
+2. use `.addEventListener()` to attach a `click` event to the button that was selected.
+3. include a callback function -- our **event handler** -- called `handleButtonClick` as the second argument to `.addEventListener()` after the first argument which is the name of the event we want to button to be listening for. We will talk about **event handlers** next.
+
+There are multiple ways to attach events to DOM elements, which you can read more about in [Understanding Events in JavaScript](https://www.taniarascia.com/understanding-events-in-javascript/#event-handlers-and-event-listeners). For this guide, we will stick to the convention of using the `.addEventListener()` function.
 
 #### Event Handlers
+
+When we refer to **event handlers** we are talking about the functions that get triggered when an event has occurred. So if a button is listening to a "click" event and that button is clicked, then the **event handler** is the function that will get called that has been programmed to turn the background pink, for example.
+
+As we showed in the above example, we can:
+
+1. attach an event to a DOM node with an **event listener** then
+2. handle the event with an **event handler** like so:
+
+```html
+<body>
+  <button id="myButton">Click Me!</button>
+</body>
+
+<script>
+const $button = document.querySelector("#myButton");
+
+$button.addEventListener( 'click', handleButtonClick);
+
+function handleButtonClick(event){
+  document.querySelector('body').style.backgroundColor = 'pink';
+}
+</script>
+```
+
+Event handlers are callback functions that are passed the `event` object, which is discussed in the following section on [Event Objects](#event-objects).
+
 
 
 ### Event Objects
 
-The event object refers to the element on which your event as been attached. 
+The event object refers to the event that has just occured on the element on which your event as been attached. 
 
-By using the `.target` property of your `event`, you can get the DOM node (i.e. the target) of that event. 
+By using the `.target` property of your `event`, you can get the DOM node (i.e. the target) of that event or you can check to see the `.originalTarget` that the event was attached to, among other properties.
+
 ```html
 <div id="app">
   <section class="section section--1">Section 1</section>
@@ -1217,10 +1338,11 @@ By using the `.target` property of your `event`, you can get the DOM node (i.e. 
 
 
 ## References: JavaScript and the DOM 
-* understanding events: https://www.digitalocean.com/community/tutorials/understanding-events-in-javascript
-* https://www.taniarascia.com/how-to-access-elements-in-the-dom/
-* https://www.taniarascia.com/how-to-traverse-the-dom/
-* https://www.taniarascia.com/how-to-make-changes-to-the-dom/
+
+* [Understanding JavaScript Events](https://www.digitalocean.com/community/tutorials/understanding-events-in-javascript)
+* [How to Access Elements in the DOM](https://www.taniarascia.com/how-to-access-elements-in-the-dom/)
+* [How to Traverse the DOM](https://www.taniarascia.com/how-to-traverse-the-dom/)
+* [How to Make Changes to the DOM](https://www.taniarascia.com/how-to-make-changes-to-the-dom/)
 
 ***
 ***
