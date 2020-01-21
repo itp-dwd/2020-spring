@@ -4,7 +4,7 @@
 - [The Web Browser Guide](#the-web-browser-guide)
   - [Table of Contents](#table-of-contents)
   - [How the web browser works](#how-the-web-browser-works)
-  - [The Browser API](#the-browser-api)
+  - [The Web Platform](#the-web-platform)
 
 ## How the web browser works
 The web browser is a magical tool. Seriously. It is amazing if you start to look into all the things the browser does. But web browsers themselves are just software that are designed and coded like any other software you use on your machine. They caveat is that web browsers are designed to be your portal to the world-wide-web. 
@@ -24,7 +24,7 @@ What we're going to learn is that web browsers are like any other software appli
 Image: Image showing a Wikipedia article about "weather forecasting" and all of the network requests fulfilled by the browser
 
 
-## The Browser API
+## The Web Platform
 
 If you're coming from NYU ITP's Intro to Computational Media course, you'll have used p5.js. All those fun *sketches* you made with JavaScript with animating circles, squares, and images were made possible because your web browser has the ability to draw shapes, images, and video as pixels that rendered into the window of the browser on something called the **canvas**. The canvas is one of your web browser's many offerings however. Baked into your web browser are features like audio recording, speech recognition, geolocation, storage, networking, and more. 
 
