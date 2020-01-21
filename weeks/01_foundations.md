@@ -13,8 +13,8 @@ A majority of the class will be focused on setting up your development environme
 ## Exercises To Do Before Class
 <!-- What materials (readings, tasks, exercises) should students complete before class to be prepared for the lesson. -->
 * Fill out the appropriate form based on your section:
-  * Joey: 
-  * Cassie:
+  * Joey’s survey: https://forms.gle/i1mHxxPhuU8mv3Ac6
+  * Cassie’s survey: https://forms.gle/Lkj9ue9VwD6ubFmV6
 
 
 ### Outcomes & Goals

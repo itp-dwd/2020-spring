@@ -24,7 +24,7 @@ Your assignment consists of two parts:
   * how to set up and run your application.
   * how you built your HTML page
   * inspiration, process documentation, and references
-  * and how you deployed your work to Glitch.
+  * and how you deployed your work to [Glitch.com](https://glitch.com).
 * Your application must be publicly accessible on Glitch.
 
 ## Submission
