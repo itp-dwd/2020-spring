@@ -3,9 +3,18 @@
 ## Table of Contents
 - [The HTML Guide](#the-html-guide)
   - [Table of Contents](#table-of-contents)
+  - [Prelude: You Should really read](#prelude-you-should-really-read)
   - [Tags and their attributes](#tags-and-their-attributes)
   - [Syntax](#syntax)
   - [Structure](#structure)
+  - [HTML as the "dependency manager"](#html-as-the-%22dependency-manager%22)
+
+## Prelude: You Should really read
+
+This guide is based heavily on these blog posts by [Tania Rascia](https://www.taniarascia.com/):
+
+* [Introduction to the DOM](https://www.taniarascia.com/introduction-to-the-dom/)
+* [Understanding the DOM Tree and Nodes](https://www.taniarascia.com/understanding-the-dom-tree-and-nodes/)
 
 ## Tags and their attributes
 
@@ -200,3 +209,8 @@ The point of the above exercise is to see how HTML can be nested within tags to 
 We know that our page has some structure that is semantically meaningful, but to our website viewers, they just see the content we've provided to them in the rawest form. What if we wanted to create our own layout, apply styling to the links and titles, add new typography, and make some better color choices? That's where CSS comes in. Read on for more.
 
 NOTE: explore defining the HTML structure before putting too much or any CSS onto the page. A well structured HTML page will naturally reveal the architecture it is meant to showcase. 
+
+## HTML as the "dependency manager"
+
+HTML acts as the "glue" to your websites by brining in any external CSS and JavaScript files that may be used in your project. Please see [The JavaScript Front End Guide -- prelude](javascript-frontend-guide.md#prelude-including-js-files-in-html) for more details.
+
