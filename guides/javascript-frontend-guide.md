@@ -50,7 +50,12 @@
       - [Updating the content of a DOM selection](#updating-the-content-of-a-dom-selection)
         - [Selected Demos](#selected-demos)
       - [Updating the style of a DOM element](#updating-the-style-of-a-dom-element)
-    - [Event Listeners](#event-listeners)
+    - [Javascript Events:](#javascript-events)
+      - [Event Handlers and Event Listeners](#event-handlers-and-event-listeners)
+      - [Table of common events](#table-of-common-events)
+      - [Event Listeners](#event-listeners)
+      - [Event Handlers](#event-handlers)
+    - [Event Objects](#event-objects)
   - [References: JavaScript and the DOM](#references-javascript-and-the-dom)
 - [JavaScript Networking, AJAX, talking to APIs, and CORs](#javascript-networking-ajax-talking-to-apis-and-cors)
   - [Background: XHR: XMLHttpRequest](#background-xhr-xmlhttprequest)
@@ -1076,19 +1081,140 @@ setTimeout( function(){
 
 #### Updating the style of a DOM element
 
+So far we've learned how to add, update, and remove DOM nodes. In JavaScript, many times we'll want to selectively apply styling changes to the DOM as a way of indicating state changes. This could range from anything from setting `display:none` to `display:block` on an element to hide/show it based on a user interaction to changing the border color if a form input has been incorrectly filled out. 
 
-* https://www.taniarascia.com/how-to-make-changes-to-the-dom/
-
-### Event Listeners
-
-TBD
+The nice thing about adding and removing CSS classes to handle your style change updates is that you can separate your concerns - styling is handled in CSS where as interaction is handled by JS. 
 
 
-```js
+```html
+<style>
+.hidden {
+  display:none;
+}
+
+</style>
+
+<header class="header hidden">
+  <h1>Surprise!</h1>
+</header>
+<main>
+The word of the day today is: "anthropocene"
+</main>
+
+<script>
+const $header = document.querySelector(".header");
+
+setTimeout( function(){
+  $header.classList.remove('hidden');
+}, 1000);
+</script>
 
 ```
 
-* https://www.taniarascia.com/understanding-events-in-javascript/
+You can also `toggle` a class in the case that you want to "toggle" between an active an inactive state:
+
+```html
+<style>
+* {
+  box-sizing:border-box;
+}
+.header{
+  border:1px solid black;
+}
+
+.active {
+  border:3px solid pink;
+}
+</style>
+
+<header class="header active">
+  <h1>Surprise!</h1>
+</header>
+
+<script>
+const $header = document.querySelector(".header");
+
+setInterval( function(){
+  $header.classList.toggle('active');
+}, 1000);
+</script>
+
+```
+
+See the demo: [JS Selectors - Class Toggle Demo](https://editor.p5js.org/joeyklee/sketches/FqdzcrMEa)
+
+So far we've been showcasing how DOM elements change depending on the JavaScript timing functions like `setInterval` or `setTimeout`, but the power of JavaScript lies in attaching event listeners like `click`, `mouseover`, `scroll`, etc on various elements and the window. In the next section we will explore how to add and handle JavaScript events.
+
+
+### Javascript Events:
+
+#### Event Handlers and Event Listeners
+
+JavaScript Events are the core of making interactive websites and web applications.
+
+If you've been coding in p5.js, then you'll have had many experiences building in interactivity to web applications. You will have seen functions like `mousePressed()` provided by p5 which makes it easier for you to handle click events and `keyPressed()` which helps you handle when a user types on their keyboard. 
+
+In this section we will cover how **to add** and **to handle** events attached to DOM elements. 
+
+The following sections are a summary of the content found in the [Blog Post, Understanding Events in Javascript](https://www.taniarascia.com/understanding-events-in-javascript/)
+
+#### Table of common events
+
+For your reference the following tables are a selection of events that you will likely use in the development of your web applications. An exhaustive list can be found at [MDN's Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events).
+
+**Mouse events**
+| Event 	| Description |
+| :---    | ---         |
+|`click` | 	Fires when the mouse is pressed and released on an element|
+|`dblclick` | 	Fires when an element is clicked twice|
+|`mouseenter` | 	Fires when a pointer enters an element|
+|`mouseleave` | 	Fires when a pointer leaves an element|
+|`mousemove` | 	Fires every time a pointer moves inside an element|
+
+**Form events**
+
+|Event 	|Description|
+| :---  | ---       |
+|`submit` 	|Fires when a form is submitted|
+|`focus` 	|Fires when an element (such as an input) receives focus |
+|`blur` 	|Fires when an element loses focus|
+
+**Keyboard events**
+
+| Event 	|Description |
+| :---    | ---        |
+| `keydown` 	|Fires once when a key is pressed |
+| `keyup` 	|Fires once when a key is released |
+| `keypress` 	|Fires continuously while a key is pressed |
+
+
+#### Event Listeners
+
+
+#### Event Handlers
+
+
+### Event Objects
+
+The event object refers to the element on which your event as been attached. 
+
+By using the `.target` property of your `event`, you can get the DOM node (i.e. the target) of that event. 
+```html
+<div id="app">
+  <section class="section section--1">Section 1</section>
+  <section class="section section--2">Section 2</section>
+  <section class="section section--3">Section 3</section>
+</div>
+
+<script>
+  const $app = document.querySelector("#app");
+  $app.addEventListener('click', evt => {
+    console.log(evt.target);
+    alert(evt.target.textContent)
+  })
+</script>
+```
+
 
 ## References: JavaScript and the DOM 
 * understanding events: https://www.digitalocean.com/community/tutorials/understanding-events-in-javascript
