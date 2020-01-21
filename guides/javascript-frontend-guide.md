@@ -1,9 +1,26 @@
+
+<style>
+h1{
+  margin-top:60px;
+  margin-bottom:60px;
+}
+
+h2, h3, h4, h5, h6{
+margin-top:36px;
+margin-bottom:36px;
+}
+</style>
+
 # Frontend Javascript Guide
+
+## About
+
+This frontend JavaScript guide is a roadmap to having a solid JavaScript foundation. Like any language, learning JavaScript for the frontend not only means having a strong grasp of the syntax of JavaScript, but also how it works with and applies to other contexts (e.g. interacting with the DOM, communicating with APIs, etc).
 
 ## Table of Contents
 - [Frontend Javascript Guide](#frontend-javascript-guide)
-  - [Table of Contents](#table-of-contents)
   - [About](#about)
+  - [Table of Contents](#table-of-contents)
 - [JavaScript Foundations](#javascript-foundations)
   - [Prelude: Including JS files in HTML](#prelude-including-js-files-in-html)
   - [Introduction: The Basics](#introduction-the-basics)
@@ -78,10 +95,6 @@
 - [Advanced: JavaScript Patterns](#advanced-javascript-patterns)
 - [Advanced: JavaScript Frameworks](#advanced-javascript-frameworks)
   - [Essential Questions](#essential-questions)
-
-## About
-
-This frontend JavaScript guide is a roadmap to having a solid JavaScript foundation. Like any language, learning JavaScript for the frontend not only means having a strong grasp of the syntax of JavaScript, but also how it works with and applies to other contexts (e.g. interacting with the DOM, communicating with APIs, etc).
 
 ***
 ***
