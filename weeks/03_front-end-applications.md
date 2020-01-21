@@ -13,6 +13,7 @@ Emphasis this week will be on writing clean and organized JavaScript code.
 You should be able to speak on the following points:
 
 * **DOM Manipulation**
+  * What does it mean for a website to be loaded?
   * How do you include JS files in HTML?
   * How do you add new DOM elements?
   * How do you remove DOM elements?
@@ -58,3 +59,53 @@ Topics we are not covering, but are of importance:
 ## Topics
 
 ### DOM Manipulation
+
+When JavaScript was first created back in the 90's, one of the original uses was to dynamically change a page's HTML after the website had loaded. This is still the most common usage of JS in the browser.
+
+To get started, create a new `index.html`, a new empty JS file `script.js`, and have the HTML link to the script. Then start a simple static server to start building and testing.
+
+**TODO** do I need to include a section about how to include JS files? Or where they are commonly put?
+
+#### When is a website finished loading?
+Back in week 1, we talked about all of the steps that happen when you load a website in a browser. Part of that process is when the server sends back an HTML file, and the browser starts rendering the HTML. The browser interprets the HTML and builds the DOM (Document Object Model) of the website. This process isn't instantaneous—it takes some time. If we want to make changes to the DOM, we have to wait until it's finished loading. How do we know (in code) when it's done? The browser fires a `load` event, which we can listen for:
+```js
+window.onload = function() {
+  initialize();
+  appendToDOM();
+}
+```
+You'll need to call certain code with this event handler, or else it won't work. More on this in a bit.
+
+#### Creating Appending DOM Elements
+*Note*: You cannot create or append DOM elements until the website is loaded. Therefore you'll need to wrap all of the code in this section in a `window.onload` handler.
+
+To create a new element, the code looks like
+
+```js
+const newParagraph = document.createElement("p");
+newParagraph.textContent = "I'm a new paragraph";
+```
+
+If you then reload your webpage, you won't see the new element? Why? Because you didn't saw where you want to put it. You must manually append it to the DOM. You need to include the line
+```js
+document.body.appendChild(newParagraph);
+```
+
+Often, you don't want to append your new element to the end of your DOM, but in a specific location. Rather then specifying an index, it's most common to specify the parent element to add the element to. For example, if your HTML body looked like this
+```html
+<section id="post">
+</section>
+<ul id="comments">
+</ul>
+<footer>
+</footer>
+```
+And you wanted to add a new element to the `#comments` section, the JS is
+```js
+const commentsContainer = document.getElementById("comments");
+const newComment = document.createElement("li");
+newComment.textContent = "This is an amazing post.";
+
+```
+
+
