@@ -46,8 +46,16 @@
   - [References: JavaScript Foundations](#references-javascript-foundations)
 - [JavaScript and the DOM](#javascript-and-the-dom)
     - [Selecting DOM elements](#selecting-dom-elements)
-    - [Updating styles & adding/removing CSS classes](#updating-styles--addingremoving-css-classes)
-    - [Event Listeners](#event-listeners)
+    - [Updating the dom: styles & adding/removing CSS classes](#updating-the-dom-styles--addingremoving-css-classes)
+      - [Updating the content of a DOM selection](#updating-the-content-of-a-dom-selection)
+        - [Selected Demos](#selected-demos)
+      - [Updating the style of a DOM element](#updating-the-style-of-a-dom-element)
+    - [Javascript Events:](#javascript-events)
+      - [Event Handlers and Event Listeners](#event-handlers-and-event-listeners)
+      - [Table of common events](#table-of-common-events)
+      - [Event Listeners](#event-listeners)
+      - [Event Handlers](#event-handlers)
+    - [Event Objects](#event-objects)
   - [References: JavaScript and the DOM](#references-javascript-and-the-dom)
 - [JavaScript Networking, AJAX, talking to APIs, and CORs](#javascript-networking-ajax-talking-to-apis-and-cors)
   - [Background: XHR: XMLHttpRequest](#background-xhr-xmlhttprequest)
@@ -904,15 +912,309 @@ Let's begin applying our JavaScript knowledge in relation to interacting to DOM.
 
 ### Selecting DOM elements
 
-TBD
+JavaScript in HTML5 is infuses web sites with interactivity. Using the browser's `document` object, you can use JavaScript in the browser to select elements living on the DOM to update styles, handle form submission, add event listeners, and much more. 
 
-### Updating styles & adding/removing CSS classes
+If you want to brush up on terminology, you should read:
+* [Introduction to the DOM](https://www.taniarascia.com/introduction-to-the-dom/)
+* [Understanding the DOM Tree and Nodes](https://www.taniarascia.com/understanding-the-dom-tree-and-nodes/)
 
-TBD
+What we're going to discuss in this section is how to access elements in the DOM and how to traverse the DOM tree:
+* [How to access elements in the DOM](https://www.taniarascia.com/how-to-access-elements-in-the-dom/)
+* [How to traverse the DOM](https://www.taniarascia.com/how-to-traverse-the-dom/)
 
-### Event Listeners
+As noted in [How to access elements in the DOM](https://www.taniarascia.com/how-to-access-elements-in-the-dom/), there are 3 types of selectors -- css id, css class, the name of the tag -- and 5 methods to select those elements based on those selectors.
 
-TBD
+Gets 	| Selector Syntax 	| Method
+| :--- | --- | --- |
+| ID 	| #demo 	| `document.getElementById()`
+| Class 	| .demo 	| `document.getElementsByClassName()`
+| Tag 	| demo 	| `document.getElementsByTagName()`
+| Selector (single)|  		| `document.querySelector()`
+| Selector (all)|  		| `document.querySelectorAll()`
+
+Important to note that when using these selectors, the number of elements that you're attempting to select matters and will determine if you need to loop through a group of selected elements or just apply your changes to 1 element.
+
+Here's an example that updates the background and border colors color 
+```html
+<div id="demo">
+  <p class="paragraph">1</p>
+  <p class="paragraph">2</p>
+  <p class="paragraph paragraph--border-red">3</p>
+</div>
+
+<script>
+const $demo = document.getElementById("demo");
+$demo.style.backgroundColor = 'black';
+
+const $paragraphs = document.querySelectorAll(".paragraph");
+// looping through each paragraph to apply an orange background
+$paragraphs.forEach(item => {
+  item.style.backgroundColor = 'orange';
+})
+
+const $pRed = document.querySelector(".paragraph--border-red");
+
+$pRed.style.border = '1px solid red';
+
+</script>
+```
+
+See a working demo here: [JS selectors demo](https://editor.p5js.org/joeyklee/sketches/nVMfhYzrS)
+
+### Updating the dom: styles & adding/removing CSS classes
+
+We just saw above how we can:
+1. select DOM elements with JavaScript and 
+2. use the selection as stored in a variable to update their CSS styles. 
+
+In this section we are going to look how to:
+1. Update the content of a DOM element
+2. Change the style of a DOM element(s) based on the addition or removal of a CSS class.
+
+#### Updating the content of a DOM selection
+
+You can update the content of a DOM selection in a number of ways. 
+
+As written in [How to Make Changes to the DOM ](https://www.taniarascia.com/how-to-make-changes-to-the-dom/), we can **create**, **insert**, and **remove** nodes from the DOM. The methods to achieve these are listed below.
+
+* **Creating Nodes:** The methods of creating new DOM nodes can be summarized as:
+
+  | Property/Method | 	Description |
+  | :---            |   ----       |
+  | `createElement()` 	| Create a new element node | 
+  | `createTextNode()` 	| Create a new text node| 
+  | `node.textContent` 	| Get or set the text content of an element node | 
+  | `node.innerHTML` 	| Get or set the HTML content of an element | 
+
+* **Inserting Nodes:** The methods of inserting nodes into the DOM can be summarized as:
+
+  |Property/Method| 	Description|
+  | :---          |     ----     |
+  | `node.appendChild()` 	| Add a node as the last child of a parent element| 
+  | `node.insertBefore()` 	| Insert a node into the parent element before specified sibling node| 
+  | `node.replaceChild() `	| Replace an existing node with a new node| 
+
+* **Removing Nodes:** The methods of removing nodes from the DOM can be summarized as:
+
+  | Method|  	Description| 
+  | :---  | ---          |
+  | `node.removeChild()` 	| Remove child node| 
+  | `node.remove()` 	| Remove node| 
+
+##### Selected Demos
+
+* `.createElement() & .appendChild()`: sometimes you'll need/want to create your DOM nodes in javascript. This is often the case if you're creating [reactive UIs](https://css-tricks.com/reactive-uis-vanillajs-part-1-pure-functional-style/):
+
+```html
+<div id="app">
+</div>
+
+<script>
+  const $app = document.querySelector("#app");
+
+  // create and unordered list:
+  const $myList = document.createElement('ul');
+  //  create 10 list items
+  for(let i =0; i < 10; i++){
+    const $item = document.createElement("li");
+    $item.textContent = `Hi! I'm item #${i}`;
+    // append each list item to the unordered list
+    $myList.appendChild($item);
+  }
+
+  // append the unordered list to the $app dom element
+  $app.appendChild($myList);
+</script>
+```
+
+* `.innerHTML`: innerHTML is an easy way to add HTML to the DOM, however note that this can open up your application for [Cross-site scripting attacks](https://owasp.org/www-community/attacks/xss/).
+
+```html
+  <div id="app">
+  </div>
+
+  <script>
+    const $app = document.querySelector("#app");
+
+    let $listItems = '';
+
+    for (let i = 0; i < 10; i++) {
+      $listItems += `<li>Hi I'm item #:${i}</li>`
+    }
+
+    $app.innerHTML = `
+    <header>
+      <h1>Hello World<h1>
+    </header>
+    <main>
+      <ul>
+      ${$listItems}
+      </ul>
+    </main>
+  `;
+  </script>
+```
+
+* `.textContent`: if you're looking to update the text content of a DOM selection, you can use the `.textContent` property:
+
+```js
+yourDomSelection.textContent = "new text"
+```
+
+For example:
+
+```html
+<p class="message">I'm a <span class="job"></span></p>
+
+<script>
+const $jobSpan = document.querySelector(".job");
+
+// after 2 seconds, set the textContent
+setTimeout( function(){
+  $jobSpan.textContent = "javascript ninja!";
+}, 2000);
+
+</script>
+```
+
+
+
+#### Updating the style of a DOM element
+
+So far we've learned how to add, update, and remove DOM nodes. In JavaScript, many times we'll want to selectively apply styling changes to the DOM as a way of indicating state changes. This could range from anything from setting `display:none` to `display:block` on an element to hide/show it based on a user interaction to changing the border color if a form input has been incorrectly filled out. 
+
+The nice thing about adding and removing CSS classes to handle your style change updates is that you can separate your concerns - styling is handled in CSS where as interaction is handled by JS. 
+
+
+```html
+<style>
+.hidden {
+  display:none;
+}
+
+</style>
+
+<header class="header hidden">
+  <h1>Surprise!</h1>
+</header>
+<main>
+The word of the day today is: "anthropocene"
+</main>
+
+<script>
+const $header = document.querySelector(".header");
+
+setTimeout( function(){
+  $header.classList.remove('hidden');
+}, 1000);
+</script>
+
+```
+
+You can also `toggle` a class in the case that you want to "toggle" between an active an inactive state:
+
+```html
+<style>
+* {
+  box-sizing:border-box;
+}
+.header{
+  border:1px solid black;
+}
+
+.active {
+  border:3px solid pink;
+}
+</style>
+
+<header class="header active">
+  <h1>Surprise!</h1>
+</header>
+
+<script>
+const $header = document.querySelector(".header");
+
+setInterval( function(){
+  $header.classList.toggle('active');
+}, 1000);
+</script>
+
+```
+
+See the demo: [JS Selectors - Class Toggle Demo](https://editor.p5js.org/joeyklee/sketches/FqdzcrMEa)
+
+So far we've been showcasing how DOM elements change depending on the JavaScript timing functions like `setInterval` or `setTimeout`, but the power of JavaScript lies in attaching event listeners like `click`, `mouseover`, `scroll`, etc on various elements and the window. In the next section we will explore how to add and handle JavaScript events.
+
+
+### Javascript Events:
+
+#### Event Handlers and Event Listeners
+
+JavaScript Events are the core of making interactive websites and web applications.
+
+If you've been coding in p5.js, then you'll have had many experiences building in interactivity to web applications. You will have seen functions like `mousePressed()` provided by p5 which makes it easier for you to handle click events and `keyPressed()` which helps you handle when a user types on their keyboard. 
+
+In this section we will cover how **to add** and **to handle** events attached to DOM elements. 
+
+The following sections are a summary of the content found in the [Blog Post, Understanding Events in Javascript](https://www.taniarascia.com/understanding-events-in-javascript/)
+
+#### Table of common events
+
+For your reference the following tables are a selection of events that you will likely use in the development of your web applications. An exhaustive list can be found at [MDN's Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events).
+
+**Mouse events**
+| Event 	| Description |
+| :---    | ---         |
+|`click` | 	Fires when the mouse is pressed and released on an element|
+|`dblclick` | 	Fires when an element is clicked twice|
+|`mouseenter` | 	Fires when a pointer enters an element|
+|`mouseleave` | 	Fires when a pointer leaves an element|
+|`mousemove` | 	Fires every time a pointer moves inside an element|
+
+**Form events**
+
+|Event 	|Description|
+| :---  | ---       |
+|`submit` 	|Fires when a form is submitted|
+|`focus` 	|Fires when an element (such as an input) receives focus |
+|`blur` 	|Fires when an element loses focus|
+
+**Keyboard events**
+
+| Event 	|Description |
+| :---    | ---        |
+| `keydown` 	|Fires once when a key is pressed |
+| `keyup` 	|Fires once when a key is released |
+| `keypress` 	|Fires continuously while a key is pressed |
+
+
+#### Event Listeners
+
+
+#### Event Handlers
+
+
+### Event Objects
+
+The event object refers to the element on which your event as been attached. 
+
+By using the `.target` property of your `event`, you can get the DOM node (i.e. the target) of that event. 
+```html
+<div id="app">
+  <section class="section section--1">Section 1</section>
+  <section class="section section--2">Section 2</section>
+  <section class="section section--3">Section 3</section>
+</div>
+
+<script>
+  const $app = document.querySelector("#app");
+  $app.addEventListener('click', evt => {
+    console.log(evt.target);
+    alert(evt.target.textContent)
+  })
+</script>
+```
+
 
 ## References: JavaScript and the DOM 
 * understanding events: https://www.digitalocean.com/community/tutorials/understanding-events-in-javascript
