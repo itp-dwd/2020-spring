@@ -1,7 +1,7 @@
 # Week 3: Front-end Applications
 
 ## Slides
-* ↳ [Link to Week # Slides: Front end Applications](#)
+* ↳ [Link to Week 3 Slides: Front end Applications](#)
 
 ## About
 This week, we will be learning how to use JavaScript to update the DOM, listen for events, and make API requests to fetch dynamic data. 

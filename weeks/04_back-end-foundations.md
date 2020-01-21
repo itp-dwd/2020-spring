@@ -1,6 +1,37 @@
 # Week 03: Back-end Foundations
 
-## Essential Questions
+## Slides
+* ↳ [Link to Week 4 Slides: Back end Foundations](#)
+
+## About
+In this week, we will be learning about server-side programming using JavaScript running in Node.js. We we learn how to run Node scripts and make our own API.
+
+Emphasis this week will be on understanding when it is necessary to use server-side programming, and differentiating between server-side and client-side code.
+
+### Outcomes & Goals
+
+* **Node.js**
+  * What is back end/server side programming?
+  * What is Node.js? What's the motivation behind its creation?
+  * How do you install Node.js?
+  * What are the Node.js core libraries? How do you use them?
+  * What capabilities does Node have that browser JS does not? What about vice versa?
+* **npm**
+  * What is `npm`? What is the difference between `npm`, the command line tool, and "npmjs.com"?
+  * How do you create an npm project? How do you install and keep track of dependencies?
+  * How do you use "npmjs.org"?
+  * How do you use `npm` with `git`?
+* **APIs**
+  * What is an API?
+  * What is REST?
+  * What is CORS?
+* **Express**
+  * What is a static web server? How do you create one with Express?
+  * How do you Express to return JSON?
+  * Why would you use Express to make API requests, rather than making the requests client-side?
+* **Data Persistence**
+  * What are ways that you can persist data?
+  * Can you persist data without a database? When do you need to use a database?
 
 - What is the "back-end" / server-side programming?
 - What is a server side programming language? How does it differ from client-side programming in the browser?
@@ -30,8 +61,19 @@ Students will walk away with a deeper understanding of:
 * The terminal / command-line
 * NPM, Node.js and Express.js
 * REST API structure
-  
 
+## Pacing / Duration
+TBD
+
+## Materials Needed
+* ↳ [Developer setup Guide](../guides/developer-setup-guide.md)
+
+## What we are not covering
+
+Topics we are not covering, but are of importance:
+* TypeScript
+* Dependency management, transpiling and bundling (Webpack, Parcel, Rollup, Browserify, Babel)
+  
 ## Topics
 
 ### JavaScript in the Browser vs Node
