@@ -1,5 +1,16 @@
 # Guide to your Browser's Developer Tools
 
+## Table of Contents
+- [Guide to your Browser's Developer Tools](#guide-to-your-browsers-developer-tools)
+  - [Table of Contents](#table-of-contents)
+  - [About](#about)
+  - [Getting Started](#getting-started)
+  - [Devtools: HTML - The Elements panel](#devtools-html---the-elements-panel)
+  - [Devtools: CSS - Styles Panel](#devtools-css---styles-panel)
+  - [Devtools: JavaScript Console](#devtools-javascript-console)
+  - [Devtools: Everything Else](#devtools-everything-else)
+  - [References](#references)
+
 ## About
 
 This guide introduces you to your browser's developer tools (a.k.a "devtools") and highlights the key features that will help you develop and debug like a pro.
@@ -65,7 +76,7 @@ Your browser's devtools come with A LOT of other panels that can help you in you
 * [The Security Tab](https://flaviocopes.com/browser-dev-tools/#security-tab): for info about your browser's connection
 * [Audits](https://flaviocopes.com/browser-dev-tools/#audits): for auditing your code for accessibiity and performance
 
-## References:
+## References
 * [Overview of the Browser DevTools](https://flaviocopes.com/browser-dev-tools/)
 * [What are browser developer tools?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) by Mozilla MDN Docs
 * [Chrome developer tools](https://developers.google.com/web/tools/chrome-devtools/) by Google Chrome Developers
