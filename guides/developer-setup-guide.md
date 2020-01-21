@@ -12,5 +12,7 @@
 * **GitHub Account**:
   * [Sign up with Github.com](https://github.com/)
   * [Student Developer Pack](https://education.github.com/pack)
+* **Github Desktop Tool**:
+  * [Download Github Desktop](https://desktop.github.com/)
 * **Glitch Account**:
   * [Sign up with Glitch.com](https://glitch.com/)
