@@ -47,8 +47,9 @@ Your website will be served using a static web server on **Glitch** and will be 
 You can copy the code from Assignment `01` from last week and put your static HTML, CSS, and JavaScript files into the correct directories. 
 
 **e.g.**:
+* `index.html`
 * `/views`:
-  * `index.html
+  * `about.html`
 * `/public`:
   * `/js`:
     * `main.js`
