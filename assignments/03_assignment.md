@@ -1,6 +1,9 @@
-# Assignment 3: Your First Server and Client-Side Rendering
+# Assignment 3: Dynamic Front-end Web Application
 
 ## Briefing
+
+![Image: Screenshot of Weather App by Vanilla JS Academy](/assets/assignment-03__header.png)
+[Image: Screenshot of Weather App by Vanilla JS Academy](https://vanillajsacademy.com/projects/weather/)
 
 This week, the assignment is to created a dynamic front end web application. This means that it must:
   * Connect with an API (e.g. weather, time)
