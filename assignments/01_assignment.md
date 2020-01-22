@@ -2,6 +2,8 @@
 
 ## Briefing
 
+![Assignment 1 demo - net art with rainbows and gif](/assets/assignment-01__demo.gif)
+
 Your task this week is to code a simple website using basic HTML and CSS. The goal of this assignment is to begin your practice of the web development and deployment process.
 
 Your assignment consists of two parts:
@@ -25,7 +27,7 @@ Your assignment consists of two parts:
   * how you built your HTML page
   * inspiration, process documentation, and references
   * and how you deployed your work to [Glitch.com](https://glitch.com).
-* Your application must be publicly accessible on Glitch.
+* Your application must be publicly accessible on [Glitch.com](https://glitch.com).
 
 ## Submission
 
