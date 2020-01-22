@@ -76,7 +76,9 @@ This frontend JavaScript guide is a roadmap to having a solid JavaScript foundat
   - [References: JavaScript and APIs](#references-javascript-and-apis)
 - [The Web Platform](#the-web-platform)
   - [Browser Platform: `localStorage`](#browser-platform-localstorage)
+    - [Reference: local Storage](#reference-local-storage)
   - [Browser Platform: Geolocation API](#browser-platform-geolocation-api)
+    - [Reference: Geolocation API](#reference-geolocation-api)
   - [References: The Web Platform](#references-the-web-platform)
 - [Conclusion & Recap](#conclusion--recap)
 - [Advanced: JavaScript Patterns](#advanced-javascript-patterns)
@@ -1618,11 +1620,29 @@ From the exciting list of features above, this section will highlight just a few
 
 ## Browser Platform: `localStorage`
 
-TBD
+`localStorage` is like a "database" that lives in your browser that allows you to store data as strings in "key/value" pairs. Like a database, `localStorage` will persist data that is stored there, HOWEVER, if you clear your browser data, all your `localStorage` data will be removed. 
+
+There are many uses for `localStorage` (e.g. quick prototypes or storing data while offline, etc) and adds a wonderful capability to your clientside web applications for persisting data in a lightweight (though precarious) way. 
+
+You can read more about [how to use local storage with JavaScript](https://www.taniarascia.com/how-to-use-local-storage-with-javascript/). In simplistic terms, you can think about it as JSON object that is available at your project's URL that you can add string data to as a set of "Key/Value" pairs. The following functions allow you to add, retrieve, and remove data living in your `localStorage` like so:
+
+|Method 	|Description|
+| :---    | ---       |
+| `setItem()`| 	Add key and value to local storage|
+| `getItem()`| 	Retrieve a value by the key|
+| `removeItem()`| 	Remove an item by key|
+| `clear()`| 	Clear all storage|
+
+
+### Reference: local Storage
+* [How to use local storage with JavaScript](https://www.taniarascia.com/how-to-use-local-storage-with-javascript/)
 
 ## Browser Platform: Geolocation API
 
-TBD
+Your web browser 
+
+### Reference: Geolocation API
+* [How to use the Geolocation API](https://flaviocopes.com/geolocation-api/)
 
 ## References: The Web Platform
 
