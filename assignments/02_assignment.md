@@ -27,7 +27,7 @@ Part 1 of this assignment is about focusing on organizing **typography**, **layo
 
 ### Part 2: Development
 
-As a front end developer, your task is often to create faithful reproductions of the visual design of the web app/site that lands on your desk. Over time you will acquire new tips and tricks on how to make high fideltiy recreations of the designs you've made or those that have been given to you. You will even be able to add delightful animations and add surprising effects that will tickle your users. 
+As a front end developer, your task is often to create faithful reproductions of the visual design of the web app/site that lands on your desk. Over time you will acquire new tips and tricks on how to make high fidelity recreations of the designs you've made or those that have been given to you. You will even be able to add delightful animations and add surprising effects that will tickle your users. 
 
 For now, your job is to translate your own designs as faithfully as possible into code. In this step, you will identify how to take the specifications in your style guide and design (see part 1) and articulate them as HTML, CSS, and JavaScript. 
 
