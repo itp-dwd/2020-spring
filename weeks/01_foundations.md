@@ -189,6 +189,10 @@ $ code .
 ```sh
 $ python -m SimpleHTTPServer
 ```
+or, if you are running Python 3
+```sh
+$ python3 -m http.server 8000
+```
 6. Test your site by navigating to http://localhost:8000
 ![First Website Preview](../assets/first-website-preview.png)
 7. Initialize your git repository and commit your changes.
