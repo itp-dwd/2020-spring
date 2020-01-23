@@ -83,6 +83,17 @@ This week your goal is to be able to speak to these following points:
   * [Download](https://desktop.github.com/)
 
 ## Topics
+
+The topics for we will be covering for this class include:
+1. How the Internet Works
+2. What are "Modern Web Applications"
+3. Development Tools
+   * Text Editor
+   * Command Line
+   * Version Control
+   * Source Code Hosting
+   * Deployment and Deploymen tOptions
+
 ### How the Internet Works
 When we're creating websites and web applications, it's helpful to understand the infrastructure of the Internet. This helps us understand all of the steps in creating a website from scratch.
 
@@ -118,9 +129,9 @@ We will eventually be creating web servers that run on our own computers. How do
 Additional notes on how web browsers work cna be found in the [Browser Guide](/guides/browser-guide.md)
 
 #### References
-* https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm
-* https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work
-* https://wsvincent.com/what-happens-when-url/
+* [How Does the Internet Work?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
+* [How does the Internet work?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
+* [What Happens When You Type in a URL](https://wsvincent.com/what-happens-when-url/)
 
 
 ### Modern Web Applications
@@ -138,6 +149,9 @@ When we create web applications, we run and test these different components on o
 In order to create websites and web applications, we use different tools to write, test, and deploy our code. These are called **development tools**. There are many different choices of tools; however, the ones we will go over in this class are used by many professional web developers and are the preferred tools of your instructors Cassie and Joey.
 
 #### Text Editor
+
+![Screenshot of VS Code Text Editor](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcode.visualstudio.com%2Fopengraphimg%2Fopengraph-home.png&f=1&nofb=1)
+
 A text editor is an application in which you can create and edit text files. It's different from an application like Microsoft Word, in that it's specifically for writing code, rather than English. It's the place you write your HTML/JS/etc. files. 
 
 In this class we will be using [VSCode](https://code.visualstudio.com/). It comes with a ton of features to make writing code easier, including tons of syntax highlighting and tons of extensions.
@@ -146,24 +160,49 @@ In this class we will be using [VSCode](https://code.visualstudio.com/). It come
 **Intermediate Guide**: [Flavio Copes's A VSCode Tutorial](https://flaviocopes.com/vscode/)
 
 #### Command Line
+
+![Terminal Window](../assets/terminal-01.png)
+
 Have you ever opened the "Terminal" application (or maybe "Windows Command Prompt") on your computer? This is called a **command line interface**. You're probably used to interacting with your computer using its GUI (Graphical User Interface), made up of icons, windows, dropdown menus, and other visual components, which you use to perform actions on your computer. The command line is a different interface to your computer, in which you can only tell your computer what to do using text commands. Sometimes it can be frustrating to interact with your computer using the command line, but it gives you access to tools you can't use from the GUI. Many of the tools used to create web applications can only be used on the command line, therefore it's important to learn how to use it.
 
 See the [command line guide](../guies/commandline.md) to get starting using the command line.
 
 #### Version Control
+
+![Git Branching Screenshot](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FAN7Rue-4aMo%2Fmaxresdefault.jpg&f=1&nofb=1)
+
 When working on a piece of writing, it's common to make many drafts before settling on a final version. The same thing happens when you write software. Version control software keeps track of all of the changes you make, and stores them in a "ledger". It also helps you collaborate with other people—you can see the changes that you made, and ones that another person made. It's a pretty powerful tool, and invaluable when writing code.
 
 The most widely used version control software is **Git**. In this class we will be using git as a command line tool. See [git guide](../guides/git.md) for an in-depth guide to getting started with git.
 
 #### Source Code Hosting
+
+![Github Logo Octocat](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftechnologyconversations.files.wordpress.com%2F2015%2F10%2Fgithub.png%3Fw%3D625&f=1&nofb=1)
+
 [GitHub](https://github.com/) is a website for hosting and exploring source code. Many open source projects are hosted on this site, from [VSCode](https://github.com/microsoft/vscode) to [p5.js](https://github.com/processing/p5.js). We'll be using it in this class to host our code (and the git revision history) online. At first, we will use GitHub Desktop to push our **git repository** to GitHub, but mainly we will be using git from the command line.
 
-#### Deployment
+#### Deployment & Deployment Options
+
+![Glitch Homepage](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Findysigner%2Fimage%2Ffetch%2Ff_auto%2Cq_auto%2Fw_400%2Fhttps%3A%2F%2Fcloud.netlifyusercontent.com%2Fassets%2F344dbf88-fdf9-42bb-adb4-46f01eedd629%2F4967a5fd-69eb-4514-9025-f45e888aa15e%2Fvr-endless-runner-game-1-p1-s1.png&f=1&nofb=1)
+
 Once we're ready to make our web application public, we can deploy it. This is different from putting your code on GitHub, as this is a site for looking at the course code, versus the application that is created when the source code is executed. For this class we will be using [Glitch](https://glitch.com/) and later on [Heroku](https://www.heroku.com/).
 
 See the [guide to importing a git repository to Glitch](https://help-center.glitch.me/help/import-git/) for a guide to deployment.
 
 **NOTE**: Glitch is also an in browser code editor (like the [p5.js Web Editor](https://editor.p5js.org/)). However, for this class we will be writing all of our code locally, then pushing to GitHub, then importing your GitHub repository to Glitch.
+
+### HTML
+> HTML is the structure and content of the page
+
+* ↳ [HTML Guide](../guides/html-guide.md)
+
+
+
+***
+***
+***
+
+## Studio
 
 ### Your first deployed website
 Now we're going to walk through creating our first website from scratch!
@@ -215,21 +254,22 @@ $ git commit -m "Initial commit"
 11. Click "Show" -> "In a New Window" and you're done!
 ![Previewing Glitch project](../assets/glitch_show.gif)
 
-### HTML
-* ↳ [HTML Guide](../guides/html-guide.md)
 
+***
+***
+***
+
+## Assignment 1: "Net Art"
+
+* ↳ [Link to Assignment](../assignments/01_assignment.md)
+
+
+<!-- 
 ### Web Development & Creative Practice
 - how do different people use web development as part of their careers?
 - guest speakers??
 - web applications have many different uses and goals
 - Profession web development vs using web development as a creative tool
-
-### What we are not covering
-
-Topics we are not covering, but are of importance:
-* ...
-* ...
-* ...
 
 
 ### Vocabulary (example)
@@ -238,7 +278,6 @@ Topics we are not covering, but are of importance:
 * World Wide Web (WWW): the collection of information that can be accessed via the Internet. 
 
 ## Studio Exercise Descriptions
-<!-- Descriptions of each exercise or phase of class. Similar to pacing but with more description of steps. -->
 - Setting up development environment
 
 ### Using a text editor
@@ -267,63 +306,4 @@ Topics we are not covering, but are of importance:
 
 
 ## References
-<!-- Include any sources cited, but not directly linked in the unit. -->
-* [How Does the Internet Work?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
-
-
-<!-- 
-
-Notes 
-
-* Short history of the web?
-
-* Blogs to follow
-* What we are not going to learn in the class
-  * list of topics/themes?
-  * knowing what you know vs what you don't yet!
-* Doing web development vs. working professionally as a developer vs. working professionally as a developer in industry vs. studio, etc
-* Conceptual overview of how the web works?
-* Overview of terms
-* Clarification of terms
-  * e.g. server vs platform as a service 
-  * e.g. serverside javascript vs serverside XYZ
-* The browser and the DOM
-* Development tools 
-  * git / github
-  * text edior (vs code ) 
-  * iterm2 or equivalent?
-  * glitch account and/or heroku?
-
-* Practice:
-  * Git exercise + build a simple webpage
-  * connecting github repo to glitch
-  
-* additional thoughts:
-  * thinking about when to build from scratch vs. using templates. 
-  * javascript patterns
-    * think about state management, not polluting global scope, etc. 
-    * e.g. pub-sub, MVC, MVVM, etc
-
--->
-
-<!-- 
-
-### Lecture
-* Course overview & logistics
-* Web Foundations:
-  * in concept
-  * in practice
-
-### Studio
-* warm up
-
-### Assignment
-* Part 0: Setup your development environment
-  * Git/Github
-  * Command-line tools
-  * Install node.js
-* Part 1: Create a simple webpage using HTML. It could be a point and click game, a quiz, a choose-your-own-adventure story, fiction, poetry, or art. 
-* Part 2: Create a Node.js HTTP server to serve your file(s).
-* Part 3: Push your project to a repository on GitHub
-* Part 4: Deploy to Glitch by importing from GitHub
- -->
+* [How Does the Internet Work?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm) -->

@@ -106,6 +106,18 @@ Topics we are not covering, but are of importance:
   * JavaScript Foundations
   * JavaScript and the DOM
 
+
+***
+***
+***
+
+## Assignment 2: Interactive Swiss Poster
+
+* ↳ [Link to Assignment](../assignments/02_assignment.md)
+
+
+
+
 ***
 ***
 *** 
