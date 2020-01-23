@@ -8,7 +8,27 @@ This week, we will be learning how to use JavaScript to update the DOM, listen f
 
 Emphasis this week will be on writing clean and organized JavaScript code.
 
-### Outcomes & Goals
+- [Week 3: Front-end Applications](#week-3-front-end-applications)
+  - [Slides](#slides)
+  - [About](#about)
+  - [Outcomes & Goals](#outcomes--goals)
+  - [Pacing / Duration](#pacing--duration)
+  - [Materials Needed](#materials-needed)
+  - [What we are not covering](#what-we-are-not-covering)
+  - [Topics](#topics)
+    - [JavaScript: Part 2](#javascript-part-2)
+    - [DOM Manipulation](#dom-manipulation)
+      - [When is a website finished loading?](#when-is-a-website-finished-loading)
+      - [Selecting DOM Elements](#selecting-dom-elements)
+      - [Creating and Appending DOM Elements](#creating-and-appending-dom-elements)
+      - [Removing Elements](#removing-elements)
+      - [HTML Element Reference](#html-element-reference)
+    - [Event Handlers](#event-handlers)
+    - [Using APIs](#using-apis)
+      - [What is an API?](#what-is-an-api)
+      - [Using Public APIs](#using-public-apis)
+
+## Outcomes & Goals
 
 You should be able to speak on the following points:
 
@@ -57,6 +77,16 @@ Topics we are not covering, but are of importance:
 * Dependency management, transpiling and bundling (Webpack, Parcel, Rollup, Browserify, Babel)
 
 ## Topics
+
+### JavaScript: Part 2
+
+> Make your things interactive with JavaScript
+
+* ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
+  * Review: JavaScript and the DOM 
+  * Callbacks, Promises, and Async/Await
+  * Networking, AJAX, talking to APIs, and CORs
+  * The Web Platform
 
 ### DOM Manipulation
 

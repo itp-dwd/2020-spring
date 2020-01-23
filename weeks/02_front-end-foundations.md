@@ -74,9 +74,9 @@ This week your goal is to be able to speak to these following points:
  ## Pacing / Duration
 - :30 Review & Questions
 - :30 Web Designing
-- :30 HTML
-- :30 CSS
-- :30 JavaScript
+- :10 Review: HTML & The Browser
+- :40 CSS
+- :40 JavaScript
 
 ## Materials Needed
 
@@ -101,7 +101,7 @@ Topics we are not covering, but are of importance:
 
 #### Review: The Browser
 
-> The browser your portal to exploring and building the web
+> The browser is your portal to exploring and building the web
 
 * ↳ [Browser Guide](../guides/browser-guide.md)
 
