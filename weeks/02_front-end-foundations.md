@@ -1,5 +1,6 @@
 # Week 02: Front-end Foundations
 
+
 ## Slides
 * ↳ [Link to Week 2 Slides: Front end Foundations](#)
 
@@ -10,7 +11,26 @@ This week, we will be focusing on the *design* and *development* **process** and
 
 Emphasis this week will be on exploring frontend web development in the service of translating web designs to code. 
 
-### Outcomes & Goals
+## Table of Contents
+- [Week 02: Front-end Foundations](#week-02-front-end-foundations)
+  - [Slides](#slides)
+  - [About](#about)
+  - [Table of Contents](#table-of-contents)
+  - [Outcomes & Goals](#outcomes--goals)
+  - [Pacing / Duration](#pacing--duration)
+  - [Materials Needed](#materials-needed)
+  - [What we are not covering](#what-we-are-not-covering)
+  - [Topics](#topics)
+    - [Part 1: Web Design(ing)](#part-1-web-designing)
+    - [Part 2: Front End Development & HTML5](#part-2-front-end-development--html5)
+      - [Review: The Browser](#review-the-browser)
+      - [Review: HTML](#review-html)
+      - [CSS](#css)
+      - [JavaScript: Part 1](#javascript-part-1)
+  - [Studio](#studio)
+  - [Assignment 2: Making & Breaking the Grid - Swiss Poster Website](#assignment-2-making--breaking-the-grid---swiss-poster-website)
+
+## Outcomes & Goals
 
 This week your goal is to be able to speak to these following points:
 
@@ -106,12 +126,20 @@ Topics we are not covering, but are of importance:
   * JavaScript Foundations
   * JavaScript and the DOM
 
+***
+***
+***
+
+## Studio
+
+TBD
+
 
 ***
 ***
 ***
 
-## Assignment 2: Interactive Swiss Poster
+## Assignment 2: Making & Breaking the Grid - Swiss Poster Website
 
 * ↳ [Link to Assignment](../assignments/02_assignment.md)
 
@@ -121,11 +149,10 @@ Topics we are not covering, but are of importance:
 ***
 ***
 *** 
-
+<!-- 
 ## Bibliography
 
 ## References
-<!-- Include any sources cited, but not directly linked in the unit. -->
 
 TBD
 
@@ -143,4 +170,4 @@ TBD
 * Callback functions:
   * ...
 
-
+ -->

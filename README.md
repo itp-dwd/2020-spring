@@ -96,7 +96,7 @@ In order to achieve these objectives, students will spend the semester building,
 | ASSIGNMENT  |  DUE DATE  | TITLE | NOTES |
 | :----         |  ----  | ---- | ---- |
 | [A1](assignments/01_assignment.md) |  FEB 03   | Internet Art: Materiality of the web     |   n/a   |
-| [A2](assignments/02_assignment.md) |  FEB 10   | Making & Breaking the Grid: Swiss Poster Design      |   n/a   |
+| [A2](assignments/02_assignment.md) |  FEB 10   | Making & Breaking the Grid: Swiss Poster Website      |   n/a   |
 | [A3](assignments/03_assignment.md) |  FEB 24   | Dynamic Front-end Applications: Advanced Client-side JavaScript and Networking    |   n/a   |
 | [A4](assignments/04_assignment.md) |  MAR 02   | API Love You: Oh CRUD.   |   n/a   |
 | [A5](assignments/05_assignment.md) |  MAR 09   | The API of You: Living forever on the web      |   n/a   |
