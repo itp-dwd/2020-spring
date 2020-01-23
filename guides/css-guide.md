@@ -7,22 +7,6 @@
   - [HTML default styles and layouts](#html-default-styles-and-layouts)
   - [The CSS Box Model: Everything is a Box](#the-css-box-model-everything-is-a-box)
   - [CSS Selectors: naming the DOM with classes and IDs](#css-selectors-naming-the-dom-with-classes-and-ids)
-  - [CSS Positioning:](#css-positioning)
-    - [Absolute and Relative Positioning](#absolute-and-relative-positioning)
-    - [Fixed Positioning](#fixed-positioning)
-  - [Layouts: `inline` vs `block` Elements](#layouts-inline-vs-block-elements)
-  - [Layouts: Flexbox](#layouts-flexbox)
-    - [Flexbox essentials: parents of the flex](#flexbox-essentials-parents-of-the-flex)
-    - [Flexbox essentials 1: what you need to know:](#flexbox-essentials-1-what-you-need-to-know)
-    - [Flexbox essentials 2: also good to know](#flexbox-essentials-2-also-good-to-know)
-    - [Flexbox essentials 3: children of the flex](#flexbox-essentials-3-children-of-the-flex)
-    - [Quick flexbox reference: flexbox layouts](#quick-flexbox-reference-flexbox-layouts)
-    - [Flexbox references:](#flexbox-references)
-  - [Media Queries & Responsive Layouts](#media-queries--responsive-layouts)
-    - [Media queries in action: `@media`](#media-queries-in-action-media)
-  - [BEM: Block Element Modifier](#bem-block-element-modifier)
-    - [BEM References:](#bem-references)
-  - [Supplementary -- Layouts: Grid](#supplementary----layouts-grid)
   - [Hot CSS Tips: 🔥](#hot-css-tips-%f0%9f%94%a5)
   - [CSS Recap:](#css-recap)
   - [CSS References:](#css-references)
@@ -135,17 +119,7 @@ The **CSS Box Model** is concerned with ways of changing an element's:
 How do we apply these style properties to our HTML elements? We can either apply these styles directly to the elements themselves e.g. `div` or `section` like this...
 
 ```html
-<section>
-  <h1>How to make Cereal</h1>
-  <p>Step 1: Pour your cereal, Step 2: Pour the Milk</p>
-</section>
-<section>
-  <h1>How to Eat Cereal</h1>
-  <p>Step 1: Spoon some cereal, Step 2: Put the spoon in your mouth, Step 3: Chew, Step 4: Swallow, Step 5: Repeat</p>
-</section>
-```
-
-```css
+<style>
 section{
   width: 100%;
   height: 200px;
@@ -159,7 +133,18 @@ section{
 h1{
   color: white;
 }
+</style>
+
+<section>
+  <h1>How to make Cereal</h1>
+  <p>Step 1: Pour your cereal, Step 2: Pour the Milk</p>
+</section>
+<section>
+  <h1>How to Eat Cereal</h1>
+  <p>Step 1: Spoon some cereal, Step 2: Put the spoon in your mouth, Step 3: Chew, Step 4: Swallow, Step 5: Repeat</p>
+</section>
 ```
+
 
 And we'd get: [Demo of CSS styling directly on elements](https://editor.p5js.org/joeyklee/sketches/ATi0hMSgC)
 
@@ -170,17 +155,7 @@ Notice how both sections are styled the EXACT same way.
 Alternatively, we can apply CSS class names to our elements that allow us to apply different styles to the same elements...
 
 ```html
-<section class="section bg-pink">
-  <h1 class="title color-white">How to make Cereal</h1>
-  <p>Step 1: Pour your cereal, Step 2: Pour the Milk</p>
-</section>
-<section class="section bg-yellow">
-  <h1 class="title color-black">How to Eat Cereal</h1>
-  <p>Step 1: Spoon some cereal, Step 2: Put the spoon in your mouth, Step 3: Chew, Step 4: Swallow, Step 5: Repeat</p>
-</section>
-```
-
-```css
+<style>
 section{
   width: 100%;
   height: 200px;
@@ -207,8 +182,18 @@ section{
 .color-black{
   color:black;
 }
+</style>
 
+<section class="section bg-pink">
+  <h1 class="title color-white">How to make Cereal</h1>
+  <p>Step 1: Pour your cereal, Step 2: Pour the Milk</p>
+</section>
+<section class="section bg-yellow">
+  <h1 class="title color-black">How to Eat Cereal</h1>
+  <p>Step 1: Spoon some cereal, Step 2: Put the spoon in your mouth, Step 3: Chew, Step 4: Swallow, Step 5: Repeat</p>
+</section>
 ```
+
 
 ![Image of Using CSS Selectors to apply different styles to the same elements](/assets/css__selectors-02.png)
 
@@ -218,16 +203,15 @@ Notice how we have different class names (indicated by the dot `.` syntax follow
 
 There are many ways *6-ish* ways to select and apply styles to HTML elements. These are the:
 
-* Universal selector:
-  * selects all the things
-* Type selector:
-  * selects based on the element type (e.g. `div`, `h1`, etc)
-* Class selector
-  * selects based on the class name that has been applied to an element
-* Attribute selector
-  * selects based on an HTML attribute such as `type="text"` for form inputs or `target="_blank"` for `a` tags. 
-* and ID selector
-  * selects based on the ID name that has been applied to an element.
+| selector | description | example |
+| :---      | ---         | --- |
+Universal selector | selects all the things|  `* {padding:0;}`
+```|
+| Type selector | selects based on the element type (e.g. `div`, `h1`, etc)| `h1{font-size: 36px;}` |
+| Class selector | selects based on the class name that has been applied to an element | `.title{color:pink}` |
+| Attribute selector | selects based on an HTML attribute such as `type="text"` for form inputs or `target="_blank"` for `a` tags. | `[type="text"]{ border-radius: 4px}` | 
+| ID selector |selects based on the ID name that has been applied to an element. | `#helloButton{ background-color:purple }`| 
+
 
 As listed in [Tania Rascia's CSS Tutorial](https://www.taniarascia.com/overview-of-css-concepts/#css-selectors), we can target HTML elements by:
 

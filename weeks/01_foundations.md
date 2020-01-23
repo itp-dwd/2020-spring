@@ -34,8 +34,12 @@ This week your goal is to be able to speak to these following points:
     * What is DevOps (developer operations)?
 * **Development environment**:
   * Git/Github:
-    * What is Git? What is GitHub? What is GitHub Desktop? How do they relate to web/software development?
-    * How does git track changes in files? What are the commands to add and commit changes to files?
+    * What is Git? 
+    * What is GitHub? 
+    * What is GitHub Desktop? 
+    * How do Git and Github relate to web/software development?
+    * How does git track changes in files? 
+    * What are the commands to add and commit changes to files?
     * How do you connect your local git repository to the remote git repository?
   * Command line:
     * What's the difference between the command line and a GUI (graphical user interface)?
