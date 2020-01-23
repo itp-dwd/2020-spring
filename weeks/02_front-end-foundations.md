@@ -116,6 +116,10 @@ Topics we are not covering, but are of importance:
 > Cassie's experience learning CSS: "CSS is poorly designed, but you learn a few hacks to make it work for you."
 
 * ↳ [CSS Guide](../guides/css-guide.md)
+  * CSS Foundations
+  * CSS Layouts with Flexbox
+  * Responsive Design with Media Queries
+  * BEM Conventions for CSS
 
 
 #### JavaScript: Part 1
@@ -123,8 +127,8 @@ Topics we are not covering, but are of importance:
 > Make your things interactive with JavaScript
 
 * ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
-  * JavaScript Foundations
-  * JavaScript and the DOM
+  * JavaScript Foundations: Array Methods, Object Methods
+  * JavaScript and the DOM: DOM Selectors & Event Listeners/Handlers
 
 ***
 ***
