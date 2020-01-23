@@ -76,6 +76,10 @@ This frontend JavaScript guide is a roadmap to having a solid JavaScript foundat
   - [References: JavaScript and APIs](#references-javascript-and-apis)
 - [The Web Platform](#the-web-platform)
   - [Browser Platform: `localStorage`](#browser-platform-localstorage)
+      - [Examples](#examples)
+        - [`setItem(key, value)`](#setitemkey-value)
+        - [`getItem(key)`](#getitemkey)
+        - [`removeItem(key)`](#removeitemkey)
     - [Reference: local Storage](#reference-local-storage)
   - [Browser Platform: Geolocation API](#browser-platform-geolocation-api)
     - [Reference: Geolocation API](#reference-geolocation-api)
@@ -1620,11 +1624,13 @@ From the exciting list of features above, this section will highlight just a few
 
 ## Browser Platform: `localStorage`
 
-`localStorage` is like a "database" that lives in your browser that allows you to store data as strings in "key/value" pairs. Like a database, `localStorage` will persist data that is stored there, HOWEVER, if you clear your browser data, all your `localStorage` data will be removed. 
+`localStorage` is like a "database" that lives in your browser that allows you to store data as strings in "key/value" pairs. Like a database, `localStorage` will persist data that is stored there, HOWEVER, if you clear your browser data, all your `localStorage` data will be removed and, unlike a database, the data in `localStorage` is specific to browser context that is visiting your web app. In other words, generally I can't access your `localStorage` and you can't access mine (though there are ways to so it is good not to store anything sensitive there!).
 
-There are many uses for `localStorage` (e.g. quick prototypes or storing data while offline, etc) and adds a wonderful capability to your clientside web applications for persisting data in a lightweight (though precarious) way. 
+There are many uses for `localStorage` (e.g. quick prototypes or storing data while offline, etc) and adds a wonderful capability for your clientside web applications to persist data in a lightweight (though precarious) way.
 
-You can read more about [how to use local storage with JavaScript](https://www.taniarascia.com/how-to-use-local-storage-with-javascript/). In simplistic terms, you can think about it as JSON object that is available at your project's URL that you can add string data to as a set of "Key/Value" pairs. The following functions allow you to add, retrieve, and remove data living in your `localStorage` like so:
+One of my favorite uses of `localStorage` is [Maya Man's Glance Back Project](https://mayaontheinter.net/glanceback/) where she stores images taken automatically by her webcam on her local storage. 
+
+You can read more about [how to use local storage with JavaScript](https://www.taniarascia.com/how-to-use-local-storage-with-javascript/). In simplistic terms, you can think about it as JSON object that is available at your project's URL that you can add string data to as a set of "Key/Value" pairs. The following functions allow you to add, retrieve, and remove data living in your `localStorage`:
 
 |Method 	|Description|
 | :---    | ---       |
@@ -1633,6 +1639,51 @@ You can read more about [how to use local storage with JavaScript](https://www.t
 | `removeItem()`| 	Remove an item by key|
 | `clear()`| 	Clear all storage|
 
+#### Examples
+
+#####  `setItem(key, value)`
+> sets data to localStorage provided a key and value.
+
+```js
+const wishlist = [
+  {item: 'cupcakes', price: 20},
+  {item: 'pretzels', price: 8},
+  {item: 'marshmallows', price: 6},
+];
+
+localStorage.setItem('wishlist', JSON.stringify(wishlist))
+```
+
+NOTICE: We need to `JSON.stringify()` the JSON array before adding it to local storage.
+
+##### `getItem(key)`
+> retrieves the specified key/value pair based on a give key
+
+```js
+const myWishList = JSON.parse(localStorage.getItem('wishlist'));
+```
+NOTICE: we use `JSON.parse()` to parse the results of `.getItem()` because what we retrieve is a stringified version of the JSON array.
+
+##### `removeItem(key)`
+> removes the specified key/value pair
+
+```js
+// check if that key exists
+console.log(JSON.parse(localStorage.getItem('wishlist')))
+
+// remove it
+localStorage.removeItem('wishlist');
+
+// check if that key exists
+console.log(JSON.parse(localStorage.getItem('wishlist')))
+```
+
+**clear()**
+> removes everything in your localStorage
+
+```js
+localStorage.clear();
+```
 
 ### Reference: local Storage
 * [How to use local storage with JavaScript](https://www.taniarascia.com/how-to-use-local-storage-with-javascript/)
