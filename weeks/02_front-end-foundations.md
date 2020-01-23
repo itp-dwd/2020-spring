@@ -79,13 +79,13 @@ Topics we are not covering, but are of importance:
 
 ### Part 2: Front End Development & HTML5
 
-#### The Browser
+#### Review: The Browser
 
 > The browser your portal to exploring and building the web
 
 * ↳ [Browser Guide](../guides/browser-guide.md)
 
-#### HTML
+#### Review: HTML
 
 > HTML is the structure and content of the page
 
@@ -98,13 +98,17 @@ Topics we are not covering, but are of importance:
 * ↳ [CSS Guide](../guides/css-guide.md)
 
 
-#### JavaScript
+#### JavaScript: Part 1
 
 > Make your things interactive with JavaScript
 
 * ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
+  * JavaScript Foundations
+  * JavaScript and the DOM
 
-
+***
+***
+*** 
 
 ## Bibliography
 
@@ -128,11 +132,3 @@ TBD
   * ...
 
 
-***
-***
-*** 
-
-
-### CSS TODOS
-- Using HTML to include CSS
-- Using Developer Tools to Debug CSS

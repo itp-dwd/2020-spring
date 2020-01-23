@@ -115,6 +115,7 @@ Applications that are running on a computer, that are waiting for HTTP requests 
 
 We will eventually be creating web servers that run on our own computers. How do we access them from a browser? Your local computer has a special IP address, **127.0.0.1**, which is aliased to "localhost". When we create these web servers, we'll give them a specific port too, usually something like 8000 or 8080.
 
+Additional notes on how web browsers work cna be found in the [Browser Guide](/guides/browser-guide.md)
 
 #### References
 * https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm
