@@ -69,7 +69,7 @@ In order to achieve these objectives, students will spend the semester building,
 * Room: ITP FLOOR or ITP RESIDENT'S OFFICE
 * PLEASE SIGN UP: 📅 
   * [Cassie](https://calendar.google.com/calendar/selfsched?sstoken=UU1sWVF3by0wR2lQfGRlZmF1bHR8YjhkY2IyODcxNDk3ODRhNzI1OTkyN2JiMDY3ODFmNWI)
-  * [Joey](https://calendar.google.com/calendar/selfsched?sstoken=UUluV2hDekNIMzVEfGRlZmF1bHR8NjZjMzBlNTU5OGFiNTk4OWJiZDY1Y2E2YTc2MTkzYzQ)
+  * [Joey](https://calendar.google.com/calendar/selfsched?sstoken=UU9QS0R3c3cybXB4fGRlZmF1bHR8OWY1YWExODk4YTc3YTNkMjM5MDg4ZTIxMmE3OTY5MjM)
 * If you can't make those times, please send either of us an email and we can chat at another time or via video conference.
 
 
