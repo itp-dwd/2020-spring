@@ -39,7 +39,7 @@ In order to achieve these objectives, students will spend the semester building,
 | Instructor Github | [@joeyklee](https://github.com/joeyklee) |  [@catarak](https://github.com/catarak) |
 | Class Day | Monday   | Monday     |  
 | Class Time      | 6:30 - 9:00 | 6:30 - 9:00 |
-| Class Room      | TBD         | TBD       |
+| Class Room      | Room **411**, 370 Jay Street, Booklyn         | Room **450**, 370 Jay Street, Booklyn       |
 | Class Dates     | Jan. 27 - Mar. 23 | Jan. 27 - Mar. 23 |
 
 
