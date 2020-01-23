@@ -84,8 +84,9 @@ Topics we are not covering, but are of importance:
 
 * ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
   * Review: JavaScript and the DOM 
-  * Callbacks, Promises, and Async/Await
+  * Asynchronous Javascript: Callbacks, Promises, and Async/Await
   * Networking, AJAX, talking to APIs, and CORs
+  * Reactive UIs, Refactoring, and Structuring
   * The Web Platform
 
 ### DOM Manipulation
@@ -105,6 +106,8 @@ window.onload = function() {
 }
 ```
 You'll need to call any code that accesses the DOM, whether you are selecting elements, binding event handlers, or adding or removing elements, after this function had been called. It's common wrap calls to any initialization code in this function.
+
+You can read more here about the details about [Browser Page Lifecycle](/guides/browser-guide.md##the-page-lifecycle)
 
 #### Selecting DOM Elements
 See [Selecting DOM Elements](../guides/javascript-frontend-guide.md#selecting-dom-elements) in the JS Front End Guide.

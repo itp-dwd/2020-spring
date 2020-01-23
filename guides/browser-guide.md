@@ -4,6 +4,7 @@
 - [The Web Browser Guide](#the-web-browser-guide)
   - [Table of Contents](#table-of-contents)
   - [How the web browser works](#how-the-web-browser-works)
+  - [The Page Lifecycle](#the-page-lifecycle)
   - [The Web Platform](#the-web-platform)
 
 ## How the web browser works
@@ -22,6 +23,66 @@ What we're going to learn is that web browsers are like any other software appli
 
 ![Image showing a Wikipedia article about "weather forecasting" and all of the network requests fulfilled by the browser](/assets/week02-browser-01.png)
 Image: Image showing a Wikipedia article about "weather forecasting" and all of the network requests fulfilled by the browser
+
+
+## The Page Lifecycle
+
+See: [How does the browser page lifecycle work?](https://stackoverflow.com/questions/44044956/how-does-browser-page-lifecycle-sequence-work), [Browser Life Cycle](https://dzone.com/articles/browser-life-cycle), and [How Browsers Work: Behind the scenes of modern web browsers](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
+
+An important concept for web development is understanding the "Browser page lifecycle" which is the order in which CSS, HTML, and JavaScript are "handled", that is calculated/parsed/rendered/executed. 
+
+The lifecylce can be broken down generally into the process of:
+
+1. constructing the dom
+2. handling css
+3. rendering the tree
+4. building the layout
+5. painting the pixels to the screen
+6. javascript
+
+| constructing the dom | handling css | rendering the tree | layout | paint | javascript |
+| :---: | --- | --- | --- | --- | --- |
+| ![](https://i.stack.imgur.com/qBRao.png) | ![](https://i.stack.imgur.com/035w3.png) | ![](https://i.stack.imgur.com/Y9eFa.png) | ![](https://i.stack.imgur.com/eSgwA.png) | Converting all the previous steps into pixels on the screen | Execute the javascript |
+
+Quite likely you won't need to worry about steps 1 - 5 until you start diving deeper into web performance considerations (e.g. using `css transforms` rather than changing their position). However, you will need to be aware of and be able to make sure your JavaScript is executed at the right time and web the DOM is loaded. 
+
+For this, you will need to keep your eye on 2 things:
+
+1. make sure you are loading/referencing your external JavaScript files in the correct order
+
+  ```html
+  
+  <body>
+      <div id="app"></div>
+      <!-- javascript files -->
+      <!-- the p5js library -->
+      <script src="js/p5.js"></script>
+      <!-- your own custom class that relies on p5 -->
+      <script src="js/Dots.js"></script>
+      <!-- your main sketch file that need BOTH p5 and Dots.js -->
+      <script src="js/sketch.js"></script>
+  </body>
+  ```
+
+
+2. make sure that you are executing your JavaScript AFTER your DOM is successfully loaded. 
+
+  ```js
+  window.onload = function() {
+     initialize();
+     appendToDOM();
+   }
+  ```
+
+  this can also be written:
+
+  ```js
+  window.addEventListener('DOMContentLoaded', function(){
+    initialize();
+    appendToDOM();
+  })
+  ```
+
 
 
 ## The Web Platform
