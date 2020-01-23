@@ -149,14 +149,16 @@ TBD
 ***
 ***
 *** 
-<!-- 
-## Bibliography
 
-## References
+
+<!-- 
+Bibliography
+
+References
 
 TBD
 
-## Terms
+ Terms
 * DOM:
   * Document Object Model
 * HTML:

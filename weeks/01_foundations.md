@@ -10,6 +10,31 @@ As part of this week's lecture and discussion, we will go through a (very) quick
 
 A majority of the class will be focused on setting up your development environments and getting you into the practice of developing and deploying web applications through your first assignment.
 
+## Table Of Contents
+
+- [Week 01: Web Foundations](#week-01-web-foundations)
+  - [Slides](#slides)
+  - [About](#about)
+  - [Table Of Contents](#table-of-contents)
+  - [Exercises To Do Before Class](#exercises-to-do-before-class)
+    - [Outcomes & Goals](#outcomes--goals)
+  - [Pacing / Duration](#pacing--duration)
+  - [Materials Needed](#materials-needed)
+  - [Topics](#topics)
+    - [How the Internet Works](#how-the-internet-works)
+      - [References](#references)
+    - [Modern Web Applications](#modern-web-applications)
+    - [Development Tools](#development-tools)
+      - [Text Editor](#text-editor)
+      - [Command Line](#command-line)
+      - [Version Control](#version-control)
+      - [Source Code Hosting](#source-code-hosting)
+      - [Deployment & Deployment Options](#deployment--deployment-options)
+    - [HTML](#html)
+  - [Studio](#studio)
+    - [Your first deployed website](#your-first-deployed-website)
+  - [Assignment 1: "Net Art"](#assignment-1-%22net-art%22)
+
 ## Exercises To Do Before Class
 <!-- What materials (readings, tasks, exercises) should students complete before class to be prepared for the lesson. -->
 * Fill out the appropriate form based on your section:
@@ -265,45 +290,46 @@ $ git commit -m "Initial commit"
 
 
 <!-- 
-### Web Development & Creative Practice
+
+Web Development & Creative Practice
 - how do different people use web development as part of their careers?
 - guest speakers??
 - web applications have many different uses and goals
 - Profession web development vs using web development as a creative tool
 
 
-### Vocabulary (example)
+Vocabulary (example)
 * Internet: a global network of computers connected to each other
 * IP Address: short for Internet protocol address, a unique of the form **nnn.nnn.nnn.nnn** where nnn is a number from 0-255.
 * World Wide Web (WWW): the collection of information that can be accessed via the Internet. 
 
-## Studio Exercise Descriptions
+Studio Exercise Descriptions
 - Setting up development environment
 
-### Using a text editor
+Using a text editor
 - Using VSCode
 
-### Using Git and GitHub
+Using Git and GitHub
 - Installing git (how does this work on Windows??)
 - Initializing a Git repository
 - [Coding Train - Git and GitHub for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
 - Documentation for deploying to Glitch.com from GitHub
 
-### Node.js and the back end
+Node.js and the back end
 - Downloading Node
 - TODO: Should students download Node directly or use `nvm`?
 - How to run a node script from the command line
 
-### Using the command line
+Using the command line
 - TODO: how do you use unix on Windows??
 - Using git
 - Moving around directories
 
-### Creating a static server with Node and Express
+Creating a static server with Node and Express
 - [Example tutorial](https://alligator.io/nodejs/serving-static-files-in-express/), but maybe make our own
 
-### Deploying to Glitch.com
+Deploying to Glitch.com
 
 
-## References
+References
 * [How Does the Internet Work?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm) -->
