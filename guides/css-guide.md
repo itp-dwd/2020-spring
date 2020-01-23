@@ -4,13 +4,32 @@
 
 - [CSS Guide](#css-guide)
   - [Table of Contents](#table-of-contents)
+  - [About](#about)
   - [HTML default styles and layouts](#html-default-styles-and-layouts)
   - [The CSS Box Model: Everything is a Box](#the-css-box-model-everything-is-a-box)
   - [CSS Selectors: naming the DOM with classes and IDs](#css-selectors-naming-the-dom-with-classes-and-ids)
+  - [CSS Positioning:](#css-positioning)
+    - [Absolute and Relative Positioning](#absolute-and-relative-positioning)
+    - [Fixed Positioning](#fixed-positioning)
+  - [Layouts: `inline` vs `block` Elements](#layouts-inline-vs-block-elements)
+  - [Layouts: Flexbox](#layouts-flexbox)
+    - [Flexbox essentials: parents of the flex](#flexbox-essentials-parents-of-the-flex)
+    - [Flexbox essentials 1: what you need to know:](#flexbox-essentials-1-what-you-need-to-know)
+    - [Flexbox essentials 2: also good to know](#flexbox-essentials-2-also-good-to-know)
+    - [Flexbox essentials 3: children of the flex](#flexbox-essentials-3-children-of-the-flex)
+    - [Quick flexbox reference: flexbox layouts](#quick-flexbox-reference-flexbox-layouts)
+    - [Flexbox references:](#flexbox-references)
+  - [Media Queries & Responsive Layouts](#media-queries--responsive-layouts)
+    - [Media queries in action: `@media`](#media-queries-in-action-media)
+  - [BEM: Block Element Modifier](#bem-block-element-modifier)
+    - [BEM References:](#bem-references)
+  - [Supplementary -- Layouts: Grid](#supplementary----layouts-grid)
   - [Hot CSS Tips: 🔥](#hot-css-tips-%f0%9f%94%a5)
   - [CSS Recap:](#css-recap)
   - [CSS References:](#css-references)
 - [Levelling up: Getting advanced with CSS and beyond](#levelling-up-getting-advanced-with-css-and-beyond)
+
+## About
 
 Cascading Style Sheets (CSS). It's wonderful, it's horrible, it's the way we apply layout and style to our DOM. Love it or hate it, it's what we've got and frankly, it can feel like magic once you get an handle on it. With CSS you can create delightful animations, fancy hover effects, and dynamic and engaging visual interfaces. The trick is to practice, practice, practice and get a feel for the materiality of CSS as it interacts with HTML and JavaScript.
 
@@ -205,8 +224,7 @@ There are many ways *6-ish* ways to select and apply styles to HTML elements. Th
 
 | selector | description | example |
 | :---      | ---         | --- |
-Universal selector | selects all the things|  `* {padding:0;}`
-```|
+Universal selector | selects all the things|  `* {padding:0;}`|
 | Type selector | selects based on the element type (e.g. `div`, `h1`, etc)| `h1{font-size: 36px;}` |
 | Class selector | selects based on the class name that has been applied to an element | `.title{color:pink}` |
 | Attribute selector | selects based on an HTML attribute such as `type="text"` for form inputs or `target="_blank"` for `a` tags. | `[type="text"]{ border-radius: 4px}` | 
@@ -281,6 +299,7 @@ A few important notes are detailed below.
 
 As your HTML elements find a position on the page, whether they are defined by you are following the default flow of the page, the page layout and the position of items will depend on that element's `display` property. In the [Layout section on inline and block elements](#layouts-inline-vs-block-elements), we will start by looking at what it means when elements are displayed `inline` or `block` (or `inline-block`).
 
+
 ## Layouts: `inline` vs `block` Elements
 
 ![Illustration of different display properties](https://i.stack.imgur.com/mGTYI.png)
@@ -325,6 +344,7 @@ Flexbox! This is going to be the main focus of our discussion on CSS layouts. Wh
 * well supported across browsers,
 * not hacky (e.g. using floats -- float:left, float:right, etc -- can be tricky)
 * and it's well documented with lots of examples and resources to draw from. 
+
 
 ### Flexbox essentials: parents of the flex
 
