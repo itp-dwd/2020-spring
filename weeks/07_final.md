@@ -1,7 +1,9 @@
 # Week 07: Final Meeting
 
-<!-- 
-* Next Steps
-* Final project presentations
-* 
-*  -->
+## Final Project Presentations
+
+
+## Next Steps
+
+
+## Conclusion
