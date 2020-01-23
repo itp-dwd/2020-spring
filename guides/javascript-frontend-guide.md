@@ -82,6 +82,10 @@ This frontend JavaScript guide is a roadmap to having a solid JavaScript foundat
         - [`removeItem(key)`](#removeitemkey)
     - [Reference: local Storage](#reference-local-storage)
   - [Browser Platform: Geolocation API](#browser-platform-geolocation-api)
+      - [Examples](#examples-1)
+        - [`navigator.geolocation.getCurrentPosition()`](#navigatorgeolocationgetcurrentposition)
+        - [`navigator.geolocation.watchPosition()`](#navigatorgeolocationwatchposition)
+        - [`navigator.geolocation.clearWatch()`](#navigatorgeolocationclearwatch)
     - [Reference: Geolocation API](#reference-geolocation-api)
   - [References: The Web Platform](#references-the-web-platform)
 - [Conclusion & Recap](#conclusion--recap)
@@ -1634,10 +1638,10 @@ You can read more about [how to use local storage with JavaScript](https://www.t
 
 |Method 	|Description|
 | :---    | ---       |
-| `setItem()`| 	Add key and value to local storage|
-| `getItem()`| 	Retrieve a value by the key|
-| `removeItem()`| 	Remove an item by key|
-| `clear()`| 	Clear all storage|
+| `localStorage.setItem()`| 	Add key and value to local storage|
+| `localStorage.getItem()`| 	Retrieve a value by the key|
+| `localStorage.removeItem()`| 	Remove an item by key|
+| `localStorage.clear()`| 	Clear all storage|
 
 #### Examples
 
@@ -1690,7 +1694,53 @@ localStorage.clear();
 
 ## Browser Platform: Geolocation API
 
-Your web browser 
+Over secure HTTPS connections your web browser can access the geolocation capabilities that are part of the web platform.
+
+The geolocation API for the browser has 3 main methods:
+
+| method | description |
+| :---  | --- |
+| `navigator.geolocation.getCurrentPosition()`| gets the current user's position just once on function call |
+| `navigator.geolocation.watchPosition()` | continuously gets the the user's position |
+| `navigator.geolocation.clearWatch()` | stops watching the user's position |
+
+#### Examples
+
+##### `navigator.geolocation.getCurrentPosition()`
+
+```js
+navigator.geolocation.getCurrentPosition( position => {
+  console.log(position);
+})
+```
+
+NOTICE: the `.getCurrentPosition()` takes a callback function that is passed the `position` object that contains all of the geolocation information. 
+
+##### `navigator.geolocation.watchPosition()`
+
+```js
+navigator.geolocation.watchPosition( position => {
+  console.log(position);
+})
+```
+
+NOTICE: the `.watchPosition()` takes a callback function that is passed the `position` object that contains all of the geolocation information. 
+
+##### `navigator.geolocation.clearWatch()`
+
+```js
+const myGeoTracker = navigator.geolocation.watchPosition( position => {
+  console.log(position);
+})
+
+setTimeout(function(){
+  navigator.geolocation.clearWatch(myGeoTracker);
+}, 3000);
+
+```
+
+NOTICE: the `.clearWatch()` takes the variable name associated that contains the reference to the function that is watching the location. 
+
 
 ### Reference: Geolocation API
 * [How to use the Geolocation API](https://flaviocopes.com/geolocation-api/)
