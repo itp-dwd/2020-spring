@@ -185,7 +185,7 @@ In this class, we will use the term API mostly in the context of RESTful API's a
 
 * **Reading: ** [Nobody Introduced Me to the API](https://www.robinwieruch.de/what-is-an-api-javascript)
 
-#### Using Public APIs
+#### Public APIs and Terms
 
 Many websites and web applications have created publicly available APIs, to let you access their data or use their services from code. There's tons to choose from!
 
@@ -193,9 +193,45 @@ Many websites and web applications have created publicly available APIs, to let 
 
 If you look through this list, and look through the documentation for each API, you'll notice they look pretty different. Some are minimal, for example, the [Bored API](https://www.boredapi.com/documentation) simply gives you suggestions for activities to do if you are bored. [The New York Times APIs](https://developer.nytimes.com/apis) are much more complicated, and therefore the [documentation](https://developer.nytimes.com/docs/articlesearch-product/1/overview) is more complicated.
 
-There are a few things to keep in mind when using APIs:
+There are a few terms to get comfortable with when using APIs:
 * **Authentication (or Auth)**: Some APIs require you to authenticate before you can use them. Why? Think of it like logging into a website like Twitter—it gives the API developers and maintainers control over your access to the service, as well as see how you are using it. If they perceive that you are abusing their service, they can turn off your access.
-* **CORS**: Cross-Origin Resource Sharing gives API controls over which websites can access the API. APIs decide which origins can access them, and how. If CORS is enabled, then you should be able to use it. You can use any API if you are making the requests server-side, but that's a topic for next week.
+* **AJAX and Fetch**: see [#javascript-networking-ajax-talking-to-apis-and-cors](../guides/javascript-frontend-guide.md)
+* **CORS**: Cross-Origin Resource Sharing gives API controls over which websites can access the API. APIs decide which origins can access them, and how. If CORS is enabled, then you should be able to use it. If you are making the requests server-side, this is irrelevant, as CORS is only important for AJAX requests, but that's a topic for next week.
+* **origin**: an origin is the protocol (http, https) + hostname (localhost, twitter.com) + port (8000, 80). For example, the full origin running your website locally using the python simple server is `http://localhost:8000`, and the full origin of Wikipedia is https://wikipedia.org:443
+* **API Key**: a string of letters/numbers that gives you access to an API, that you can think of like a password.
+* **OAuth**: A system for authenticating with an API service in which you can enter a username and password and get back a token. Usually more complicated to use than an API key.
+* **Base URL**: Every API has base URL that all of its endpoints are appended to. It usually looks something like `https://www.potterapi.com/v1/`
+* **Endpoint**: Also known as a path, an endpoint gives you the slice of data, or service within an API, which is appended to the base url. This also includes the HTTP verb (GET, POST, etc.) ([What is an HTTP verb?](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)) This could be something like GET `/characters`, where the full URL would be GET `https://www.potterapi.com/v1/characters`. 
+* **URL Query Parameters**: Often endpoints allow you filter and search the data at an endpoint using query string parameters. For example, `https://www.potterapi.com/v1/characters?house=Gryffindor`. `house` is the name of the parameter, and `Gryffindor` is the value. In the documentation, it's usually specified what these parameters can be, just be sure to [URL encode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) them.
+* **Response format**: Usually the response is JSON, very rarely it will not be.
 
+#### Making an API request from JavaScript
+
+Let's practice working with APIs using the [Harry Potter API](https://www.potterapi.com/). To integrate using this API into your application, there's a few steps:
+
+0. Look through the API documentation and figure out if it has the capabilities you are looking for. In this case, I've decided we're using the Harry Potter API so I've done that work for us.
+1. Make an account and request an API key. If the API authentication uses API keys, you'll probably have to register with an email/password, and then they will give you an API key.
+2. Let's say, for example, we're trying to get all of the characters in Gryffindor house. We need to look at the documentation and construct the full URL:
+   1. We need to use the `/characters` endpoint: GET `/characters`
+   2. Add a query string parameter, `house=Gryffindor`, bringing the url to GET `/characters?house=Gryffindor`
+   3. Add the api key: GET `/characters?house=Gryffindor&key=API_KEY`
+   4. Prepend with the base URL: GET `https://www.potterapi.com/v1/characters?house=Gryffindor&key=API_KEY`
+3. Test that the URL works. A GET request is the same as entering a URL into your browser window, except that rather than getting a web page back we just get JSON:
+  ![Potter API Response JSON](../assets/potter_api_response.png)
+  **Note**: I have a Chrome extension that "prettifies" the JSON, for you it may look like a blob of text.
+4. Use the Fetch API to make the API request from JS:
+  ```js
+  const API_KEY = "API_KEY";
+  const baseUrl = "https://www.potterapi.com/v1";
+  const URL = `${baseUrl}/characters?house=Gryffindor&key=${API_KEY}`;
+  fetch(URL).then((response) => {
+    return response.json()
+  }).then((data) => {
+    console.log(data);
+  });
+  ```
+  What's with the "`", and the "=>", and the ".then()"? This is all newer JavaScript syntax, also known as ES6 or ES2015. It's all concepts you understand already, just different syntax. Let's diverge for a moment and talk about these things. 
+  * The backtick characters "`" denote template strings. They're the same as regular strings with " " or ' ' but with some superpowers.
+    1. You can 
 
 

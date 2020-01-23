@@ -11,6 +11,11 @@ This frontend JavaScript guide is a roadmap to having a solid JavaScript foundat
 - [JavaScript Foundations](#javascript-foundations)
   - [Prelude: Including JS files in HTML](#prelude-including-js-files-in-html)
   - [Introduction: The Basics](#introduction-the-basics)
+  - [ES6/ES2015 New Features](#es6es2015-new-features)
+    - [Reference: Overview of New Features](#reference-overview-of-new-features)
+    - [Template Strings](#template-strings)
+    - [Arrow Functions](#arrow-functions)
+      - [References](#references)
   - [Javascript Array Methods:](#javascript-array-methods)
     - [Creation](#creation)
       - [Creating a new Array: `new Array()`](#creating-a-new-array-new-array)
@@ -177,6 +182,83 @@ You can skip this section if the following topics are familiar or you have a gra
 10. ✅ Handling [Date and Time in JavaScript](https://www.taniarascia.com/understanding-date-and-time-in-javascript/) or at least being aware of dates in time in computer land.
 
 NOTE: While different languages have different syntax for things, you can consider the above list of skills and awarenesses that are generally considered foundational. If you decide to explore other programming languages, you can consider creating your own list of these skills.
+
+## ES6/ES2015 New Features
+
+JavaScript is an evolving language. Because its popularity has surged within the past 10 years, many new features have been added to make it easier to use and more powerful. In this class, we will take advantage of some of these new features. 
+
+### Reference: Overview of New Features
+[ES6 Features](https://github.com/lukehoban/es6features#readme)
+
+### Template Strings
+Template strings are the same as strings that use "" or '', except they can do more. You can insert variables in a simpler way:
+```js
+// Old ES5 Way
+var name = "Cassie";
+var greeting = "Hello, " + Cassie + "!";
+
+// New ES6 Way
+const name = "Cassie";
+const greeting = `Hello, ${name}!`;
+```
+
+You can also create multiline strings, which is hard to do the old way:
+```js
+// Old ES5 Way
+var paragraph = "<p>\n" + 
+  "    JavaScript was created in 1995.\n" + 
+  "</p>";
+console.log(paragraph);
+// <p>
+//     JavaScript was created in 1995.
+// </p>
+
+// New ES6 Way
+const paragraph = `<p>
+    JavaScript was created in 1995.
+</p>`;
+console.log(paragraph);
+// <p>
+//     JavaScript was created in 1995.
+// </p>
+```
+
+### Arrow Functions
+Arrow functions are similar to a regular function expression, but have a few gotcha's. They are usually more compact:
+```js
+// Regular function expression
+function add(a, b) {
+  return a + b;
+}
+add(3, 4); // returns 7
+
+// Arrow function
+const add = (a, b) => a + b;
+add(3, 4); // returns 7
+
+// Longer arrow function
+const add = (a, b) => {
+  return a + b;
+}
+add(3, 4); // returns 7
+```
+Notice that if you don't include the `{}`, the value of the statement is **implicitly returned**, but otherwise the syntax just replaces `function()` with `() =>`.
+
+You can even leave out the `()` if there is one argument:
+```js
+const timesTwo = param => param * 2;
+console.log(timesTwo(6)); // returns 36
+```
+
+The big benefit of using arrow functions is that `this` within the function body never changes, wherever the function is called. You may not have run into any issues yet with `this` and scope, but to avoid them, you can follow a few simple rules about when to use arrow functions, and when to use regular function expressions (from [Stack Overflow](https://stackoverflow.com/a/23045200)):
+* Use `function` in the global scope and for `Object.prototype` properties.
+* Use `class` for object constructors.
+* Use `=>` everywhere else.
+
+#### References
+* (When (and why) you should use ES6 arrow functions — and when you shouldn’t)[https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/]
+* (Stack Overflow - When should I use Arrow functions in ECMAScript 6?)[https://stackoverflow.com/a/23045200]
+
 
 ## Javascript Array Methods:
 
