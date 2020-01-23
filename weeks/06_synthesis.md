@@ -1,4 +1,14 @@
-# Week 05: Synthesis 1
+# Week 06: Synthesis
+
+## Slides
+* ↳ [Link to Week 6 Slides: Synthesis]()
+
+## About
+
+This week, we will be putting all of the pieces together: `design → front end development → back end development → databases → deployment`.
+
+
+
 
 <!-- 
 
@@ -15,7 +25,6 @@
 
 # Week 06: Synthesis 2
 
-<!-- 
 ### Lecture
 * Putting it all together
 
@@ -30,5 +39,4 @@
    * Source code (please cite your sources in the code comments)
 
 
- -->
  -->
