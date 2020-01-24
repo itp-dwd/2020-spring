@@ -6,6 +6,23 @@ When running client side web applications, often you will need to create your ow
 
 This guide outlines a few options for creating a simple web server
 
+## Table of Contents
+
+- [Quick Web Servers](#quick-web-servers)
+  - [About](#about)
+  - [Table of Contents](#table-of-contents)
+  - [Stopping any terminal/commandline process:](#stopping-any-terminalcommandline-process)
+  - [Option 1: Python -- Simple Web Server](#option-1-python----simple-web-server)
+    - [Step 1: change directories and run a "simple" web server:](#step-1-change-directories-and-run-a-%22simple%22-web-server)
+    - [Step 2: see your files](#step-2-see-your-files)
+  - [Option 2: Node.js -- http-server module](#option-2-nodejs----http-server-module)
+    - [Step 1: install the `http-server` module](#step-1-install-the-http-server-module)
+    - [Step 2: change directories and run a "http-server"](#step-2-change-directories-and-run-a-%22http-server%22)
+  - [Option 3: Node.js -- live-server package](#option-3-nodejs----live-server-package)
+    - [Step 1: install the "live-server" module](#step-1-install-the-%22live-server%22-module)
+    - [Step 2: change directories and run a "live-server"](#step-2-change-directories-and-run-a-%22live-server%22)
+
+
 ## Stopping any terminal/commandline process:
 
 1. go to your terminal window
@@ -13,7 +30,7 @@ This guide outlines a few options for creating a simple web server
 
 ## Option 1: Python -- Simple Web Server
 
-Most computers have python installed by default. As this is the case, you can quickly and easily serve up your project specific files
+Most computers have python installed by default. As this is the case, you can quickly and easily serve up your project specific files.
 
 ### Step 1: change directories and run a "simple" web server:
 
@@ -46,6 +63,8 @@ By default, any `index.html` file will be rendered in the browser. If you were t
 If you're set up with node.js, personally I find it easier to use the [Node.js http-server module](https://www.npmjs.com/package/http-server) to do exactly the same thing as the python web server above. 
 
 ### Step 1: install the `http-server` module
+
+The `http-server` module is a simple module for serving up your static files.
 
 ```sh
 $ npm install http-server -g
@@ -93,6 +112,10 @@ Hit CTRL-C to stop the server
 ***
 
 ## Option 3: Node.js -- live-server package
+
+The `live-server module` does the same things as the following 2 options however, it will watch for changes in your project directory and reload your page. This can be really helpful for front-end development so you don't have to reload your page manually every time you change something. 
+
+### Step 1: install the "live-server" module
 
 ```sh
 $ npm install live-server -g
