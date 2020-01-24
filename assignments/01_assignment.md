@@ -29,6 +29,7 @@ Your assignment consists of two parts:
     * how you built your HTML page
     * inspiration, process documentation, struggles, references, and questions, like your ITP blog
     * and how you deployed your work to [Glitch.com](https://glitch.com).
+  * You may use this [README template](/templates/readme-template.md) to structure your README documentation and blog post
 * Requirement 3: **Deployed publicly to Glitch**
   * Your application must be publicly accessible on [Glitch.com](https://glitch.com).
 

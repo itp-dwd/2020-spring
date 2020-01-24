@@ -1,6 +1,6 @@
 # Developer Setup Guide
 
-## Materials
+## ⛱ Materials
 
 * Laptop & Power charger
 * **Text Editor** (VS Code):
@@ -20,7 +20,34 @@
   * [Sign up with Glitch.com](https://glitch.com/)
 
 
-## Development Tools 
+## 🛠 Development Tools 
 
 ### Simple HTTP Server 
 
+See the [Quick Web Servers Guide](quick-web-servers.md).
+
+
+
+## 📷 Documentation Tools
+
+### Screenshots: OS based Screenshots
+
+* On MacOS:
+  * to capture the entire screen: `shift` + `command` + `3`
+  * to interactive capture using your mouse: `shift` + `command` + `4`
+  * to capture a selected window: `shift` + `command` + `4` + `spacebar` > click on the window you want to capture
+* On Windows:
+  * See [Microsoft Screenshot](https://www.microsoft.com/en-us/p/screenshot/9wzdncrdqjfq?activetab=pivot:overviewtab#)
+
+
+### GIFs: Giphy Capture
+
+Gifs are a great way to document dynamic web pages and interaction. We can recommend using [Giphy Capture](https://giphy.com/apps/giphycapture) to create gifs documentation for your websites and web apps as well as for any process based documentation you're creating for your READMEs.
+
+See: [Giphy Capture](https://giphy.com/apps/giphycapture).
+
+### Screen Recordings: Open Broadcast Studio (OBS)
+
+[OBS](https://obsproject.com/) is a free software for doing screen recordings. Highly recommended for doing screen recordings and if you want to make multiple views (e.g. screen capture while recording your face using the web cam)
+
+See [OBS](https://obsproject.com/).

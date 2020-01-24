@@ -12,7 +12,7 @@ Your assignment this week is to **design** and **develop** a website about New Y
 
 ## Requirements
 
-Your assignment will be comprised of two parts:
+Your assignment will be comprised of four parts: `design` > `development` > `deployment` > `documentation`
 
 ### Part 1: Sketching, Wireframes, and Design specifications
 Effective front end web development, is as about able to translate an interface or visual design into code and identifying how to combine content with layout, structure, and styling.
@@ -56,7 +56,13 @@ You can copy the code from Assignment `01` from last week and put your static HT
   * `/css`:
     * `main.css`
   
-
+### Part 4: Documentation
+* You must have a README.md that explains:
+    * how to set up and run your application.
+    * how you built your HTML page
+    * inspiration, process documentation, struggles, references, and questions, like your ITP blog
+    * and how you deployed your work to [Glitch.com](https://glitch.com).
+  * You may use this [README template](/templates/readme-template.md) to structure your README documentation and blog post
 
 ## Submission
 
