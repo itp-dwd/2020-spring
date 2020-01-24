@@ -13,7 +13,7 @@ Your assignment consists of two parts:
    * GitHub Account
    * Glitch Account
    * [Generate an ssh key and add it to your GitHub account](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
-   * *Optional*: [Customize your shell](#).
+   * *Optional*: Customize your command line. Warning: This can be a black hole for your time. For example, Cassie uses [iTerm2](https://www.iterm2.com/) (an alternative to Terminal on MacOS), [Oh-my-zsh](https://ohmyz.sh/) (package manager for zsh), and [Starship](https://starship.rs/) (customizes your command prompt).
    * *Optional*: [Customize your VSCode](https://code.visualstudio.com/docs/introvideos/configure)
 2. Creating, from scratch, a simple web page using only HTML, CSS, and media assets (images, videos, gifs, fonts, etc.). No JavaScript! You could make a page about your beloved pet, or maybe a work of hypertext art, fiction, or poetry. Try looking at [Rhizome's Artbase](https://rhizome.org/art/artbase/), specifically [Collection: Hypertext](https://rhizome.org/art/artbase/collections/collection-hypertext/) for inspiration.
 
