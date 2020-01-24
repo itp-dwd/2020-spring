@@ -32,7 +32,6 @@ A majority of the class will be focused on setting up your development environme
       - [Deployment & Deployment Options](#deployment--deployment-options)
     - [HTML](#html)
   - [Studio](#studio)
-    - [Your first deployed website](#your-first-deployed-website)
   - [Assignment 1: "Net Art"](#assignment-1-%22net-art%22)
 
 ## Exercises To Do Before Class
@@ -229,56 +228,7 @@ See the [guide to importing a git repository to Glitch](https://help-center.glit
 
 ## Studio
 
-### Your first deployed website
-Now we're going to walk through creating our first website from scratch!
-
-1. Create a new project folder and open it in VSCode. I have a folder in my home directory called "Development" where all of my code lives, but you can put it wherever works for you.
-```sh
-$ mkdir ~/Development/first-website
-$ cd ~/Development/first-website
-$ code .
-```
-**NOTE**: `code` opens VSCode from the command line. You may have to open VSCode and run "Shell Command: Install 'code' command in PATH".
-2. Create a new file and save it as `index.html`.
-3. Add the following content:
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    <h1>Welcome to My Homepage</h1>
-    <p>I hope you have a great day.</p>
-  </body>
-</html>
-```
-4. Save this and go back to your command line
-5. Serve your site locally by running
-```sh
-$ python -m SimpleHTTPServer
-```
-or, if you are running Python 3
-```sh
-$ python3 -m http.server 8000
-```
-6. Test your site by navigating to http://localhost:8000
-![First Website Preview](../assets/first-website-preview.png)
-7. Initialize your git repository and commit your changes.
-```sh
-$ git init
-$ git add .
-$ git commit -m "Initial commit"
-```
-8. Use GitHub Desktop to push your repository to GitHub.
-![Gif Showing how to connect and push git repository](../assets/github_desktop.gif)
-9. Get your repository's URL
-![First Website GitHub](../assets/first-website-github.png)
-10. Create a "New Project" on Glitch from your git repository URL
-![Cloning git repo to Glitch gif](../assets/glitch_clone.gif)
-11. Click "Show" -> "In a New Window" and you're done!
-![Previewing Glitch project](../assets/glitch_show.gif)
-
+* ↳ see [First Website Guide](../guides/process-and-workflow-beginner.md)
 
 ***
 ***
