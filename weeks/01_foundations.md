@@ -220,15 +220,13 @@ See the [guide to importing a git repository to Glitch](https://help-center.glit
 
 * ↳ [HTML Guide](../guides/html-guide.md)
 
-
-
 ***
 ***
 ***
 
 ## Studio
 
-* ↳ see [First Website Guide](../guides/process-and-workflow-beginner.md)
+* ↳ see [Your First Website Guide](/guides/your-first-website-guide.md)
 
 ***
 ***
