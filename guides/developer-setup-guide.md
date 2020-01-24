@@ -1,5 +1,7 @@
 # Developer Setup Guide
 
+## Materials
+
 * Laptop & Power charger
 * **Text Editor** (VS Code):
   * [VS Code - Visual Studio Code](https://code.visualstudio.com/)
@@ -16,3 +18,9 @@
   * [Download Github Desktop](https://desktop.github.com/)
 * **Glitch Account**:
   * [Sign up with Glitch.com](https://glitch.com/)
+
+
+## Development Tools 
+
+### Simple HTTP Server 
+
