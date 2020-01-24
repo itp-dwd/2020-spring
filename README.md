@@ -1,8 +1,6 @@
 # Dynamic Web Development
 **NYU, Interactive Telecommunications Program, Spring 2020**
 
-**work in progress**
-
 ## Course Description
 
 *Dynamic Web Development* introduces the fundamentals of building "full stack" web applications. This course will focus on modern, client- and server- side web technologies and provide practical methods for approaching web development for creative and functional applications. The core technologies used in this course are HTML5, JavaScript, Node.js with the Express framework, and MongoDB database. Students will learn to design, develop, and deploy web applications and gain the necessary skills to extend and explore web development independently. 
@@ -13,13 +11,13 @@ The course will be a mixture of lecture and in-class collaborative coding, with 
 
 * ↳ [Read the Code Of Conduct here](/CODEOFCONDUCT.md)
 
-
 ## Objectives:
 (forked from Sam Slover's API of you class)
 By the end of the class, you should have a solid understanding of the following concepts:
 
 * Full-Stack Javascript - Familiarity with both client-side and server-side Javascript.
-* Designing Data-Driven Applications- How to design and build a 'full-stack' data application.
+* UI/UX Design - Creating wireframes and style guides, and translating them to code.
+* Designing Data-Driven Applications - How to design and build a 'full-stack' data application.
 * Using APIs - How to interact with and use an API from within your client application.
 * Structuring Data - How to intelligently structure data.
 * Storing Data - How to build systems to store your own data.
@@ -28,7 +26,7 @@ By the end of the class, you should have a solid understanding of the following 
 
 ## Outcomes
 
-In order to achieve these objectives, students will spend the semester building, refactoring, getting feedback and interating on, one project throughout the course. The interactive web application will require students to exercise each of the key skills taught throughout this course as well as equip students with the skills to continue developing new dynamic web applications after the course. 
+In order to achieve these objectives, students will spend the semester building, refactoring, getting feedback and iterating on, one project throughout the course. The interactive web application will require students to exercise each of the key skills taught throughout this course as well as equip students with the skills to continue developing new dynamic web applications after the course. 
 
 ## Details
 
@@ -39,29 +37,8 @@ In order to achieve these objectives, students will spend the semester building,
 | Instructor Github | [@joeyklee](https://github.com/joeyklee) |  [@catarak](https://github.com/catarak) |
 | Class Day | Monday   | Monday     |  
 | Class Time      | 6:30 - 9:00 | 6:30 - 9:00 |
-| Class Room      | Room **411**, 370 Jay Street, Booklyn         | Room **450**, 370 Jay Street, Booklyn       |
+| Class Room      | Room **411**, 370 Jay Street, Brooklyn         | Room **450**, 370 Jay Street, Brooklyn       |
 | Class Dates     | Jan. 27 - Mar. 23 | Jan. 27 - Mar. 23 |
-
-
-
-<!-- ### Section 1 - w/ Joey Lee
-* **Info**:
-  * MONDAY 6:30PM to 9:00PM
-  * ROOM TBD
-  * JAN. 27 - MAR. 23
-  * 7 meetings, 2 Point Course
-* **Instructor**: 
-  * 
-
-
-### Section 2 - w/ Cassie Tarakajian
-* **Info**:
-  * MONDAY 6:30PM to 9:00PM
-  * ROOM TBD
-  * JAN. 27 - MAR. 23
-  * 7 meetings // 2 Point Course
-* **Instructor**: 
-  * [Cassie Tarakajian](https://cassietarakajian.com/) (github: @catarak // cassie.tarakajian@nyu.edu ) -->
 
 
 ### Office Hours
@@ -102,14 +79,29 @@ In order to achieve these objectives, students will spend the semester building,
 | [A5](assignments/05_assignment.md) |  MAR 09   | The API of You: Living forever on the web      |   n/a   |
 | [FINAL PROJECT & PRESENTATION](assignments/06_final-project.md) |  MAR 23   | Final Project  |   n/a   |
 
-📨All Assignments should be submitted to your respective section:
+📨 All Assignments should be submitted to your respective section:
 * Section 1:
   * [Joey's Section - Assignment Submission Form](https://forms.gle/GkLsRM581kfyHg6W6)
 * Section 2:
   * [Cassie's Section - Assignment Submission Form](https://forms.gle/pzxHjZtq1iP5WAyv9)
 
 
-Here's an outline of how your work will generally be evaluated. The explaners of each category are rough guidelines for how I assign numbers (or quantify 😉) to the work you are producing in this class. Inspired by [cmda-tt course](https://github.com/cmda-tt/course-17-18/tree/master/assessment-3).
+### Grading
+
+Students will be evaluated on effort, personal progress and growth, class participation, assignments, and the final project. It is understood that coding and making things is tough, therefore your effort, curiosity, and engagement is of utmost importance. You will be graded on your progress throughout the class, your ability to complete assignments on time, your interaction with peers, and your ability to justify your decisions thoughtfully.
+
+**GRADE CALCULATION**:
+
+Here is a basic breakdown of graded tasks along that trajectory:
+* 20% Attendance/Participation
+* 50% Assignments
+* 10% Project Proposal
+* 20% Final Project, completed on conclusion of the course
+* TOTAL: 100%
+
+Please see ITP's statement on [Pass/Fail](http://help.itp.nyu.edu/academic-policies/pass-fail) which states that a "Pass" is equivalent to an "A" or a "B" while anything less would be considered a "Fail".
+
+Here's an outline of how your assignments and final will generally be evaluated. The explaners of each category are rough guidelines for how I assign numbers (or quantify 😉) to the work you are producing in this class. Inspired by [cmda-tt course](https://github.com/cmda-tt/course-17-18/tree/master/assessment-3).
 
 | Category | 1 - 2 pts | 3 - 4 pts | 5 - 6 pts | 7 - 8 pts | 9 - 10 pts |
 | :------- | --------- | --------- | --------- | --------- | ---------- |
@@ -117,77 +109,19 @@ Here's an outline of how your work will generally be evaluated. The explaners of
 | **Understanding** | There is either no substance or the student cannot explain or justify decision making | The work shows partial grasp of the concepts, but shows major gaps that could be addressed with more thought | The work is sensible and grounded and can be explained in a coherent manner | The work represents the concept well, references past and current work. The student can speak to more than 1 perspective. | The work shows strong graps of concepts and the state-of-the-art. The work is well received in both concept and implementation |
 | **Application** | The work reflects very little conceptual references to the course materials; a general lack of awareness to methodology and implementation | The work applies methodology(ies) that have some potential, but not quite relevant or effective | The work uses methods that are appropriate and thoughtful. The application of methods are standard and show good potential | The work uses methods that are appropriate, thoughtful, and well implemented. There are innovative ideas that are shown in the application. | There work shows careful methodological considerations and is beautifully crafted, designed, and presented. |
 
+**ATTENDANCE AND PARTICIPATION POLICY**: 
 
-## Overview
+Attendance is mandatory. Please inform your teacher via email if you are going to miss a class. Two unexcused absences is cause for failing the class. (An unexcused lateness of 10 minutes or more is equivalent to 1/2 an absence.)
 
-## Week 1: Web Foundations
-
-## Week 2: Front-end Foundations
-
-## Week 3: Front-end Applications
-
-## Week 4: Back-end Foundations
-
-## Week 5: Data Persistence & Databases
-
-## Week 6: Synthesis 
-
-## Week 7: Final
+This class will be participatory, you are expected to participate in discussions and give feedback to other students both in class and participate with their projects. This (along with attendance) is 20% of your grade.
 
 
-<!-- 
+**LATE ASSIGNMENTS**:
 
-Students will create and using Application Programming Interfaces (APIs), interfacing with 
+Late assignments **will not be accepted** except under special circumstances or with a doctors note. 
 
-NOTES:
- This course will provide a framework for learning how to develop and program web applications. It will focus on server side development using JavaScript, Node.js with the Express framework, and the MongoDB database on cloud based infrastructure. Additional topics will include login and session management, web services and APIs, and will lightly touch on front-end web development. The course will be a mixture of lecture and in-class collaborative coding, with weekly programming and reading homework. 
+If you have not "finished" your assignment you still must submit what you have done to the appropriate assignment submission google form. You can improve on your submitted assignent after submission, BUT your work will not be reviewed if it is passed the deadline. 
 
-## Week 1
-> Introduction: Client-Server, TCP/IP, DNS, HTTP, Servers and Servers, Node.js, Basic Web Server, HTML, CSS, the JavaScript DOM, and git
-
-* Node.js, VPS, and Basic HTTP Server Notes
-* HTML Basics
-* CSS Basics
-* JavaScript DOM
-* git Basics
-
-## Week 2
-> Webservers with Node and Express
-Express Basics and HTML Forms
-
-
-## Week 3
-> Using Express Templates and Databases
-Express Templates
-Data Storage
-
-## Week 4
-> AJAX with JQuery, Using Simple Web Services
-
-
-## Week 5
-> Final Project Proposals
-Cookies, Sessions, Logins, and HTTPS
-HTTPS File Uploads
-Creating Node Packages
-
-## Week 6
-> Final Project Workshop and Additional Topics
-Using Web Services (OAuth, Facebook, Twitter, etc)
-
-## Week 7
-> Final Project Presentations: Expect Guests
-
- -->
-
-
-<br>
-
-***
-***
-***
-
-<br>
 
 ## NYU STATEMENTS AND PRINCIPLES
 
