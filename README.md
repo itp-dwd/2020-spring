@@ -109,6 +109,14 @@ In order to achieve these objectives, students will spend the semester building,
   * [Cassie's Section - Assignment Submission Form](https://forms.gle/pzxHjZtq1iP5WAyv9)
 
 
+Here's an outline of how your work will generally be evaluated. The explaners of each category are rough guidelines for how I assign numbers (or quantify 😉) to the work you are producing in this class. Inspired by [cmda-tt course](https://github.com/cmda-tt/course-17-18/tree/master/assessment-3).
+
+| Category | 1 - 2 pts | 3 - 4 pts | 5 - 6 pts | 7 - 8 pts | 9 - 10 pts |
+| :------- | --------- | --------- | --------- | --------- | ---------- |
+| **Quality**  | The work is handed in late, broken, incomplete, undocumented, or shows lack of care or thought | The work is only partially documented and seems only partially complete | The work is documented and represents the student's concept and shows good effort | The work is well documented, thoughtful, and professional | The work shows mastery and is well polished |
+| **Understanding** | There is either no substance or the student cannot explain or justify decision making | The work shows partial grasp of the concepts, but shows major gaps that could be addressed with more thought | The work is sensible and grounded and can be explained in a coherent manner | The work represents the concept well, references past and current work. The student can speak to more than 1 perspective. | The work shows strong graps of concepts and the state-of-the-art. The work is well received in both concept and implementation |
+| **Application** | The work reflects very little conceptual references to the course materials; a general lack of awareness to methodology and implementation | The work applies methodology(ies) that have some potential, but not quite relevant or effective | The work uses methods that are appropriate and thoughtful. The application of methods are standard and show good potential | The work uses methods that are appropriate, thoughtful, and well implemented. There are innovative ideas that are shown in the application. | There work shows careful methodological considerations and is beautifully crafted, designed, and presented. |
+
 
 ## Overview
 

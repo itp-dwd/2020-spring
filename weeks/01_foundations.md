@@ -117,7 +117,7 @@ The topics for we will be covering for this class include:
    * Command Line
    * Version Control
    * Source Code Hosting
-   * Deployment and Deploymen tOptions
+   * Deployment and Deployment Options
 
 ### How the Internet Works
 When we're creating websites and web applications, it's helpful to understand the infrastructure of the Internet. This helps us understand all of the steps in creating a website from scratch.
