@@ -13,21 +13,24 @@ Your assignment consists of two parts:
    * GitHub Account
    * Glitch Account
    * [Generate an ssh key and add it to your GitHub account](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
-   * *Optional*: [Customize your shell](https://hackernoon.com/how-to-trick-out-terminal-287c0e93fce0).
+   * *Optional*: [Customize your shell](#).
    * *Optional*: [Customize your VSCode](https://code.visualstudio.com/docs/introvideos/configure)
 2. Creating, from scratch, a simple web page using only HTML, CSS, and media assets (images, videos, gifs, fonts, etc.). No JavaScript! You could make a page about your beloved pet, or maybe a work of hypertext art, fiction, or poetry. Try looking at [Rhizome's Artbase](https://rhizome.org/art/artbase/), specifically [Collection: Hypertext](https://rhizome.org/art/artbase/collections/collection-hypertext/) for inspiration.
 
 ## Requirements
-* A web application deployed to the web following best practices. This means:
+* Requirement 1: **Developing like a pro**
+  * A web application deployed to the web following best practices.
   * Your code and changes to your code must be well tracked using git
   * Your code must exist as a Github repository
   * You must `add`, `commit`, and `push` changes from your local development environment to your remote Github repository.
-* You must have a README.md that explains:
-  * how to set up and run your application.
-  * how you built your HTML page
-  * inspiration, process documentation, and references
-  * and how you deployed your work to [Glitch.com](https://glitch.com).
-* Your application must be publicly accessible on [Glitch.com](https://glitch.com).
+* Requirement 2: **README.md**
+  * You must have a README.md that explains:
+    * how to set up and run your application.
+    * how you built your HTML page
+    * inspiration, process documentation, struggles, references, and questions, like your ITP blog
+    * and how you deployed your work to [Glitch.com](https://glitch.com).
+* Requirement 3: **Deployed publicly to Glitch**
+  * Your application must be publicly accessible on [Glitch.com](https://glitch.com).
 
 ## Submission
 
