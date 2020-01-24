@@ -26,7 +26,10 @@ Emphasis this week will be on writing clean and organized JavaScript code.
     - [Event Handlers](#event-handlers)
     - [Using APIs](#using-apis)
       - [What is an API?](#what-is-an-api)
-      - [Using Public APIs](#using-public-apis)
+      - [Connecting to RESTful APIs with JavaScript: AJAX and the Fetch API](#connecting-to-restful-apis-with-javascript-ajax-and-the-fetch-api)
+      - [Public APIs and Terms](#public-apis-and-terms)
+      - [An Example API request from JavaScript](#an-example-api-request-from-javascript)
+    - [Reactive UIs](#reactive-uis)
 
 ## Outcomes & Goals
 
@@ -185,6 +188,14 @@ In this class, we will use the term API mostly in the context of RESTful API's a
 
 * **Reading: ** [Nobody Introduced Me to the API](https://www.robinwieruch.de/what-is-an-api-javascript)
 
+#### Connecting to RESTful APIs with JavaScript: AJAX and the Fetch API
+When you load a website or web application, the server is communicating with the browser using HTTP. This is called a **communication protocol**. When you want to load data from an API, you also need to make the request using HTTP. In JavaScript, this is done using AJAX (Asynchronous JavaScript and XML). 
+
+The syntax for making AJAX requests is quite verbose, and while some libraries have been created to make AJAX easier to use (jQuery, Axios), the standard now is to use the Fetch API. To use the Fetch API, you must understand Promises and async/await.
+
+* **Promises and async/await**: [Callbacks, Promises, and async/await](../guides/javascript-frontend-guide.md#callbacks-promises-and-asyncawait)
+* **In-depth guide**: [JavaScript Networking, AJAX, talking to APIs, and CORS](../guides/javascript-frontend-guide.md#javascript-networking-ajax-talking-to-apis-and-cors)
+
 #### Public APIs and Terms
 
 Many websites and web applications have created publicly available APIs, to let you access their data or use their services from code. There's tons to choose from!
@@ -205,7 +216,8 @@ There are a few terms to get comfortable with when using APIs:
 * **URL Query Parameters**: Often endpoints allow you filter and search the data at an endpoint using query string parameters. For example, `https://www.potterapi.com/v1/characters?house=Gryffindor`. `house` is the name of the parameter, and `Gryffindor` is the value. In the documentation, it's usually specified what these parameters can be, just be sure to [URL encode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) them.
 * **Response format**: Usually the response is JSON, very rarely it will not be.
 
-#### Making an API request from JavaScript
+
+#### An Example API request from JavaScript
 
 Let's practice working with APIs using the [Harry Potter API](https://www.potterapi.com/). To integrate using this API into your application, there's a few steps:
 
@@ -225,13 +237,21 @@ Let's practice working with APIs using the [Harry Potter API](https://www.potter
   const baseUrl = "https://www.potterapi.com/v1";
   const URL = `${baseUrl}/characters?house=Gryffindor&key=${API_KEY}`;
   fetch(URL).then((response) => {
-    return response.json()
+    return response.json();
   }).then((data) => {
     console.log(data);
   });
   ```
-  What's with the "`", and the "=>", and the ".then()"? This is all newer JavaScript syntax, also known as ES6 or ES2015. It's all concepts you understand already, just different syntax. Let's diverge for a moment and talk about these things. 
-  * The backtick characters "`" denote template strings. They're the same as regular strings with " " or ' ' but with some superpowers.
-    1. You can 
+  Notice that this code uses a few newer JavaScript features:
+  * [Template Strings](../guides/javascript-frontend-guide.md#template-strings)
+  * [Arrow Functions](../guides/javascript-frontend-guide.md#arrow-functions)
+  * [Promises](../guides/javascript-frontend-guide.md#callbacks-promises-and-asyncawait)
+
+`data` now holds the JSON from the API we wanted to get. We could do anything we want with it! Create HTML elements, make a data visualization, or even sonify it.
+
+### Reactive UIs
+
+There are many different design patterns to use JSON data to create interfaces. This is the reason for the plethora of front end frameworks—jQuery, Backbone, Angular, React, Vue—they exist to help make this process easier. In this class, we will not be using any front end frameworks, but instead be making our own by using a design pattern called Reactive UI. It's no coincidence that the name is similar to React, and if you can master Reactive UIs, the transition to React will feel right. 
+
 
 
