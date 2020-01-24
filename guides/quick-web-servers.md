@@ -2,9 +2,7 @@
 
 ## About
 
-When running client side web applications, often you will need to create your own simple web server to serve your HTML, CSS, and JavaScript.
-
-This guide outlines a few options for creating a simple web server
+When running client side web applications, often you will need to create your own simple web server to serve your HTML, CSS, and JavaScript. This guide outlines a few options for creating a simple web server.
 
 ## Table of Contents
 
