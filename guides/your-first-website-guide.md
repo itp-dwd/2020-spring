@@ -19,6 +19,25 @@ Basically, we're looking to make sure you have *at least*:
 * you have an account on Glitch.com
 * the github desktop app
 
+## Table of Contents
+
+- [Your First Website Guide](#your-first-website-guide)
+  - [About](#about)
+  - [Prerequisites](#prerequisites)
+  - [Table of Contents](#table-of-contents)
+  - [10 Step Guide to Creating & Publishing Your First Webpage](#10-step-guide-to-creating--publishing-your-first-webpage)
+    - [Step 1: Create your project folder and open it in VS Code](#step-1-create-your-project-folder-and-open-it-in-vs-code)
+    - [Step 2: Create an `index.html` file](#step-2-create-an-indexhtml-file)
+    - [Step 3: add HTML code to `index.html`](#step-3-add-html-code-to-indexhtml)
+    - [Step 4: Create a local web server](#step-4-create-a-local-web-server)
+    - [Step 5: Test your site](#step-5-test-your-site)
+    - [Step 6: Start tracking with Git](#step-6-start-tracking-with-git)
+    - [Step 7: Use Github Desktop make your code open source](#step-7-use-github-desktop-make-your-code-open-source)
+    - [Step 8: Get your Github Repo's URL](#step-8-get-your-github-repos-url)
+    - [Step 9: Create a "New Project" on Glitch from your git repository URL](#step-9-create-a-%22new-project%22-on-glitch-from-your-git-repository-url)
+    - [Step 10: See your project live](#step-10-see-your-project-live)
+  - [Conclusion ✨](#conclusion-%e2%9c%a8)
+
 ## 10 Step Guide to Creating & Publishing Your First Webpage
 
 ### Step 1: Create your project folder and open it in VS Code
