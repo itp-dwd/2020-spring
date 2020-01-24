@@ -34,12 +34,12 @@ For now, your job is to translate your own designs as faithfully as possible int
 Here you will:
 * 1. Create an HTML structure that best uses semantic HTML to structure your content
 * 2. Define CSS rules that follow as best as possible BEM conventions that structure your layout and style your DOM elements
-* 3. Write JavaScript that fulfills any (3) of the below interactive elements:
-  * Selects the background of the website and changes it on button click (you'll have to add a button somewhere on your page... maybe in the navigation?).
-  * ...
-  * ...
-
-* you must use BEM conventions to apply CSS classes
+* 3. Write JavaScript that fulfills the 5 below interactive elements that use the following events. The JavaScript should update the CSS using in response to the following events:
+  * `onload`
+  * `click`
+  * `scroll`
+  * `mouseover`
+  * `onkeypress`
 
 ### Part 3: Deployment
 Your website will be served using a static web server on **Glitch** and will be pulled from a remote Github repository. You will need to practice good git tracking and connect your local git repository to a remote Github Repository. 

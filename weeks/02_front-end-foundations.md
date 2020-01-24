@@ -127,7 +127,7 @@ Topics we are not covering, but are of importance:
 > Make your things interactive with JavaScript
 
 * ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
-  * JavaScript Foundations: Array Methods, Object Methods
+  * JavaScript Foundations: ES6/ES2015, Array Methods, Object Methods
   * JavaScript and the DOM: DOM Selectors & Event Listeners/Handlers
 
 ***

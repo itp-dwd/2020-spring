@@ -4,7 +4,8 @@
 
 
 ## Requirements
-
+* Final Project Proposal
+  * You can build on a previous week's project!
 
 
 ## Submission
