@@ -1,5 +1,36 @@
 # Git Guide
 
+## Table of Contents
+
+- [Git Guide](#git-guide)
+  - [Table of Contents](#table-of-contents)
+  - [About](#about)
+  - [What is Git?](#what-is-git)
+  - [Initialize!](#initialize)
+  - [Adding & Committing Changes](#adding--committing-changes)
+    - [Check the status](#check-the-status)
+    - [Add and commit ALL changes](#add-and-commit-all-changes)
+    - [Add single file and commit with a specific message](#add-single-file-and-commit-with-a-specific-message)
+    - [Add multiples files and commit with a specific message](#add-multiples-files-and-commit-with-a-specific-message)
+  - [Undoing Changes](#undoing-changes)
+    - [Show the Commits with `git log`](#show-the-commits-with-git-log)
+    - [Resetting](#resetting)
+    - [Reverting](#reverting)
+  - [Ignoring files from git tracking](#ignoring-files-from-git-tracking)
+  - [Branching & Merging](#branching--merging)
+    - [Branching](#branching)
+      - [Creating a branch](#creating-a-branch)
+      - [Switching branches](#switching-branches)
+    - [Create and Switch Branches](#create-and-switch-branches)
+    - [Merging](#merging)
+- [What is Github?](#what-is-github)
+  - [SSH keys for Git Authentication/Authorization](#ssh-keys-for-git-authenticationauthorization)
+  - [Connecting to a remote repository](#connecting-to-a-remote-repository)
+  - [Cloning a remote repository](#cloning-a-remote-repository)
+  - [Forking an open source project](#forking-an-open-source-project)
+  - [Pull requests and contributing](#pull-requests-and-contributing)
+- [Quickstart](#quickstart)
+
 ## About 
 
 The best thing you can do for yourself on your developer journey is to use version control and get into the good practice of tracking your project evolution with a version control system. At the time of this writing (and quite likely into the future) we use `git` to do version control.
@@ -241,10 +272,12 @@ $ git clone https://github.com/joeyklee/rainbow-gif-maker.git
 
 ## Forking an open source project
 
+TBD
 
 
 ## Pull requests and contributing
 
+TBD
 
 
 ***
