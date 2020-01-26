@@ -1,16 +1,17 @@
 # Dynamic Web Development
 **NYU, Interactive Telecommunications Program, Spring 2020**
 
-[**Link to the course listing**<br> **Category**: 2 Point, All, Elective<br>
-**Tags**: web development, javascript, nodejs, express, full stack <br>](https://itp.nyu.edu/registration/CourseInfo.php?course_id=778)
-
 ## COURSE DESCRIPTION
 
 *Dynamic Web Development* introduces the fundamentals of building "full stack" web applications. This course will focus on modern, client- and server- side web technologies and provide practical methods for approaching web development for creative and functional applications. The core technologies used in this course are HTML5, JavaScript, Node.js with the Express framework, and MongoDB database. Students will learn to design, develop, and deploy web applications and gain the necessary skills to extend and explore web development independently. 
 
 The course will be a mixture of lecture and in-class collaborative coding, with weekly programming and reading homework. 
 
-### INSTRUCTOR DETAILS
+[**Link to the course listing**<br> **Category**: 2 Point, All, Elective<br>
+**Tags**: web development, javascript, nodejs, express, full stack <br>](https://itp.nyu.edu/registration/CourseInfo.php?course_id=778)
+
+
+### COURSE DETAILS
 
 | Details | Section 1 | Section 2 |
 | :-----   | -------  | --------   |      
