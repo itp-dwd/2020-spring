@@ -1,34 +1,16 @@
 # Dynamic Web Development
 **NYU, Interactive Telecommunications Program, Spring 2020**
 
-## Course Description
+[**Link to the course listing**<br> **Category**: 2 Point, All, Elective<br>
+**Tags**: web development, javascript, nodejs, express, full stack <br>](https://itp.nyu.edu/registration/CourseInfo.php?course_id=778)
+
+## COURSE DESCRIPTION
 
 *Dynamic Web Development* introduces the fundamentals of building "full stack" web applications. This course will focus on modern, client- and server- side web technologies and provide practical methods for approaching web development for creative and functional applications. The core technologies used in this course are HTML5, JavaScript, Node.js with the Express framework, and MongoDB database. Students will learn to design, develop, and deploy web applications and gain the necessary skills to extend and explore web development independently. 
 
 The course will be a mixture of lecture and in-class collaborative coding, with weekly programming and reading homework. 
 
-## Code of Conduct
-
-* ↳ [Read the Code Of Conduct here](/CODEOFCONDUCT.md)
-
-## Objectives:
-(forked from Sam Slover's API of you class)
-By the end of the class, you should have a solid understanding of the following concepts:
-
-* Full-Stack Javascript - Familiarity with both client-side and server-side Javascript.
-* UI/UX Design - Creating wireframes and style guides, and translating them to code.
-* Designing Data-Driven Applications - How to design and build a 'full-stack' data application.
-* Using APIs - How to interact with and use an API from within your client application.
-* Structuring Data - How to intelligently structure data.
-* Storing Data - How to build systems to store your own data.
-* Building APIs - How to build your own APIs and make the data available to client applications.
-* Deploying full stack applications - Deploying applications using Platforms-as-a-Service (PaaS) with Git/GitHub, Glitch, and Heroku.
-
-## Outcomes
-
-In order to achieve these objectives, students will spend the semester building, refactoring, getting feedback and iterating on, one project throughout the course. The interactive web application will require students to exercise each of the key skills taught throughout this course as well as equip students with the skills to continue developing new dynamic web applications after the course. 
-
-## Details
+### INSTRUCTOR DETAILS
 
 | Details | Section 1 | Section 2 |
 | :-----   | -------  | --------   |      
@@ -41,22 +23,46 @@ In order to achieve these objectives, students will spend the semester building,
 | Class Dates     | Jan. 27 - Mar. 23 | Jan. 27 - Mar. 23 |
 
 
-### Office Hours
-* By Appointment - DAY & DAY, H:MM-H:MMpm
-* Room: ITP FLOOR or ITP RESIDENT'S OFFICE
-* PLEASE SIGN UP: 📅 
-  * [Cassie](https://calendar.google.com/calendar/selfsched?sstoken=UU1sWVF3by0wR2lQfGRlZmF1bHR8YjhkY2IyODcxNDk3ODRhNzI1OTkyN2JiMDY3ODFmNWI)
-  * [Joey](https://calendar.google.com/calendar/selfsched?sstoken=UU9QS0R3c3cybXB4fGRlZmF1bHR8OWY1YWExODk4YTc3YTNkMjM5MDg4ZTIxMmE3OTY5MjM)
-* If you can't make those times, please send either of us an email and we can chat at another time or via video conference.
+### OFFICE HOURS
+
+Office hours are by appointment. Please see the office hour offerings by the instructors below. You are also welcome to meet with ITP Residents.
+
+| Detail | Joey | Cassie |
+| :---  | ---   |  ---   |
+| Office Hours    | [4-5pm, TUE & THUR By Appointment](https://calendar.google.com/calendar/selfsched?sstoken=UU9QS0R3c3cybXB4fGRlZmF1bHR8OWY1YWExODk4YTc3YTNkMjM5MDg4ZTIxMmE3OTY5MjM) | [#-#pm, DAY & DAY By Appointment](https://calendar.google.com/calendar/selfsched?sstoken=UU1sWVF3by0wR2lQfGRlZmF1bHR8YjhkY2IyODcxNDk3ODRhNzI1OTkyN2JiMDY3ODFmNWI)
+| Location | ITP FLOOR or ITP RESIDENT'S OFFICE | ITP FLOOR or ITP RESIDENT'S OFFICE |
+
+* NOTE: If you can't make those times, please send either of us an email and we can chat at another time or via video conference.
 
 
-[**Link to the course listing**<br> **Category**: 2 Point, All, Elective<br>
-**Tags**: web development, javascript, nodejs, express, full stack <br>](https://itp.nyu.edu/registration/CourseInfo.php?course_id=778)
+
+## CODE OF CONDUCT
+
+* ↳ [Read the Code Of Conduct here](/CODEOFCONDUCT.md)
+
+## OBJECTIVES
+
+By the end of the class, you should have a solid understanding of the following concepts:
+
+* Full-Stack Javascript - Familiarity with both client-side and server-side Javascript.
+* UI/UX Design - Creating wireframes and style guides, and translating them to code.
+* Designing Data-Driven Applications - How to design and build a 'full-stack' data application.
+* Using APIs - How to interact with and use an API from within your client application.
+* Structuring Data - How to intelligently structure data.
+* Storing Data - How to build systems to store your own data.
+* Building APIs - How to build your own APIs and make the data available to client applications.
+* Deploying full stack applications - Deploying applications using Platforms-as-a-Service (PaaS) with Git/GitHub, Glitch, and Heroku.
+
+NOTE: These goals and objectives were adapted from Sam Slover's [API of you class](https://github.com/sslover/api-of-you) and the previous [ITP's 2018 DWD Course](https://itp.nyu.edu/~sve204/dwd_spring2018/).
+
+## OUTCOMES
+
+In order to achieve these objectives, students will spend the semester building, refactoring, getting feedback and iterating on, one project throughout the course. The interactive web application will require students to exercise each of the key skills taught throughout this course as well as equip students with the skills to continue developing new dynamic web applications after the course. 
 
 
-## Schedule
+## SCHEDULE
 
-### Meetings
+### MEETINGS
 
 | GO TO  |  DATE  | THEME | NOTES |
 | :----         |  ----  | ---- | ---- |
@@ -68,7 +74,7 @@ In order to achieve these objectives, students will spend the semester building,
 | [WEEK 06](weeks/06_synthesis.md) |  MAR 09   | Synthesis     |   n/a   |
 | [WEEK 07](weeks/07_final.md) |  MAR 23   | Final Class    |   n/a   |
 
-### Assignments
+### ASSIGNMENTS
 
 | ASSIGNMENT  |  DUE DATE  | TITLE | NOTES |
 | :----         |  ----  | ---- | ---- |
@@ -86,11 +92,11 @@ In order to achieve these objectives, students will spend the semester building,
   * [Cassie's Section - Assignment Submission Form](https://forms.gle/pzxHjZtq1iP5WAyv9)
 
 
-### Grading
+### GRADING
 
 Students will be evaluated on effort, personal progress and growth, class participation, assignments, and the final project. It is understood that coding and making things is tough, therefore your effort, curiosity, and engagement is of utmost importance. You will be graded on your progress throughout the class, your ability to complete assignments on time, your interaction with peers, and your ability to justify your decisions thoughtfully.
 
-**GRADE CALCULATION**:
+#### GRADE CALCULATION:
 
 Here is a basic breakdown of graded tasks along that trajectory:
 * 20% Attendance/Participation
@@ -109,14 +115,14 @@ Here's an outline of how your assignments and final will generally be evaluated.
 | **Understanding** | There is either no substance or the student cannot explain or justify decision making | The work shows partial grasp of the concepts, but shows major gaps that could be addressed with more thought | The work is sensible and grounded and can be explained in a coherent manner | The work represents the concept well, references past and current work. The student can speak to more than 1 perspective. | The work shows strong graps of concepts and the state-of-the-art. The work is well received in both concept and implementation |
 | **Application** | The work reflects very little conceptual references to the course materials; a general lack of awareness to methodology and implementation | The work applies methodology(ies) that have some potential, but not quite relevant or effective | The work uses methods that are appropriate and thoughtful. The application of methods are standard and show good potential | The work uses methods that are appropriate, thoughtful, and well implemented. There are innovative ideas that are shown in the application. | There work shows careful methodological considerations and is beautifully crafted, designed, and presented. |
 
-**ATTENDANCE AND PARTICIPATION POLICY**: 
+#### ATTENDANCE AND PARTICIPATION POLICY: 
 
 Attendance is mandatory. Please inform your teacher via email if you are going to miss a class. Two unexcused absences is cause for failing the class. (An unexcused lateness of 10 minutes or more is equivalent to 1/2 an absence.)
 
 This class will be participatory, you are expected to participate in discussions and give feedback to other students both in class and participate with their projects. This (along with attendance) is 20% of your grade.
 
 
-**LATE ASSIGNMENTS**:
+#### LATE ASSIGNMENTS:
 
 Late assignments **will not be accepted** except under special circumstances or with a doctors note. 
 
