@@ -71,7 +71,8 @@ You should be able to speak on the following points:
 TBD
 
 ## Materials Needed
-* ↳ [Developer setup Guide](../guides/developer-setup-guide.md)
+
+* ↳ please see [Developer Setup Guide - Quickstart](../guides/developer-setup-guide.md#quickstart)
 
 ## What we are not covering
 

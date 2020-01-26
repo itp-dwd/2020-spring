@@ -80,7 +80,7 @@ This week your goal is to be able to speak to these following points:
 
 ## Materials Needed
 
-* ↳ [Developer setup Guide](../guides/developer-setup-guide.md)
+* ↳ please see [Developer Setup Guide - Quickstart](../guides/developer-setup-guide.md#quickstart)
   
 ## What we are not covering
 
