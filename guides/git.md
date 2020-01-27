@@ -24,6 +24,7 @@
     - [Create and Switch Branches](#create-and-switch-branches)
     - [Merging](#merging)
 - [What is Github?](#what-is-github)
+  - [GitHub Desktop](#github-desktop)
   - [SSH keys for Git Authentication/Authorization](#ssh-keys-for-git-authenticationauthorization)
   - [Connecting to a remote repository](#connecting-to-a-remote-repository)
   - [Cloning a remote repository](#cloning-a-remote-repository)
@@ -62,7 +63,7 @@ $ git init
 
 ## Adding & Committing Changes
 
-Most of the time you will be adding and commiting changes with git. The following commands and the combinations will become part of your brain and muscle memory!
+Most of the time you will be adding and committing changes with git. The following commands and the combinations will become part of your brain and muscle memory!
 
 ### Check the status
 > `git status`
@@ -242,6 +243,10 @@ Github is a service that allows you to host your git version controlled projects
 
 Github is a platform where you can develop projects -- software or otherwise -- with others.
 
+## GitHub Desktop
+
+[GitHub Desktop](https://desktop.github.com/) is an application that provides you with a GUI for interacting with git and GitHub. It allows you to run git commands outside of the command line, and synchronize your changes with GitHub. It is recommended that you get comfortable using git from the command line, as this is the most common way to use it. However, if you are having issues synching your local repositories with your remote repositories, GitHub Desktop can help.
+
 ## SSH keys for Git Authentication/Authorization
 
 If you want to connect to Github from your local repositories, then you'll need to set up SSH keys that allow you to authenticate from the terminal/commandline and push or pull changes from Github to your local machine.
@@ -347,6 +352,7 @@ For all the wonders of git, it can honestly sometimes create A LOT of headaches.
 
 ## References
 
+* [Coding Train - Git and GitHub for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
 * [Getting Started With Git](https://www.taniarascia.com/getting-started-with-git/)
 * [The Complete Git Guide](https://flaviocopes.com/git/)
 * [Git Workflow to manage work on Multiple Branches](https://flaviocopes.com/git-workflow/)
