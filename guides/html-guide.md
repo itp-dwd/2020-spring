@@ -7,6 +7,8 @@
   - [Tags and their attributes](#tags-and-their-attributes)
   - [Syntax](#syntax)
   - [Structure](#structure)
+  - [Special HTML Tags](#special-html-tags)
+    - [HTML Forms](#html-forms)
   - [HTML as the "dependency manager"](#html-as-the-%22dependency-manager%22)
 
 ## Prelude: You Should really read
@@ -209,6 +211,52 @@ The point of the above exercise is to see how HTML can be nested within tags to 
 We know that our page has some structure that is semantically meaningful, but to our website viewers, they just see the content we've provided to them in the rawest form. What if we wanted to create our own layout, apply styling to the links and titles, add new typography, and make some better color choices? That's where CSS comes in. Read on for more.
 
 NOTE: explore defining the HTML structure before putting too much or any CSS onto the page. A well structured HTML page will naturally reveal the architecture it is meant to showcase. 
+
+## Special HTML Tags
+
+HTML is organized into the DOM, aka the DOM tree. Some HTML conventions aren't intuitive so it is helpful to have a few clues as to how they are usually structured. Some of these can be seen below:
+
+### HTML Forms
+
+If you're asking for any information from your users, this will likely come in the form of well... a form! Forms act as the parent element which wrap various `<input>` tags that are relevant to that `<form>` element.
+
+![HTML form](../assets/html__forms-01.png)
+
+```html
+<form>
+<input type="text" name="form-secret" placeholder="write a secret">
+<input type="button" value="send my secret">
+</form>
+```
+As you can see, by defining different values for the `type` attribute of the `<input>` the input will be rendered differently to the browser window. Furthermore, their function will differ. 
+* `type="text"` will accept text input
+* `type="button"` will submit the data within the form when that button is pressed
+
+Important to also note is the attribute `name`. The `name` attribute allows you to retrieve the value of data submitted via a form. For example, if the above form was submitted, you could retrieve the inputs submitted by the form by selecting `.theNameYouGave.value`:
+
+```html
+<form id="secretForm">
+<input type="text" name="secretInput" placeholder="write a secret">
+<input type="submit" value="send my secret">
+</form>
+
+<script>
+document.querySelector("#secretForm").addEventListener('submit', (event) => {
+  // this prevents the page from reloading on submit which is the default behavior for forms!
+  event.preventDefault(); 
+  // console log the input DOM element text input 
+  // NOTICE: that the event knows which target element was clicked and you can reference the name attribute
+  console.log(event.target.secretInput);
+  // a popup will show with the value you type in!
+  alert(event.target.secretInput.value); 
+})
+</script>
+```
+
+You can see the other `input` types here: [HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
+
+Upon inspecting those other inputs, you'll notice the importance of the names for getting back the `value` of the input. For example, notice the [Radio Button Example](https://editor.p5js.org/joeyklee/sketches/yH9dbjA4K) input where all of the radio options take the attribute `name="food"`. When you submit the form containing these buttons, you'll be able to get the value from the `.food.value`.
+
 
 ## HTML as the "dependency manager"
 
