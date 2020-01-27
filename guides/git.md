@@ -189,7 +189,7 @@ Along with **tracking file changes**, git also offers up other functionality tha
 
 With **branching** in git, say good bye to crazy file and experimental feature testing gymnastics like "myProject-final-1", "myProject-final-final", "myProject-version-with-rainbows" etc. Git provides you with ability to create **branches** or other versions of your project without needing to duplicate your project or create experimental files and so on. 
 
-The idea with branching is that you can create different versions of your project (the branches) then, if you want to or if it is relevant, you can **merge** those versions or experiments into the project.
+The idea with branching is that you can create different versions of your project (the branches) then, if you want to or if it is relevant, you can **merge** those versions or experiments into the project. In professional software development, where many developers are working on the same repository, developers will work on **feature branches** and then merge to `master` once the feature is complete and tested.
 
 ### Branching
 
