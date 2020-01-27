@@ -83,6 +83,7 @@ Creating, from scratch, a simple web page using only HTML, CSS, and media assets
   * inspiration, process documentation, struggles, references, and questions, like your ITP blog
   * and how you deployed your work to [Glitch.com](https://glitch.com).
 * You may use this [README template](/templates/readme-template.md) to structure your README documentation and blog post
+* See the [Markdown Guide](../guides/markdown-guide.md) or syntax help.
 
 Some examples of nice readme:
 * [p5.js Readme](https://github.com/processing/p5.js)
