@@ -152,8 +152,6 @@ Web applications have lots of different components, but they are primarily compo
 - Back end: Also known as server-side code, this is the code that runs on a hardware server connected to the Internet. This code could be Python, Ruby, Rust, Haskell, etc. but in the context of this class is JavaScript running in Node.js.
 - Database: This stores and persists your website's data. This can be a lot of information! The back end will typically fetch a portion of this data to send to the front end (e.g. if you went to the Wikipedia page for "Capybara", the backend would fetch the "Capybara" entry in the database and nothing else). In this class we will be using MongoDB. 
 
-TODO insert a diagram, probably create one because none of the ones on the internet are good. 
-
 When we create web applications, we run and test these different components on our local computer. When we are happy with what we have and ready to put it on the internet, we need to transfer this code to a computer that can serve files to the internet. This process is called **deployment**. Many companies provide servers that you can transfer your website files to, this is called **hosting**. These companies include Digital Ocean, AWS, and Google; for this class we will be using Glitch.com and Heroku. 
 
 
