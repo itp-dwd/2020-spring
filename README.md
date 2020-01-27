@@ -30,7 +30,7 @@ Office hours are by appointment. Please see the office hour offerings by the ins
 
 | Detail | Joey | Cassie |
 | :---  | ---   |  ---   |
-| Office Hours    | [4-5pm, TUE & THUR By Appointment](https://calendar.google.com/calendar/selfsched?sstoken=UU9QS0R3c3cybXB4fGRlZmF1bHR8OWY1YWExODk4YTc3YTNkMjM5MDg4ZTIxMmE3OTY5MjM) | [#-#pm, DAY & DAY By Appointment](https://calendar.google.com/calendar/selfsched?sstoken=UU1sWVF3by0wR2lQfGRlZmF1bHR8YjhkY2IyODcxNDk3ODRhNzI1OTkyN2JiMDY3ODFmNWI)
+| Office Hours    | [4-5pm, TUE & THUR By Appointment](https://calendar.google.com/calendar/selfsched?sstoken=UU9QS0R3c3cybXB4fGRlZmF1bHR8OWY1YWExODk4YTc3YTNkMjM5MDg4ZTIxMmE3OTY5MjM) | [11AM-1PM, Friday By Appointment](https://calendar.google.com/calendar/selfsched?sstoken=UU1sWVF3by0wR2lQfGRlZmF1bHR8YjhkY2IyODcxNDk3ODRhNzI1OTkyN2JiMDY3ODFmNWI)
 | Location | ITP FLOOR or ITP RESIDENT'S OFFICE | ITP FLOOR or ITP RESIDENT'S OFFICE |
 
 * NOTE: If you can't make those times, please send either of us an email and we can chat at another time or via video conference.
