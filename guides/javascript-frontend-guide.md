@@ -4,6 +4,8 @@
 
 This frontend JavaScript guide is a roadmap to having a solid JavaScript foundation. Like any language, learning JavaScript for the frontend not only means having a strong grasp of the syntax of JavaScript, but also how it works with and applies to other contexts (e.g. interacting with the DOM, communicating with APIs, etc).
 
+In this guide we focus on the foundational knowledge of JavaScript rather than on frameworks and libraries. You can read about the importance of focusing specifically on these core skills as they relate to this post on [How it feels to learn JavaScript in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f) (yes it is 2020 now, but if anything the insights in that post are increasingly relevant).
+
 ## Table of Contents
 - [Frontend Javascript Guide](#frontend-javascript-guide)
   - [About](#about)
@@ -1445,6 +1447,8 @@ By using the `.target` property of your `event`, you can get the DOM node (i.e. 
 This section is about using client side JavaScript to communicate (aka network) with the outside world. There are a number of ways we can make network connections to servers from our web browser -- e.g. web sockets, webRTC, and HTTP -- but we will focus our attention specifically on communicating over HTTP using **XHR** and its more friendlier API, the **Fetch API**.
 
 In this section you will learn about how you can use JavaScript to communicate with outside servers and APIs from the browser.
+
+For a nice blog post about interacting with APIs and building dynamic frontend interfaces see: [How to Connect to an API with JavaScript](https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/).
 
 ## Background: XHR: XMLHttpRequest
 

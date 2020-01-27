@@ -95,7 +95,13 @@ Design & Prototype | [Sketch App](https://www.sketch.com/) |  Sketch is built fo
 
 ## 🛠 Development Tools 
 
-TBD
+* RunJS: 
+  * A tool for running javascript in an interactive environment on your machine. Very cool for testing code
+  * https://runjs.dev/
+* JSON Placeholder API:
+  * https://jsonplaceholder.typicode.com/
+  * /users: https://jsonplaceholder.typicode.com/users
+  
 
 ## 📷 Documentation Tools
 
