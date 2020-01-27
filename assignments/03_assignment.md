@@ -10,6 +10,9 @@ This week, the assignment is to created a dynamic front end web application. Thi
   * Include an interactive element that responds to an event (e.g. click, scroll, mouseover, etc.)
   * Be responsive to the screen size
 
+## Required Readings
+* [Elements of UI Engineering](https://overreacted.io/the-elements-of-ui-engineering/)
+
 ## Requirements
 
 ### Part 1: Sketching, Wireframes, and Design specifications
