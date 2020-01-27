@@ -33,6 +33,7 @@ Your assignment consists of two parts:
 * Requirement 3: **Deployed publicly to Glitch**
   * Your application must be publicly accessible on [Glitch.com](https://glitch.com).
 
+
 ## Submission
 
 **Details:**
@@ -45,3 +46,23 @@ Your assignment consists of two parts:
 * Section 2:
   * [Cassie's Section - Assignment Submission Form](https://forms.gle/pzxHjZtq1iP5WAyv9)
 
+
+## Required Reading
+* [HTML Guide](guides/../guides/html-guide.md)
+  * Specifically:
+    * [Introduction to the DOM](https://www.taniarascia.com/introduction-to-the-dom/)
+    * [Understanding the DOM Tree](https://www.taniarascia.com/understanding-the-dom-tree-and-nodes/)
+
+## Helpful Tips & References:
+
+* [Your First Website Guide](../guides/your-first-website-guide.md)
+* [CSS Guide](../guides/css-guide.md)
+* [Commandline Guide](../guides/commandline.md)
+* [Git Guide](../guides/git.md)
+* [Quick Web Server Guide](../guides/quick-web-servers.md)
+* [Glitch Guide](../guides/glitch.md)
+
+## Supplementary References
+
+* [CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+* [CSS Keyframe Animations](https://www.w3schools.com/css/css3_animations.asp)

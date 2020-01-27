@@ -22,12 +22,13 @@ Along with having your **laptop** AND **charger**...
 |☑️| Github | [Sign up with Github.com](https://github.com/) | Collaborative software development platform | ![Github Logo](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.tecmint.com%2Fwp-content%2Fuploads%2F2013%2F10%2FInstall-GitHub.jpeg&f=1&nofb=1) |
 |☑️| Student Developer Pack | [[Student Developer Pack](https://education.github.com/pack) | Lots of free offerings for students for software development - take advatnage of these benefits while you can! | ![Github student developer pack](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpcguide.wpengine.com%2Fwp-content%2Fuploads%2Fgithub-student-developer-pack.png&f=1&nofb=1)  |
 |☑️| Platform as a Service | [Sign up with Glitch.com](https://glitch.com/) | When building web applications you'll need a web hosting service that can provide a platform to host your server side code. | ![Glitch App](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftheegent.com%2Fwp-content%2Fuploads%2F2019%2F07%2Fcoding-remix-site-glitch-hits-2-5-million-apps.jpg&f=1&nofb=1)  |
+|✅ | Simple Web Server | [See Simple Web Server Guide](/guides/quick-web-servers.md) |   A simple web server allows you to serve up your local HTML/CSS/JavaScript for development and testing  | --- |
 
 
 
 
 
-## Materials
+## Beyond the Quickstart
 
 In addition to the materials in the [Quickstart](#quickstart), these materials are necessary for developing your fullstack web applications:
 
@@ -67,7 +68,16 @@ In addition to the materials in the [Quickstart](#quickstart), these materials a
 
 ## ✏️ Web Design Tools
 
-* [Figma](https://www.figma.com/)
+| Purpose | Tool | Description | Key Features | Image |
+| :--- | --- | --- | --- | --- |
+| Design & Prototype | [Figma](https://www.figma.com/) | Design and prototype in tandem. Bring your ideas to life faster in animated prototypes that feel like the real thing. Get insights from users and test concepts earlier and more often. | --- |![Figma Interface Screenshot](https://i.vimeocdn.com/video/822590268.jpg?mw=1200&mh=686) |
+Design & Prototype | [Sketch App](https://www.sketch.com/) |  Sketch is built for designers like you. From essential tools that help you work faster, to game-changing features that empower teams around the world, we've built the definitive platform for digital design. | --- | ![Sketch Interface Screenshot](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnewbirddesign.com%2Fapp%2Fuploads%2F2017%2F01%2FSketch-Pages.jpeg&f=1&nofb=1)
+| Prototyping & Screen Flow | [Invision](https://www.invisionapp.com/) | Create rich interactive prototypes from sketch files | --- | ![Invision Interface Screenshot](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.onextrapixel.com%2Fwp-content%2Fuploads%2F2015%2F10%2FInvisionapp-2.jpg&f=1&nofb=1) |
+| Prototyping | [Framer](https://www.framer.com/) | Bring your creative ideas to life with Framer X, the best tool for interactive design. Create responsive layouts, design realistic prototypes, and bring everything closer to production—all in one place | --- | ![Framer Interface Screenshot](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fframer.com%2Fassets%2Fstatic%2Fimages%2Fsocial%2Fframer.png&f=1&nofb=1) |
+| Design & CMS | [Webflow](https://webflow.com/) & [Webflow Designer](https://webflow.com/designer)| Take control of HTML5, CSS3, and JavaScript in a completely visual canvas — and let Webflow translate your design into clean, semantic code that’s ready to publish to the web, or hand off to developers. | --- | --- |
+
+
+<!-- * [Figma](https://www.figma.com/)
   * Design and prototype in tandem. Bring your ideas to life faster in animated prototypes that feel like the real thing. Get insights from users and test concepts earlier and more often.
   * ![Figma Interface Screenshot](https://i.vimeocdn.com/video/822590268.jpg?mw=1200&mh=686)
 * [Sketch App](https://www.sketch.com/)
@@ -79,14 +89,13 @@ In addition to the materials in the [Quickstart](#quickstart), these materials a
 * [Framer](https://www.framer.com/)
   * Bring your creative ideas to life with Framer X, the best tool for interactive design. Create responsive layouts, design realistic prototypes, and bring everything closer to production—all in one place
   * ![Framer Interface Screenshot](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fframer.com%2Fassets%2Fstatic%2Fimages%2Fsocial%2Fframer.png&f=1&nofb=1)
+ -->
 
 
 
 ## 🛠 Development Tools 
 
-* Simple HTTP Server 
-  * See the [Quick Web Servers Guide](quick-web-servers.md).
-
+TBD
 
 ## 📷 Documentation Tools
 
