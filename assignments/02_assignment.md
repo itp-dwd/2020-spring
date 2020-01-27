@@ -8,7 +8,17 @@ Your assignment this week is to **design** and **develop** a website about New Y
 | :--- | --- | ---   |
 |![Swiss Bauhaus Poster Design](https://mir-s3-cdn-cf.behance.net/project_modules/disp/846f1d30168169.560573d11654d.jpg) | ![Smashing Magazine, Swiss Poster Design Review](https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/30ec28ab-658a-4397-a974-580743f02566/poster3.jpg) | ![Designspiration, Swiss Poster Design](https://dspncdn.com/a1/media/692x/6f/6a/d1/6f6ad1ecf3ad3577d5b3e184339a82e0.jpg) |
 
+## Required Reading
 
+* [Web Design Process Guide](../guides/web-design-process.md)
+* [CSS Guide](../guides/css-guide.md)
+  * Specifically:
+    * [CSS: An art, a science, a nightmare (everything you should know) ](https://www.taniarascia.com/overview-of-css-concepts/)
+    * The sections on layout - flexbox and BEM conventions
+* [JavaScript Frontend guide](../guides/javascript-frontend-guide.md)
+  * Specifically:
+    * [JavaScript and the DOM](../guides/javascript-frontend-guide.md#javascript-and-the-dom) which includes selecting and updating the DOM in JavaScript and JavaScript Events
+* [Dev Tools Guide](../guides/dev-tools.md)
 
 ## Requirements
 
@@ -44,7 +54,20 @@ Here you will:
 ### Part 3: Deployment
 Your website will be served using a static web server on **Glitch** and will be pulled from a remote Github repository. You will need to practice good git tracking and connect your local git repository to a remote Github Repository. 
 
-You can copy the code from Assignment `01` from last week and put your static HTML, CSS, and JavaScript files into the correct directories. 
+Consider structuring your project directory like so:
+
+```
+/myCoolProject
+  README.md
+  index.html
+  /public
+    /js
+      main.js
+    /css
+      main.css
+```
+
+<!-- You can copy the code from Assignment `01` from last week and put your static HTML, CSS, and JavaScript files into the correct directories. 
 
 **e.g.**:
 * `index.html`
@@ -54,7 +77,7 @@ You can copy the code from Assignment `01` from last week and put your static HT
   * `/js`:
     * `main.js`
   * `/css`:
-    * `main.css`
+    * `main.css` -->
   
 ### Part 4: Documentation
 * You must have a README.md that explains:
