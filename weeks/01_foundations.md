@@ -112,7 +112,7 @@ What is the Internet? It's a global network of computers connected to each other
 
 <img src="https://mdn.mozillademos.org/files/8443/internet-schema-2.png" width="300" alt="Naive incorrect Internet diagram" />
 
-Instead, computers are connected to intermediary routers, provided by an Internet Service Provider (ISP), whose only job is to direct messages from one computer to another. 
+Instead, computers are connected to intermediary routers, provided by an Internet Service Provider (ISP) (e.g. AT&T, Verizon, Sprint, Spectrum, etc), whose only job is to direct messages from one computer to another. 
 
 <img src="https://mdn.mozillademos.org/files/8453/internet-schema-7.png" alt="Accurate Internet diagram with ISP routers" width="300">
 
@@ -125,7 +125,7 @@ Each computer has a unique IP (Internet Protocol) address, which you can think o
 When you navigate to a url in your browser, how is this translated to a website on the world wide web? A special type of computer, called a server, is holding all of the data and files necessary to make that website work. When you navigate to a url, your request is routed to the appropriate server, which gives you back all of the data you need. These are all of the steps:
 1. You enter a URL into your browser, e.g. https://neopets.com. This url is called a "domain name". 
 2. The browser converts the domain name into an IP address using a DNS (Domain Name Server). This special type of server contains a database that maps domain names to IP address.
-3. Your browser sends a HTTP request to the computer at the returned IP address. HTTP stands for Hyper-Text Transfer Protocol, and it is then language that browsers and web servers speak to each other in.
+3. Your browser sends a HTTP request to the computer at the returned IP address. HTTP stands for Hyper-Text Transfer Protocol, and it is the language that browsers and web servers speak to each other in.
 4. The web server sends back an HTTP response, containing the website's HTML (Hyper-text Markup Language) document. Every single website has an HTML document which contains the structure of the web page, and also lists any additional resources the browser needs to request.
 5. Your browser starts rendering the HTML, converting the HTML code to visual elements, known as the DOM (Document Object Model).
 6. Your browser requests any additional resources linked to in the HTML, i.e. images, videos, javascript files, css, and repeats steps 3-5.
