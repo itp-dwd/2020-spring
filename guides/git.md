@@ -30,6 +30,7 @@
   - [Forking an open source project](#forking-an-open-source-project)
   - [Pull requests and contributing](#pull-requests-and-contributing)
 - [Quickstart](#quickstart)
+  - [Debugging Mistakes with Git](#debugging-mistakes-with-git)
   - [References](#references)
 
 ## About 
@@ -338,6 +339,11 @@ node_modules/
 config.js
 ```
 
+## Debugging Mistakes with Git
+
+For all the wonders of git, it can honestly sometimes create A LOT of headaches. There will be times when you'll need to debug things like **merge conflicts** or other issues and you won't know what to do or where to go. You'll do a lot of googling for answers and asking people for help. You can start here for some tips.
+
+* [Oh Shit Git](https://ohshitgit.com/)
 
 ## References
 
