@@ -30,7 +30,9 @@ Emphasis this week will be on writing clean and organized JavaScript code.
       - [Public APIs and Terms](#public-apis-and-terms)
       - [An Example API request from JavaScript](#an-example-api-request-from-javascript)
     - [Reactive UIs](#reactive-uis)
-      - [What is Functional Programming?](#what-is-functional-programming)
+      - [Functional programming: An applied approach](#functional-programming-an-applied-approach)
+      - [Single source of truth](#single-source-of-truth)
+      - [Why functional programming?](#why-functional-programming)
 
 ## Outcomes & Goals
 
@@ -253,14 +255,96 @@ Let's practice working with APIs using the [Harry Potter API](https://www.potter
 
 ### Reactive UIs
 
-There are many different design patterns to use JSON data to create interfaces. This is the reason for the plethora of front end frameworks—jQuery, Backbone, Angular, React, Vue—they exist to help make this process easier. In this class, we will not be using any front end frameworks, but instead be making our own by using a design pattern called Reactive UI. It's no coincidence that the name is similar to React, and if you can master Reactive UIs, the transition to React will feel right. 
+In ICM, we learned **object-oriented programming**—we encapsulated data and actions (functions) into objects, also known as `class`es. They looked something like this:
+```js
+// assuming this code uses p5.js
+class Bubble {
+  constructor() {
+    this.x = random(0, width);
+    this.y = random(0, height);
+    this.size = random(5, 20);
+  }
 
-#### What is Functional Programming?
+  show() {
+    fill(0, 255, 255);
+    ellipse(this.x, this.y, this.size);
+  }
+
+  update() {
+    this.y = this.y + 1;
+  }
+}
+
+let bubble = new Bubble();
+```
+This code contains:
+1. A **data structure**:
+   ```js
+   const data = {
+     x: Number,
+     y: Number,
+     size: Number
+   };
+   ```
+2. **functions** that initialize and update the data structure:
+   ```js
+   constructor() {
+     this.x = random(0, width);
+     this.y = random(0, height);
+     this.size = random(5, 20);
+   }
+
+   update() {
+     this.y = this.y + 1;
+   }    
+   ```
+3. **functions** that translate the data structure into visual elements:
+   ```js
+   update() {
+     this.y = this.y + 1;
+   }
+   ```
+
+When creating dynamic websites using HTML, CSS, and JS, we also want to do to the same things! Except we're going to use a different design pattern, called **functional programming**. I'm going to show you how it works, and then talk about why we're switching. 
+
+#### Functional programming: An applied approach
+
+If you search "functional programming" on the Internet, you'll see terms like **pure function** or **immutable data** come up. Don't worry about what these mean yet. Using functional programming to create dynamic web interfaces solves problems that you likely haven't encountered, so I don't want to bore you with these details. Let's just look at how it works.
+
+Let's say we were making a website to explore the characters in Harry Potter. We want to have a radio button selector to select the house, so we could see only the characters in "Gryffindor" or "Slytherin". What are all of the steps in putting this together?
+1. Construct URL for Harry Potter API, use house as query string parameter
+2. Make API request and load data as JSON
+3. Translate JSON to HTML
+4. Add event handlers to do steps 1-3 when the user selects a different house
+
+#### Single source of truth
+
+When creating dynamic interfaces using JavaScript and HTML, once issue that arises is **multiple sources of truth**. This happens because HTML and JavaScript can have different internal states:
+```html
+<section>
+  <h1>Profile</h1>
+  <p><span>Name: </span> Cassie</p>
+  <p><span>Bio: </span>Cassie is a plant psychologist from Hoboken, New Jersey.</p>
+</section>
+```
+
+```js
+const person = {
+  name: "Cassie",
+  bio: "Cassie is a plant psychologist from Hoboken, New Jersey."
+}
+```
+
+#### Why functional programming?
+
+When 
 
 * values that are functions of other values
 * How to talk about multiple sources of truth problem? "The jQuery Problem"
 * functions take json, return html
 * functions can be nested and broken down into "components"
+* in p5.js the view is being re-rendered 60 times a second, therefore the view can't get out of sync with the data.
+* how do i explain a problem that the students probably don't know exists? like the issue is that there is a state in HTML and one in JavaScript. maybe explain this after?
 
 In ICM, we learned how to create `class`es, which was a way to encapsulate data and functions in one place, commonly referred to as "Object-Oriented Programming":
 ```js
@@ -285,5 +369,35 @@ class Bubble {
 let bubble = new Bubble();
 ```
 
-When using functional programming, you're no longer working with objects. Instead, you write only functions, 
+
+
+When using functional programming in the context of building websites, we want to separate the data and the view. 
+
+
+You basically have two different types of functions: ones that get and update data (JSON), and ones that take the JSON as an argument, and return an interface (HTML). Why? Let's look at some code.
+```js
+const todos = [
+  {
+    text: "Feed cat",
+    status: "Incomplete"
+  },
+  {
+    text: "Fix bike",
+    status: "Incomplete"
+  },
+  {
+    text: "Buy cactus",
+    status: "Incomplete"
+  }
+];
+
+function TodoList() {
+  return `
+    <ul>
+
+    </ul>
+  `
+}
+```
+
 
