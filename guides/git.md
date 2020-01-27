@@ -30,6 +30,7 @@
   - [Forking an open source project](#forking-an-open-source-project)
   - [Pull requests and contributing](#pull-requests-and-contributing)
 - [Quickstart](#quickstart)
+  - [References](#references)
 
 ## About 
 
@@ -336,3 +337,10 @@ One handy feature of git is to have it ignore certain files and directories that
 node_modules/
 config.js
 ```
+
+
+## References
+
+* [Getting Started With Git](https://www.taniarascia.com/getting-started-with-git/)
+* [The Complete Git Guide](https://flaviocopes.com/git/)
+* [Git Workflow to manage work on Multiple Branches](https://flaviocopes.com/git-workflow/)
