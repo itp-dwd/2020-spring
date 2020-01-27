@@ -166,8 +166,8 @@ A text editor is an application in which you can create and edit text files. It'
 
 In this class we will be using [VSCode](https://code.visualstudio.com/). It comes with a ton of features to make writing code easier, including tons of syntax highlighting and tons of extensions.
 
-**Introduction Guide**: [Code Academy's Getting Started with VSCode](https://www.codecademy.com/articles/visual-studio-code)
-**Intermediate Guide**: [Flavio Copes's A VSCode Tutorial](https://flaviocopes.com/vscode/)
+* **Introduction Guide**: [Code Academy's Getting Started with VSCode](https://www.codecademy.com/articles/visual-studio-code)
+* **Intermediate Guide**: [Flavio Copes's A VSCode Tutorial](https://flaviocopes.com/vscode/)
 
 #### Command Line
 
