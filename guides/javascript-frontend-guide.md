@@ -94,9 +94,9 @@ This frontend JavaScript guide is a roadmap to having a solid JavaScript foundat
     - [Reference: Geolocation API](#reference-geolocation-api)
   - [References: The Web Platform](#references-the-web-platform)
 - [Conclusion & Recap](#conclusion--recap)
+- [History of JavaScript](#history-of-javascript)
 - [Advanced: JavaScript Patterns](#advanced-javascript-patterns)
 - [Advanced: JavaScript Frameworks](#advanced-javascript-frameworks)
-  - [Essential Questions](#essential-questions)
 
 ***
 ***
@@ -1843,6 +1843,11 @@ NOTICE: the `.clearWatch()` takes the variable name associated that contains the
 ***
 ***
 
+# History of JavaScript
+
+* A short [History of JavaScript](https://roadmap.sh/guides/history-of-javascript)
+
+
 # Advanced: JavaScript Patterns
 
 For continued learning, you will start to get into a place where you'll want to develop and eye for and an ability to implement different JavaScript patterns. These software development patterns allow you to handle increasing complexity in your applications such as handling state, managing data, variable and function scoping, and general modularity, scalability, and maintenance of frontend applications. 
@@ -1899,7 +1904,7 @@ Structure
  -->
 
 <!-- 
-## Essential Questions
+Essential Questions
 
 - How does the web browser work?
 - What is the DOM? 
