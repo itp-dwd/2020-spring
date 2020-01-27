@@ -4,6 +4,7 @@
 
 - [CSS Guide](#css-guide)
   - [Table of Contents](#table-of-contents)
+  - [Quickstart](#quickstart)
   - [About](#about)
   - [HTML default styles and layouts](#html-default-styles-and-layouts)
   - [The CSS Box Model: Everything is a Box](#the-css-box-model-everything-is-a-box)
@@ -21,6 +22,7 @@
     - [Flexbox references:](#flexbox-references)
   - [Media Queries & Responsive Layouts](#media-queries--responsive-layouts)
     - [Media queries in action: `@media`](#media-queries-in-action-media)
+    - [You don't need a framework](#you-dont-need-a-framework)
   - [BEM: Block Element Modifier](#bem-block-element-modifier)
     - [BEM References:](#bem-references)
   - [Supplementary -- Layouts: Grid](#supplementary----layouts-grid)
@@ -28,6 +30,11 @@
   - [CSS Recap:](#css-recap)
   - [CSS References:](#css-references)
 - [Levelling up: Getting advanced with CSS and beyond](#levelling-up-getting-advanced-with-css-and-beyond)
+
+## Quickstart
+
+* See [Design for Developers - structuring the DOM and styling](https://www.taniarascia.com/design-for-developers/)
+
 
 ## About
 
@@ -473,6 +480,10 @@ The way media queries work is by defining a **lower** and **upper** boundary for
 * ↳ [CSS Media Query Demo - changing the layout](https://editor.p5js.org/joeyklee/sketches/2qOSdoNzr)
 
 ![CSS Media Query Demo - Changing the layout](../assets/week03-css-media-queries-02.gif)
+
+### You don't need a framework
+
+* [You don't need a framework for responsive design](https://www.taniarascia.com/you-dont-need-a-framework/)
 
 
 ## BEM: Block Element Modifier

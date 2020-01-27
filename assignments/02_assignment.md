@@ -16,6 +16,7 @@ Your goal this week is to practice defining a grid and ensuring you can layout a
 ## Required Reading
 
 * [Web Design Process Guide](../guides/web-design-process.md)
+* [Design for Developers - structuring the DOM and styling](https://www.taniarascia.com/design-for-developers/)
 * [CSS Guide](../guides/css-guide.md)
   * Specifically:
     * [CSS: An art, a science, a nightmare (everything you should know) ](https://www.taniarascia.com/overview-of-css-concepts/)
@@ -24,6 +25,7 @@ Your goal this week is to practice defining a grid and ensuring you can layout a
   * Specifically:
     * [JavaScript and the DOM](../guides/javascript-frontend-guide.md#javascript-and-the-dom) which includes selecting and updating the DOM in JavaScript and JavaScript Events
 * [Dev Tools Guide](../guides/dev-tools.md)
+* [You don't need a framework for responsive design](https://www.taniarascia.com/you-dont-need-a-framework/)
 
 ## Requirements
 
