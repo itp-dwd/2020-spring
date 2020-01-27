@@ -30,6 +30,7 @@ Emphasis this week will be on writing clean and organized JavaScript code.
       - [Public APIs and Terms](#public-apis-and-terms)
       - [An Example API request from JavaScript](#an-example-api-request-from-javascript)
     - [Reactive UIs](#reactive-uis)
+      - [What is Functional Programming?](#what-is-functional-programming)
 
 ## Outcomes & Goals
 
@@ -254,5 +255,35 @@ Let's practice working with APIs using the [Harry Potter API](https://www.potter
 
 There are many different design patterns to use JSON data to create interfaces. This is the reason for the plethora of front end frameworks—jQuery, Backbone, Angular, React, Vue—they exist to help make this process easier. In this class, we will not be using any front end frameworks, but instead be making our own by using a design pattern called Reactive UI. It's no coincidence that the name is similar to React, and if you can master Reactive UIs, the transition to React will feel right. 
 
+#### What is Functional Programming?
 
+* values that are functions of other values
+* How to talk about multiple sources of truth problem? "The jQuery Problem"
+* functions take json, return html
+* functions can be nested and broken down into "components"
+
+In ICM, we learned how to create `class`es, which was a way to encapsulate data and functions in one place, commonly referred to as "Object-Oriented Programming":
+```js
+// assuming this code uses p5.js
+class Bubble {
+  constructor() {
+    this.x = random(0, width);
+    this.y = random(0, height);
+    this.size = random(5, 20);
+  }
+
+  show() {
+    fill(0, 255, 255);
+    ellipse(this.x, this.y, this.size);
+  }
+
+  update() {
+    this.y = this.y + 1;
+  }
+}
+
+let bubble = new Bubble();
+```
+
+When using functional programming, you're no longer working with objects. Instead, you write only functions, 
 
