@@ -143,6 +143,7 @@ Additional notes on how web browsers work cna be found in the [Browser Guide](/g
 * [How Does the Internet Work?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
 * [How does the Internet work?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
 * [What Happens When You Type in a URL](https://wsvincent.com/what-happens-when-url/)
+* [History of the Internet](https://thehistoryoftheweb.com/)
 
 
 ### Modern Web Applications
