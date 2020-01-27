@@ -35,6 +35,8 @@
 
 The best thing you can do for yourself on your developer journey is to use version control and get into the good practice of tracking your project evolution with a version control system. At the time of this writing (and quite likely into the future) we use `git` to do version control.
 
+Git provides many benefits, some of which are outlined here in [Git Centric Workflows](https://www.swyx.io/writing/netlify-git-centric/) (ignore all the references to Netlify and focus on the notes on git).
+
 This guide is about introducing concepts and syntax in git.
 
 ## What is Git?
