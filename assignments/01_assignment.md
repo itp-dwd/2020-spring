@@ -17,7 +17,7 @@ code → track → sync → deploy (repeat)
 Please refer to the [Required Reading](#required-reading) for relevant information as well as to the [Helpful Tips and References](#helpful-tips--references)  and [Supplemental References](#supplementary-references) for additional tips.
 
 ## Required Reading
-* [HTML Guide](guides/../guides/html-guide.md)
+* [HTML Guide](../guides/html-guide.md)
   * Specifically:
     * [Introduction to the DOM](https://www.taniarascia.com/introduction-to-the-dom/)
     * [Understanding the DOM Tree](https://www.taniarascia.com/understanding-the-dom-tree-and-nodes/)
