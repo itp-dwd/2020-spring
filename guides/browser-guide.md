@@ -31,7 +31,7 @@ See: [How does the browser page lifecycle work?](https://stackoverflow.com/quest
 
 An important concept for web development is understanding the "Browser page lifecycle" which is the order in which CSS, HTML, and JavaScript are "handled", that is calculated/parsed/rendered/executed. 
 
-The lifecylce can be broken down generally into the process of:
+The lifecycle can be broken down generally into the process of:
 
 1. constructing the dom
 2. handling css
