@@ -6,6 +6,7 @@
   - [Web Design(ing)](#web-designing)
   - [Research: User Research, Defining Requirements, Moodboards, and Inspiration](#research-user-research-defining-requirements-moodboards-and-inspiration)
     - [Research Examples](#research-examples)
+    - [Requirements Examples](#requirements-examples)
   - [Sketching](#sketching)
   - [Wireframing](#wireframing)
   - [Visual Designing](#visual-designing)
@@ -19,31 +20,36 @@ In this class, we briefly introduce you to the the basic process and components 
 
 ## Research: User Research, Defining Requirements, Moodboards, and Inspiration
 
-**Research**: Before anything else, any and every good design process will begin with **research**. Research about your users, their needs, their desires, their pain points, their delights, what motivates them, what inspires them, what scares them, what keeps them engaged, what truly benefits them, and so on. In ITP's [Designing Meaningful Interactions](https://itp.nyu.edu/classes/ux_bak/) you can get a deeper understanding and appreciation for UX design and UX design methods. Additionally, some methods and thinking in this direction can be found here in [This is Service Design Thinking](https://www.goodreads.com/book/show/9840969-this-is-service-design-thinking) and [Don Norman's The Design of Everyday Things](https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things?from_search=true&qid=HOCwRYeOac&rank=1).
-
-### Research Examples
-* Nonprofit
-  ![Nonprofit research example](../assets/research--nonprofit.png)
-* University
-  ![University website example](../assets/research--university.png)
-* Studio
-  ![Studio research example](../assets/research--studio.png)
-* Product
-  ![Product research example](../assets/research--product.png)
-* Information Architecture
-  ![Information architecture research example](../assets/research--information-architecture.png)
-
-**Requirements**: Your research will inform **the requirements** for your application. Does your design need to be interactive or is it a passive interaction? Does the subject warrant a certain color palette? Do certain typographic considerations need to be made based on your users or based on the briefing from your client or company's style guide? Does your site need to allow people to log-in to a service? Do you need to display data on the site? Based on questions such as these, you will define a requirements list of what **features** and **functionality** the front-end of your site/application will need. You can also add your own "nice-to-haves" section!
-
-* ↳ An example of project requirements can be found here [TBD - coming soon]().
-
 **Moodboards & Inspiration**: Simultaneously while you're researching and defining and refining your requirements, it helps to being collecting materials that can inform your web application's design concept. You can use services like [Are.na](https://www.are.na/) or [Pinterest](https://www.pinterest.com/) or just use a folder full of images to collect inspiration of websites, images, interaction types, typography, colors, layouts, etc that might come to influence your visual design.
 
 ![Moodboard](../assets/moodboard.png)
 
+**Research**: Before anything else, any and every good design process will begin with **research**. Research about your users, their needs, their desires, their pain points, their delights, what motivates them, what inspires them, what scares them, what keeps them engaged, what truly benefits them, and so on. In ITP's [Designing Meaningful Interactions](https://itp.nyu.edu/classes/ux_bak/) you can get a deeper understanding and appreciation for UX design and UX design methods. Additionally, some methods and thinking in this direction can be found here in [This is Service Design Thinking](https://www.goodreads.com/book/show/9840969-this-is-service-design-thinking) and [Don Norman's The Design of Everyday Things](https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things?from_search=true&qid=HOCwRYeOac&rank=1).
+
+### Research Examples
+* **Nonprofit**
+  ![Nonprofit research example](../assets/research--nonprofit.png)
+* **University**
+  ![University website example](../assets/research--university.png)
+* **Studio**
+  ![Studio research example](../assets/research--studio.png)
+* **Product**
+  ![Product research example](../assets/research--product.png)
+* **Information** Architecture
+  ![Information architecture research example](../assets/research--information-architecture.png)
+
+**Requirements**: Your research will inform **the requirements** for your application. Does your design need to be interactive or is it a passive interaction? Does the subject warrant a certain color palette? Do certain typographic considerations need to be made based on your users or based on the briefing from your client or company's style guide? Does your site need to allow people to log-in to a service? Do you need to display data on the site? Based on questions such as these, you will define a requirements list of what **features** and **functionality** the front-end of your site/application will need. You can also add your own "nice-to-haves" section!
+
+The format of requirements documents can vary depending on the context. For example, for a small project, it may just be a list of **functionality** and **design** requirements. For a larger project, or a client project, it will include sections like **goals**, **phases**, **milestones**, and so on.
+
+### Requirements Examples
+* **Minimal**
+  ![Bare Minimum Requirements](../assets/requirements_2.png)
+* In-depth guide: [Guide: Writing effective website specification documents](https://highrise.digital/blog/web-specification-guide/).
+
 ## Sketching
 
-![Web Design Sketches Photo](https://designmodo.com/wp-content/uploads/2011/09/Web-and-Mobile-Wireframe-Sketches-1.jpg)
+![Web Design Sketches Photo](../assets/sketching.png)
 
 The reality is that there's a lot of overhead to coding, especially when it comes to refactoring and entire code base, updating entire layouts due to a change in design, having to change colors, typography, font-sizes, and more. The point of sketching is to help you put your ideas on paper, to get feedback on those ideas, to assess the viability and appropriateness of your solutions to your/incoming requirements and more. 
 
@@ -52,6 +58,7 @@ Your sketches can be as epic or as simple as you desire, but the point is to hav
 ## Wireframing
 
 ![Wireframe example](../assets/wireframe.png)
+![Wireframe example](../assets/wireframe_2.png)
 
 [Wireframing](https://en.wikipedia.org/wiki/Website_wireframe) is the process of taking what you've done in your sketches, considering your requirements, and beginning to translate those ideas into a more clear [information architecture](https://en.wikipedia.org/wiki/Information_architecture) which will eventually lead to a visual design. Wireframing is a *process* and not just a *product* of work that you do as a web designer/developer that allows you to identify "the practicality of a design concept" and to identify functionality, user flows, and experience of your application. It is by nature, iteritive and meant to help you reduce the overhead to major code changes downstream. The idea is to resolve your interactions and flows in the wireframes before moving on to production (though it can be helpful to begin *prototyping* with code in tandem).
 
@@ -68,7 +75,7 @@ Some helpful wireframe kits for the [Sketch App]() can be found here:
 
 ## Visual Designing
 
-![Example Visual Design from Dribbble, Zarah Rosiana](https://cdn.dribbble.com/users/3961357/screenshots/9511356/media/73dcdfa79eb5f0acd795127a94a91290.png)
+![Example Visual Design](../assets/visual_design.png)
 
 While wireframes are generally lower fidelity, higher fidelity wireframes will begin to look and feel like the a "design" of your application. As you move towards a final "design", you'll be moving towards what some might call as a **visual design** of your application -- i.e. what you envision your application to look like in the end. This means adding all of the elements that will be on the final pages, even the real copy (e.g. text). Your visual design will include the image assets, styled buttons, correct margin spacing, colors, and typography. The **visual design is your map** to how you will develop the front end of your web application and will be the metric of your success for your front end code.
 
