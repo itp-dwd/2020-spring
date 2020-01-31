@@ -317,6 +317,41 @@ Let's say we were making a website to explore the characters in Harry Potter. We
 3. Translate JSON to HTML
 4. Add event handlers to do steps 1-3 when the user selects a different house
 
+Since we've already done (1) and (2) in the previous API section, let's focus on (3) and (4). We know that the data we're getting back is a list of characters, so we want to put them in some `<ul>`'s and `<li>`'s. We want to use JS to generate HTML that looks like this:
+```html
+<ul>
+  <li>
+    <p><span>Name: </span> Katie Bell</p>
+    <p><span>Species: </span> Human</p>
+  </li>
+  <li>
+    <p><span>Name: </span> Cuthbert Binns</p>
+    <p><span>Species: </span> Ghost</p>
+  </li>
+  <li>
+    <p><span>Name: </span> Sirius Black</p>
+    <p><span>Species: </span> Human</p>
+  </li>
+  <!-- ... and so on -->
+</ul>
+```
+
+When we're using JS to create HTML, we're not going to manually create all of the DOM elements, though technically this would work:
+```js
+```
+
+
+ We need to combine our knowledge of `Array` functions, and template strings:
+```js
+const characters = [/*...*/]; // contains HP characters
+
+function CharacterList(characters) {
+  return `<ul>
+  
+  </ul>`;
+}
+```
+
 #### Single source of truth
 
 When creating dynamic interfaces using JavaScript and HTML, once issue that arises is **multiple sources of truth**. This happens because HTML and JavaScript can have different internal states:
