@@ -23,6 +23,7 @@ Emphasis this week will be on exploring frontend web development in the service 
   - [Topics](#topics)
     - [Part 1: Web Design(ing)](#part-1-web-designing)
     - [Part 2: Front End Development & HTML5](#part-2-front-end-development--html5)
+      - [Developer Tools](#developer-tools)
       - [Review: The Browser](#review-the-browser)
       - [Review: HTML](#review-html)
       - [CSS](#css)
@@ -98,6 +99,9 @@ Topics we are not covering, but are of importance:
 * ↳[Web Design Process Guide](../guides/web-design-process.md)
 
 ### Part 2: Front End Development & HTML5
+
+#### Developer Tools
+* ↳ [Developer Tools Guide](../guides/dev-tools.md)
 
 #### Review: The Browser
 

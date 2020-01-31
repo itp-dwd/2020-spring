@@ -11,6 +11,9 @@
   - [Wireframing](#wireframing)
   - [Visual Designing](#visual-designing)
   - [Style Guide](#style-guide)
+  - [Grid Theory](#grid-theory)
+  - [Reverse Engineering](#reverse-engineering)
+  - [Design Tools](#design-tools)
 
 ## Web Design(ing)
 
@@ -93,7 +96,7 @@ The style guide is your reference for all things related to the design of your a
 * navigation
 * and more...
 
-![Duolingo Style Guide Screenshot](https://miro.medium.com/max/1536/1*igcvdM0mqD7haMdbgUORQg.png)
+![Style Guide Example](../assets/style-guide.png)
 
 This document is a general reference for how different components of your site should look. 
 
@@ -101,3 +104,12 @@ You can look at different style guide examples here:
 * [IBM Design Language](https://www.ibm.com/design/language/layout/overview)
 * [BBC - GEL Design Patterns](https://www.bbc.co.uk/gel/guidelines/category/foundations)
 * DuoLingo had a good one, but has been taken off the web!
+
+## Grid Theory
+* ↳ [See Building Better UI Designs with Layout Grids](https://www.smashingmagazine.com/2017/12/building-better-ui-designs-layout-grids/)
+
+## Reverse Engineering
+
+One tool used to practice creating the different components of designs is **reverse engineering**. This is the process of looking at an existing design and 
+
+## Design Tools
