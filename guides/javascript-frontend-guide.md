@@ -1098,19 +1098,18 @@ Here's an example that updates the background and border colors color
 </div>
 
 <script>
-const $demo = document.getElementById("demo");
-$demo.style.backgroundColor = 'black';
-
-const $paragraphs = document.querySelectorAll(".paragraph");
-// looping through each paragraph to apply an orange background
-$paragraphs.forEach(item => {
-  item.style.backgroundColor = 'orange';
-})
-
-const $pRed = document.querySelector(".paragraph--border-red");
-
-$pRed.style.border = '1px solid red';
-
+  // make the the background black
+  const $demo = document.getElementById("demo");
+  $demo.style.backgroundColor = 'black';
+  // select all paragraphs and make them orange
+  const $paragraphs = document.querySelectorAll(".paragraph");
+  // looping through each paragraph to apply an orange background
+  $paragraphs.forEach(item => {
+    item.style.backgroundColor = 'orange';
+  })
+  // select the paragraph and make the border red
+  const $pRed = document.querySelector(".paragraph--border-red");
+  $pRed.style.border = '1px solid red';
 </script>
 ```
 

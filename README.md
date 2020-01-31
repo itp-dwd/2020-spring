@@ -8,7 +8,7 @@
 The course will be a mixture of lecture and in-class collaborative coding, with weekly programming and reading homework. 
 
 [**Link to the course listing**<br> **Category**: 2 Point, All, Elective<br>
-**Tags**: web development, javascript, nodejs, express, full stack <br>](https://itp.nyu.edu/registration/CourseInfo.php?course_id=778)
+**Tags**:  <br>](https://itp.nyu.edu/registration/CourseInfo.php?course_id=778)
 
 
 ### COURSE DETAILS

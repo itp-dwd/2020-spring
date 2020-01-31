@@ -9,9 +9,9 @@ Your goal this week is to practice defining a grid and ensuring you can layout a
 
 
 
-<!-- |     |     |     |
+|     |     |     |
 | :--- | --- | ---   |
-|![Swiss Bauhaus Poster Design](https://mir-s3-cdn-cf.behance.net/project_modules/disp/846f1d30168169.560573d11654d.jpg) | ![Smashing Magazine, Swiss Poster Design Review](https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/30ec28ab-658a-4397-a974-580743f02566/poster3.jpg) | ![Designspiration, Swiss Poster Design](https://dspncdn.com/a1/media/692x/6f/6a/d1/6f6ad1ecf3ad3577d5b3e184339a82e0.jpg) | -->
+|![Swiss Bauhaus Poster Design](https://mir-s3-cdn-cf.behance.net/project_modules/disp/846f1d30168169.560573d11654d.jpg) | ![Smashing Magazine, Swiss Poster Design Review](https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/30ec28ab-658a-4397-a974-580743f02566/poster3.jpg) | ![Designspiration, Swiss Poster Design](https://dspncdn.com/a1/media/692x/6f/6a/d1/6f6ad1ecf3ad3577d5b3e184339a82e0.jpg) |
 
 ## Required Reading
 
