@@ -175,7 +175,7 @@ In this class we will be using [VSCode](https://code.visualstudio.com/). It come
 
 Have you ever opened the "Terminal" application (or maybe "Windows Command Prompt") on your computer? This is called a **command line interface**. You're probably used to interacting with your computer using its GUI (Graphical User Interface), made up of icons, windows, dropdown menus, and other visual components, which you use to perform actions on your computer. The command line is a different interface to your computer, in which you can only tell your computer what to do using text commands. Sometimes it can be frustrating to interact with your computer using the command line, but it gives you access to tools you can't use from the GUI. Many of the tools used to create web applications can only be used on the command line, therefore it's important to learn how to use it.
 
-See the [command line guide](../guies/commandline.md) to get starting using the command line.
+See the [command line guide](../guides/commandline.md) to get starting using the command line.
 
 #### Version Control
 
