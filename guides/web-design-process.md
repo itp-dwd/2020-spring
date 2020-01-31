@@ -110,6 +110,15 @@ You can look at different style guide examples here:
 
 ## Reverse Engineering
 
-One tool used to practice creating the different components of designs is **reverse engineering**. This is the process of looking at an existing design and 
+One tool used to practice creating the different components of designs is **reverse engineering**. This is the process of looking at an existing design and breaking it down into a grid and style guide.
+
+![Reverse Engineering, Swiss Poster Design](../assets/reverse_engineering.png)
 
 ## Design Tools
+
+There's no right tool to create designs with! Because some of them have a learning curve, or are not free, it's recommended you use whatever is easiest for you.
+
+* **Keynote** - Comes with MacOS, easy to use, normally used to make slides
+* **PowerPoint** - $139.99, easy to use, normally used to make slides
+* **[Sketch](https://www.sketch.com/)** - $99, the tool used by Cassie and Joey, optimized for creating digital designs for web and mobile applications
+* **[Figma](https://www.figma.com/)** - Free for individuals, optimized for web and mobile designs, generates some code. (Neither Cassie nor Joey has used it and can neither endorse nor renounce it)
