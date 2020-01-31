@@ -5,6 +5,7 @@
   - [Table of Contents](#table-of-contents)
   - [Web Design(ing)](#web-designing)
   - [Research: User Research, Defining Requirements, Moodboards, and Inspiration](#research-user-research-defining-requirements-moodboards-and-inspiration)
+    - [Research Examples](#research-examples)
   - [Sketching](#sketching)
   - [Wireframing](#wireframing)
   - [Visual Designing](#visual-designing)
@@ -20,7 +21,17 @@ In this class, we briefly introduce you to the the basic process and components 
 
 **Research**: Before anything else, any and every good design process will begin with **research**. Research about your users, their needs, their desires, their pain points, their delights, what motivates them, what inspires them, what scares them, what keeps them engaged, what truly benefits them, and so on. In ITP's [Designing Meaningful Interactions](https://itp.nyu.edu/classes/ux_bak/) you can get a deeper understanding and appreciation for UX design and UX design methods. Additionally, some methods and thinking in this direction can be found here in [This is Service Design Thinking](https://www.goodreads.com/book/show/9840969-this-is-service-design-thinking) and [Don Norman's The Design of Everyday Things](https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things?from_search=true&qid=HOCwRYeOac&rank=1).
 
-* ↳ An example of design research can be found here [TBD - coming soon]().
+### Research Examples
+* Nonprofit
+  ![Nonprofit research example](../assets/research--nonprofit.png)
+* University
+  ![University website example](../assets/research--university.png)
+* Studio
+  ![Studio research example](../assets/research--studio.png)
+* Product
+  ![Product research example](../assets/research--product.png)
+* Information Architecture
+  ![Information architecture research example](../assets/research--information-architecture.png)
 
 **Requirements**: Your research will inform **the requirements** for your application. Does your design need to be interactive or is it a passive interaction? Does the subject warrant a certain color palette? Do certain typographic considerations need to be made based on your users or based on the briefing from your client or company's style guide? Does your site need to allow people to log-in to a service? Do you need to display data on the site? Based on questions such as these, you will define a requirements list of what **features** and **functionality** the front-end of your site/application will need. You can also add your own "nice-to-haves" section!
 
@@ -28,7 +39,7 @@ In this class, we briefly introduce you to the the basic process and components 
 
 **Moodboards & Inspiration**: Simultaneously while you're researching and defining and refining your requirements, it helps to being collecting materials that can inform your web application's design concept. You can use services like [Are.na](https://www.are.na/) or [Pinterest](https://www.pinterest.com/) or just use a folder full of images to collect inspiration of websites, images, interaction types, typography, colors, layouts, etc that might come to influence your visual design.
 
-* ↳ An example of a moodboard can be found here [TBD - coming soon]().
+![Moodboard](../assets/moodboard.png)
 
 ## Sketching
 
@@ -40,7 +51,7 @@ Your sketches can be as epic or as simple as you desire, but the point is to hav
 
 ## Wireframing
 
-![Wireframe example from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/4/47/Profilewireframe.png)
+![Wireframe example](../assets/wireframe.png)
 
 [Wireframing](https://en.wikipedia.org/wiki/Website_wireframe) is the process of taking what you've done in your sketches, considering your requirements, and beginning to translate those ideas into a more clear [information architecture](https://en.wikipedia.org/wiki/Information_architecture) which will eventually lead to a visual design. Wireframing is a *process* and not just a *product* of work that you do as a web designer/developer that allows you to identify "the practicality of a design concept" and to identify functionality, user flows, and experience of your application. It is by nature, iteritive and meant to help you reduce the overhead to major code changes downstream. The idea is to resolve your interactions and flows in the wireframes before moving on to production (though it can be helpful to begin *prototyping* with code in tandem).
 
