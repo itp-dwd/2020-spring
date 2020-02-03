@@ -686,6 +686,14 @@ Some CSS Grid references:
   - `vertical-align: middle` doesn't do what you think it does.
   - Almost always use `* { box-sizing: border-box }`
   - units: `em`, `rem`, `px` ==> I'd always go for `rem` if possible.
+  - Using `rem`s is sometimes hard because designs are usually in pixels, and since the default font size is 16px, then 1rem = 16px, You can make this easy on yourself by setting the font-size in html to be `62.5%`:
+    ```css
+    html{
+      font-size: 62.5%;
+    }
+    ```
+    then 1rem = 10px, 2rem = 20px, and so on.
+
 
 * these references are GOLD:
   * Design for Developers: https://www.taniarascia.com/design-for-developers/
