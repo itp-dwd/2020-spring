@@ -140,7 +140,9 @@ Topics we are not covering, but are of importance:
 
 ## Studio
 
-Interactive / Live Coding studio time. Following along with [Slides](https://docs.google.com/presentation/d/1kmeu2AiWSQnX-e3nm-F0-Etsq1FvTHpClT0mIOH6NO4/edit?usp=sharing)
+Interactive / Live Coding studio time. Following along with [Slides](https://docs.google.com/presentation/d/1kmeu2AiWSQnX-e3nm-F0-Etsq1FvTHpClT0mIOH6NO4/edit?usp=sharing). 
+
+The studio for today will follow along with this exercise: [Frontend foundation Workbook](https://github.com/itp-dwd/front-end-foundations-workbook)
 
 
 ***
