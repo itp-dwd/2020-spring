@@ -2,7 +2,7 @@
 
 
 ## Slides
-* ↳ [Link to Week 2 Slides: Front end Foundations](#)
+* ↳ [Link to Week 2 Slides: Front end Foundations](https://docs.google.com/presentation/d/1kmeu2AiWSQnX-e3nm-F0-Etsq1FvTHpClT0mIOH6NO4/edit?usp=sharing)
 
 
 ## About
@@ -140,7 +140,7 @@ Topics we are not covering, but are of importance:
 
 ## Studio
 
-TBD
+Interactive / Live Coding studio time. Following along with [Slides](https://docs.google.com/presentation/d/1kmeu2AiWSQnX-e3nm-F0-Etsq1FvTHpClT0mIOH6NO4/edit?usp=sharing)
 
 
 ***
