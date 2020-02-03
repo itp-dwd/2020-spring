@@ -699,6 +699,7 @@ Some CSS Grid references:
   * Design for Developers: https://www.taniarascia.com/design-for-developers/
   * You don't need a CSS Framework: https://www.taniarascia.com/you-dont-need-a-framework/
   * CSS: An Art, A Science, a Nightmare (Everything you should know): https://www.taniarascia.com/overview-of-css-concepts/
+  * CSS Units for font-size: https://medium.com/code-better/css-units-for-font-size-px-em-rem-79f7e592bb97
 
 ## CSS Recap:
 
