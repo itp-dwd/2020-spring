@@ -338,18 +338,56 @@ Since we've already done (1) and (2) in the previous API section, let's focus on
 
 When we're using JS to create HTML, we're not going to manually create all of the DOM elements, though technically this would work:
 ```js
+  // "data" contains the array of characters
+  let listContainer = document.createElement("ul");
+  document.body.appendChild(listContainer);
+  for (let i = 0; i < data.length; i += 1) {
+    const listItem = document.createElement("li");
+    listItem.textContent = data[i].name;
+    listContainer.appendChild(listItem);
+  }
+```
+Creating HTML this way is hard to read, and pretty long. It's also unclear what the HTML structure is. There's a better way! What we can do is create an HTML string, as though we were writing the HTML in a text editor, and then set the `innerHTML` of a DOM element to that string. The browser will then render that HTML string to the DOM.
+
+Let's start with just creating one `<li>` string:
+```js
+function CharacterItem(character) {
+  return `<li>
+          <p>${character.name}</p>
+         </li>`;
+}
+```
+So now, we've written a function that takes a character (as JSON) as an argument and returns HTML. To create the list, we could do the following:
+```js
+  function CharacterList(characters) {
+    let listItems = '';
+    characters.forEach(character => {
+      const li = CharacterItem(character);
+      listItems += li;
+    });
+    return `<ul>
+              ${listItems}
+           </ul>`;
+  }
+```
+`forEach` is a JavaScript array function. It's like a `for` loop but better! Spend some time getting comfortable: [JavaScript array functions](../guides/javascript-frontend-guide.md#javascript-array-methods).
+
+If we want, we can make this code a little shorter using `map`:
+```js
+  function CharacterList(characters) {
+    return `<ul>
+              ${characters.map(CharacterItem).join('')}
+           </ul>`;
+  }
 ```
 
-
- We need to combine our knowledge of `Array` functions, and template strings:
+Then, when we are ready to actually render the HTML, we can write the following code:
 ```js
-const characters = [/*...*/]; // contains HP characters
-
-function CharacterList(characters) {
-  return `<ul>
-  
-  </ul>`;
-}
+  // assuming there's a <div> with the id "list-container"
+  const listContainer = document.getElementById("list-container");
+  // data is the response from the Potter API
+  const list = CharacterList(data);
+  listContainer.innerHTML(list);
 ```
 
 #### Single source of truth
