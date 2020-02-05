@@ -1,7 +1,7 @@
 # Week 3: Front-end Applications
 
 ## Slides
-* ↳ [Link to Week 3 Slides: Front end Applications](#)
+* ↳ [Link to Week 3 Slides: Front end Applications](https://docs.google.com/presentation/d/100WtCNmj6iJA8loNarUAnuLM5LoS09k2WkWhmRGJU_g/edit?usp=sharing)
 
 ## About
 This week, we will be learning how to use JavaScript to update the DOM, listen for events, and make API requests to fetch dynamic data. 
@@ -31,13 +31,18 @@ Emphasis this week will be on writing clean and organized JavaScript code.
       - [An Example API request from JavaScript](#an-example-api-request-from-javascript)
     - [Reactive UIs](#reactive-uis)
       - [Functional programming: An applied approach](#functional-programming-an-applied-approach)
-      - [Single source of truth](#single-source-of-truth)
-      - [Why functional programming?](#why-functional-programming)
+      - [Unidirectional Data Flow](#unidirectional-data-flow)
+    - [Organizing your JavaScript](#organizing-your-javascript)
 
 ## Outcomes & Goals
 
 You should be able to speak on the following points:
 
+* **ES2015 Features**
+  * Template strings
+  * Array functions
+  * Promises, async/await
+  * Arrow functions
 * **DOM Manipulation**
   * What does it mean for a website to be loaded?
   * How do you include JS files in HTML?
@@ -251,6 +256,15 @@ Let's practice working with APIs using the [Harry Potter API](https://www.potter
   * [Arrow Functions](../guides/javascript-frontend-guide.md#arrow-functions)
   * [Promises](../guides/javascript-frontend-guide.md#callbacks-promises-and-asyncawait)
 
+  We could also using async/await to make the code even shorter:
+  ```js
+  const API_KEY = "API_KEY";
+  const baseUrl = "https://www.potterapi.com/v1";
+  const URL = `${baseUrl}/characters?house=Gryffindor&key=${API_KEY}`;
+  const response = await fetch(URL);
+  const data = response.json();
+  ```
+
 `data` now holds the JSON from the API we wanted to get. We could do anything we want with it! Create HTML elements, make a data visualization, or even sonify it.
 
 ### Reactive UIs
@@ -390,87 +404,36 @@ Then, when we are ready to actually render the HTML, we can write the following 
   listContainer.innerHTML(list);
 ```
 
-#### Single source of truth
+The functions `CharacterList` and `CharacterItem` can be referred to as **components**, which is a term commonly used in front end web development. 
 
-When creating dynamic interfaces using JavaScript and HTML, once issue that arises is **multiple sources of truth**. This happens because HTML and JavaScript can have different internal states:
-```html
-<section>
-  <h1>Profile</h1>
-  <p><span>Name: </span> Cassie</p>
-  <p><span>Bio: </span>Cassie is a plant psychologist from Hoboken, New Jersey.</p>
-</section>
+#### Unidirectional Data Flow
+
+We're going to get a little abstract for a moment. When we use functional programming to create interfaces, we're using a concept called unidirectional data flow. 
+
+![Unidirectional data flow diagram, state -> view -> actions](https://flaviocopes.com/react-unidirectional-data-flow/view-actions-state.png)
+
+There are three components here:
+* **state**: This is your data, sometimes called the **store**. In our case, this is simply JS Objects, holding API response data, or interface state, i.e. if a dropdown menu is open
+* **view**: This is the HTML created as a function of the state. When the state changes, the view changes.
+* **actions**: These are functions, triggered by the view, which make changes to the state.
+
+When you construct your application like this, there is one **source of truth**—the state. When a user interacts with your website, and triggers an event, e.g. they press a button and you want something to change, that event should call a **function** that makes an update to the **state**. Then, the change in state will regenerate the HTML strings. 
+
+### Organizing your JavaScript
+
+When using p5.js, we used a file called `sketch.js` to be our "main" file, the first place we'd look to get an overview of how the code works. From there, you might have some separate files that contained different classes or collections of functions, maybe one called `bubble.js`, `level.js`, and so on. 
+
+When using JS without p5.js, we want to add the same kind of organization. Your folder structure should look something like this:
+
 ```
-
-```js
-const person = {
-  name: "Cassie",
-  bio: "Cassie is a plant psychologist from Hoboken, New Jersey."
-}
+index.html
+views/
+  about.html
+  other-page.html
+styles/
+  main.css
+  about.css
+js/
+  main.js
+  navigation.js
 ```
-
-#### Why functional programming?
-
-When 
-
-* values that are functions of other values
-* How to talk about multiple sources of truth problem? "The jQuery Problem"
-* functions take json, return html
-* functions can be nested and broken down into "components"
-* in p5.js the view is being re-rendered 60 times a second, therefore the view can't get out of sync with the data.
-* how do i explain a problem that the students probably don't know exists? like the issue is that there is a state in HTML and one in JavaScript. maybe explain this after?
-
-In ICM, we learned how to create `class`es, which was a way to encapsulate data and functions in one place, commonly referred to as "Object-Oriented Programming":
-```js
-// assuming this code uses p5.js
-class Bubble {
-  constructor() {
-    this.x = random(0, width);
-    this.y = random(0, height);
-    this.size = random(5, 20);
-  }
-
-  show() {
-    fill(0, 255, 255);
-    ellipse(this.x, this.y, this.size);
-  }
-
-  update() {
-    this.y = this.y + 1;
-  }
-}
-
-let bubble = new Bubble();
-```
-
-
-
-When using functional programming in the context of building websites, we want to separate the data and the view. 
-
-
-You basically have two different types of functions: ones that get and update data (JSON), and ones that take the JSON as an argument, and return an interface (HTML). Why? Let's look at some code.
-```js
-const todos = [
-  {
-    text: "Feed cat",
-    status: "Incomplete"
-  },
-  {
-    text: "Fix bike",
-    status: "Incomplete"
-  },
-  {
-    text: "Buy cactus",
-    status: "Incomplete"
-  }
-];
-
-function TodoList() {
-  return `
-    <ul>
-
-    </ul>
-  `
-}
-```
-
-
