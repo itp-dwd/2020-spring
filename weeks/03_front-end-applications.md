@@ -90,7 +90,9 @@ Topics we are not covering, but are of importance:
 > Make your things interactive with JavaScript
 
 * ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
-  * Review: JavaScript and the DOM 
+  * Javascript Foundations Review
+  * JavaScript and the DOM
+  * JavaScript Events and the DOM 
   * Asynchronous Javascript: Callbacks, Promises, and Async/Await
   * Networking, AJAX, talking to APIs, and CORs
   * Reactive UIs, Refactoring, and Structuring
