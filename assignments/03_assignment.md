@@ -12,6 +12,8 @@ This week, the assignment is to created a dynamic front end web application. Thi
 
 ## Required Readings
 * [Elements of UI Engineering](https://overreacted.io/the-elements-of-ui-engineering/)
+* [How to Connect to an API with JavaScript](https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/)
+* [Reactive UIs in Vanilla JS](https://css-tricks.com/reactive-uis-vanillajs-part-1-pure-functional-style/)
 
 ## Requirements
 
