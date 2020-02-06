@@ -14,6 +14,7 @@
   - [Grid Theory](#grid-theory)
   - [Reverse Engineering](#reverse-engineering)
   - [Design Tools](#design-tools)
+  - [Resources](#resources)
 
 ## Web Design(ing)
 
@@ -122,3 +123,6 @@ There's no right tool to create designs with! Because some of them have a learni
 * **PowerPoint** - $139.99, easy to use, normally used to make slides
 * **[Sketch](https://www.sketch.com/)** - $99, the tool used by Cassie and Joey, optimized for creating digital designs for web and mobile applications
 * **[Figma](https://www.figma.com/)** - Free for individuals, optimized for web and mobile designs, generates some code. (Neither Cassie nor Joey has used it and can neither endorse nor renounce it)
+
+## Resources
+* [Design for Developers](https://www.taniarascia.com/design-for-developers/)
