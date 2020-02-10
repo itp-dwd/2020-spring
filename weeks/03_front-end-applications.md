@@ -33,8 +33,9 @@ This introduction to JavaScript foundations assumes basic working knowledge of J
     - [JAVASCRIPT: THE DOM & EVENTS](#javascript-the-dom--events)
     - [JAVASCRIPT: GETTING DATA FROM APIS](#javascript-getting-data-from-apis)
     - [JAVASCRIPT: FORM DATA & SENDING DATA TO APIS](#javascript-form-data--sending-data-to-apis)
-    - [JAVASCRIPT: FUNCTIONAL PROGRAMMING & REACTIVE USER INTERFACES](#javascript-functional-programming--reactive-user-interfaces)
+    - [JAVASCRIPT: FUNCTIONAL PROGRAMMING, UI COMPONENTS, & REACTIVE USER INTERFACES](#javascript-functional-programming-ui-components--reactive-user-interfaces)
     - [JAVASCRIPT: THE BROWSER PLATFORM](#javascript-the-browser-platform)
+  - [STUDIO: FRONT-END APPLICATIONS WORKBOOK](#studio-front-end-applications-workbook)
   - [ASSIGNMENT 3: INTERACTIVE FRONT-END APPLICATION](#assignment-3-interactive-front-end-application)
   - [ADDITIONAL NOTES](#additional-notes)
     - [DOM Manipulation](#dom-manipulation)
@@ -124,7 +125,6 @@ Topics we are not covering, but are of importance:
 
 
 ### JAVASCRIPT: THE DOM & EVENTS
-
 > "All we do is talk about manipulating the DOM, but what about checking in and caring for the DOM?" - Kara Gates via Twitter
 
 * ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
@@ -132,23 +132,39 @@ Topics we are not covering, but are of importance:
   * JavaScript Events and the DOM 
 
 ### JAVASCRIPT: GETTING DATA FROM APIS
+> API: "It’s like the connectors on the back of your TV. They let you plug in a device from another manufacturer (DVD player, games console, set-top box) and both the TV and the device know what to do next. The connectors are the interface that lets one machine talk to another." - [Sideways Dictionary](https://sidewaysdictionary.com/#/term/api)
 
 * ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
   * Asynchronous Javascript: Callbacks, Promises, and Async/Await
   * Retrieving data from APIs: Networking, AJAX, and CORs
 
 ### JAVASCRIPT: FORM DATA & SENDING DATA TO APIS
+> "API: It's like a waiter at a restaurant. The waiter takes a guests' food order, then delivers to the food order to the kitchen staff. The kitchen staff then makes the food, hands the food to the waiter, and then the waiter delivers the correct food order back to the guest." - [Sideways Dictionary](https://sidewaysdictionary.com/#/term/api)
 
 * ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
   * Sending data to APIs: POST, PUT, DELETE
 
-### JAVASCRIPT: FUNCTIONAL PROGRAMMING & REACTIVE USER INTERFACES
+### JAVASCRIPT: FUNCTIONAL PROGRAMMING, UI COMPONENTS, & REACTIVE USER INTERFACES
+> "No JavaScript frameworks were created during the writing of this article." - Jose Aguinaga in *[How it feels to learn JavaScript in 2016]((https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f))*
 
 * ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
   * Reactive UIs, Refactoring, and Structuring
 
 ### JAVASCRIPT: THE BROWSER PLATFORM
+> "The Browser is a treasure trove of goodies."
+
+* ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
   * The Web Platform
+
+***
+***
+***
+
+## STUDIO: FRONT-END APPLICATIONS WORKBOOK
+
+Learn by doing with the [Front-End Applications Workbook](https://github.com/itp-dwd/front-end-applications-workbook). Here you will encounter a set of guided challenges that will introduce you to a specific process of building an interactive front-end web application that interacts with a 3rd party API to generate a dynamic clientside views.
+
+* ↳ [Link to Front-End Applications Workbook](https://github.com/itp-dwd/front-end-applications-workbook)
 
 ***
 ***
