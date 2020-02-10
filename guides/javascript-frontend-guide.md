@@ -60,7 +60,10 @@ In this guide we focus on the foundational knowledge of JavaScript rather than o
     - [Selecting DOM elements](#selecting-dom-elements)
     - [Updating the dom: styles & adding/removing CSS classes](#updating-the-dom-styles--addingremoving-css-classes)
       - [Updating the content of a DOM selection](#updating-the-content-of-a-dom-selection)
-        - [Selected Demos](#selected-demos)
+    - [Aside: HTMLElement and the JavaScript Classes of HTML](#aside-htmlelement-and-the-javascript-classes-of-html)
+    - [Adding DOM Elements with JavaScript](#adding-dom-elements-with-javascript)
+      - [Additional Notes on Creating and Appending DOM Elements](#additional-notes-on-creating-and-appending-dom-elements)
+      - [Removing Elements](#removing-elements)
       - [Updating the style of a DOM element](#updating-the-style-of-a-dom-element)
     - [Javascript Events:](#javascript-events)
       - [Event Handlers and Event Listeners](#event-handlers-and-event-listeners)
@@ -68,8 +71,12 @@ In this guide we focus on the foundational knowledge of JavaScript rather than o
       - [Event Listeners](#event-listeners)
       - [Event Handlers](#event-handlers)
     - [Event Objects](#event-objects)
+    - [When is a website finished loading?](#when-is-a-website-finished-loading)
   - [References: JavaScript and the DOM](#references-javascript-and-the-dom)
 - [JavaScript Networking, AJAX, talking to APIs, and CORs](#javascript-networking-ajax-talking-to-apis-and-cors)
+  - [What is an API?](#what-is-an-api)
+  - [Connecting to RESTful APIs with JavaScript: AJAX and the Fetch API](#connecting-to-restful-apis-with-javascript-ajax-and-the-fetch-api)
+  - [Public APIs and Terms](#public-apis-and-terms)
   - [Background: XHR: XMLHttpRequest](#background-xhr-xmlhttprequest)
   - [Fetch API](#fetch-api)
     - [Fetch: default](#fetch-default)
@@ -81,6 +88,7 @@ In this guide we focus on the foundational knowledge of JavaScript rather than o
   - [A quick note on Axios](#a-quick-note-on-axios)
   - [CORs: Cross origin Resource Sharing](#cors-cross-origin-resource-sharing)
   - [References: JavaScript and APIs](#references-javascript-and-apis)
+- [FUNCTIONAL PROGRAMMING, UI COMPONENTS, & REACTIVE USER INTERFACES](#functional-programming-ui-components--reactive-user-interfaces)
 - [The Web Platform](#the-web-platform)
   - [Browser Platform: `localStorage`](#browser-platform-localstorage)
       - [Examples](#examples)
@@ -1058,11 +1066,14 @@ You can see a working demo here: [Async/await demo on button click](https://edit
 
 # JavaScript and the DOM
 
+When JavaScript was first created back in the 90's, one of the original uses was to dynamically change a page's HTML after the website had loaded. This is still the most common usage of JS in the browser.
+
 In this section we discuss the wonderful role of JavaScript and its ability to interact with the DOM. This is where we really dive into what it means for JavaScript to not only create the ability for pages to be *interactive*, but also *reactive*. So far, we've been talking mostly about JavaScript as a language, but now it is time to explore the ways in which JavaScript completes the HTML5 trifecta of HTML/CSS/JavaScript.
 
 By mastering JavaScript as a language, understanding how to work with JavaScript in relation to CSS and HTML, and building up your sensibilities for software architectures and JavaScript patterns, you'll be well equipped to approach the development client side applications with confidence and across many contexts.
 
-Let's begin applying our JavaScript knowledge in relation to interacting to DOM.
+
+Let's begin applying our JavaScript knowledge in relation to interacting to DOM. You can create a new `index.html`, a new empty JS file `script.js`, and have the HTML link to the script. Then start a simple static server to start building and testing if you haven't already been doing so while you follow along.
 
 
 ### Selecting DOM elements
@@ -1155,7 +1166,17 @@ As written in [How to Make Changes to the DOM ](https://www.taniarascia.com/how-
   | `node.removeChild()` 	| Remove child node| 
   | `node.remove()` 	| Remove node| 
 
-##### Selected Demos
+
+### Aside: HTMLElement and the JavaScript Classes of HTML
+
+Every single HTML element is a subclass of [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement). This means that every single element shares some of the same methods and properties, and also have their own (for example, a `<p>` tag can do different stuff from a `<canvas>` element). Also, HTMLElement is a subclass of a few different classes—[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element), [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), and [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)—therefore, all elements also include any of the methods/properties from these classes as well.
+
+The best reference for web development tools is the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web). It's impossible to memorize all of the different attributes and methods and properties!
+
+
+### Adding DOM Elements with JavaScript
+
+This section showcases how you can add DOM elements to your HTML with JavaScript. Specifically, we look at the combination of `.createElement()` and `.appendChild()`, and the use of `.innerHTML`.
 
 * `.createElement() & .appendChild()`: sometimes you'll need/want to create your DOM nodes in javascript. This is often the case if you're creating [reactive UIs](https://css-tricks.com/reactive-uis-vanillajs-part-1-pure-functional-style/):
 
@@ -1231,6 +1252,52 @@ setTimeout( function(){
 </script>
 ```
 
+#### Additional Notes on Creating and Appending DOM Elements
+
+See [Reference: JavaScript and the DOM](#references-javascript-and-the-dom) for an in-depth guide. 
+
+*Note*: You cannot create or append DOM elements until the website is loaded. Therefore you'll need to wrap all of the code in this section in a `window.onload` handler.
+
+To create a new element, the code looks like
+
+```js
+const newParagraph = document.createElement("p");
+newParagraph.textContent = "I'm a new paragraph";
+```
+
+If you then reload your webpage, you won't see the new element? Why? Because you didn't say where you want to put it. You must manually append it to the DOM. You need to include the line
+```js
+document.body.appendChild(newParagraph);
+```
+
+Often, you don't want to append your new element to the end of your DOM, but in a specific location. Rather then specifying an index, it's most common to specify the parent element to add the element to. For example, if your HTML body looked like this
+```html
+<section id="post">
+</section>
+<ul id="comments">
+</ul>
+<footer>
+</footer>
+```
+And you wanted to add a new element to the `#comments` section, you first need to select the element to append to, using `document.getElementById`:
+```js
+const commentsContainer = document.getElementById("comments");
+const newComment = document.createElement("li");
+newComment.textContent = "This is an amazing post.";
+commentsContainer.appendChild(newComment);
+```
+Once you selected an element, you can access that elements attributes/properties/methods. This allows you to set, for example, the `textContent` or `innerHTML`, or call methods like `removeChild()`. These depend on the type of HTML element, but you can get the gist from looking at the [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) documentation on MDN (Mozilla Developer Network).
+
+#### Removing Elements
+
+After you've selected an element, you can remove it directly by calling `.remove()`, or remove a child element by calling `.removeChild(childElement)`:
+```js
+const postElement = document.getElementById("post");
+postElement.remove();
+
+const commentContainer = document.getElementById("comments");
+commentContainer.removeChild(commentContainer.lastChild);
+```
 
 
 #### Updating the style of a DOM element
@@ -1304,7 +1371,7 @@ So far we've been showcasing how DOM elements change depending on the JavaScript
 
 #### Event Handlers and Event Listeners
 
-JavaScript Events are the core of making interactive websites and web applications.
+JavaScript Events are the core of making interactive websites and web applications. When you click on a link, it takes you to a new page, you click a button and it makes a purchase. Every HTML element has **event handlers** so that you can listen for these events, and take actions (i.e. execute code) when these events occur. 
 
 If you've been coding in p5.js, then you'll have had many experiences building in interactivity to web applications. You will have seen functions like `mousePressed()` provided by p5 which makes it easier for you to handle click events and `keyPressed()` which helps you handle when a user types on their keyboard. 
 
@@ -1429,6 +1496,31 @@ By using the `.target` property of your `event`, you can get the DOM node (i.e. 
 </script>
 ```
 
+### When is a website finished loading?
+Back in week 1, we talked about all of the steps that happen when you load a website in a browser. Part of that process is when the server sends back an HTML file, and the browser starts rendering the HTML. The browser interprets the HTML and builds the DOM (Document Object Model) of the website. This process isn't instantaneous—it takes some time. If we want to make changes to the DOM, we have to wait until it's finished loading. How do we know (in code) when it's done? The browser fires a `load` event, which we can listen for:
+```js
+window.onload = function() {
+  initialize();
+  appendToDOM();
+}
+```
+You'll need to call any code that accesses the DOM, whether you are selecting elements, binding event handlers, or adding or removing elements, after this function had been called. It's common wrap calls to any initialization code in this function.
+
+You can read more here about the details about [Browser Page Lifecycle](/guides/browser-guide.md##the-page-lifecycle)
+
+An additional handy thing about wrapping your entire code with the `.onload` event handler is that you can also wrap your entire code with an `async` function so that you can use the `await` feature for asynchronous functions:
+
+```js
+window.onload = function() {
+  initialize();
+  appendToDOM();
+
+  await getData();
+  updatePosts();
+}
+```
+
+
 
 ## References: JavaScript and the DOM 
 
@@ -1448,6 +1540,49 @@ This section is about using client side JavaScript to communicate (aka network) 
 In this section you will learn about how you can use JavaScript to communicate with outside servers and APIs from the browser.
 
 For a nice blog post about interacting with APIs and building dynamic frontend interfaces see: [How to Connect to an API with JavaScript](https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/).
+
+## What is an API?
+
+In ICM, we used p5.js to get data from API's using [loadJSON()](https://p5js.org/reference/#/p5/loadJSON). Our p5.js sketch, the front end JavaScript code, was making an HTTP request, specifically an AJAX request (Asychronous JavaScript Request), and fetching JSON data. This specific type of API is called a REST (Relational State Transfer) API, which specifically defines the interface for computer systems connected to the Internet. I just named a lot of terms, so let's take a step back and talk about all of these different pieces.
+
+What is an API? API stands for "Application Programming Interface," which I don't think does a great job of actually explaining what an API is. The thing is, it's actually a pretty general term—basically, every piece of software has an interface, and therefore an API. You use the API in *code*—for example, you can open the website [Twitter](https://twitter.com) to write a tweet, or you can use the Twitter API to write a tweet from code. Why would you want to do this? For example, you could make a Twitter bot that tweets a programmatically generated [Emoji Aquarium](https://twitter.com/emojiaquarium) every three hours.
+
+What you can do with an API depends on the underlying software. Sometimes an API gives you access to JSON weather data, or sometimes it lets you create a Tweet, or control another application like Ableton Live.
+
+In this class, we will use the term API mostly in the context of RESTful API's and Browser API's. In reality, you're using tons of APIs (VSCode API, Node API, etc.) but we may not talk about them.
+
+* **Reading: ** [Nobody Introduced Me to the API](https://www.robinwieruch.de/what-is-an-api-javascript)
+
+## Connecting to RESTful APIs with JavaScript: AJAX and the Fetch API
+When you load a website or web application, the server is communicating with the browser using HTTP. This is called a **communication protocol**. When you want to load data from an API, you also need to make the request using HTTP. In JavaScript, this is done using AJAX (Asynchronous JavaScript and XML). 
+
+The syntax for making AJAX requests is quite verbose, and while some libraries have been created to make AJAX easier to use (jQuery, Axios), the standard now is to use the Fetch API. To use the Fetch API, you must understand Promises and async/await.
+
+* **Promises and async/await**: [Callbacks, Promises, and async/await](#callbacks-promises-and-asyncawait)
+  
+* **In-depth guide**: [JavaScript Networking, AJAX, talking to APIs, and CORS](#javascript-networking-ajax-talking-to-apis-and-cors)
+
+We will look at how to communicate with APIs from the client-side more below. Before we get started with the technical parts of API communication, let's cover a few more details about different APIs and some important terminology.
+
+## Public APIs and Terms
+
+Many websites and web applications have created publicly available APIs, to let you access their data or use their services from code. There's tons to choose from!
+
+* **Resource**: [Free, Public APIs](https://github.com/public-apis/public-apis)
+
+If you look through this list, and look through the documentation for each API, you'll notice they look pretty different. Some are minimal, for example, the [Bored API](https://www.boredapi.com/documentation) simply gives you suggestions for activities to do if you are bored. [The New York Times APIs](https://developer.nytimes.com/apis) are much more complicated, and therefore the [documentation](https://developer.nytimes.com/docs/articlesearch-product/1/overview) is more complicated.
+
+There are a few terms to get comfortable with when using APIs:
+* **Authentication (or Auth)**: Some APIs require you to authenticate before you can use them. Why? Think of it like logging into a website like Twitter—it gives the API developers and maintainers control over your access to the service, as well as see how you are using it. If they perceive that you are abusing their service, they can turn off your access.
+* **AJAX and Fetch**: see [#javascript-networking-ajax-talking-to-apis-and-cors](../guides/javascript-frontend-guide.md)
+* **CORS**: Cross-Origin Resource Sharing gives API controls over which websites can access the API. APIs decide which origins can access them, and how. If CORS is enabled, then you should be able to use it. If you are making the requests server-side, this is irrelevant, as CORS is only important for AJAX requests, but that's a topic for next week.
+* **origin**: an origin is the protocol (http, https) + hostname (localhost, twitter.com) + port (8000, 80). For example, the full origin running your website locally using the python simple server is `http://localhost:8000`, and the full origin of Wikipedia is https://wikipedia.org:443
+* **API Key**: a string of letters/numbers that gives you access to an API, that you can think of like a password.
+* **OAuth**: A system for authenticating with an API service in which you can enter a username and password and get back a token. Usually more complicated to use than an API key.
+* **Base URL**: Every API has base URL that all of its endpoints are appended to. It usually looks something like `https://www.potterapi.com/v1/`
+* **Endpoint**: Also known as a path, an endpoint gives you the slice of data, or service within an API, which is appended to the base url. This also includes the HTTP verb (GET, POST, etc.) ([What is an HTTP verb?](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)) This could be something like GET `/characters`, where the full URL would be GET `https://www.potterapi.com/v1/characters`. 
+* **URL Query Parameters**: Often endpoints allow you filter and search the data at an endpoint using query string parameters. For example, `https://www.potterapi.com/v1/characters?house=Gryffindor`. `house` is the name of the parameter, and `Gryffindor` is the value. In the documentation, it's usually specified what these parameters can be, just be sure to [URL encode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) them.
+* **Response format**: Usually the response is JSON, very rarely it will not be.
 
 ## Background: XHR: XMLHttpRequest
 
@@ -1674,6 +1809,17 @@ You can read more in this blog post by [Flavio Copes where he explains what CORs
 ***
 ***
 ***
+
+# FUNCTIONAL PROGRAMMING, UI COMPONENTS, & REACTIVE USER INTERFACES
+
+
+
+
+
+***
+***
+***
+
 # The Web Platform
 
 The Browser is a treasure trove of goodies. It is comprised of many exciting APIs that can be accessed through JavaScript. This section is about the **web platform** that will enable and enhance your users' frontend experiences. 
