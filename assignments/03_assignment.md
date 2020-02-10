@@ -10,6 +10,8 @@ This week, the assignment is to created a dynamic front end web application. Thi
   * Include an interactive element that responds to an event (e.g. click, scroll, mouseover, etc.)
   * Be responsive to the screen size
 
+There are MANY APIs out there. Here's a list you might consider exploring: [list of public apis](https://github.com/public-apis/public-apis)
+
 ## Required Readings
 * [Elements of UI Engineering](https://overreacted.io/the-elements-of-ui-engineering/)
 * [How to Connect to an API with JavaScript](https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/)

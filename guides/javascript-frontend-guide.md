@@ -1987,6 +1987,13 @@ NOTICE: the `.clearWatch()` takes the variable name associated that contains the
 
 # Conclusion & Recap
 
+In this guide, we covered a lot. By now, you have been introduced to the fundamental front-end JavaScript skills, syntax, and features that are central to your understanding of clientside web development. 
+
+This guide is just the beginning and is a prompt for you to continue discovering more about the wonders and complexities of JavaScript. The only way to develop your skills is to continue practicing, learning to break things, resolving errors, and working through the materiality of the ways that JavaScript, CSS, and HTML work together. 
+
+We've provided a set of guidelines in this document, but as you develop your own style and preferences, you will learn to develop your own mechanics for structuring and developing web applications in the way that makes sense to you right now and with your current skills and understanding. The beauty of it all is that learning to program, particularly in the context of the web, is an ever evolving process that is shaped directly by your engagement with these various tools and features. 
+
+Keep going! 
 
 ***
 ***
