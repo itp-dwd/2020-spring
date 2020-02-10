@@ -1,9 +1,9 @@
-# Week 3: Front-end Applications
+# WEEK 3: FRONT-END APPLICATIONS
 
-## Slides
+## SLIDES
 * ↳ [Link to Week 3 Slides: Front end Applications](https://docs.google.com/presentation/d/100WtCNmj6iJA8loNarUAnuLM5LoS09k2WkWhmRGJU_g/edit?usp=sharing)
 
-## About
+## ABOUT
 This week, we will be exploring JavaScript as it relates to adding interactivity to our web applications. JavaScript can be and is used to, among many things, update the content of DOM elements, to dynamically apply CSS styles that allow for better user experience and interaction design, and to send and retrieve data from external APIs that can affect what information is shown on the page. 
 
 We will take a project based approach to highlight the major features of modern JavaScript (as of 2020) and how you can use JavaScript to do things like update and manipulate the DOM, listen for events (e.g. did the user click? did the user scroll? is the page loaded?), and make API requests to get and send data from remote servers. 
@@ -11,6 +11,7 @@ We will take a project based approach to highlight the major features of modern 
 Emphasis this week will be on writing clean and organized JavaScript code.
 
 This introduction to JavaScript foundations assumes basic working knowledge of JavaScript, i.e.:  
+
 * the existence of control structures: 
   * looping (for loops, while loops)
   * conditional statements (e.g. if, else if, else)
@@ -20,15 +21,22 @@ This introduction to JavaScript foundations assumes basic working knowledge of J
 * basic asynchronous JavaScript:
   * callback functions
 
-- [Week 3: Front-end Applications](#week-3-front-end-applications)
-  - [Slides](#slides)
-  - [About](#about)
-  - [Outcomes & Goals](#outcomes--goals)
-  - [Pacing / Duration](#pacing--duration)
-  - [Materials Needed](#materials-needed)
-  - [What we are not covering](#what-we-are-not-covering)
-  - [Topics](#topics)
-    - [JavaScript: Part 2](#javascript-part-2)
+- [WEEK 3: FRONT-END APPLICATIONS](#week-3-front-end-applications)
+  - [SLIDES](#slides)
+  - [ABOUT](#about)
+  - [OUTCOMES & GOALS](#outcomes--goals)
+  - [PACING / DURATION](#pacing--duration)
+  - [MATERIALS NEEDED](#materials-needed)
+  - [WHAT WE ARE NOT COVERING](#what-we-are-not-covering)
+  - [TOPICS](#topics)
+    - [JAVASCRIPT: FOUNDATIONS](#javascript-foundations)
+    - [JAVASCRIPT: THE DOM & EVENTS](#javascript-the-dom--events)
+    - [JAVASCRIPT: GETTING DATA FROM APIS](#javascript-getting-data-from-apis)
+    - [JAVASCRIPT: FORM DATA & SENDING DATA TO APIS](#javascript-form-data--sending-data-to-apis)
+    - [JAVASCRIPT: FUNCTIONAL PROGRAMMING & REACTIVE USER INTERFACES](#javascript-functional-programming--reactive-user-interfaces)
+    - [JAVASCRIPT: THE BROWSER PLATFORM](#javascript-the-browser-platform)
+  - [ASSIGNMENT 3: INTERACTIVE FRONT-END APPLICATION](#assignment-3-interactive-front-end-application)
+  - [ADDITIONAL NOTES](#additional-notes)
     - [DOM Manipulation](#dom-manipulation)
       - [When is a website finished loading?](#when-is-a-website-finished-loading)
       - [Selecting DOM Elements](#selecting-dom-elements)
@@ -45,9 +53,8 @@ This introduction to JavaScript foundations assumes basic working knowledge of J
       - [Functional programming: An applied approach](#functional-programming-an-applied-approach)
       - [Unidirectional Data Flow](#unidirectional-data-flow)
     - [Organizing your JavaScript](#organizing-your-javascript)
-  - [Assignment 3: Interactive Front-End Application](#assignment-3-interactive-front-end-application)
 
-## Outcomes & Goals
+## OUTCOMES & GOALS
 
 You should be able to speak to the ways that JavaScript related to the following topics: 
 
@@ -88,34 +95,74 @@ You should be able to speak to the ways that JavaScript related to the following
   * How do you write clean code?
   * How do you know when you need to refactor?
 
-## Pacing / Duration
+## PACING / DURATION
 
+* :10 Quick, random selection of Assignment highlights
+* :10 Review of last week's material on CSS layouts
+* : 
 
-
-## Materials Needed
+## MATERIALS NEEDED
 
 * ↳ please see [Developer Setup Guide - Quickstart](../guides/developer-setup-guide.md#quickstart)
 
-## What we are not covering
+## WHAT WE ARE NOT COVERING
 
 Topics we are not covering, but are of importance:
 * JavaScript Frameworks (React, Vue, Angular, Next)
 * Dependency management, transpiling and bundling (Webpack, Parcel, Rollup, Browserify, Babel)
 
-## Topics
+## TOPICS
 
-### JavaScript: Part 2
-
-> Make your things interactive with JavaScript
+### JAVASCRIPT: FOUNDATIONS
+> Essential JavaScript for all occasions
 
 * ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
-  * Javascript Foundations Review
+  * JavaScript Foundations Review
+  * ES6 Syntax, arrow functions, Template Strings
+  * Array Functions: e.g. `.forEach()`, `.map()`, `.filter()`, `.findIndex()`
+  * Object Functions: e.g. `Object.keys()`, `Object.values()` 
+
+
+### JAVASCRIPT: THE DOM & EVENTS
+
+> "All we do is talk about manipulating the DOM, but what about checking in and caring for the DOM?" - Kara Gates via Twitter
+
+* ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
   * JavaScript and the DOM
   * JavaScript Events and the DOM 
+
+### JAVASCRIPT: GETTING DATA FROM APIS
+
+* ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
   * Asynchronous Javascript: Callbacks, Promises, and Async/Await
-  * Networking, AJAX, talking to APIs, and CORs
+  * Retrieving data from APIs: Networking, AJAX, and CORs
+
+### JAVASCRIPT: FORM DATA & SENDING DATA TO APIS
+
+* ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
+  * Sending data to APIs: POST, PUT, DELETE
+
+### JAVASCRIPT: FUNCTIONAL PROGRAMMING & REACTIVE USER INTERFACES
+
+* ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
   * Reactive UIs, Refactoring, and Structuring
+
+### JAVASCRIPT: THE BROWSER PLATFORM
   * The Web Platform
+
+***
+***
+***
+
+## ASSIGNMENT 3: INTERACTIVE FRONT-END APPLICATION
+
+* ↳ [Link to Assignment](../assignments/03_assignment.md)
+
+***
+***
+***
+
+## ADDITIONAL NOTES
 
 ### DOM Manipulation
 
@@ -458,9 +505,4 @@ js/
 ***
 ***
 ***
-
-## Assignment 3: Interactive Front-End Application
-
-* ↳ [Link to Assignment](../assignments/03_assignment.md)
-
 
