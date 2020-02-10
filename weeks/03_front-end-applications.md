@@ -4,9 +4,21 @@
 * ↳ [Link to Week 3 Slides: Front end Applications](https://docs.google.com/presentation/d/100WtCNmj6iJA8loNarUAnuLM5LoS09k2WkWhmRGJU_g/edit?usp=sharing)
 
 ## About
-This week, we will be learning how to use JavaScript to update the DOM, listen for events, and make API requests to fetch dynamic data. 
+This week, we will be exploring JavaScript as it relates to adding interactivity to our web applications. JavaScript can be and is used to, among many things, update the content of DOM elements, to dynamically apply CSS styles that allow for better user experience and interaction design, and to send and retrieve data from external APIs that can affect what information is shown on the page. 
+
+We will take a project based approach to highlight the major features of modern JavaScript (as of 2020) and how you can use JavaScript to do things like update and manipulate the DOM, listen for events (e.g. did the user click? did the user scroll? is the page loaded?), and make API requests to get and send data from remote servers. 
 
 Emphasis this week will be on writing clean and organized JavaScript code.
+
+This introduction to JavaScript foundations assumes basic working knowledge of JavaScript, i.e.:  
+* the existence of control structures: 
+  * looping (for loops, while loops)
+  * conditional statements (e.g. if, else if, else)
+* the existence of data structures:
+  * JSON
+  * arrays
+* basic asynchronous JavaScript:
+  * callback functions
 
 - [Week 3: Front-end Applications](#week-3-front-end-applications)
   - [Slides](#slides)
@@ -36,7 +48,7 @@ Emphasis this week will be on writing clean and organized JavaScript code.
 
 ## Outcomes & Goals
 
-You should be able to speak on the following points:
+You should be able to speak to the ways that JavaScript related to the following topics: 
 
 * **ES2015 Features**
   * Template strings
