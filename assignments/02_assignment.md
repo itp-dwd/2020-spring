@@ -60,7 +60,7 @@ Here you will:
       box-sizing: border-box;
     }
     ```
-3. **Interactivity**: Write JavaScript that fulfills the 5 below interactive elements that use the following events. The JavaScript should update the CSS using in response to the following events:
+3. (UPDATE Feb 03 2020: Note that since we did not cover JavaScript Events in class, this is no longer a strict requirement. However you are welcome to add interactivity with JavaScript events if you'd like) **Interactivity**: Write JavaScript that fulfills the 5 below interactive elements that use the following events. The JavaScript should update the CSS using in response to the following events:
    * `onload`
    * `click`
    * `scroll`

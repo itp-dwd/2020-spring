@@ -45,6 +45,7 @@ This introduction to JavaScript foundations assumes basic working knowledge of J
       - [Functional programming: An applied approach](#functional-programming-an-applied-approach)
       - [Unidirectional Data Flow](#unidirectional-data-flow)
     - [Organizing your JavaScript](#organizing-your-javascript)
+  - [Assignment 3: Interactive Front-End Application](#assignment-3-interactive-front-end-application)
 
 ## Outcomes & Goals
 
@@ -58,10 +59,10 @@ You should be able to speak to the ways that JavaScript related to the following
 * **DOM Manipulation**
   * What does it mean for a website to be loaded?
   * How do you include JS files in HTML?
-  * How do you add new DOM elements?
-  * How do you remove DOM elements?
-  * How do you change DOM elements?
-  * How do you select DOM elements?
+  * How do you **add** new DOM elements?
+  * How do you **remove** DOM elements?
+  * How do you **change** DOM elements?
+  * How do you **select** DOM elements?
 * **Event Handling**
   * What is an event handler?
   * What types of events can elements listen for?
@@ -88,7 +89,8 @@ You should be able to speak to the ways that JavaScript related to the following
   * How do you know when you need to refactor?
 
 ## Pacing / Duration
-TBD
+
+
 
 ## Materials Needed
 
@@ -121,7 +123,7 @@ When JavaScript was first created back in the 90's, one of the original uses was
 
 To get started, create a new `index.html`, a new empty JS file `script.js`, and have the HTML link to the script. Then start a simple static server to start building and testing.
 
-**TODO** do I need to include a section about how to include JS files? Or where they are commonly put?
+
 
 #### When is a website finished loading?
 Back in week 1, we talked about all of the steps that happen when you load a website in a browser. Part of that process is when the server sends back an HTML file, and the browser starts rendering the HTML. The browser interprets the HTML and builds the DOM (Document Object Model) of the website. This process isn't instantaneous—it takes some time. If we want to make changes to the DOM, we have to wait until it's finished loading. How do we know (in code) when it's done? The browser fires a `load` event, which we can listen for:
@@ -151,7 +153,7 @@ const newParagraph = document.createElement("p");
 newParagraph.textContent = "I'm a new paragraph";
 ```
 
-If you then reload your webpage, you won't see the new element? Why? Because you didn't saw where you want to put it. You must manually append it to the DOM. You need to include the line
+If you then reload your webpage, you won't see the new element? Why? Because you didn't say where you want to put it. You must manually append it to the DOM. You need to include the line
 ```js
 document.body.appendChild(newParagraph);
 ```
@@ -451,3 +453,14 @@ js/
   main.js
   navigation.js
 ```
+
+
+***
+***
+***
+
+## Assignment 3: Interactive Front-End Application
+
+* ↳ [Link to Assignment](../assignments/03_assignment.md)
+
+

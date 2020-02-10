@@ -27,7 +27,6 @@ Emphasis this week will be on exploring frontend web development in the service 
       - [Review: The Browser](#review-the-browser)
       - [Review: HTML](#review-html)
       - [CSS](#css)
-      - [JavaScript: Part 1](#javascript-part-1)
   - [Studio](#studio)
   - [Assignment 2: Making & Breaking the Grid - Swiss Poster Website](#assignment-2-making--breaking-the-grid---swiss-poster-website)
 
@@ -126,6 +125,9 @@ Topics we are not covering, but are of importance:
   * BEM Conventions for CSS
 
 
+*NOTE from Feb 3 2020: The entire class was dedicated to web design process, CSS layouts, responsive design,and BEM following the [Frontend foundation Workbook](https://github.com/itp-dwd/front-end-foundations-workbook). We did not discuss JavaScript due to time constraints and therefore will cover this in Week 3.*
+
+<!-- 
 #### JavaScript: Part 1
 
 > Make your things interactive with JavaScript
@@ -133,6 +135,7 @@ Topics we are not covering, but are of importance:
 * ↳ [JavaScript Frontend Guide](../guides/javascript-frontend-guide.md)
   * JavaScript Foundations: ES6/ES2015, Array Methods, Object Methods
   * JavaScript and the DOM: DOM Selectors & Event Listeners/Handlers
+-->
 
 ***
 ***
