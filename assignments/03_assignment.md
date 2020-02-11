@@ -10,12 +10,17 @@ This week, the assignment is to created a dynamic front end web application. Thi
   * Include an interactive element that responds to an event (e.g. click, scroll, mouseover, etc.)
   * Be responsive to the screen size
 
-There are MANY APIs out there. Here's a list you might consider exploring: [list of public apis](https://github.com/public-apis/public-apis)
+There are MANY APIs out there. Here's a list you might consider exploring: [list of public apis](https://github.com/public-apis/public-apis) If the API is marked **CORS: No**, or **Auth: OAuth**, you won't be able to use it for this assignment.
 
 ## Required Readings
 * [Elements of UI Engineering](https://overreacted.io/the-elements-of-ui-engineering/)
 * [How to Connect to an API with JavaScript](https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/)
 * [Reactive UIs in Vanilla JS](https://css-tricks.com/reactive-uis-vanillajs-part-1-pure-functional-style/)
+
+## Example Projects
+Note that these are not finished, polished apps, just a jumping off point.
+* [Weather App](https://github.com/joeyklee/weather-app)
+* [Music Genres + Feelings](https://github.com/itp-dwd/a3-cat-frontend-web-app)
 
 ## Requirements
 
