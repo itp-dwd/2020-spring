@@ -1,14 +1,28 @@
-# Week 03: Back-end Foundations
+# WEEK 03: BACK-END FOUNDATIONS
 
-## Slides
+## SLIDES
 * ↳ [Link to Week 4 Slides: Back end Foundations](#)
 
-## About
-In this week, we will be learning about server-side programming using JavaScript running in Node.js. We we learn how to run Node scripts and make our own API.
+## ABOUT
+
+This week we will be focusing our attention on server-side programming, otherwise known as the "back-end" of web applications.
+
+We will be learning about server-side programming using JavaScript running in Node.js. We we learn how to run Node scripts and make our own API.
 
 Emphasis this week will be on understanding when it is necessary to use server-side programming, and differentiating between server-side and client-side code.
 
-### Outcomes & Goals
+
+### OUTCOMES & GOALS
+
+In this class we will be:
+* Learning to program a server with Node.js
+* Writing server-side JavaScript to create our own REST APIs that allow us to communicate between our client and server to perform CRUD operations.
+
+Students will walk away with a deeper understanding of:
+* The terminal / command-line
+* NPM, Node.js and Express.js
+* REST API structure
+
 
 * **Node.js**
   * What is back end/server side programming?
@@ -16,11 +30,14 @@ Emphasis this week will be on understanding when it is necessary to use server-s
   * How do you install Node.js?
   * What are the Node.js core libraries? How do you use them?
   * What capabilities does Node have that browser JS does not? What about vice versa?
+  * What is Node.js? How does it relate to Express.js?
 * **npm**
   * What is `npm`? What is the difference between `npm`, the command line tool, and "npmjs.com"?
   * How do you create an npm project? How do you install and keep track of dependencies?
   * How do you use "npmjs.org"?
   * How do you use `npm` with `git`?
+  * What is **npm**, what is a `package.json`, how they are related, and why they are important?
+  * How to install node.js dependencies using npm.
 * **APIs**
   * What is an API?
   * What is REST?
@@ -32,49 +49,33 @@ Emphasis this week will be on understanding when it is necessary to use server-s
 * **Data Persistence**
   * What are ways that you can persist data?
   * Can you persist data without a database? When do you need to use a database?
+* **Platform as a service**:
+  * What is the difference between server-side code and the server machine? How is this related to a platform-as-a-service (PaaS)?
+  * Can you explain the difference between a server (code), server (machine), and server (the service)? 
+* **Client vs Server**:
+  * Can you clearly delineate between your server-side code and your client-side code? Explain how they are different.
+  * What is the "back-end" / server-side programming?
+  * What is a server side programming language? How does it differ from client-side programming in the browser?
+  * What does it mean to serve *static* files using a web server? 
+  * How do you use dynamic data in your website?
 
-- What is the "back-end" / server-side programming?
-- What is a server side programming language? How does it differ from client-side programming in the browser?
-- What is Node.js? How does it relate to Express.js?
-- What is **npm**, what is a `package.json`, how they are related, and why they are important
-- How to install node.js dependencies using npm.
-- What does it mean to serve *static* files using a web server? 
-- Can you clearly delineate between your server-side code and your client-side code? Explain how they are different.
-- What is an API? 
-- What is REST?
-- What is CRUD?
-- How do we persist data? Can we persist data on a server without a database?
-- What is the difference between server-side code and the server machine? How is this related to a platform-as-a-service (PaaS)?
-- How do you use dynamic data in your website?
-- Can you explain the difference between a server (code), server (machine), and server (the service)? 
-
-## Introduction
-This week we will be focusing our attention on server-side programming, otherwise known as the "back-end" of web applications.
-
-### Outcomes & Goals
-
-In this class we will be:
-* Learning to program a server with Node.js
-* Writing server-side JavaScript to create our own REST APIs that allow us to communicate between our client and server to perform CRUD operations.
-
-Students will walk away with a deeper understanding of:
-* The terminal / command-line
-* NPM, Node.js and Express.js
-* REST API structure
-
-## Pacing / Duration
-TBD
-
-## Materials Needed
-* ↳ [Developer setup Guide](../guides/developer-setup-guide.md)
 
 ## What we are not covering
 
 Topics we are not covering, but are of importance:
 * TypeScript
 * Dependency management, transpiling and bundling (Webpack, Parcel, Rollup, Browserify, Babel)
+
+## PACING / DURATION
+TBD
+
+## MATERIALS NEEDED
+
+* ↳ please see [Developer Setup Guide - Quickstart](../guides/developer-setup-guide.md#quickstart)
+### Outcomes & Goals
+
   
-## Topics
+## TOPICS
 
 ### JavaScript in the Browser vs Node
 - Node
@@ -188,8 +189,24 @@ TBD
     * ...
   * 
 
-## Studio Exercise Descriptions
-Descriptions of each exercise or phase of class. Similar to pacing but with more description of steps.
+***
+***
+***
 
-## References
-Include any sources cited, but not directly linked in the unit.
+## STUDIO: BACKEND FOUNDATIONS WORKBOOK
+
+Learn by doing with the [Back-End Foundations Workbook](#). Here you will encounter a set of guided challenges that will introduce you to the basic building blocks necessary to build a basic web server and API. 
+
+* ↳ [Back-End Foundations Workbook](#)
+
+***
+***
+***
+
+## ASSIGNMENT 3: API Love You - Oh CRUD
+
+* ↳ [Link to Assignment](../assignments/04_assignment.md)
+
+***
+***
+***
