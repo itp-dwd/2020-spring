@@ -60,13 +60,14 @@ Students will walk away with a deeper understanding of:
   * How do you use dynamic data in your website?
 
 
-## What we are not covering
+## WHAT WE ARE NOT COVERING
 
 Topics we are not covering, but are of importance:
 * TypeScript
 * Dependency management, transpiling and bundling (Webpack, Parcel, Rollup, Browserify, Babel)
 
 ## PACING / DURATION
+
 TBD
 
 ## MATERIALS NEEDED
@@ -77,7 +78,19 @@ TBD
   
 ## TOPICS
 
-### JavaScript in the Browser vs Node
+### The client vs. the Server
+
+### Server-side JavaScript with Node.js
+
+### Friendly web servers with Express.js
+
+### Building APIs with Express.js & the basics of CRUD
+
+### Tools for Interfacing with APIs
+
+### Interfacing with APIs from the client
+
+<!-- ### JavaScript in the Browser vs Node
 - Node
   - **In a nutshell**:
     - same language, different capabilities 
@@ -149,45 +162,8 @@ TBD
 - Quick intro to cURL
 - Introduction to Postman
 - using `fetch` to grab data
-- render to front end using template strings
+- render to front end using template strings -->
 
-### What we are not covering
-
-These are topics that won't be covered in the class at all, or will be covered in a later week.
-
-Topics we are not covering, but are of importance:
-* ...
-* ...
-* ...
-
-
-## Pacing / Duration
-<!-- Number of total hours the class session will take. Please try to take into account transition time between instruction and hands on exercises if any prep is necessary. -->
-
-- Break down of the class schedule example: 
-  - :15 Overview, context, examples and vocabulary 
-  - :20 Instruction & hands on exercise 
-  - :15 Wrap-up discussion & sharing, reflection or journal and next steps
-
-## Materials Needed
-<!-- What hardware, software, or other materials will students or teachers need for lessons. -->
-
-* Laptop & Power charger
-* Text Editor (VS Code)
-* Web browser (chrome or firefox preferred, but safari is ok)
-* Node.js installed (with NVM?)
-* Terminal/command-line
-
-### Exercises To Do Before Class
-What materials (readings, tasks, exercises) should students complete before class to be prepared for the lesson.
-
-TBD
-
-### Vocabulary (example)
-* term:
-  * route:
-    * ...
-  * 
 
 ***
 ***
