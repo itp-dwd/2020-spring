@@ -50,3 +50,7 @@ Here we outline some of the major differences, uses, advantages, and disadvantag
  -  **Does have**
     -  access to `window`, `document`
     -  access to browser API's, like Web Audio and Canvas -->
+
+If you ever wondered why we need to run a **local web server** when we work on clientside projects to access images and external files like `.json` data or `.js` files, it's because we need a *server* to *serve up* those external files living outside of the HTML context. (Is this of those, "OMG I get it now" moments?). Remember, your client-side JavaScript can only access what is going on in the browser, so in order to access those other files, you need server-side code to make those files living in your file system accessible to your browser. 
+
+This guide will show you how you can program your own web servers and build your own APIs to make files and data accessible from a local file system to your browser context. 
