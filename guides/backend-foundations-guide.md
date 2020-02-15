@@ -21,10 +21,14 @@ Before continuing, you should make sure to have explored the following guides an
   - [WHAT IS NODE.JS](#what-is-nodejs)
   - [INSTALLING NODE.JS](#installing-nodejs)
   - [BASICS OF RUNNING SERVER-SIDE SCRIPTS](#basics-of-running-server-side-scripts)
-    - [Running JavaScript in NODE.js's REPL Environment](#running-javascript-in-nodejss-repl-environment)
-    - [Running JavaSc](#running-javasc)
+    - [RUNNING JAVASCRIPT IN NODE.JS'S REPL ENVIRONMENT](#running-javascript-in-nodejss-repl-environment)
+    - [RUNNING JAVASCRIPT AS A SCRIPT](#running-javascript-as-a-script)
   - [BASICS OF ACCESSING NODE.JS LIBRARIES](#basics-of-accessing-nodejs-libraries)
+  - [A simple Node.js Script](#a-simple-nodejs-script)
 - [NODE.JS & THE NODE PACKAGE MANAGER (NPM)](#nodejs--the-node-package-manager-npm)
+  - [What is NPM and what are Node Modules](#what-is-npm-and-what-are-node-modules)
+  - [Project management with package.json](#project-management-with-packagejson)
+  - [Installing Node Modules and dependency management](#installing-node-modules-and-dependency-management)
 
 ***
 ***
@@ -110,7 +114,7 @@ There are a number of ways to write server-side code. You can write server-side 
 * **B**. A Node.js "script": 
   * meaning a file that contains all of the code that you want to be run from top to bottom.
 
-### Running JavaScript in NODE.js's REPL Environment
+### RUNNING JAVASCRIPT IN NODE.JS'S REPL ENVIRONMENT
 
 Open your terminal and type:
 ```sh
@@ -149,7 +153,7 @@ undefined
 
 You might be wondering: "Why does `undefined` keep coming up?" - others have wondered the same thing and you can read more about it here [node.js displays “undefined” on the console](https://stackoverflow.com/questions/8457389/node-js-displays-undefined-on-the-console)
 
-### Running JavaSc
+### RUNNING JAVASCRIPT AS A SCRIPT
 
 Running a script - code runs from top to bottom. Assuming you have a file called: `script.js`:
 
@@ -175,10 +179,34 @@ You should see in your terminal:
 
 ## BASICS OF ACCESSING NODE.JS LIBRARIES 
 
+- `require()` vs. `import` 
+  - there are 2 ways to import packages but depends on the version of Node.js you're using. For usage of `import` please use Node.js version >=12. 
+- Core Node libraries
+  - `fs`
+  - `path`
+  - `http`
+
+## A simple Node.js Script
+
+A node.js script that does X
+
+TBD
 
 ***
 ***
 ***
 # NODE.JS & THE NODE PACKAGE MANAGER (NPM)
+
+## What is NPM and what are Node Modules
+
+## Project management with package.json
+
+## Installing Node Modules and dependency management 
+
+
+
+***
+***
+***
 
 
