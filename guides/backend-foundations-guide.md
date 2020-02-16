@@ -24,7 +24,8 @@ Before continuing, you should make sure to have explored the following guides an
     - [RUNNING JAVASCRIPT IN NODE.JS'S REPL ENVIRONMENT](#running-javascript-in-nodejss-repl-environment)
     - [RUNNING JAVASCRIPT AS A SCRIPT](#running-javascript-as-a-script)
   - [BASICS OF ACCESSING NODE.JS LIBRARIES](#basics-of-accessing-nodejs-libraries)
-  - [A simple Node.js Script](#a-simple-nodejs-script)
+  - [A SIMPLE NODE.JS SCRIPT](#a-simple-nodejs-script)
+  - [RECAP](#recap)
 - [NODE.JS & THE NODE PACKAGE MANAGER (NPM)](#nodejs--the-node-package-manager-npm)
   - [What is NPM and what are Node Modules](#what-is-npm-and-what-are-node-modules)
   - [Project management with package.json](#project-management-with-packagejson)
@@ -179,18 +180,144 @@ You should see in your terminal:
 
 ## BASICS OF ACCESSING NODE.JS LIBRARIES 
 
-- `require()` vs. `import` 
-  - there are 2 ways to import packages but depends on the version of Node.js you're using. For usage of `import` please use Node.js version >=12. 
-- Core Node libraries
+Node.js has grown in large part because of a thriving open source community that have made **node modules** that make it easier to do certain programming tasks. These **node modules**, also called node **libraries**, are code packages that make it easier to do things like make web servers, communicate with database servers, read, parse, and write files, and even do complex computational tasks like geospatial analyses, scientific computing, and more.  
+
+If you've programmed with p5.js, you know that in order to use p5.js you need to reference the p5.js library in your `index.html` as a `<script>`. In order for us to use libraries in Node.js you'll need to *import* or *require* them into your projects. 
+
+| node.js version | library import syntax | example |
+| :---            | ----                  | --- |
+| `< 12`  | `require('package name')`| `const fs = require('fs')` |
+| `>= 12`  | `import 'package name'`| `import * as fs from 'fs'` |
+
+How do you tell which node version you're using? If I type in my terminal, the following, mine says v10.15.0, yours might say something different:
+```sh
+$ node -v
+v10.15.0
+```
+
+There are some libraries that are part of the **core node libraries** which means we don't need to download anything using `npm` in order to use them. Instead, we can just import them directly into our projects and start using them. Some of the core node libraries include:
+
+| libary name | description |
+| :---        | ---         |
+| `'fs'`      | File System - a helper library for accessing files in your local file system |
+| `'path'`    | Path - a helper library for helping to resolve file paths to files on your local file system | 
+| `'http'`    | HTTP - a helper library for creating an HTTP server |
+
+<!-- - `require()` vs. `import` 
+  - there are 2 ways to import packages but depends on the version of Node.js you're using. For usage of `import` please use Node.js version >=12.  -->
+  
+<!-- - Core Node libraries
   - `fs`
   - `path`
-  - `http`
+  - `http` -->
 
-## A simple Node.js Script
+Let's take a look at making our very first node.js script with some of the core libraries we mentioned above.
 
-A node.js script that does X
+## A SIMPLE NODE.JS SCRIPT
 
-TBD
+In this short excursion, we will make a node.js script that:
+
+1. reads and writes data to a file called "myData.json"
+2. the contents of "myData.json" will be an array that stores a timestamp and the size of "myData.json" every time the script is run.
+
+* **Step 0**: Create a folder called `data-logger`:
+   ```sh
+   $ mkdir ~/Desktop/data-logger
+   ```
+
+* **Step 0.5**: cd into that `data-logger` folder:
+  ```sh
+  $ cd ~/Desktop/data-logger
+  ```
+
+* **Step 1**: Create a file called: `index.js`
+   ```sh
+   $ touch index.js
+   ```
+
+* **Step 2**: Add your libraries to the top of the script
+In `index.js`
+   ```js
+   // Step 2: Add your libraries to the top of the script
+   const fs = require('fs');
+   const path = require('path');
+   ```
+
+* **Step 3**: Set a placeholder for our data
+  ```js
+  // Step 3: Set a placeholder for our data;
+  let data = [];
+  ```
+
+* **Step 4**: Get the path to our data
+  ```js
+  // Step 4: Get the path to our data
+  const dataPath = path.resolve(__dirname + '/myData.json');
+  ```
+
+* **Step 5**: Load in existing data or create an empty data file
+   ```js
+   // Step 5: Load in existing data or create an empty data file
+   if(fs.existsSync(dataPath)){
+     // If a data file exists, then load it using fs.readFileSync()
+     data = fs.readFileSync(dataPath);
+     data = JSON.parse(data);
+   } else {
+     // otherwise create an empty json file in the directory we will write to later.
+     fs.writeFileSync(dataPath, JSON.stringify(data));
+   }
+   ```
+
+* **Step 6**:  get the file size of the file and the timestamp
+   ```js
+   // Step 6: get the file size of the file and the timestamp
+   const fileSize = fs.statSync(dataPath).size / 1000000.0; // to get the size in mb
+   const currentTime = new Date();
+
+   ```
+
+* **Step 7**: create a JSON object entry for the size of the myData.json and timestamp
+   ```js
+   // Step 7: create a JSON object entry for the size of the myData.json and timestamp
+   const metadata = {
+     size: fileSize,
+     timestamp: currentTime
+   }
+   ```
+
+* **Step 8**: push your metadata object to the "data" array
+  ```js
+  // Step 8: push your metadata object to the "data" array
+  data.push(metadata);
+  ```
+
+* **Step 9**: write to your file
+  ```js
+  // Step 9: write to your file
+  fs.writeFileSync(dataPath, JSON.stringify(data));
+  ```
+
+Run the script by doing:
+
+```sh
+$ node index.js
+```
+
+Now open your `myData.json` and see what you find!
+
+```json
+[{"size":0.000002,"timestamp":"2020-02-16T16:32:44.460Z"}]
+```
+
+If you run this script over and over again, you'll see the new entries appended to that array. Can you imagine how you might be able to remix this script in a way that allows you to continually store data about something interesting? Maybe you can store data collected from your own little weather station or something else? 
+
+A note on `.readFileSync()` and `.writeFileSync()`: These are synchronous functions. The preferred alternative is to always use asynchronous functions -- `.readFile()` and `.writeFile()` -- and handle file writing with callback functions or promises and async/await. If you use 
+ 
+## RECAP
+
+So we've looked at using node.js libraries that are baked in to Node.js already. In the next section we are going to learn more about the NPM - node package manager - and the Node.js ecosystem and how to bring in 3rd-party libraries that make it easier to make more complex applications. 
+
+
 
 ***
 ***
