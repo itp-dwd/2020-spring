@@ -26,10 +26,15 @@ Before continuing, you should make sure to have explored the following guides an
   - [BASICS OF ACCESSING NODE.JS LIBRARIES](#basics-of-accessing-nodejs-libraries)
   - [A SIMPLE NODE.JS SCRIPT](#a-simple-nodejs-script)
   - [RECAP](#recap)
+  - [References](#references)
 - [NODE.JS & THE NODE PACKAGE MANAGER (NPM)](#nodejs--the-node-package-manager-npm)
   - [What is NPM and what are Node Modules](#what-is-npm-and-what-are-node-modules)
   - [Project management with package.json](#project-management-with-packagejson)
-  - [Installing Node Modules and dependency management](#installing-node-modules-and-dependency-management)
+  - [Installing Node Modules, dependency management, and the `node_modules` directory](#installing-node-modules-dependency-management-and-the-nodemodules-directory)
+- [NODE.JS WITH EXPRESS.js](#nodejs-with-expressjs)
+  - [What is Express.js?](#what-is-expressjs)
+  - [Express.js and the concept of Middleware](#expressjs-and-the-concept-of-middleware)
+  - [Simple Express.js Web Server](#simple-expressjs-web-server)
 
 ***
 ***
@@ -317,23 +322,146 @@ A note on `.readFileSync()` and `.writeFileSync()`: These are synchronous functi
 
 So we've looked at using node.js libraries that are baked in to Node.js already. In the next section we are going to learn more about the NPM - node package manager - and the Node.js ecosystem and how to bring in 3rd-party libraries that make it easier to make more complex applications. 
 
-
+## References
+* https://flaviocopes.com/how-to-check-if-file-exists-node/
 
 ***
 ***
 ***
 # NODE.JS & THE NODE PACKAGE MANAGER (NPM)
 
+Node.js thrives on an active community of people making open source software for the node.js ecosystem. These node.js libraries are centralized on NPM - the node package manager - a platform that allows node.js users to download and access the software built and contributed by other node.js users. These packages range the gamut from node packages that are a couple lines long with limited features to massive software projects that are hundreds and thousands of lines long with extensive features. It's always a good idea to check NPM for keywords of interest before starting a software project with Node.js - you might just find exactly what you need!
+
+In this section we cover:
+* the importance of the NPM community and open source software in the node.js ecosystem
+* the structure of and convention of structuring node modules
+* how the NPM universe allows you to document and organize your dependencies
+
 ## What is NPM and what are Node Modules
 
-## Project management with package.json
+As mentioned above, NPM stands for Node Package Manager and is the server that serves up thousands of open source node modules for people to use in their node.js projects. You might be wondering, "how is it that *all* of these node modules just work?" If so, here's why. 
 
-## Installing Node Modules and dependency management 
+Node.js modules are a standard way of structuring node.js code so that they can be *required* or *imported* into a node.js project. 
+
+* This is the `module.exports` syntax in Node.js `version < 12`:
+  ```js
+  function myCustomAdditionFunction(a, b){
+    return a + b;
+  }
+
+  module.exports = myCustomAdditionFunction;
+  ```
+
+* or `export default` syntax in Node.js `version >= 12` :
+  ```js
+  function myCustomAdditionFunction(a, b){
+    return a + b;
+  }
+
+  export default myCustomAdditionFunction;
+  ```
+
+Node.js code that uses `module.exports` or `export default` can then be used as a dependency in another script using the `require()` or `import` statements:
+
+For example, if we have a folder structure like this:
+
+```txt
+/myProject
+  index.js
+  myCustomAdditionFunction.js
+```
+
+Then in `index.js` we could do:
+```js
+// import * as myAddFunction from './myCustomAdditionFunction.js';
+const myAddFunction = require('./myCustomAdditionFunction.js');
+
+console.log(myAddFunction(1, 2)) // 3;
+```
+
+You will not only use see this structure in node.js code all the time, but you will also write code structured this way. This will allow you to *modularize* your code, keep your code tidy, and help you to maintain the best Node.js coding best practices. 
 
 
+## Project management with package.json 
+
+Step 1 of Node.js coding best practices is to make sure you include all the metadata for your node.js project in a file called `package.json` in the root directory of your project. You can create this manually, but the most common method is to use the `npm init` command in your project directory:
+
+```sh
+$ cd myProject
+$ npm init
+```
+
+You will then answer all of the questions prompted to you:
+
+```sh
+$ cd myProject
+$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (myProject)
+version: (1.0.0) 0.0.1
+description: a simple demo project
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author: joeyklee
+license: (ISC) MIT
+About to write to /Users/username/myProject/package.json:
+
+{
+  "name": "myProject",
+  "version": "0.0.1",
+  "description": " a simple demo project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joeyklee",
+  "license": "MIT"
+}
+
+
+Is this OK? (yes) yes
+```
+NOTE: You should use your Github username and select an appropriate license. 
+
+As you can see, the `package.json` includes important info about your project. 
+
+Your `package.json` will become your best friend. The `package.json` file will include all that you and others will need to know in order to get your project running, whether that is a list of dependencies to install or how to run your program. 
+
+The `package.json` file is also of supreme importance for how servers and other platforms know which dependencies to install and how to run your code. 
+
+
+## Installing Node Modules, dependency management, and the `node_modules` directory
+
+* make sure to always add `node_modules` to your `.gitignore` file while using node. NEVER check all your node_modules into git tracking.
+
+In your project root directory, in a file called `.gitignore`:
+```txt
+node_modules
+```
 
 ***
 ***
 ***
 
+# NODE.JS WITH EXPRESS.js
 
+## What is Express.js?
+
+## Express.js and the concept of Middleware
+
+## Simple Express.js Web Server
+
+***
+***
+***
