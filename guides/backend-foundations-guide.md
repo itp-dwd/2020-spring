@@ -31,6 +31,9 @@ Before continuing, you should make sure to have explored the following guides an
   - [What is NPM and what are Node Modules](#what-is-npm-and-what-are-node-modules)
   - [Project management with package.json](#project-management-with-packagejson)
   - [Installing Node Modules, dependency management, and the `node_modules` directory](#installing-node-modules-dependency-management-and-the-nodemodules-directory)
+    - [Installing packages](#installing-packages)
+    - [Excluding `node_modules` from git tracking](#excluding-nodemodules-from-git-tracking)
+  - [Recap](#recap-1)
 - [NODE.JS WITH EXPRESS.js](#nodejs-with-expressjs)
   - [What is Express.js?](#what-is-expressjs)
   - [Express.js and the concept of Middleware](#expressjs-and-the-concept-of-middleware)
@@ -443,12 +446,47 @@ The `package.json` file is also of supreme importance for how servers and other 
 
 ## Installing Node Modules, dependency management, and the `node_modules` directory
 
-* make sure to always add `node_modules` to your `.gitignore` file while using node. NEVER check all your node_modules into git tracking.
+### Installing packages
+Ah! The moment we've been waiting for: downloading node modules from NPM. Its simple actually. 
+
+Make sure you're in your project directory and in your terminal:
+
+```sh
+$ cd myProject
+$ npm install <package name>
+```
+
+Let's take the example of installing `cat-me` - a node package for making super cool ascii art cats in node.js:
+
+```sh
+$ npm install cat-me
+```
+
+Now you can do:
+in `~/myProject/index.js`
+```js
+const catMe = require('cat-me');
+
+console.log(catMe());
+console.log(catMe('nyan'));
+```
+
+See what happens!
+
+Note also that in your `package.json` (assuming you did the `npm init` step) is that `cat-me` will be added as part of the `dependencies` property of your `package.json` file.
+
+### Excluding `node_modules` from git tracking
+
+Make sure to always add `node_modules` to your `.gitignore` file while using node. NEVER check all your node_modules into git tracking.
 
 In your project root directory, in a file called `.gitignore`:
 ```txt
 node_modules
 ```
+
+## Recap
+
+Now that you've seen how to install packages, import them into your projects, and take care of your project's dependencies, it is time to look into a specific Node package called *Express.js*. Express.js is designed specifically to help make it easier to make web servers and server-side APIs for the node.js environment. 
 
 ***
 ***
