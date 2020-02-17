@@ -38,6 +38,21 @@ Before continuing, you should make sure to have explored the following guides an
   - [What is Express.js?](#what-is-expressjs)
   - [Express.js and the concept of Middleware](#expressjs-and-the-concept-of-middleware)
   - [Simple Express.js Web Server](#simple-expressjs-web-server)
+  - [Express conventions](#express-conventions)
+- [Express.js APIs](#expressjs-apis)
+  - [What's an API?](#whats-an-api)
+  - [Express API Structure](#express-api-structure)
+  - [API Routes: Part 1 - HTTP Verbs](#api-routes-part-1---http-verbs)
+    - [GET](#get)
+    - [POST](#post)
+    - [PUT](#put)
+    - [DELETE](#delete)
+  - [Ephemeral Data Storage](#ephemeral-data-storage)
+  - [Example: API example and A Simple File-based data store](#example-api-example-and-a-simple-file-based-data-store)
+- [Interfacing with your API](#interfacing-with-your-api)
+  - [cURL](#curl)
+  - [Postman](#postman)
+  - [Client-side interfacing](#client-side-interfacing)
 
 ***
 ***
@@ -500,6 +515,85 @@ Now that you've seen how to install packages, import them into your projects, an
 
 ## Simple Express.js Web Server
 
+- Why use express on top of Node? To create a web server
+  - you can technically create one using just the `http` module, but it's a lot of code.
+    - TODO: example code
+  - Here's some examples of other web server code:
+    - Ruby: https://blog.appsignal.com/2016/11/23/ruby-magic-building-a-30-line-http-server-in-ruby.html
+
+## Express conventions
+- Serving different HTML files based on a route
+  - getting the correct path w/ `path.resolve(__dirname, 'views') + 'about.html'` 
+  - convention: `views` directory
+
 ***
 ***
 ***
+
+# Express.js APIs
+
+## What's an API? 
+
+TBD
+
+## Express API Structure
+
+TBD
+
+## API Routes: Part 1 - HTTP Verbs
+
+### GET
+TBD
+
+* routing w/ URL parameters and query parameter
+
+### POST
+TBD
+
+* routing w/ URL parameters and query parameter
+
+### PUT
+TBD
+
+* routing w/ URL parameters and query parameter
+
+### DELETE
+TBD
+
+* routing w/ URL parameters and query parameter
+
+<!-- - How to build APIs with express:
+  - `app.get`
+  - `app.post`
+  - `app.put`
+  - `app.delete`
+- `requests` and `response` ==> (res, req)
+- 
+- - Dynamic routes
+  - url params
+  - query params -->
+
+## Ephemeral Data Storage
+
+TBD
+
+## Example: API example and A Simple File-based data store
+
+- Storing/updating json object on the server
+- Writing files to the server
+- maybe for later: node-fetch/isomorphic fetch or external API requests from the server
+
+***
+***
+***
+
+# Interfacing with your API
+
+## cURL
+- Quick intro to cURL
+
+## Postman
+- Introduction to Postman
+
+## Client-side interfacing
+- using `fetch` to grab data
