@@ -80,15 +80,27 @@ TBD
 
 ### The client vs. the Server
 
+* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
+
 ### Server-side JavaScript with Node.js
+
+* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
 
 ### Friendly web servers with Express.js
 
+* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
+
 ### Building APIs with Express.js & the basics of CRUD
+
+* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
 
 ### Tools for Interfacing with APIs
 
+* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
+
 ### Interfacing with APIs from the client
+
+* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
 
 <!-- ### JavaScript in the Browser vs Node
 - Node
