@@ -80,15 +80,18 @@ TBD
 
 ### The client vs. the Server
 
-* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
+* [Backend Foundations Guide - Client vs Server](../guides/backend-foundations-guide.md#client-side-javascript-vs-server-side-javascript)
 
 ### Server-side JavaScript with Node.js
 
-* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
+* [Backend Foundations Guide - Server-side JavaScript with Node.js - The Basics](../guides/backend-foundations-guide.md#server-side-javascript-with-nodejs-the-basics)
+
+### NPM, the Node Package Manager
+* [Backend Foundations Guide - NPM](../guides/backend-foundations-guide.md#nodejs--the-node-package-manager-npm)
 
 ### Friendly web servers with Express.js
 
-* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
+* [Backend Foundations Guide - Node with Express](../guides/backend-foundations-guide.md#simple-expressjs-web-server)
 
 ### Building APIs with Express.js & the basics of CRUD
 
