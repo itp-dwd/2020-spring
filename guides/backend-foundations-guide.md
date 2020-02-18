@@ -37,8 +37,16 @@ Before continuing, you should make sure to have explored the following guides an
 - [NODE.JS WITH EXPRESS.js](#nodejs-with-expressjs)
   - [What is Express.js?](#what-is-expressjs)
   - [Express.js Core Concepts](#expressjs-core-concepts)
-  - [Simple Express.js Web Server](#simple-expressjs-web-server)
-  - [Express conventions](#express-conventions)
+  - [SIMPLE EXPRESS.JS WEB SERVER](#simple-expressjs-web-server)
+    - [SETUP](#setup)
+    - [DEPENDENCIES](#dependencies)
+    - [YOUR WEBSERVER: `INDEX.JS`](#your-webserver-indexjs)
+    - [YOUR SERVED STATIC HTML: `PUBLIC/INDEX.HTML`](#your-served-static-html-publicindexhtml)
+    - [RUN THE WEB SERVER](#run-the-web-server)
+    - [Tidying Up](#tidying-up)
+  - [EXPRESS CONVENTIONS](#express-conventions)
+    - [Serving your HTML views in the `views` directory](#serving-your-html-views-in-the-views-directory)
+    - [ADDITIONAL NOTES](#additional-notes)
 - [Express.js APIs](#expressjs-apis)
   - [What's an API?](#whats-an-api)
   - [Express API Structure](#express-api-structure)
@@ -511,7 +519,7 @@ Now that you've seen how to install packages, import them into your projects, an
 
 ## What is Express.js?
 
-Express.js is a Node.js library built on top of Node.js's HTTP server module that serves as a lovely abstraction layer to make building web servers in Node.js easier.  In theory, you could never ever touch Express.js and code everything in vanilla Node.js code, however Express.js makes building web servers much much more simple. 
+Express.js is a Node.js library built on top of Node's HTTP server module that serves as a lovely abstraction layer to make building web servers in Node.js easier.  In theory, you could never ever touch Express.js and code everything in vanilla Node.js code, however Express.js makes building web servers much much more simple.  
 
 ## Express.js Core Concepts 
 
@@ -521,27 +529,200 @@ Let's explain each of those terms with the metaphor of New York City's Subway li
 
 * **Middleware**:
   * If an express.js application is the entire collection of all the subway lines, you can think if express middleware as the subway stops. Middleware are functions that are strung together in your Express.js application through which each subway train flows.  Your subway trains in this case are your data. 
+  * On a technical level, middleware, also known as "middleware functions" are indeed functions. These middleware functions take 3 parameters: `(request, response, next)`, where `next` is a function that says, "Everything in this function that I wanted to accomplish is done, now proceed to the next middleware please."
+  ```js
+  app.get('/hello', handleHello1, handleHello2)
+
+  function handleHello1( (req, res, next) => {
+    console.log('hello');
+    next();
+  })
+  function handleHello2( (req, res, next) => {
+    console.log('Lovely person');
+    res.end();
+  })
+  ```
+
 * **Routing**:
   * If middleware are the stops that your data (the subway trains) are meant to flow through your program, Express.js routes dictate which middleware your data (the trains) are meant to flow. Some data (trains) will flow through same middleware (stops) and others will not. 
   * Routes are the endpoints of your Express API that allow people to access or submit data from your server. 
+  * In the below code, we have the API endpoints specifying how you and your users can access certain data by those routes on your server. So for example I could make a GET request to: "https://myapp.com/hello", or "https://myapp.com/hello/1x2aa4facvsa" or make a POST request to "https://myapp.com/hello" and something would happen.
+  ```js
+  app.get('/hello', handleHello1, handleHello2);
+  app.get('/hello/:id', getSpecificHello);
+  app.post('/hello', addHelloToDatabase);
+  ```
 * **Handling Requests and Response**:
   * If routes are like specific subway lines and the middleware are like the specific stops your subway train takes, requests are like the people getting on the train at each station and the response are the people getting off of the train. Some train stations have elevators and escalators, others only have stairs. Some train stations are connected to malls and parks, others just put you on the street. You can think of handling requests as different data (people or trains) that come into your express application and responses as different ways those data get used (people get off the train, the train is re-routed or is delayed, etc).
+  * Handling requests means that a client is trying to communicate with your server and sends some kind of information. So if someone made a request to "https://myapp.com/hello/1x2aa4facvsa", what you would get logged in your console would be "1x2aa4facvsa" the id string that was passed into the URL *parameters* aka `param` property of the request object.
+  ```js
+  app.get('/hello/:id', getSpecificHello);
+
+  function getSpecificHello(req, res, next){
+    console.log(req.params.id)
+    // usually this would mean you'd search a database and retrieve the database entry for that specific id
+  }
+  ```
 * **Views** (we are not really going to talk about rendering views on the server in this class!): 
   * Express.js allows you to render HTML on the server dynamically to send to a client's web browser. There are advantages and disadvantages to server-side rendering, but all you need to know for now is that it is possible. In this class, we don't discuss server-side rendering in favor of separating out client-side and server-side applications that communicate using AJAX requests through HTTP/HTTPS.
   * In our subway metaphor, views would be the outside world where our subway lines deliver us to. They are the endpoints to why we take the wonderful subway train to get from A to B.
+  * In the case of what we will do in this class, we will serve our views from a static web server. 
 
-## Simple Express.js Web Server
+## SIMPLE EXPRESS.JS WEB SERVER
 
-- Why use express on top of Node? To create a web server
-  - you can technically create one using just the `http` module, but it's a lot of code.
-    - TODO: example code
-  - Here's some examples of other web server code:
+Remember how when you've coded client-side projects in the past, you always had to run a local web server (probably using `python -m SimpleHTTPServer`)? Well, now we're going to look at how to write the code to make **your very own web server**. 
+
+### SETUP 
+
+```sh
+# 1. create a project directory
+~ $ mkdir ~/Desktop/my-first-webserver
+# 2. change directories
+(my-first-webserver) $ cd ~/Desktop/my-first-webserver
+# 3. use npm init to create a package.json
+(my-first-webserver) $ npm init
+# 4. create an index.js file in the root directory
+(my-first-webserver) $ touch index.js
+# 5. create a folder called public
+(my-first-webserver) $ mkdir public
+# 6. create an index.html file in /public
+(my-first-webserver) $ touch public/index.html
+```
+**Setup**: 
+
+1. create a project directory called `my-first-webserver`
+2. change directories
+3. use `npm init` to create a package.json
+4. create an index.js file in the root directory using `touch`
+5. create a folder called `public`
+
+
+### DEPENDENCIES
+
+```sh
+# 1. install the express.js dependency 
+(my-first-webserver) $ npm install express
+```
+
+**Dependencies**:
+
+1. install the express.js dependency using `npm install`
+
+
+### YOUR WEBSERVER: `INDEX.JS`
+
+```js
+// 1. Load your dependencies
+const path = require('path');
+const express = require('express');
+// 2. Instantiate an express instance
+const app = express();
+// 3. Define a port number to run your server on
+const PORT = 3000;
+
+// 4. Get the path to your public directory
+const publicURL = path.resolve(`${__dirname}/public`);
+// 5. Define the folder which will host your static files 
+app.use(express.static(publicURL))
+
+// 6. Define the route where your static HTML fill be found
+app.get("/", (req, res, next) => {
+  res.sendFile("index.html");
+});
+
+// 7. Start your webserver by listening to the port you defined
+app.listen(PORT, () => {
+  console.log(`see the magic at: http://localhost:${PORT}`)
+});
+```
+**Express web server**: in your file `my-first-webserver/index.js`
+
+1. Load your dependencies
+2. Instantiate an express instance
+3. Define a port number to run your server on
+4. Get the path to your public directory
+5. Define the folder which will host your static files 
+6. Define the route where your static HTML fill be found
+7. Start your webserver by listening to the port you defined
+
+### YOUR SERVED STATIC HTML: `PUBLIC/INDEX.HTML`
+
+In the `public/index.html`
+```html
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    hello there lovely person
+  </body>
+</html>
+```
+
+### RUN THE WEB SERVER
+
+```sh
+(my-first-webserver) $ node index.js
+see the magic at: http://localhost:3000
+```
+
+Go to http://localhost:3000 and see the website running.
+
+### Tidying Up
+
+* Create a file called `.gitignore` and add the following to make sure that you DO NOT TRACK YOUR NODE_MODULES in git tracking:
+  ```txt
+  node_modules
+  .DS_Store
+  ```
+
+## EXPRESS CONVENTIONS
+
+### Serving your HTML views in the `views` directory
+In the above example of the express web server, we serve everything that lives in the "public" directory. A typical convention when you're building web applications is to put all of your HTML into a directory called `views`. This makes it easier for people coming to your full stack web application to find your HTML files that render into your front-end application code. 
+
+This is the scaffold for what your basic node application might look like:
+```txt
+/myProject
+  package.json
+  .gitignore
+  index.js
+  /public
+    /assets
+      MrBubz.jpg
+    /js
+      main.js
+    /css
+      main.css
+  /views
+    index.html
+    /about
+      index.html
+    /contact
+      contact.html
+  /node_modules
+```
+
+To serve your `views` directory as a static HTML endpoint, you can do:
+
+```js
+const viewsURL = path.resolve(`${__dirname}/views`);
+app.use(express.static(viewsURL))
+```
+
+### ADDITIONAL NOTES
+
+- Why use express on top of Node? To create a web server you can technically create one using just the `http` module, but it's a lot of code.
+- You can create web servers in lots of other languages and essentially they follow the same approach
     - Ruby: https://blog.appsignal.com/2016/11/23/ruby-magic-building-a-30-line-http-server-in-ruby.html
+    - Python web server: https://ruslanspivak.com/lsbaws-part1/
 
-## Express conventions
-- Serving different HTML files based on a route
-  - getting the correct path w/ `path.resolve(__dirname, 'views') + 'about.html'` 
-  - convention: `views` directory
+
 
 ***
 ***
