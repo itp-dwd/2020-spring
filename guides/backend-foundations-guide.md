@@ -36,7 +36,7 @@ Before continuing, you should make sure to have explored the following guides an
   - [Recap](#recap-1)
 - [NODE.JS WITH EXPRESS.js](#nodejs-with-expressjs)
   - [What is Express.js?](#what-is-expressjs)
-  - [Express.js and the concept of Middleware](#expressjs-and-the-concept-of-middleware)
+  - [Express.js Core Concepts](#expressjs-core-concepts)
   - [Simple Express.js Web Server](#simple-expressjs-web-server)
   - [Express conventions](#express-conventions)
 - [Express.js APIs](#expressjs-apis)
@@ -511,7 +511,24 @@ Now that you've seen how to install packages, import them into your projects, an
 
 ## What is Express.js?
 
-## Express.js and the concept of Middleware
+Express.js is a Node.js library built on top of Node.js's HTTP server module that serves as a lovely abstraction layer to make building web servers in Node.js easier.  In theory, you could never ever touch Express.js and code everything in vanilla Node.js code, however Express.js makes building web servers much much more simple. 
+
+## Express.js Core Concepts 
+
+The core concepts of Express can be categorized conceptually with these terms: **Middleware**, **Routing**, **Request and Response handling**, and **Views**.
+
+Let's explain each of those terms with the metaphor of New York City's Subway lines:
+
+* **Middleware**:
+  * If an express.js application is the entire collection of all the subway lines, you can think if express middleware as the subway stops. Middleware are functions that are strung together in your Express.js application through which each subway train flows.  Your subway trains in this case are your data. 
+* **Routing**:
+  * If middleware are the stops that your data (the subway trains) are meant to flow through your program, Express.js routes dictate which middleware your data (the trains) are meant to flow. Some data (trains) will flow through same middleware (stops) and others will not. 
+  * Routes are the endpoints of your Express API that allow people to access or submit data from your server. 
+* **Handling Requests and Response**:
+  * If routes are like specific subway lines and the middleware are like the specific stops your subway train takes, requests are like the people getting on the train at each station and the response are the people getting off of the train. Some train stations have elevators and escalators, others only have stairs. Some train stations are connected to malls and parks, others just put you on the street. You can think of handling requests as different data (people or trains) that come into your express application and responses as different ways those data get used (people get off the train, the train is re-routed or is delayed, etc).
+* **Views** (we are not really going to talk about rendering views on the server in this class!): 
+  * Express.js allows you to render HTML on the server dynamically to send to a client's web browser. There are advantages and disadvantages to server-side rendering, but all you need to know for now is that it is possible. In this class, we don't discuss server-side rendering in favor of separating out client-side and server-side applications that communicate using AJAX requests through HTTP/HTTPS.
+  * In our subway metaphor, views would be the outside world where our subway lines deliver us to. They are the endpoints to why we take the wonderful subway train to get from A to B.
 
 ## Simple Express.js Web Server
 
