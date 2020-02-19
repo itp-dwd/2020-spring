@@ -47,15 +47,17 @@ Before continuing, you should make sure to have explored the following guides an
   - [EXPRESS CONVENTIONS](#express-conventions)
     - [Serving your HTML views in the `views` directory](#serving-your-html-views-in-the-views-directory)
     - [ADDITIONAL NOTES](#additional-notes)
-- [Express.js APIs](#expressjs-apis)
-  - [What's an API?](#whats-an-api)
-  - [Express API Structure](#express-api-structure)
-  - [API Routes: Part 1 - HTTP Verbs](#api-routes-part-1---http-verbs)
+- [EXPRESS.JS APIS](#expressjs-apis)
+  - [WHAT'S AN API?](#whats-an-api)
+  - [EXPRESS API STRUCTURE](#express-api-structure)
+  - [API ROUTES: PART 1 - HTTP VERBS](#api-routes-part-1---http-verbs)
+    - [HTTP Verbs:](#http-verbs)
+  - [CRUD with Express.js: Dream Collector](#crud-with-expressjs-dream-collector)
+    - [SETUP](#setup-1)
     - [GET](#get)
     - [POST](#post)
     - [PUT](#put)
     - [DELETE](#delete)
-  - [Ephemeral Data Storage](#ephemeral-data-storage)
   - [Example: API example and A Simple File-based data store](#example-api-example-and-a-simple-file-based-data-store)
 - [Interfacing with your API](#interfacing-with-your-api)
   - [cURL](#curl)
@@ -728,37 +730,286 @@ app.use(express.static(viewsURL))
 ***
 ***
 
-# Express.js APIs
+# EXPRESS.JS APIS
 
-## What's an API? 
+Express.js helps us make web servers. Part of what it means to "make a web server" is creating ways for our web servers to communicate with external client applications. In this section we will cover how building APIs in Express allow us to create server-side functionality that can pass data back and forth between a client, the server, other servers and eventually databases. 
 
-TBD
+## WHAT'S AN API? 
 
-## Express API Structure
+API stands for Application Programming Interface. 
 
-TBD
+## EXPRESS API STRUCTURE
 
-## API Routes: Part 1 - HTTP Verbs
+In general you can think of creating Express APIs as defining "routes" where client applications can make requests to interface with your server. 
+
+Using the **API endpoints** -- the routes -- that you define on your server, people will be able to send data and retrieve data to/from your server, access HTML views, and more. 
+
+An overview of an express application looks something like this:
+
+```js
+// 1. Setup and load your libraries 
+
+// 2. Connect to a database
+
+// 3. Initialize express 
+
+// 4. Define your API endpoints
+
+// 5. Start listening
+```
+
+There are basically 5 steps and each of these steps will contain code that speaks very generally to how an Express app is structured. Most of the work in building a "back end" to an application is how you define the logic in step 4 where you are defining your API endpoints. 
+
+In the following section we are going to cover how to build an API with Express that allows you to do CRUD -- create, read, update, and delete -- which is what lies at the core of any web application. 
+
+
+## API ROUTES: PART 1 - HTTP VERBS
+
+In this section we are going to focus on step 4 where we define our API endpoints. 
+
+### HTTP Verbs:
+
+HTTP/HTTPS is one of the main protocols that allow us to communicate across the web. In order to pass messages from clients to servers and vice versa in a clear way, part of the HTTP protocol includes what we might call HTTP verbs or HTTP request types. The HTTP Request types define what kind of client-server interaction we should expect. 
+
+| **verb** | **description** | **translation** | **CRUD** |
+| :--- | ---         | ---         | --- |
+| POST | A client wants to create data on a server by sending it some data in a request         | "Hey! I have some data, can I leave it with you?" | `CREATE` |
+| GET | A client requests data from a server  | "Hey! Can I GET some data?" | `READ` |
+| PUT | A client is requesting to update data that already exists on a server | "Hey! Remember that data I gave you last week, can you update it with this new stuff?"         | `UPDATE` |
+| DELETE | A client is requesting to delete data that exists on the server | "Hey! Remember that data I gave you, can you uh remove that, thank you bye!" | `DELETE` |
+
+In Express.js we define in our code *how we expect* people to communicate with the server. As the designer and developer of your server's API, you will be creating the routes where you want people to interface with your server (and your data).
+
+Hopefully, this makes sense conceptually. Let's now walk through how this translates into code using an example. 
+
+## CRUD with Express.js: Dream Collector
+
+We are going to build a dream collector. The dream collector store data in a static JSON file on your server, so there will be no database server, but rather a flat file to read and write from. 
+
+### SETUP
+
+```sh
+# 1. Create a new project folder
+~ $ mkdir ~/Desktop/dream-collector
+# 2. change directories
+(dream-collector) $ cd ~/Desktop/dream-collector
+# 3. create your server file
+(dream-collector) $ touch index.js
+# 4. run npm init
+(dream-collector) $ npm init
+# 5. install your dependencies: express - for creating your express app
+(dream-collector) $ npm install express
+# 5. install your dependencies: morgan - for debugging and enhanced logging functionality
+(dream-collector) $ npm install morgan
+# 6. install a development dependency: 
+(dream-collector) $ npm install nodemon -D
+# 7. Create a folder called "db"
+(dream-collector) $ mkdir db
+# 8. Create a file called "db.json" in /db and add an empty array into the JSON file using echo
+(dream-collector) $ echo [] >> db/db.json
+```
+
+Your project scaffold will look like this now:
+
+```txt
+/dream-collector
+  index.js
+  /db
+    db.json
+  /node_modules
+```
+
+In your `index.js` file now add the following code. The following subsections will explain each section
+
+```js
+// 1. add your dependencies
+const fs = require('fs');
+const path = require('path');
+const express = require('express');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
+const PORT = 3000;
+
+// 2. Read your data in ensuring that there is an empty array or valid data
+const dataPath = path.resolve(`${__dirname}/db/db.json`);
+let data = JSON.parse(fs.readFileSync(dataPath));
+
+// 3. instantiate your express app
+const app = express();
+
+// 4. define your middleware: logging
+app.use(logger('dev'));
+// 4. define your middleware: request handling
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+// 4. define your middleware: result handling
+app.use(bodyParser.json());
+
+// 5. GET: get all dreams
+app.get("/api/v1/dreams", (req, res, next) => {
+  res.json(data);
+});
+
+// 6. GET: get only a specific dream
+app.get("/api/v1/dreams/:id", (req, res, next) => {
+  const selected = data.find( item => item.id === Number(req.params.id) );
+  res.json(selected);
+});
+
+// 7. POST: create data
+app.post("/api/v1/dreams", async (req, res, next) => {
+  const newData = {
+    dream: req.body.dream,
+    id: data.length + 1,
+  }
+  // push the data to the data array
+  data.push(newData);
+  // write to the file
+  await writeFile(dataPath, data);
+  res.json(newData);
+})
+
+// 7. create a function that promisify's the fs.writeFile() function
+function writeFile(dataPath, data){
+  return new Promise( (resolve, reject) => {
+    fs.writeFile(dataPath, JSON.stringify(data), (err) => {
+      if(err){
+        return console.error(err)
+      } 
+      resolve(data);
+    })
+  })
+}
+
+// 8. PUT: create data
+app.put("/api/v1/dreams/:id", async (req, res, next) => {
+  const selectedId = req.params.id;
+  console.log(selectedId)
+  const newDream = {
+    dream: req.body.dream,
+    id: selectedId
+  }
+
+  const updatedData = data.map(item => {
+    if(item.id === Number(selectedId)){
+      return newDream
+    } 
+    return item;
+  });
+
+  // set data to the updateData
+  data = updatedData.slice();
+  // write to the file
+  await writeFile(dataPath, data);
+  res.json(newDream);
+});
+
+// 9. DELETE: delete data
+app.delete('/api/v1/dreams/:id', async (req, res, next) => {
+  data = data.filter(item => item.id === Number(req.params.id));
+  await writeFile(dataPath, data);
+  res.json({"message":"successfully removed item"});
+});
+
+// 10. Start listening 
+app.listen(PORT, ()=>{
+  console.log(`listening at: http://localhost:${PORT}`)
+});
+```
 
 ### GET
-TBD
 
-* routing w/ URL parameters and query parameter
+**Step 5:**
+```js
+// 5. GET: get all dreams
+app.get("/api/v1/dreams", (req, res, next) => {
+  res.json(data);
+});
+```
+
+**Step 6:**
+```js
+// 6. GET: get only a specific dream
+app.get("/api/v1/dreams/:id", (req, res, next) => {
+  const selected = data.find( item => item.id === Number(req.params.id) );
+  res.json(selected);
+});
+```
 
 ### POST
-TBD
 
-* routing w/ URL parameters and query parameter
+```js
+// 7. POST: create data
+app.post("/api/v1/dreams", async (req, res, next) => {
+  const newData = {
+    dream: req.body.dream,
+    id: data.length + 1,
+  }
+  // push the data to the data array
+  data.push(newData);
+  // write to the file
+  await writeFile(dataPath, data);
+  res.json(newData);
+})
+
+// 7. create a function that promisify's the fs.writeFile() function
+function writeFile(dataPath, data){
+  return new Promise( (resolve, reject) => {
+    fs.writeFile(dataPath, JSON.stringify(data), (err) => {
+      if(err){
+        return console.error(err)
+      } 
+      resolve(data);
+    })
+  })
+}
+```
+
 
 ### PUT
-TBD
+
+```js
+// 8. PUT: create data
+app.put("/api/v1/dreams/:id", async (req, res, next) => {
+  const selectedId = req.params.id;
+  console.log(selectedId)
+  const newDream = {
+    dream: req.body.dream,
+    id: selectedId
+  }
+
+  const updatedData = data.map(item => {
+    if(item.id === Number(selectedId)){
+      return newDream
+    } 
+    return item;
+  });
+
+  // set data to the updateData
+  data = updatedData.slice();
+  // write to the file
+  await writeFile(dataPath, data);
+  res.json(newDream);
+});
+```
 
 * routing w/ URL parameters and query parameter
 
 ### DELETE
-TBD
 
-* routing w/ URL parameters and query parameter
+```js
+// 9. DELETE: delete data
+app.delete('/api/v1/dreams/:id', async (req, res, next) => {
+  data = data.filter(item => item.id === Number(req.params.id));
+  await writeFile(dataPath, data);
+  res.json({"message":"successfully removed item"});
+});
+```
+
+
+
+
 
 <!-- - How to build APIs with express:
   - `app.get`
@@ -771,7 +1022,7 @@ TBD
   - url params
   - query params -->
 
-## Ephemeral Data Storage
+<!-- ## Ephemeral Data Storage
 
 TBD
 
@@ -779,7 +1030,7 @@ TBD
 
 - Storing/updating json object on the server
 - Writing files to the server
-- maybe for later: node-fetch/isomorphic fetch or external API requests from the server
+- maybe for later: node-fetch/isomorphic fetch or external API requests from the server -->
 
 ***
 ***
