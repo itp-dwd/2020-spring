@@ -85,7 +85,7 @@ Here we outline some of the major differences, uses, advantages, and disadvantag
 | **Disadvantages** | 1. Does not have access to your local file system | 1. Has no "window" or DOM or access to the browser environment, 2. Can be more abstract since feedback is only through the terminal | 
 | **Purpose** | 1. For adding interactivity and functionality to websites and client facing applications and 2. To communicate with servers via APIs to get data and bring them to the client. | 1. For handling data, serving up websites, for interfacing with a database, for automating processes and 2. To create API endpoints for client-side applications to send and retrieve data.  | 
 
-If you ever wondered why we need to run a **local web server** when we work on clientside projects to access images and external files like `.json` data or `.js` files, it's because we need a *server* to *serve up* those external files living outside of the HTML context. (Is this of those, "OMG I get it now" moments?). Remember, your client-side JavaScript can only access what is going on in the browser, so in order to access those other files, you need server-side code to make those files living in your file system accessible to your browser. 
+If you ever wondered why we need to run a **local web server** when we work on client-side projects to access images and external files like `.json` data or `.js` files, it's because we need a *server* to *serve up* those external files living outside of the HTML context. (Is this of those, "OMG I get it now" moments?). Remember, your client-side JavaScript can only access what is going on in the browser, so in order to access those other files, you need server-side code to make those files living in your file system accessible to your browser. 
 
 This guide will show you how you can program your own web servers and build your own APIs to make files and data accessible from a local file system to your browser context. 
 
@@ -117,13 +117,13 @@ This guide will show you how you can program your own web servers and build your
 # SERVER-SIDE JAVASCRIPT WITH NODE.JS: THE BASICS
 
 ## WHAT IS NODE.JS
-Before we can get into programming our own webservers, we will take a second to explore the basics of server-side JavaScript with Node.js. 
+Before we can get into programming our own web servers, we will take a second to explore the basics of server-side JavaScript with Node.js. 
 
 Let's start with answering the question: What is Node.js? Node.js is a JavaScript that runs on the server rather than in the browser. 
 
 In the past, we might write server-side code in Python, PHP, Java, C/C++, or Ruby. Whether it is Python or Ruby or Node.js, they all more or less do the same thing -- they allow you to write code that accesses/manipulates/runs computation on the files and data on your local file system. 
 
-Aside: In my own experiences doing research and data analysis, I was writing code in Python and R to take big data files, run scripts that would do data cleaning and processing, calculate statistics, and generate figures and graphs of the data we'd collected from our weather and pollution sensors. During this time, I never interfaced with the web browser. We would just write code that ran on our machines that would output files into a folder so we could analyze our results and write about it later. Never in this process did I have to interface with a browser or even the internet for that matter. We just wrote code that was meant to live (and die) on our machines (or to be shared with other scientists and researchers). Another way to think about this is like writing the code for software that just lives on your computer like the Arduino IDE or Microsoft Word and Excel -- those progams can interface with files and directories on your machine, but otherwise those software just live on your computer.  
+Aside: In my own experiences doing research and data analysis, I was writing code in Python and R to take big data files, run scripts that would do data cleaning and processing, calculate statistics, and generate figures and graphs of the data we'd collected from our weather and pollution sensors. During this time, I never interfaced with the web browser. We would just write code that ran on our machines that would output files into a folder so we could analyze our results and write about it later. Never in this process did I have to interface with a browser or even the internet for that matter. We just wrote code that was meant to live (and die) on our machines (or to be shared with other scientists and researchers). Another way to think about this is like writing the code for software that just lives on your computer like the Arduino IDE or Microsoft Word and Excel -- those programs can interface with files and directories on your machine, but otherwise those software just live on your computer.  
 
 The neat thing about these server-side programming languages is that they allow you to write code so that can take files living on your local file system and *serve* up files and data to the internet so that other people can access: 
 
@@ -230,7 +230,7 @@ v10.15.0
 
 There are some libraries that are part of the **core node libraries** which means we don't need to download anything using `npm` in order to use them. Instead, we can just import them directly into our projects and start using them. Some of the core node libraries include:
 
-| libary name | description |
+| library name | description |
 | :---        | ---         |
 | `'fs'`      | File System - a helper library for accessing files in your local file system |
 | `'path'`    | Path - a helper library for helping to resolve file paths to files on your local file system | 
