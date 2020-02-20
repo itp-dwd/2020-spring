@@ -52,8 +52,12 @@ Before continuing, you should make sure to have explored the following guides an
   - [EXPRESS API STRUCTURE](#express-api-structure)
   - [API ROUTES: PART 1 - HTTP VERBS](#api-routes-part-1---http-verbs)
     - [HTTP Verbs:](#http-verbs)
-  - [CRUD with Express.js: Dream Collector](#crud-with-expressjs-dream-collector)
+  - [Introduction to CRUD with persistence: Pizza Topping API](#introduction-to-crud-with-persistence-pizza-topping-api)
     - [SETUP](#setup-1)
+    - [The "Model": Reading and Writing from a JSON file](#the-%22model%22-reading-and-writing-from-a-json-file)
+    - [The "Controller": Connecting endpoints to the Model](#the-%22controller%22-connecting-endpoints-to-the-model)
+  - [CRUD with Express.js: Dream Collector](#crud-with-expressjs-dream-collector)
+    - [SETUP](#setup-2)
     - [GET](#get)
     - [POST](#post)
     - [PUT](#put)
@@ -780,7 +784,182 @@ HTTP/HTTPS is one of the main protocols that allow us to communicate across the 
 
 In Express.js we define in our code *how we expect* people to communicate with the server. As the designer and developer of your server's API, you will be creating the routes where you want people to interface with your server (and your data).
 
-Hopefully, this makes sense conceptually. Let's now walk through how this translates into code using an example. 
+Hopefully, this makes sense conceptually. Let's now walk through how this translates into code using an example
+
+## Introduction to CRUD with persistence: Pizza Topping API
+
+We are now going to build a pizza topping API. This is also covered as part of the [back end foundations workbook](https://github.com/itp-dwd/back-end-foundations-workbook).
+
+### SETUP
+```sh
+# 1. Create a new project folder
+~ $ mkdir ~/Desktop/pizza-topping-api
+# 2. change directories
+(pizza-topping-api) $ cd ~/Desktop/pizza-topping-api
+# 3. create your server file
+(pizza-topping-api) $ touch server.js
+# 4. run npm init
+(pizza-topping-api) $ npm init
+# 5. install your dependencies: express - for creating your express app
+(pizza-topping-api) $ npm install express
+# 7. Create a folder called "db"
+(pizza-topping-api) $ mkdir db
+# 8. Create a file called "toppings.json"
+(pizza-topping-api) $ touch db/db.json
+# 9. Copy the contents of https://raw.githubusercontent.com/dariusk/corpora/master/data/foods/pizzaToppings.json to this file
+(pizza-topping-api) $ curl https://raw.githubusercontent.com/dariusk/corpora/master/data/foods/pizzaToppings.json >> db/db.json
+```
+
+Your project scaffold will look like this now:
+
+```txt
+/pizza-topping-api
+  index.js
+  /db
+    toppings.json
+  /node_modules
+```
+
+In your `server.js` file now add the following code. The following subsections will explain each section
+
+```js
+// 1. Add your dependencies
+const express = require("express");
+const path = require("path");
+const fs = require("fs");
+
+// 2. Instantiate your Express application
+const app = express();
+
+// 3. Add your express middleware
+// 3. Middleware: serve public as a static folder
+app.use(express.static("public"));
+// 3. Middleware: parse http request body as json
+app.use(express.json());
+
+// This is not necessary for the API, but let's keep it in, why not
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "views/index.html"));
+});
+
+// 4. Add functions to read/write to toppings.json when API requests are made
+// 4.1 Returns the contents as JSON of toppings.json
+function getToppings() {
+  const contents = fs.readFileSync(path.join(__dirname, "./data/toppings.json"));
+  const obj = JSON.parse(contents);
+  return obj;
+}
+
+// 4.2 Adds a new topping to the pizzaToppings array,
+// then saves the object to disk
+function addTopping(topping) {
+  const toppings = getToppings();
+  // Push updates the original array
+  toppings.pizzaToppings.push(topping);
+  fs.writeFileSync(path.join(__dirname, "./data/toppings.json"), JSON.stringify(toppings));
+  return toppings;
+}
+
+// 4.2 Deletes a topping from the pizzaToppings array,
+// then saves the object to disk
+function deleteTopping(toppingToDelete) {
+  const toppings = getToppings();
+  // filter does NOT change the original array
+  toppings.pizzaToppings = toppings.pizzaToppings.filter(topping => topping !== toppingToDelete);
+  fs.writeFileSync(path.join(__dirname, "./data/toppings.json"), JSON.stringify(toppings));
+  return toppings;
+}
+
+// 5 Create API endpoints
+// 5.1 GET /toppings - returns the list of all toppings
+app.get("/toppings", (req, res) => {
+  const toppings = getToppings();
+  res.json(toppings);
+});
+
+// 5.2 POST /toppings - adds the topping in req.body.topping to the topping array
+app.post("/toppings", (req, res) => {
+  const topping = req.body.topping;
+  const toppings = addTopping(topping);
+  // often, updated list will be returned by API
+  res.json(toppings);
+});
+
+// 5.2 DELETE /toppings/:name - removes the topping in :name from the topping array
+app.delete("/toppings/:name", (req, res) => {
+  const toppingToDelete = req.params.name;
+  const toppings = deleteTopping(toppingToDelete);
+  res.json(toppings);
+});
+
+// 6 Start the server
+app.listen(3000, () => {
+  console.log("Server is listening on port 3000!");
+});
+
+```
+
+### The "Model": Reading and Writing from a JSON file
+We are using a JSON file called `toppings.json` as our data store. We want our data to persist—this means that when we shut down and restart our server, the data will still be there. The JSON file is our **source of truth**. Therefore, every time we need to update the list of toppings, we need to read from the JSON file, update the JS object, and then write the object back to JSON. The functions that update data persistence are called the Model.
+
+```js
+function getToppings() {
+  const contents = fs.readFileSync(path.join(__dirname, "./data/toppings.json"));
+  const obj = JSON.parse(contents);
+  return obj;
+}
+
+// Adds a new topping to the pizzaToppings array,
+// then saves the object to disk
+function addTopping(topping) {
+  const toppings = getToppings();
+  // Push updates the original array
+  toppings.pizzaToppings.push(topping);
+
+  //After updating the object, write back to disk
+  fs.writeFileSync(path.join(__dirname, "./data/toppings.json"), JSON.stringify(toppings));
+  return toppings;
+}
+
+// Deletes a topping from the pizzaToppings array,
+// then saves the object to disk
+function deleteTopping(toppingToDelete) {
+  const toppings = getToppings();
+  // filter does NOT change the original array
+  toppings.pizzaToppings = toppings.pizzaToppings.filter(topping => topping !== toppingToDelete);
+
+  //After updating the object, write back to disk
+  fs.writeFileSync(path.join(__dirname, "./data/toppings.json"), JSON.stringify(toppings));
+  return toppings;
+}
+```
+
+### The "Controller": Connecting endpoints to the Model
+The functions that handle API requests and route them to the right Model functions are called the Controller. They parse the data from the request and form the response.
+
+```js
+// 5 Create API endpoints
+// GET /toppings - returns the list of all toppings
+app.get("/toppings", (req, res) => {
+  const toppings = getToppings();
+  res.json(toppings);
+});
+
+// POST /toppings - adds the topping in req.body.topping to the topping array
+app.post("/toppings", (req, res) => {
+  const topping = req.body.topping;
+  const toppings = addTopping(topping);
+  // often, updated list will be returned by API
+  res.json(toppings);
+});
+
+// DELETE /toppings/:name - removes the topping in :name from the topping array
+app.delete("/toppings/:name", (req, res) => {
+  const toppingToDelete = req.params.name;
+  const toppings = deleteTopping(toppingToDelete);
+  res.json(toppings);
+});
+```
 
 ## CRUD with Express.js: Dream Collector
 
