@@ -11,28 +11,66 @@ This week your assignment is to **leap into the world of server-side programming
 * Similar to the previous weeks' assignments, you will start by designing your API on paper. You will be required to conceptually diagram how your requests and data will flow between your client and server. 
 
 ### Part 2: Development
-* **Client Side**:
-  * your client side code (HTML, CSS, JavaScript) will be served through your web server.
-  * You will use the `async/await` and the `fetch()` function to make network requests that allow your client to communicate with your server's API.
-* **Server Side**:
-  * Your client side code will be served through your web server by:
-    * 1. creating a static file server middleware
-    * 2. setting the default API route of your server to send the `index.html` file in your static file directory.
+* Server Side:
+  * You will need to use `npm init` to create your Node project
+  * You will add dependencies using `npm install`
   * Your server-side code will use Express.js to define meaningful API routes that allow you to CREATE, READ, UPDATE, and DELETE data on the server using http requests. You will use:
     * GET: `app.get()`
     * POST: `app.post()`
     * PUT: `app.put()`
     * DELETE: `app.delete()`
+  * You will create multiple endpoints that do at least one of the following:
+    * Access an API that can't be used client-side, due to CORS or Authentication reasons
+    * You will read and write to a JSON file data store
+  * Your client side code will be served through your web server by:
+    * 1. creating a static file server middleware
+    * 2. setting the default API route of your server to send the `index.html` file in your static file directory.
+  * You can start your server by running `npm start` (otherwise it won't work with Glitch!)
+* Client Side:
+  * You will use the `async/await` and the `fetch()` function to make network requests that allow your client to communicate with your server's API.
+  * The data from the API will be translated into HTML
+  * The focus this week is on creating an API and connected it to the browser, so the design and layout can be minimal, but there should be something.
+  * your client side code (HTML, CSS, JavaScript) will be served through your `express` web server.
+  * This static server will also serve any necessary CSS and image/video/etc. files
+
+This is how your code should be structured:
+```
+package.json
+package-lock.json
+.gitignore
+index.js
+db/
+  data.json
+server/
+  other-server-side-js-file.js
+public/
+  js/
+    main.js
+  css/
+    main.css
+  assets/
+```
+
 
 ### Part 3: Deployment
 Your website will be served using **Glitch** and will be pulled from a remote Github repository. You will need to practice good git tracking and connect your local git repository to a remote Github Repository. 
 
+### Part 4: API Documentation
+
+  
+### Part 5: README Documentation
+* You must have a README.md that explains:
+    * how to set up and run your application.
+    * how you built your HTML page
+    * inspiration, process documentation, struggles, references, and questions, like your ITP blog
+    * and how you deployed your work to [Glitch.com](https://glitch.com).
+  * You may use this [README template](/templates/readme-template.md) to structure your README documentation and blog post
 
 ## Submission
 
 **Details:**
-* Due Date: DATE
-* Your assignment must be turned in BEFORE midnight on Sunday, the day before class, DATE.
+* Due Date: Week 5 - March 2
+* Your assignment must be turned in BEFORE midnight on Sunday, the day before class, March 2.
 
 **📨All Assignments should be submitted to your respective section:**
 * Section 1:

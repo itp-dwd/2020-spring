@@ -73,7 +73,7 @@ You can copy the code from Assignment `02` from last week and put your static HT
 
 **Details:**
 * Due Date: week 4 - Feb 24
-* Your assignment must be turned in BEFORE midnight on Sunday, the day before class, Feb 9.
+* Your assignment must be turned in BEFORE midnight on Sunday, the day before class, Feb 24.
 
 **📨All Assignments should be submitted to your respective section:**
 * Section 1:
