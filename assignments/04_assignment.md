@@ -28,9 +28,9 @@ This week your assignment is to **leap into the world of server-side programming
   * You can start your server by running `npm start` (otherwise it won't work with Glitch!)
 * Client Side:
   * You will use the `async/await` and the `fetch()` function to make network requests that allow your client to communicate with your server's API.
-  * The data from the API will be translated into HTML
-  * The focus this week is on creating an API and connected it to the browser, so the design and layout can be minimal, but there should be something.
-  * your client side code (HTML, CSS, JavaScript) will be served through your `express` web server.
+  * The data from the API will be transformed dynamically, using JS, into HTML
+  * The focus this week is on creating an API and connected it to the browser, so the design and layout can be simple.
+  * Your client side code (HTML, CSS, JavaScript) will be served through your `express` web server.
   * This static server will also serve any necessary CSS and image/video/etc. files
 
 This is how your code should be structured:
@@ -56,10 +56,32 @@ public/
 Your website will be served using **Glitch** and will be pulled from a remote Github repository. You will need to practice good git tracking and connect your local git repository to a remote Github Repository. 
 
 ### Part 4: API Documentation
-
+* You must have a file in your repository called `API.md` that contains a list of all endpoints, with the following information:
+  * The route, i.e. `/toppings`
+  * The HTTP verb, i.e. `GET`
+  * Query string parameters, i.e. `q=pepperoni`
+  * Any URL parameters, i.e. `/toppings/:name`
+  * Request body format, i.e.
+  ```json
+  {
+    topping: "pepperoni"
+  }
+  ```
+  * Response format, i.e.
+  ```json
+  { 
+    description: "A list of pizza toppings.",
+    pizzaToppings: [
+      "pepperoni",
+      "ham",
+      "pineapple",
+      ...
+    ]
+  }
+  ```
   
 ### Part 5: README Documentation
-* You must have a README.md that explains:
+* You must have a `README.md` that explains:
     * how to set up and run your application.
     * how you built your HTML page
     * inspiration, process documentation, struggles, references, and questions, like your ITP blog
