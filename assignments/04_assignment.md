@@ -5,7 +5,7 @@
 This week your assignment is to **leap into the world of server-side programming** with Node.js/Express.js. In this project, you will write server-side JavaScript to **create an API** that accepts AJAX request coming from a client-side web application (that you've built) to **create**, **read**, **update**, and **delete** data that are living on your server. 
 
 ## Readings
-
+* [Back-end Foundations Guide](../guides/backend-foundations-guide.md)
 * [What is Node.js](https://www.youtube.com/watch?v=RF5_MPSNAtU&t=5s)
 * [Building and API in Node.js Series - Coding Train](https://www.youtube.com/watch?v=P-Upi9TMrBk&list=PLRqwX-V7Uu6Yyn-fBtGHfN0_xCtBwUkBp)
 
@@ -47,27 +47,49 @@ This week your assignment is to **leap into the world of server-side programming
   * Your client side code (HTML, CSS, JavaScript) will be served through your `express` web server.
   * This static server will also serve any necessary CSS and image/video/etc. files
 
-This is how your code should be structured:
-```
-package.json
-package-lock.json
-.gitignore
-index.js
-db/
-  data.json
-server/
-  other-server-side-js-file.js
-public/
-  js/
-    main.js
-  css/
-    main.css
-  assets/
-```
+  This is how your code should be structured:
+  ```
+  yourProject/
+    package.json
+    package-lock.json
+    .gitignore
+    index.js
+    db/
+      data.json
+    server/
+      your-custom-js-script.js
+    public/
+      js/
+        main.js
+      css/
+        main.css
+      assets/
+        mycat.png
+  ```
 
 
 ### Part 3: Deployment
 Your website will be served using **Glitch** and will be pulled from a remote Github repository. You will need to practice good git tracking and connect your local git repository to a remote Github Repository. 
+
+You must ensure that your `package.json` has all of the necessary components in order for your application to run. It should look something like this (but not exactly) -- pay particular attention to the "scripts" section:
+
+```json
+{
+  "name": "first-api",
+  "version": "0.0.1",
+  "description": "My first API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Cassie Tarakajian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
+```
 
 ### Part 4: API Documentation
 * You must have a file in your repository called `API.md` that contains a list of all endpoints, with the following information:
