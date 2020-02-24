@@ -11,7 +11,7 @@ This week your assignment is to **leap into the world of server-side programming
 * Similar to the previous weeks' assignments, you will start by designing your API on paper. You will be required to conceptually diagram how your requests and data will flow between your client and server. 
 
 ### Part 2: Development
-* Server Side:
+* **Server Side**:
   * You will need to use `npm init` to create your Node project
   * You will add dependencies using `npm install`
   * Your server-side code will use Express.js to define meaningful API routes that allow you to CREATE, READ, UPDATE, and DELETE data on the server using http requests. You will use:
@@ -25,8 +25,14 @@ This week your assignment is to **leap into the world of server-side programming
   * Your client side code will be served through your web server by:
     * 1. creating a static file server middleware
     * 2. setting the default API route of your server to send the `index.html` file in your static file directory.
-  * You can start your server by running `npm start` (otherwise it won't work with Glitch!)
-* Client Side:
+  * You will add the keyword `start` followed by the command to run your server.js file to the "script" property of your `package.json` so you can start your server by running `npm start` (otherwise it won't work with Glitch!). In `package.json`:
+  ```json
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  ```
+* **Client Side**:
   * You will use the `async/await` and the `fetch()` function to make network requests that allow your client to communicate with your server's API.
   * The data from the API will be transformed dynamically, using JS, into HTML
   * The focus this week is on creating an API and connected it to the browser, so the design and layout can be simple.
