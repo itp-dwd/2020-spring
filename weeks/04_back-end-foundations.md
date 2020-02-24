@@ -95,15 +95,16 @@ TBD
 
 ### Building APIs with Express.js & the basics of CRUD
 
-* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
+* [Backend Foundations Guide - Basics of CRUD in RESTful APIs](../guides/backend-foundations-guide.md#introduction-to-crud-with-persistence-pizza-topping-api)
 
 ### Tools for Interfacing with APIs
 
-* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
+* [Backend Foundations Guide - cURL](../guides/backend-foundations-guide.md#curl)
+* [Backend Foundations Guide - Postman](../guides/backend-foundations-guide.md#postman)
 
 ### Interfacing with APIs from the client
 
-* [Backend Foundations Guide](../guides/backend-foundations-guide.md)
+* [Backend Foundations Guide](../guides/backend-foundations-guide.md#client-side-interfacing)
 
 <!-- ### JavaScript in the Browser vs Node
 - Node
@@ -186,9 +187,9 @@ TBD
 
 ## STUDIO: BACKEND FOUNDATIONS WORKBOOK
 
-Learn by doing with the [Back-End Foundations Workbook](#). Here you will encounter a set of guided challenges that will introduce you to the basic building blocks necessary to build a basic web server and API. 
+Learn by doing with the [Back-End Foundations Workbook](../guides/backend-foundations-guide.md). Here you will encounter a set of guided challenges that will introduce you to the basic building blocks necessary to build a basic web server and API. 
 
-* ↳ [Back-End Foundations Workbook](#)
+* ↳ [Back-End Foundations Workbook](../guides/backend-foundations-guide.md)
 
 ***
 ***

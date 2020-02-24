@@ -6,13 +6,15 @@ This week your assignment is to **leap into the world of server-side programming
 
 ## Readings
 * [Back-end Foundations Guide](../guides/backend-foundations-guide.md)
+
 * [What is Node.js](https://www.youtube.com/watch?v=RF5_MPSNAtU&t=5s)
 * [Building and API in Node.js Series - Coding Train](https://www.youtube.com/watch?v=P-Upi9TMrBk&list=PLRqwX-V7Uu6Yyn-fBtGHfN0_xCtBwUkBp)
 
 ## Additional References
 * [Data & APIs Coding Train Series by @shiffman](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X)
 * [Simple Express API Tutorial by @joeyklee](https://github.com/joeyklee/simple-express-api)
-
+* [Express Tutorial - Flavio Copes](https://flaviocopes.com/express/)
+  
 ## Requirements
 
 ### Part 1: Designing your API

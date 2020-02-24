@@ -26,7 +26,7 @@ Before continuing, you should make sure to have explored the following guides an
   - [BASICS OF ACCESSING NODE.JS LIBRARIES](#basics-of-accessing-nodejs-libraries)
   - [A SIMPLE NODE.JS SCRIPT](#a-simple-nodejs-script)
   - [RECAP](#recap)
-  - [References](#references)
+  - [REFERENCES](#references)
 - [NODE.JS & THE NODE PACKAGE MANAGER (NPM)](#nodejs--the-node-package-manager-npm)
   - [What is NPM and what are Node Modules](#what-is-npm-and-what-are-node-modules)
   - [Project management with package.json](#project-management-with-packagejson)
@@ -354,7 +354,7 @@ A note on `.readFileSync()` and `.writeFileSync()`: These are synchronous functi
 
 So we've looked at using node.js libraries that are baked in to Node.js already. In the next section we are going to learn more about the NPM - node package manager - and the Node.js ecosystem and how to bring in 3rd-party libraries that make it easier to make more complex applications. 
 
-## References
+## REFERENCES
 * https://flaviocopes.com/how-to-check-if-file-exists-node/
 
 ***
