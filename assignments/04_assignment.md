@@ -4,6 +4,14 @@
 
 This week your assignment is to **leap into the world of server-side programming** with Node.js/Express.js. In this project, you will write server-side JavaScript to **create an API** that accepts AJAX request coming from a client-side web application (that you've built) to **create**, **read**, **update**, and **delete** data that are living on your server. 
 
+## Readings
+
+* [What is Node.js](https://www.youtube.com/watch?v=RF5_MPSNAtU&t=5s)
+* [Building and API in Node.js Series - Coding Train](https://www.youtube.com/watch?v=P-Upi9TMrBk&list=PLRqwX-V7Uu6Yyn-fBtGHfN0_xCtBwUkBp)
+
+## Additional References
+* [Data & APIs Coding Train Series by @shiffman](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X)
+* [Simple Express API Tutorial by @joeyklee](https://github.com/joeyklee/simple-express-api)
 
 ## Requirements
 
