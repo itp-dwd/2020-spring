@@ -11,6 +11,8 @@ In this guide we focus on the foundational knowledge of server-side JavaScript w
 Before continuing, you should make sure to have explored the following guides and resources:
 
 * [front-end javascript guide](javascript-frontend-guide.md)
+* [Dev Tools Guide](dev-tools.md)
+* [Node Debugger Guide](node-debugger.md)
 
 
 - [BACKEND FOUNDATIONS GUIDE](#backend-foundations-guide)
