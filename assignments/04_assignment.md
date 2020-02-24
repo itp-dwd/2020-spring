@@ -93,6 +93,8 @@ You must ensure that your `package.json` has all of the necessary components in 
 }
 ```
 
+If you are using an API and need to store secret keys, you will need to create a `.env` file in your Glitch project, **after** you import it from GitHub, since it won't be checked into your project because of your `.gitignore`. You can access variables in your `.env` file in any Node scripts in `process.env.VARIABLR_NAME`. [See this guide from Glitch for more](https://glitch.com/help/env/).
+
 ### PART 4: API DOCUMENTATION
 * You must have a file in your repository called `API.md` that contains a list of all endpoints, with the following information:
   * The route, i.e. `/toppings`
