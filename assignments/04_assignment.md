@@ -1,26 +1,26 @@
 # Assignment 4: API Love You - Oh CRUD
 
-## Briefing
+## BRIEFING
 
 This week your assignment is to **leap into the world of server-side programming** with Node.js/Express.js. In this project, you will write server-side JavaScript to **create an API** that accepts AJAX request coming from a client-side web application (that you've built) to **create**, **read**, **update**, and **delete** data that are living on your server. 
 
-## Readings
+## READINGS
 * [Back-end Foundations Guide](../guides/backend-foundations-guide.md)
 
 * [What is Node.js](https://www.youtube.com/watch?v=RF5_MPSNAtU&t=5s)
 * [Building and API in Node.js Series - Coding Train](https://www.youtube.com/watch?v=P-Upi9TMrBk&list=PLRqwX-V7Uu6Yyn-fBtGHfN0_xCtBwUkBp)
 
-## Additional References
+## ADDITIONAL REFERENCES
 * [Data & APIs Coding Train Series by @shiffman](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X)
 * [Simple Express API Tutorial by @joeyklee](https://github.com/joeyklee/simple-express-api)
 * [Express Tutorial - Flavio Copes](https://flaviocopes.com/express/)
   
-## Requirements
+## REQUIREMENTS
 
-### Part 1: Designing your API
+### PART 1: DESIGNING YOUR API
 * Similar to the previous weeks' assignments, you will start by designing your API on paper. You will be required to conceptually diagram how your requests and data will flow between your client and server. 
 
-### Part 2: Development
+### PART 2: DEVELOPMENT
 * **Server Side**:
   * You will need to use `npm init` to create your Node project
   * You will add dependencies using `npm install`
@@ -70,7 +70,7 @@ This week your assignment is to **leap into the world of server-side programming
   ```
 
 
-### Part 3: Deployment
+### PART 3: DEPLOYMENT
 Your website will be served using **Glitch** and will be pulled from a remote Github repository. You will need to practice good git tracking and connect your local git repository to a remote Github Repository. 
 
 You must ensure that your `package.json` has all of the necessary components in order for your application to run. It should look something like this (but not exactly) -- pay particular attention to the "scripts" section:
@@ -93,7 +93,7 @@ You must ensure that your `package.json` has all of the necessary components in 
 }
 ```
 
-### Part 4: API Documentation
+### PART 4: API DOCUMENTATION
 * You must have a file in your repository called `API.md` that contains a list of all endpoints, with the following information:
   * The route, i.e. `/toppings`
   * The HTTP verb, i.e. `GET`
@@ -118,7 +118,7 @@ You must ensure that your `package.json` has all of the necessary components in 
   }
   ```
   
-### Part 5: README Documentation
+### PART 5: README DOCUMENTATION
 * You must have a `README.md` that explains:
     * how to set up and run your application.
     * how you built your HTML page
@@ -126,7 +126,7 @@ You must ensure that your `package.json` has all of the necessary components in 
     * and how you deployed your work to [Glitch.com](https://glitch.com).
   * You may use this [README template](/templates/readme-template.md) to structure your README documentation and blog post
 
-## Submission
+## SUBMISSION
 
 **Details:**
 * Due Date: Week 5 - March 2

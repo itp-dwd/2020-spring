@@ -1,6 +1,6 @@
 # WEEK 03: BACK-END FOUNDATIONS
 
-* 🌟 Guest Speaker, [Yuraima Estevez](https://www.yuraima.com/)
+* 🌟 Guest Speaker, [Yuraima Estevez](https://www.yuraima.com/), [Accessibility Talk](https://reactnewyork.com/#videos)
 
 ## SLIDES
 * ↳ [Link to Week 4 Slides: Back end Foundations](#)
@@ -77,38 +77,61 @@ Topics we are not covering, but are of importance:
 ## MATERIALS NEEDED
 
 * ↳ please see [Developer Setup Guide - Quickstart](../guides/developer-setup-guide.md#quickstart)
-### Outcomes & Goals
 
   
 ## TOPICS
 
-### The client vs. the Server
+### THE CLIENT VS. THE SERVER
 
 * [Backend Foundations Guide - Client vs Server](../guides/backend-foundations-guide.md#client-side-javascript-vs-server-side-javascript)
 
-### Server-side JavaScript with Node.js
+### SERVER-SIDE JAVASCRIPT WITH NODE.JS
 
 * [Backend Foundations Guide - Server-side JavaScript with Node.js - The Basics](../guides/backend-foundations-guide.md#server-side-javascript-with-nodejs-the-basics)
 
-### NPM, the Node Package Manager
+### NPM, THE NODE PACKAGE MANAGER
 * [Backend Foundations Guide - NPM](../guides/backend-foundations-guide.md#nodejs--the-node-package-manager-npm)
 
-### Friendly web servers with Express.js
+### FRIENDLY WEB SERVERS WITH EXPRESS.JS
 
 * [Backend Foundations Guide - Node with Express](../guides/backend-foundations-guide.md#simple-expressjs-web-server)
 
-### Building APIs with Express.js & the basics of CRUD
+### BUILDING APIS WITH EXPRESS.JS & THE BASICS OF CRUD
 
 * [Backend Foundations Guide - Basics of CRUD in RESTful APIs](../guides/backend-foundations-guide.md#introduction-to-crud-with-persistence-pizza-topping-api)
 
-### Tools for Interfacing with APIs
+### TOOLS FOR INTERFACING WITH APIS
 
 * [Backend Foundations Guide - cURL](../guides/backend-foundations-guide.md#curl)
 * [Backend Foundations Guide - Postman](../guides/backend-foundations-guide.md#postman)
 
-### Interfacing with APIs from the client
+### INTERFACING WITH APIS FROM THE CLIENT
 
 * [Backend Foundations Guide](../guides/backend-foundations-guide.md#client-side-interfacing)
+
+
+***
+***
+***
+
+## STUDIO: BACKEND FOUNDATIONS WORKBOOK
+
+Learn by doing with the [Back-End Foundations Workbook](../guides/backend-foundations-guide.md). Here you will encounter a set of guided challenges that will introduce you to the basic building blocks necessary to build a basic web server and API. 
+
+* ↳ [Back-End Foundations Workbook](../guides/backend-foundations-guide.md)
+
+***
+***
+***
+
+## ASSIGNMENT 3: API Love You - Oh CRUD
+
+* ↳ [Link to Assignment](../assignments/04_assignment.md)
+
+***
+***
+***
+
 
 <!-- ### JavaScript in the Browser vs Node
 - Node
@@ -183,26 +206,3 @@ Topics we are not covering, but are of importance:
 - Introduction to Postman
 - using `fetch` to grab data
 - render to front end using template strings -->
-
-
-***
-***
-***
-
-## STUDIO: BACKEND FOUNDATIONS WORKBOOK
-
-Learn by doing with the [Back-End Foundations Workbook](../guides/backend-foundations-guide.md). Here you will encounter a set of guided challenges that will introduce you to the basic building blocks necessary to build a basic web server and API. 
-
-* ↳ [Back-End Foundations Workbook](../guides/backend-foundations-guide.md)
-
-***
-***
-***
-
-## ASSIGNMENT 3: API Love You - Oh CRUD
-
-* ↳ [Link to Assignment](../assignments/04_assignment.md)
-
-***
-***
-***
