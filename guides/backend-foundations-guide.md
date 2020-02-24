@@ -1233,7 +1233,7 @@ TBD
 
 ## Client-side interfacing
 
-In the [Front-end JavaScript guide](javascript-frontend-guide.md), you saw how you can you the `fetch()` function to make network requests to 3rd party APIs. The only difference here is that now, you will be writing client-side code to interface with *your own api*.
+In the [Front-end JavaScript guide - Fetch API](javascript-frontend-guide.md#fetch-api) section, you saw how you can you the `fetch()` function to make network requests to 3rd party APIs. The only difference here is that now, you will be writing client-side code to interface with *your own api*. 
 
 
 ### Local development
