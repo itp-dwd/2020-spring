@@ -1,5 +1,7 @@
 # WEEK 03: BACK-END FOUNDATIONS
 
+* 🌟 Guest Speaker, [Yuraima Estevez](https://www.yuraima.com/)
+
 ## SLIDES
 * ↳ [Link to Week 4 Slides: Back end Foundations](#)
 
@@ -68,7 +70,9 @@ Topics we are not covering, but are of importance:
 
 ## PACING / DURATION
 
-TBD
+* :30 - Guest Speaker, [Yuraima Estevez](https://www.yuraima.com/)
+* :30 - Overview of Backend Foundations with Node.js and Express.js
+* :60 - Studio / Live coding express API.
 
 ## MATERIALS NEEDED
 
