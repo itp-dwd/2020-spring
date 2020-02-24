@@ -67,6 +67,8 @@ Before continuing, you should make sure to have explored the following guides an
   - [cURL](#curl)
   - [Postman](#postman)
   - [Client-side interfacing](#client-side-interfacing)
+    - [Local development](#local-development)
+    - [Changing your request URL for deployment](#changing-your-request-url-for-deployment)
 
 ***
 ***
@@ -1218,13 +1220,52 @@ TBD
 # Interfacing with your API
 
 ## cURL
-- Quick intro to cURL
+> cURL is a commandline tool for creating network requests. The name stands for "Client URL" - https://en.wikipedia.org/wiki/CURL. 
+
+
+- See: [Curl Cheatsheet](curl-cheatsheet.md)
 
 ## Postman
-- Introduction to Postman
+> Postman is a GUI based tool that allows you to test RESTful APIs. It is basically like cURL except with way more features and with a graphical user interface. 
+
+- See: [Postman Cheatsheet](postman.md)
+
 
 ## Client-side interfacing
-- using `fetch` to grab data
+
+In the [Front-end JavaScript guide](javascript-frontend-guide.md), you saw how you can you the `fetch()` function to make network requests to 3rd party APIs. The only difference here is that now, you will be writing client-side code to interface with *your own api*.
+
+
+### Local development
+
+When working locally, you will be making your network requests with the base url of your local development server. If you've been following along with this guide, it will be:
+
+**Base URL:**
+```
+http://localhost:3000/
+```
+
+**API Routes**: for example
+```
+http://localhost:3000/api/v1/dreams
+```
+
+In your client side code, you can begin to write your GET, PUT, POST, DELETE requests to those API endpoints that you defined. You can see how you can send different requests with `fetch()` by passing in the relevant `method` in the **options** argument as well as any necessary `body` data. Those details are in the [javascript-frontend-guide - Fetch API](javascript-frontend-guide.md#fetch-api)
+
+
+### Changing your request URL for deployment
+
+When you have deployed to Glitch, for example, you will need to change your baseURL to your API such that it matches the URL to your application. 
+
+**Base URL:**
+```
+http://localhost:3000/ ==> https://joeyklee-list-project.glitch.me/
+```
+
+**API Routes**: for example
+```
+http://localhost:3000/api/v1/dreams ==> https://joeyklee-list-project.glitch.me/api/v1/dreams
+```
 
 
 ***

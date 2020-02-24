@@ -3,7 +3,7 @@
 * 🌟 Guest Speaker, [Yuraima Estevez](https://www.yuraima.com/), [Accessibility Talk](https://reactnewyork.com/#videos)
 
 ## SLIDES
-* ↳ [Link to Week 4 Slides: Back end Foundations](#)
+* ↳ [Link to Week 4 Slides: Back end Foundations](https://docs.google.com/presentation/d/1jE6lTeUDnePIjwSl2h4lP3K0glPqUfMDSr_HKdaNGm0/edit?usp=sharing)
 
 ## ABOUT
 
@@ -107,7 +107,7 @@ Topics we are not covering, but are of importance:
 
 ### INTERFACING WITH APIS FROM THE CLIENT
 
-* [Backend Foundations Guide](../guides/backend-foundations-guide.md#client-side-interfacing)
+* [Backend Foundations Guide - client-side interfacing](../guides/backend-foundations-guide.md#client-side-interfacing)
 
 
 ***
