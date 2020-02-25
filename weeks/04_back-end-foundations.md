@@ -118,7 +118,7 @@ Topics we are not covering, but are of importance:
 
 Learn by doing with the [Back-End Foundations Workbook](../guides/backend-foundations-guide.md). Here you will encounter a set of guided challenges that will introduce you to the basic building blocks necessary to build a basic web server and API. 
 
-* ↳ [Back-End Foundations Workbook](../guides/backend-foundations-guide.md)
+* ↳ [Back-End Foundations Workbook](https://github.com/itp-dwd/back-end-foundations-workbook)
 
 ***
 ***
