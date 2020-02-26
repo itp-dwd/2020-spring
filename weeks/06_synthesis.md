@@ -7,6 +7,10 @@
 
 This week, we will be putting all of the pieces together: `design → front end development → back end development → databases → deployment`.
 
+* MongoDB
+* Deployment to MongoDB Atlas
+* Deployment to Heroku
+
 
 
 

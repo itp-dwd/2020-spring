@@ -1,4 +1,61 @@
-# Week 04: Databases
+# Week 05: Databases
+
+## Slides
+* ↳ [Link to Week % Slides: Databases](https://docs.google.com/presentation/d/1dY3tUGLn87aO7lqKDjcfaXvsgrOjDIJFya9DzKVPBJs/edit?usp=sharing)
+
+## About
+
+This week we will learn how to persist data in web applications using a database. We will learn about CRUD conventions for data storage and retrieval.
+
+Emphasis this week will be understand the need for databases, rather than using a JSON data store, CRUD conventions, and connecting user events to API requests to database actions. 
+
+### Outcomes & Goals
+
+In this class we will be:
+* Translating UI/UX designs into data models
+* Learning the vocabulary of NoSQL databases
+* Learning about Rest API/CRUD conventions
+* Learning how to set and retrieve data from NeDB
+
+Students will walk away with a deeper understanding of:
+* Data Models
+* NoSQL Databases
+* CRUD
+* How web applications consume custom, dynamic data
+
+* **Data Models**
+  * What is a data model?
+  * How do you translate interface design into a data model?
+* **NoSQL Database**
+  * What is a document database?
+  * What is a document?
+  * What is an id/ObjectID?
+  * What is a key-value pair?
+  * What is a key-array pair?
+  * What is a nested document?
+  * How do you relate documents to each other?
+  * What types of relationships can documents have?
+* **Databases + CRUD**
+  * How do you map data actions to API endpoints?
+  * What are conventions, and what are choices that you, as the developer, need to make?
+* **Deployment**
+  * How do you use databases in a production web application?
+  * What does it mean to responsibly store data?
+  * What are ways that you can let users have control over their data?'
+
+## What we are not covering
+- Advanced databases (indexes, tree structures,join tables, etc.)
+
+## Pacing / Duration
+* :30 Homework/Review
+* :20 Translating interfaces to JSON
+* :30 Using a JSON file data store
+* :5 Break
+* :60 Using NeDB
+* :5 Assignment
+
+## Materials Needed
+* Install MongoDB?
 
 <!-- 
 ### Lecture
