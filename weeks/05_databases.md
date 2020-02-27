@@ -27,8 +27,8 @@ Students will walk away with a deeper understanding of:
   * What is a data model?
   * How do you translate interface design into a data model?
 * **NoSQL Database**
-  * What is a document database?
   * What is a document?
+  * What is a collection?
   * What is an id/ObjectID?
   * What is a key-value pair?
   * What is a key-array pair?
