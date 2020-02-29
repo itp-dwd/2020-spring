@@ -1,15 +1,15 @@
 # Week 05: Databases
 
-## Slides
-* ↳ [Link to Week % Slides: Databases](https://docs.google.com/presentation/d/1dY3tUGLn87aO7lqKDjcfaXvsgrOjDIJFya9DzKVPBJs/edit?usp=sharing)
+## SLIDES
+* ↳ [Link to Week 5 Slides: Databases](https://docs.google.com/presentation/d/1dY3tUGLn87aO7lqKDjcfaXvsgrOjDIJFya9DzKVPBJs/edit?usp=sharing)
 
-## About
+## ABOUT
 
 This week we will learn how to persist data in web applications using a database. We will learn about CRUD conventions for data storage and retrieval.
 
 Emphasis this week will be understand the need for databases, rather than using a JSON data store, CRUD conventions, and connecting user events to API requests to database actions. 
 
-### Outcomes & Goals
+### OUTCOMES & GOALS
 
 In this class we will be:
 * Translating UI/UX designs into data models
@@ -43,10 +43,23 @@ Students will walk away with a deeper understanding of:
   * What does it mean to responsibly store data?
   * What are ways that you can let users have control over their data?'
 
-## What we are not covering
+<!-- 
+- Why do we need databases?
+- What are the different types of databases?
+- How is the data in databases structured?
+- In a document-based NoSQL database, what is a
+  - document?
+  - id? ObjectID? unique id?
+  - schema?
+  - collection?
+- What does it mean to responsibly store data?
+- What are ways that you can let users have control over their data?
+ -->
+
+## WHAT WE ARE NOT COVERING
 - Advanced databases (indexes, tree structures,join tables, etc.)
 
-## Pacing / Duration
+## PACING / DURATION
 * :30 Homework/Review
 * :20 Translating interfaces to JSON
 * :30 Using a JSON file data store
@@ -54,8 +67,50 @@ Students will walk away with a deeper understanding of:
 * :60 Using NeDB
 * :5 Assignment
 
-## Materials Needed
-* Install MongoDB?
+## MATERIALS NEEDED
+
+* ↳ please see [MongoDB Guide - Setup](../guides/mongodb-guide.md)
+
+
+## TOPICS
+
+### Introduction to data persistence
+
+### Databases as software
+
+### Databases as a service
+
+### 
+
+
+***
+***
+***
+
+## STUDIO: BACKEND FOUNDATIONS WORKBOOK
+
+Learn by doing with the [Databases Workbook](https://github.com/itp-dwd/databases-workbook). Here you will encounter a set of guided challenges that will introduce you to the basic building blocks necessary to build a basic web server and API. 
+
+* ↳ [Database Foundations Workbook](https://github.com/itp-dwd/databases-workbook)
+
+***
+***
+***
+
+## ASSIGNMENT 5: The API of You: Living forever on the web 
+
+* ↳ [Link to Assignment](../assignments/05_assignment.md)
+
+***
+***
+***
+
+
+<!--
+via:
+* https://github.com/ITPNYU/ICM-2019-Code/blob/master/weeks/01_intro.md
+* https://github.com/eyebeam/curriculum/blob/master/TEMPLATE.md
+-->
 
 <!-- 
 ### Lecture
@@ -73,66 +128,3 @@ Students will walk away with a deeper understanding of:
 * (Using templates?)
 * Deploy to Heroku
  -->
-
-## Exercises To Do Before Class
-What materials (readings, tasks, exercises) should students complete before class to be prepared for the lesson.
-
-## Essential Questions
-- Why do we need databases?
-- What are the different types of databases?
-- How is the data in databases structured?
-- In a document-based NoSQL database, what is a
-  - document?
-  - id? ObjectID? unique id?
-  - schema?
-  - collection?
-- What does it mean to responsibly store data?
-- What are ways that you can let users have control over their data?
-
-## Introduction
-Please provide a narrative of what the unit is about, and why we should learn it that is simple enough that a student could read and understand. Example: "In this workshop we will be using ... to explore ... so that you have a better understanding of how ...
-
-### Outcomes & Goals
-This can be easily answered by completing these example sentences:
-* In this workshop we will be… (soldering, setting up a RPi home network, making a wearable that communicates with….)
-* Students will walk away with a deeper understanding of…
-
-## Topics
-This section can have many subheaders (h3's). This should list all of the topic areas, (e.g. Git, Using the command line), with links to guides and references. 
-
-### What we are not covering
-
-NOTE: ...
-
-Topics we are not covering, but are of importance:
-* ...
-* ...
-* ...
-
-
-## Pacing / Duration
-Number of total hours the class session will take. Please try to take into account transition time between instruction and hands on exercises if any prep is necessary.
-
-- Break down of the class schedule example: 
-  - :15 Overview, context, examples and vocabulary 
-  - :20 Instruction & hands on exercise 
-  - :15 Wrap-up discussion & sharing, reflection or journal and next steps
-
-## Materials Needed
-What hardware, software, or other materials will students or teachers need for lessons.
-
-### Vocabulary (example)
-* Program: A procedure, or set of instructions, that performs a specific task when executed by a computer. 
-* Programming Language: The human-readable commands and syntax (or grammar rules) used to write programs.
-
-## Studio Exercise Descriptions
-Descriptions of each exercise or phase of class. Similar to pacing but with more description of steps.
-
-## References
-Include any sources cited, but not directly linked in the unit.
-
-<!--
-via:
-* https://github.com/ITPNYU/ICM-2019-Code/blob/master/weeks/01_intro.md
-* https://github.com/eyebeam/curriculum/blob/master/TEMPLATE.md
--->
