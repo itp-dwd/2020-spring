@@ -31,7 +31,11 @@ The database type we are going to use in this class are called [NoSQL databases]
 
 ### Others
 
-There
+There tons of other NoSQL databases. It is worth checking out:
+* [PouchDB](https://pouchdb.com/)
+* [RethinkDB](https://rethinkdb.com/docs/guide/javascript/)
+
+And lots of others [Awesome-database](https://github.com/agarcialeon/awesome-database#document-store-)
 
 ## SQL Databases
 
