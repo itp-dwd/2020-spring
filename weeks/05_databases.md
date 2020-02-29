@@ -76,6 +76,12 @@ Students will walk away with a deeper understanding of:
 
 ### Introduction to data persistence
 
+* []()
+
+### What is a database?
+
+### Why do we use data
+
 ### Databases as software
 
 ### Databases as a service
