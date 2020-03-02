@@ -6,7 +6,7 @@ This week your assignment is to persist data in your Node.js/Express.js API with
 
 You are welcome to create any kind of application you'd like, so if you have an idea, please go ahead!
 
-If you need inspiration, you might consider creating a personal data dashboard like the [Feltron Report](http://feltron.com/FAR05.html).
+If you need inspiration, you might consider creating a personal data dashboard like the [Feltron Report](http://feltron.com/FAR05.html) or [Feltron Report 2006](http://feltron.com/FAR06.html), [2007](http://feltron.com/FAR07.html).
 
 ## Readings
 * [Databases Guide](../guides/databases-guide.md)
