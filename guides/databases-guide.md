@@ -2,8 +2,31 @@
 
 ## About
 
-## Introduction to data persistence
+This is the databases guide. Here we briefly introduce that you might need to know about databases before starting to use them in your projects. 
 
+## Table of Contents
+
+- [Databases Guide](#databases-guide)
+  - [About](#about)
+  - [Table of Contents](#table-of-contents)
+  - [Dynamic Data & Data persistence](#dynamic-data--data-persistence)
+  - [What are data?](#what-are-data)
+  - [What is a database?](#what-is-a-database)
+  - [Why do we use database software?](#why-do-we-use-database-software)
+    - [Indexing](#indexing)
+    - [Querying](#querying)
+  - [Database services](#database-services)
+  - [NoSQL Databases](#nosql-databases)
+    - [NeDB](#nedb)
+    - [MongoDB](#mongodb)
+    - [Others](#others)
+  - [SQL Databases](#sql-databases)
+
+## Dynamic Data & Data persistence
+
+If you've been coding in JavaScript and you even gone through the [Backend Foundations Guide](./backend-foundations-guide.md) you will have had your first taste of what it means to dynamically update data living on a server. This is hugely important because it is, theoretically, the first time you will have be able to **persist** the changes to your data on your web projects. This means that any interactions you've had with your data while using your web application could be stored and reflected back not only to you but to others who would also access that same data by going to your website.  
+
+This concept of having a place on the web where your data is living and having the means to access, create, update, and delete data dynamically by creating and API is central to our discussion of databases. 
 
 ## What are data?
 
@@ -17,11 +40,11 @@ Without launching into a while philosophical discussions (albeit an important on
 
 ... and these data will be organized into lists (e.g. arrays) or JSON objects in some way, shape, and form. 
 
-These data will be stored in either a ["flat file"](https://www.techopedia.com/definition/25956/flat-file) or as some kind of [binary file](https://www.techopedia.com/definition/937/binary-file) in a[database software](https://www.techopedia.com/definition/1185/database-db).
+These data will be stored in either, **in memory**, in a ["flat file"](https://www.techopedia.com/definition/25956/flat-file), or as some kind of [binary file](https://www.techopedia.com/definition/937/binary-file) in a[database software](https://www.techopedia.com/definition/1185/database-db).
 
 These data, regardless if they are in the form of a flat file or being retrieved dynamically from a database software, will live somewhere on some kind of server infrastructure so that they can be used in some way -- e.g. read, create, updated, deleted -- by super cool/interesting/meaningful applications like the ones you're building in this class.
 
-This raises the question, what is a database? Read on to learn more.
+This raises the question, what exactly is a database? Read on to learn more.
 
 See: [How do you say, "data", The Guardian](https://www.theguardian.com/news/datablog/2010/jul/16/data-plural-singular)
 
@@ -50,7 +73,12 @@ Indexes can be made on properties like text - e.g. user names - or even spatial 
 
 ### Querying
 
-Databases can be queried in ways that allow for data retrieval based on specific properties.  
+Databases can be queried in ways that allow for data retrieval based on specific properties. As we've established, databases are software and each software is written differently (some more drastically different than others). In any case, how you **query** a database will depend the database's API. 
+
+You can say there are two different types of database types that are differentiated based on how we can query for data in those databases. There are:
+* [SQL Databases]() - Structured Query Language (SQL) databases
+* VS.
+* [NoSQL Databases]() - No-Structured Query Language (SQL) or non-relational databases
 
 
 
