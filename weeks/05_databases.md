@@ -74,29 +74,41 @@ Students will walk away with a deeper understanding of:
 
 ## TOPICS
 
-### Introduction to data persistence
+### Data Persistence
+* [Database Guide - Dynamic Data & Data persistence](../guides/databases-guide.md#dynamic-data--data-persistence)
 
-* []()
+### What are Data?
+* [Database Guide - What are data?](../guides/databases-guide.md#what-are-data)
 
-### What is a database?
+### What is a Database?
+* [Database Guide - What is a database?](../guides/databases-guide.md#what-is-a-database)
 
-### Why do we use data
+### Databases are software
+* [Database Guide - Why do we use database software?](../guides/databases-guide.md#why-do-we-use-database-software)
+  - [Storage](../guides/databases-guide.md#storage)
+  - [Indexing](../guides/databases-guide.md#indexing)
+  - [Querying](../guides/databases-guide.md#querying)
 
-### Databases as software
+### Database Services
+* [Database Guide - Database services](../guides/databases-guide.md#database-services)
 
-### Databases as a service
-
-
-
-### 
+### NoSQL / Non-relational Databases
+* [Database Guide - NoSQL Databases](../guides/databases-guide.md#nosql-databases)
+  - [NeDB](../guides/databases-guide.md#nedb)
+  - [MongoDB](../guides/databases-guide.md#mongodb)
 
 
 ***
 ***
 ***
 
-## STUDIO: BACKEND FOUNDATIONS WORKBOOK
+## STUDIO: MongoDB Atlas Setup & Workbook
 
+### MongoDB Atlas Setup
+
+* ↳ [MongoDB Atlas Setup](../guides/database-services-guide.md#mongodb-atlas)
+
+### Workbook
 Learn by doing with the [Databases Workbook](https://github.com/itp-dwd/databases-workbook). Here you will encounter a set of guided challenges that will introduce you to the basic building blocks necessary to build a basic web server and API. 
 
 * ↳ [Database Foundations Workbook](https://github.com/itp-dwd/databases-workbook)
