@@ -140,6 +140,11 @@ A query to such a NoSQL database might look something like this:
 > db.getCollection('newyork').find({})
 ```
 
+Looks familiar right? Kinda like JavaScript syntax, no? Since we're working with documents and keys/values, it would make sense that our syntax would reflect the kind of JavaScript-y object world we're used to.
+
+We are going to introduce 2 types of non-relational databases for this class:
+* [NeDB](https://github.com/louischatriot/nedb/) - this is a lightweight, simple flat file, JavaScript-based non-relational "database" which is great for learning, prototyping, and testing.
+* [MongoDB](https://www.mongodb.com/) - this is a solid choice for a document-style NoSQL database for projects of any size. 
 
 ### NeDB
 
