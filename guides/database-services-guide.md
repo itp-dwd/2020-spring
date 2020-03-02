@@ -34,6 +34,13 @@ This is a guide to some database services that can be a database hosting service
 
 ### What is MongoDB Atlas?
 
+MongoDB Atlas is a database as a service. MongoDB, the company behind the MongoDB database provides a service that allows you to deploy scalable database servers on the web. 
+
+As written on their website:
+> MongoDB Atlas is the global cloud database service for modern applications. Deploy fully managed MongoDB across AWS, Azure, or GCP. Best-in-class automation and proven practices guarantee availability, scalability, and compliance with the most demanding data security and privacy standards. Use MongoDB's robust ecosystem of drivers, integrations, and tools to build faster and spend less time managing your database.
+
+We recommend using a database as a service provider like MongoDB Atlas because database management is tough and requires a whole different set of training and skills that are part of the DevOps engineering universe. By using databases as a service you can sleep slightly better at night knowing that quite likely the service is doing a better job at managing the databases, security, etc than if you had to do everything on your own. That being said, if you're a database person and you know about this stuff, then you're welcome to roll your own solution. For most people, using a database service is the right way to go.
+
 ### Setting up MongoDB Atlas
 
 These steps will take you through how to set up MongoDB Atlas and point you to tips to get your Express applications up and running.
