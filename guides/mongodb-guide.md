@@ -9,7 +9,8 @@ The MongoDB Guide!
 - [MongoDB Guide](#mongodb-guide)
   - [About](#about)
   - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
+  - [Setup: Your database in the cloud](#setup-your-database-in-the-cloud)
+  - [Installation: Local installation and setup](#installation-local-installation-and-setup)
     - [MacOS](#macos)
     - [Windows](#windows)
   - [Running MongoDB](#running-mongodb)
@@ -31,17 +32,23 @@ The MongoDB Guide!
   - [Learn By Example](#learn-by-example)
 
 
-## Installation
+## Setup: Your database in the cloud
+
+For starters we recommend directly starting to use a MongoDB database services like [MongoDB Atlas](https://www.mongodb.com/cloud/atlas). Why? Because this will allow us to quickly start reading and writing data in our web applications without fussing with local installation quirks and hiccups. 
+
+You can follow along the [Database services guide - MongoDB Atlas](./guides/../database-services-guide.md#mongodb-atlas) to set up your database service in the "cloud." 
+
+
+## Installation: Local installation and setup
 
 ### MacOS
-1. ...
-2. ...
-3. ...
+
+* It is recommended to install MongoDB using [Homebrew]() for mac:
+  * See installation notes [MongoDB Homebrew Installation for Mac](https://github.com/mongodb/homebrew-brew)
 
 ### Windows
-1. ...
-2. ...
-3. ...
+
+* See installation notes [MongoDB Windows Installation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
 
 ## Running MongoDB
 
@@ -54,7 +61,7 @@ $ mongod
 
 ### Stopping
 
-In your terminal: `control` + `c`
+In your terminal where mongo is running, press: `control` + `c`
 
 ## Interactive Mongo
 
