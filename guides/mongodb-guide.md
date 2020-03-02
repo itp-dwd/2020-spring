@@ -35,11 +35,13 @@ The MongoDB Guide!
     - [Add boilerplate html to **views/index.html**](#add-boilerplate-html-to-viewsindexhtml)
     - [Add your "hello world" Express App](#add-your-%22hello-world%22-express-app)
     - [Defining API Endpoints](#defining-api-endpoints)
-  - [Data Models](#data-models)
-  - [Querying](#querying)
-  - [Creating](#creating)
-  - [Updating](#updating)
-  - [Deleting](#deleting)
+    - [Connect to mongodb](#connect-to-mongodb)
+    - [Data Model: models/todo.js](#data-model-modelstodojs)
+    - [Require your todos collection in your app](#require-your-todos-collection-in-your-app)
+  - [Finding Data](#finding-data)
+  - [Creating Data](#creating-data)
+  - [Updating Data](#updating-data)
+  - [Deleting Data](#deleting-data)
   - [Learn By Example](#learn-by-example)
 
 
@@ -327,6 +329,10 @@ const config = require('./config');
 
 const PORT = config.PORT;
 
+// ---- Connect to mongodb here ----
+
+// --- connect to your collection ---
+
 // Handle data in a nice way
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -379,7 +385,7 @@ app.get("/api/v1/todos", async (req, res) => {
     res.json({})
   } catch(error){
     console.error(error);
-    res.error(error);
+    res.json(error);
   }
 });
 
@@ -389,27 +395,27 @@ app.post("/api/v1/todos", async (req, res) => {
     res.json({})
   } catch(error){
     console.error(error);
-    res.error(error);
+    res.json(error);
   }
 });
 
 // PUT: "api/v1/todos:id"
-app.put("/api/v1/todos:id", async (req, res) => {
+app.put("/api/v1/todos/:id", async (req, res) => {
   try{
     res.json({})
   } catch(error){
     console.error(error);
-    res.error(error);
+    res.json(error);
   }
 });
 
 // DELETE: "api/v1/todos:id"
-app.delete("/api/v1/todos:id", async (req, res) => {
+app.delete("/api/v1/todos/:id", async (req, res) => {
   try{
     res.json({})
   } catch(error){
     console.error(error);
-    res.error(error);
+    res.json(error);
   }
 });
 ```
@@ -427,18 +433,199 @@ Hooray! If this is working, then your API is working! The next steps are to:
 * define a data model
 * start defining the API routes
 
-## Data Models
+### Connect to mongodb
 
-## Querying
+With this chunk of code, we will be connected to our MongoDB database hosted in MongoDB Atlas:
+```js
+// ---- Connect to mongodb here ----
+// read in mongoose library
+const mongoose = require('mongoose');
+// read in the URI to our MongoDB Atlas 
+const MONGODB_URI = config.MONGODB_URI;
+// Use mongoose to connect to our MongoDB Atlas server
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
-## Creating
+// --- connect to your collection ---
+```
 
-## Updating
+### Data Model: models/todo.js
 
-## Deleting
+In your `models/todo.js`, write the following code: 
+```js
+// 1. Read in your mongoose library
+const mongoose = require('mongoose');
+// 2. Get the Schema class from mongoose
+const Schema = mongoose.Schema;
+// 3. Define the database model schema for your todos
+const todoSchema = new Schema({
+  "todo": String,
+  "status": String
+});
+
+// 4. create a new mongodb model called: "todos"
+const db = mongoose.model('todos', todoSchema)
+// 5. make this todos model available to your app
+module.exports = db;
+```
+
+* Under the hood, our database will look something like:
+
+```
+todo-app
++----------------------------------------+
+| todos                                  |
+| +------------------------------------+ |  
+| | document#001                       | |
+| | document#002                       | |
+| | document#003                       | |
+| |                                    | |
+| |                                    | |
+| +------------------------------------+ |
+|                                        |
++----------------------------------------|
+```
+
+### Require your todos collection in your app
+
+Back in `index.js` **after your mongoose connection**, then add the following line:
+
+```js
+// --- connect to your collection ---
+const todos = require('./models/todo');
+```
+
+Woohoo! Now AFTER ALL OF THAT, can we start to interface with our Mongodb.
+
+## Finding Data
+
+In your `index.js`: go to `// GET: "api/v1/todos"`
 
 
+We will use the `.find()` function to find all of our data.
+```js
+// GET: "api/v1/todos"
+app.get("/api/v1/todos", async (req, res) => {
+  try{
+    const data = await todos.find();
+    res.json(data);
+  } catch(error){
+    console.error(error);
+    res.json(error);
+  }
+});
+```
 
+In this step, we will be sending back ALL of the todos data in our database when someone navigates to the URL: `/api/v1/todos`. Since we don't have anything yet in our database, we will get an empty array.
+
+## Creating Data
+
+Now go to your next API endpoint: `// POST: "api/v1/todos"`
+
+We will use the `.create()` function to create a new document.
+```js
+// POST: "api/v1/todos"
+app.post("/api/v1/todos", async (req, res) => {
+  try{
+    const newData = {
+      todo: req.body.todo,
+      status: req.body.status
+    }
+    const data = await todos.create(newData);
+    res.json(data);
+  } catch(error){
+    console.error(error);
+    res.json(error);
+  }
+});
+```
+
+and try running the following command in your terminal:
+
+```sh
+$ curl -X POST \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json' \
+  -d '{"todo":"do laundry", "status":"incomplete"}' http://localhost:3000/api/v1/todos
+```
+The JSON response will be the newly created JSON data:
+```json
+{"_id":"5e5d774a55d3633514cf2bbe","todo":"do laundry","status":"incomplete","__v":0}
+```
+
+And if you now make a GET request at: `http://localhost:3000/api/v1/todos`, you'll see:
+
+```js
+[{"_id":"5e5d774a55d3633514cf2bbe","todo":"do laundry","status":"incomplete","__v":0}]
+```
+
+See how we have this super long `_id` property in our JSON? We can and will use that to update and delete our data!
+
+## Updating Data
+
+In `index.js`, go to: `// PUT: "api/v1/todos:id"`
+
+We will use the `findOneAndUpdate()` function to find our document and update it with the updated data we pass in.
+```js
+// PUT: "api/v1/todos:id"
+app.put("/api/v1/todos/:id", async (req, res) => {
+  try{
+    const updatedData = {
+      todo: req.body.todo,
+      status: req.body.status
+    }
+    const data = await todos.findOneAndUpdate({_id: req.params.id}, updatedData, {new:true});
+    res.json(data);
+  } catch(error){
+    console.error(error);
+    res.json(error);
+  }
+});
+```
+
+You can give this a try by doing:
+
+```sh
+$ curl -X PUT \
+-H 'Content-Type: application/json' \
+-H 'Accept: application/json' \
+-d '{"status":"complete", "todo":"do laundry"}' \
+http://localhost:3000/api/v1/todos/5e5d774a55d3633514cf2bbe
+```
+
+You will see that the status has changed to `complete`:
+```
+{"_id":"5e5d774a55d3633514cf2bbe","todo":"do laundry","status":"complete","__v":0}
+```
+
+## Deleting Data
+
+In `index.js`, go to: `// DELETE: "api/v1/todos:id"`
+
+We will use the `findOneAndDelete()` function to find our document and delete it.
+
+```js
+app.delete('/api/v1/todos/:id', async (req, res) => {
+  try {
+  const deletedDocument = await treeDB.findOneAndDelete(req.params.id);
+  res.json({"message":"successfully removed item", "data": JSON.stringify(deletedDocument) });
+  } catch (error) {
+    res.json({ error: JSON.stringify(error) });
+  }
+});
+```
+
+You can give this a try by doing:
+
+```sh
+$ curl -X DELETE \
+http://localhost:3000/api/v1/todos/5e5d774a55d3633514cf2bbe
+```
+
+And the response you will get is:
+
+```json
+{"message":"successfully removed item","data":"{\"_id\":\"5e5d74d7bc1558327caf8d17\",\"todo\":\"do laundry\",\"__v\":0}"}
+```
 
 ## Learn By Example
 
