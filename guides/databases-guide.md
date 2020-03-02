@@ -13,6 +13,7 @@ This is the databases guide. Here we briefly introduce that you might need to kn
   - [What are data?](#what-are-data)
   - [What is a database?](#what-is-a-database)
   - [Why do we use database software?](#why-do-we-use-database-software)
+    - [Storage](#storage)
     - [Indexing](#indexing)
     - [Querying](#querying)
   - [Database services](#database-services)
@@ -62,8 +63,13 @@ This is where more robust database software comes in handy. We will eventually t
 ## Why do we use database software?
 
 As mentioned above, we can run into limits of handling and storing data as flat files and *in-memory*. This is where database softwares come into handy. There are tons of different database softwares (now just referred to as "databases") out there. Each has its use cases and is optimized for different tasks (e.g. real-time vs. big data analysis vs. X, Y, Z). In general however, most/all databases have the following in common:
+* storage
 * indexing
 * querying
+
+### Storage
+
+Storage is obviously first and foremost the most important thing, however not all databases store data the same way. You can count on databases storing data in some way, shape, or form. The way that data are stored will depend on the database itself. 
 
 ### Indexing
 
@@ -73,17 +79,31 @@ Indexes can be made on properties like text - e.g. user names - or even spatial 
 
 ### Querying
 
-Databases can be queried in ways that allow for data retrieval based on specific properties. As we've established, databases are software and each software is written differently (some more drastically different than others). In any case, how you **query** a database will depend the database's API. 
+Databases can be queried in ways that allow for data retrieval based on specific properties. As we've established, databases are software and each software is written differently (some more drastically different than others). In any case, how you **query** a database will depend the database's API and the underlying philosophy or purpose of that database. 
 
 You can say there are two different types of database types that are differentiated based on how we can query for data in those databases. There are:
-* [SQL Databases]() - Structured Query Language (SQL) databases
+* [SQL Databases](https://en.wikipedia.org/wiki/SQL) - Structured Query Language (SQL) databases
 * VS.
-* [NoSQL Databases]() - No-Structured Query Language (SQL) or non-relational databases
+* [NoSQL Databases](https://en.wikipedia.org/wiki/NoSQL) - No-Structured Query Language (SQL) or non-relational databases
 
+Our focus in this class is NoSQL databases for the reason that they are generally well structured for web application use cases. 
 
 
 ## Database services
 
+So if databases are just software that store our data and make it easy to use, then how do we use these databases?
+
+1. First things first: installation. Like any software, you'll have to install these database softwares onto your computer. Every time you want to use a different type of database, then you'll need to install it.
+2. Second: starting & stopping. Again, like any software, you'll need to start your database before you can use any of the data you've added to it. Similarly, you can to stop your database if you're not using it. 
+3. Third: interact with the database. Once again, like any software, you'll need to interact with the database for anything to happen. Often this will either occur using some kind of GUI, a command-line interface, OR via an API that you've built to interface with the database.
+
+This third step warrants some additional explanation. We want to interface with our database. We can create our own APIs that interface with the database or we can use some kind of GUI or commandline interface. Regardless of how we want to interface with the database (hey that rhymes!), the way this happens is through connecting to the database through a unique URL where our database is *listening* for connections by other software. Yes, that's right, when we use a database, we are *connecting to it*. Hmmm doesn't that sound similar to how we can can *connect* our web client-side and server-side applications? If you think so, then you're correct! 
+
+When you start a database on your local machine, your database is being *hosted* by your local machine. Similarly, if you start a database that you want people to be able to access from the web, an internet connected machine will **host** your database such that other web services can **connect** to it (provided they have the right credentials and are authorized to do so).
+
+This last part is important: If you want to be able to get your data on the web, you will need to find somewhere to **host** your database. Lucky for us, there are many database hosting services - a.k.a databases as a service providers - that make it possible to host these complex database softwares on the web. 
+
+You will find more details in the [Database services guide](./database-services-guide.md) for details on different database services for your projects. 
 
 ## NoSQL Databases
 
@@ -114,6 +134,11 @@ Where `New York` is the collection and `document#001` might look something like:
 {_id:"a1b2c3d4e5g6", address:"370 jay st., brooklyn", species:"Maple"}
 ```
 
+A query to such a NoSQL database might look something like this:
+
+```shell
+> db.getCollection('newyork').find({})
+```
 
 
 ### NeDB
@@ -169,5 +194,9 @@ _id,address,species
 "236yrgw34435", "372 jay st., brooklyn", "Ginko"
 ```
 
+A query to such a NoSQL database might look something like this:
 
+```shell
+> USE 'joeys-tree-database' SELECT * FROM 'newyork' ORDER BY 'address'
+```
 
