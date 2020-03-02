@@ -16,6 +16,7 @@ This is the databases guide. Here we briefly introduce that you might need to kn
     - [Storage](#storage)
     - [Indexing](#indexing)
     - [Querying](#querying)
+    - [Data Models](#data-models)
   - [Database services](#database-services)
   - [NoSQL Databases](#nosql-databases)
     - [NeDB](#nedb)
@@ -87,6 +88,10 @@ You can say there are two different types of database types that are differentia
 * [NoSQL Databases](https://en.wikipedia.org/wiki/NoSQL) - No-Structured Query Language (SQL) or non-relational databases
 
 Our focus in this class is NoSQL databases for the reason that they are generally well structured for web application use cases. 
+
+### Data Models
+
+TBD
 
 
 ## Database services

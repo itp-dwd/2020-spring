@@ -9,46 +9,63 @@ The MongoDB Guide!
 - [MongoDB Guide](#mongodb-guide)
   - [About](#about)
   - [Table of Contents](#table-of-contents)
-  - [Setup: Your database in the cloud](#setup-your-database-in-the-cloud)
-  - [Installation: Local installation and setup](#installation-local-installation-and-setup)
-    - [MacOS](#macos)
-    - [Windows](#windows)
+  - [Getting Started](#getting-started)
+    - [Option 1: Database in the cloud](#option-1-database-in-the-cloud)
+    - [Option 2: Database local installation](#option-2-database-local-installation)
+      - [MacOS](#macos)
+      - [Windows](#windows)
+- [MongoDB: Local Development](#mongodb-local-development)
   - [Running MongoDB](#running-mongodb)
     - [Starting](#starting)
     - [Stopping](#stopping)
   - [Interactive Mongo](#interactive-mongo)
     - [MongoDB GUI: Studio3T App](#mongodb-gui-studio3t-app)
     - [MongoDB via Commandline](#mongodb-via-commandline)
-  - [MongoDB with Node.js/Express.js](#mongodb-with-nodejsexpressjs)
-    - [Simplifying with Mongoose.js, the mongodb adapter](#simplifying-with-mongoosejs-the-mongodb-adapter)
-    - [Data Models](#data-models)
-    - [Querying](#querying)
-    - [Creating](#creating)
-    - [Updating](#updating)
-    - [Deleting](#deleting)
+- [MongoDB with Node.js/Express.js](#mongodb-with-nodejsexpressjs)
   - [MongoDB Atlas: Hosting your database on the web](#mongodb-atlas-hosting-your-database-on-the-web)
     - [Project Settings with .env](#project-settings-with-env)
     - [Glitch Settings](#glitch-settings)
+  - [Simplifying with Mongoose.js, the mongodb adapter](#simplifying-with-mongoosejs-the-mongodb-adapter)
+  - [Data Models](#data-models)
+  - [Querying](#querying)
+  - [Creating](#creating)
+  - [Updating](#updating)
+  - [Deleting](#deleting)
   - [Learn By Example](#learn-by-example)
 
 
-## Setup: Your database in the cloud
+## Getting Started
+
+### Option 1: Database in the cloud
 
 For starters we recommend directly starting to use a MongoDB database services like [MongoDB Atlas](https://www.mongodb.com/cloud/atlas). Why? Because this will allow us to quickly start reading and writing data in our web applications without fussing with local installation quirks and hiccups. 
 
 You can follow along the [Database services guide - MongoDB Atlas](./guides/../database-services-guide.md#mongodb-atlas) to set up your database service in the "cloud." 
 
 
-## Installation: Local installation and setup
+### Option 2: Database local installation
 
-### MacOS
+Typically as a developer, you'll develop locally and then push to the "cloud." This is the case for everything - your client side code, your server-side code, and your database server. As this is the case, setting up your local development environment includes installing your database locally. 
 
-* It is recommended to install MongoDB using [Homebrew]() for mac:
-  * See installation notes [MongoDB Homebrew Installation for Mac](https://github.com/mongodb/homebrew-brew)
+It should be noted that these installations can sometimes be fussy, so that's why we recommend [Option 1](#option-1-database-in-the-cloud) above to minimize lost time. If you want to get setup, however, you can follow the installation notes provided below.
 
-### Windows
+#### MacOS
+
+* It is recommended to install MongoDB using [Homebrew for mac](https://brew.sh/):
+  * [Installation Guide](https://joeyklee.github.io/fullstack-user-auth/#/tutorial/01_installation)
+  * Additional installation notes from MongoDB are supplied here: [MongoDB Homebrew Installation for Mac](https://github.com/mongodb/homebrew-brew)
+
+#### Windows
 
 * See installation notes [MongoDB Windows Installation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
+
+***
+***
+***
+
+# MongoDB: Local Development
+
+All of the notes below are relevant for working with a local installation of MongoDB.
 
 ## Running MongoDB
 
@@ -107,25 +124,32 @@ You can download and install the [Studio 3T](https://studio3t.com/download/) App
    > db.newyork.insertOne( { address: "370 Jay St., Brooklyn, NY"} );
    ```
 
-## MongoDB with Node.js/Express.js
+***
+***
+***
 
-### Simplifying with Mongoose.js, the mongodb adapter
-
-### Data Models
-
-### Querying
-
-### Creating
-
-### Updating
-
-### Deleting
+# MongoDB with Node.js/Express.js
 
 ## MongoDB Atlas: Hosting your database on the web
 
 ### Project Settings with .env
 
 ### Glitch Settings
+
+
+## Simplifying with Mongoose.js, the mongodb adapter
+
+## Data Models
+
+## Querying
+
+## Creating
+
+## Updating
+
+## Deleting
+
+
 
 
 ## Learn By Example
