@@ -69,6 +69,7 @@ Students will walk away with a deeper understanding of:
 
 ## MATERIALS NEEDED
 
+* ↳ please see [Database Services Guide - MongoDB Atlas](../guides/database-services-guide.md)
 * ↳ please see [MongoDB Guide - Setup](../guides/mongodb-guide.md)
 
 

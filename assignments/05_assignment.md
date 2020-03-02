@@ -4,14 +4,15 @@
 
 This week your assignment is to persist data in your Node.js/Express.js API with a database. You will write server-side JavaScript to do CRUD operations on a database, controlled by an API. Then, client-side JavaScript triggered by user actions will make API requests and read/write to the database.
 
+You are welcome to create any kind of application you'd like, so if you have an idea, please go ahead!
+
+If you need inspiration, you might consider creating a personal data dashboard like the [Feltron Report](http://feltron.com/FAR05.html).
+
 ## Readings
 * [Databases Guide](../guides/databases-guide.md)
 * [NeDB Guide](../guides/nedb-guide.md)
 * [Database Services Guide](../guides/database-services-guide.md)
 * [MongoDB Guide](../guides/mongodb-guide.md)
-
-## Additional References
-* TODO, find some
 
 ## Requirements
 
@@ -19,7 +20,7 @@ This week your assignment is to persist data in your Node.js/Express.js API with
 * The final project presentation will be on March 23. You will need to build a full stack web application, with a database, API, a dynamic front end, and a design.
 * You can build on a previous week's project! No need to do everything from scratch.
 * You will do a **6 minute** presentation, with time for feedback and questions.
-* There will be *guest critics*!
+* There will be *guest critics* at your final project presentations!
 * Cassie and Joey will give you feedback on your proposal
 
 ### Part 2: Design and Interface
