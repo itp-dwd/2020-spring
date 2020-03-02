@@ -44,11 +44,13 @@ This week your assignment is to persist data in your Node.js/Express.js API with
   * You will use the `fetch()` API to make requests to your API
 
 ### Part 4: Deployment
-* Deployed to **Glitch**
-* Code pushed to Github
-* Database deployed
+* Your code should be pushed to Github
+* Your website should be deployed to **Glitch**, putting from a remote GitHub repository
+* Your `package.json` should have all of the necessary components in order for you application to run. Make sure you have a `start` script (`"start": "node server.js"`)
+* You database should be deployed to:
   * If you are using NeDB, your database will be deployed to Glitch
   * If you are using Mongo, your database will be deployed to MongoDB Atlas
+* If necessary, you have a `.env` in your Glitch project which contains your Mongo connection string 
 
 ### Part 5: README Documentation
 * You must have a `README.md` that explains:
