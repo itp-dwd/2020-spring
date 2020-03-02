@@ -36,28 +36,36 @@ This is a guide to some database services that can be a database hosting service
 
 #### Register
 
-Register an account with [MongoDB Atlas](https://www.mongodb.com/download-center).
+* Register an account with [MongoDB Atlas](https://www.mongodb.com/download-center).
+  ![Mongodb atlas 00](../assets/mongodb-atlas/mongodb-atlas-00.png)
 
-![Mongodb atlas 00](../assets/mongodb-atlas/mongodb-atlas-00.png)
-![Mongodb atlas 00-1](../assets/mongodb-atlas/mongodb-atlas-00-1.png)
+* Accounts are free / pay-as-you-go
+  ![Mongodb atlas 00-1](../assets/mongodb-atlas/mongodb-atlas-00-1.png)
 
 #### Create a new project
 
-In your admin panel, you will **create a new project**.
+* In your admin panel, you will **create a new project**.
+  ![Mongodb atlas 01](../assets/mongodb-atlas/mongodb-atlas-01.png)
 
-![Mongodb atlas 01](../assets/mongodb-atlas/mongodb-atlas-01.png)
-![Mongodb atlas 02](../assets/mongodb-atlas/mongodb-atlas-02.png)
+* Name the project something meaningful.
+  ![Mongodb atlas 02](../assets/mongodb-atlas/mongodb-atlas-02.png)
 
-
-![Mongodb atlas 03](../assets/mongodb-atlas/mongodb-atlas-03.png)
+* Confirm: **create project**
+  ![Mongodb atlas 03](../assets/mongodb-atlas/mongodb-atlas-03.png)
 
 #### Create a cluster
-![Mongodb atlas 04](../assets/mongodb-atlas/mongodb-atlas-04.png)
 
+* In your empty project, you will **build a cluster** - this is referring to a database cluster.
+  ![Mongodb atlas 04](../assets/mongodb-atlas/mongodb-atlas-04.png)
 
-![Mongodb atlas 05](../assets/mongodb-atlas/mongodb-atlas-05.png)
-![Mongodb atlas 06](../assets/mongodb-atlas/mongodb-atlas-06.png)
-![Mongodb atlas 07](../assets/mongodb-atlas/mongodb-atlas-07.png)
+* Select the: free **starter clusters** - great for prototyping and testing
+  ![Mongodb atlas 05](../assets/mongodb-atlas/mongodb-atlas-05.png)
+
+* Select the cloud provider whose infrastructure your MongoDB server instance will be hosted by. In this case, I chose "google cloud", but AWS and Azure are probably also fine. Also select the **region** - it is recommended that you select the region closest to where you expect your main traffic to be coming from (e.g. if you are in the US, then probably a US based server makes sense).
+  ![Mongodb atlas 06](../assets/mongodb-atlas/mongodb-atlas-06.png)
+
+* Name the cluster
+  ![Mongodb atlas 07](../assets/mongodb-atlas/mongodb-atlas-07.png)
 
 #### Manage your connections
 ![Mongodb atlas 08](../assets/mongodb-atlas/mongodb-atlas-08.png)
