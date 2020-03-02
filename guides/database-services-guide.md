@@ -74,8 +74,27 @@ This is a guide to some database services that can be a database hosting service
 
 #### Choosing a connection method
 
-![Mongodb atlas 11](../assets/mongodb-atlas/mongodb-atlas-11.png)
-![Mongodb atlas 12](../assets/mongodb-atlas/mongodb-atlas-12.png)
+* **Whitelist your IP Address**: this step is to add the IP address from the place you are looking to make database connections with. For example, your home has an IP address from which you connect to the internet. You can add that in here so that MongoDB Atlas knows not to block incoming connections from that IP Address.
+* **Add a user**: this is important. You will add a database "user" which will be essential for when you connect to your database from your server-side Express.js application. By adding you **username** and **password** you will be able to connect remotely via Node.js from another server. This username and password become rolled into the URL of the MongoDB Atlas database you've just created.
+  ![Mongodb atlas 11](../assets/mongodb-atlas/mongodb-atlas-11.png)
+
+* Behold! The MongoDB Atlas URL to your database! You can use this URL to connect from your Express.js application.
+  ![Mongodb atlas 12](../assets/mongodb-atlas/mongodb-atlas-12.png)
+
+  * In your Express app, you can now set the actual MongoDB Atlas URL in your .env file. During testing your mongodb was quite likely set to a local instance of mongo:
+    ```
+    mongodb://localhost:27017/empty-tree-db
+    ```
+  * with your new fancy schmancy mongodb atlas URL. In your `.env` file, you can define:
+    ```
+    MONGODB_URI=mongodb+srv://dwd-admin:<password>@dwd-projects-ksn8b.gcp.mongodb.net/<NameOfYourCollection>?retryWrites=true&w=majority
+    ```
+    * where:
+      * `<password>`: is the password you defined earlier
+      * `<NameOfYourCollection>`: is the name of your collection. The default is set to `test`, so if you created a collection called `empty-tree-db`, then your URL would look like: 
+        ```
+        mongodb+srv://dwd-admin:<password>@dwd-projects-ksn8b.gcp.mongodb.net/empty-tree-db?retryWrites=true&w=majority
+        ```
 
 
 
