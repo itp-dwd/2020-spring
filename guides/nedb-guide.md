@@ -66,4 +66,6 @@ $ npm install nedb
 * [The Weather Here App with NeDB](https://github.com/joeyklee/the-weather-here)
 * [CRUD API - P5, Express, NeDB](https://github.com/joeyklee/simple-express-api)
 * [Data & APIs, Coding Train](https://github.com/CodingTrain/Intro-to-Data-APIs-JS)
+* **advanced**: [Basic Authentication with Express & NeDB](https://github.com/joeyklee/very-basic-express-auth-example/tree/with-nedb)
+
 
