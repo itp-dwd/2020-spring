@@ -5,14 +5,56 @@
 ## Introduction to data persistence
 
 
+## What are data?
+
+What are data? Data (the plural of datum) can be anything - images, text, sound, paintings, lists, you name it. They are records or signals of phenomenon that can be used to produce "information" which can help to explain or describe a subject or phenomenon of interest.
+
+Without launching into a while philosophical discussions (albeit an important one) about data, knowledge, and ontologies and epistomology, what is important for us is that in the context of web development, data most commonly will take the form of...
+* text
+* images
+* video
+* sound
+
+... and these data will be organized into lists (e.g. arrays) or JSON objects in some way, shape, and form. 
+
+These data will be stored in either a ["flat file"](https://www.techopedia.com/definition/25956/flat-file) or as some kind of [binary file](https://www.techopedia.com/definition/937/binary-file) in a[database software](https://www.techopedia.com/definition/1185/database-db).
+
+These data, regardless if they are in the form of a flat file or being retrieved dynamically from a database software, will live somewhere on some kind of server infrastructure so that they can be used in some way -- e.g. read, create, updated, deleted -- by super cool/interesting/meaningful applications like the ones you're building in this class.
+
+This raises the question, what is a database? Read on to learn more.
+
+See: [How do you say, "data", The Guardian](https://www.theguardian.com/news/datablog/2010/jul/16/data-plural-singular)
+
 ## What is a database?
 
+On a super general level, a database is considered anything that helps to *store* and *organize* data. 
+Let's take for example a library like the Brooklyn Public Library. The Brooklyn Public Library can be considered a kind of database; the books are the data, the library itself organizes them and makes it easy to find books. The key words here are "organize" and "easy to find." While it is one thing to collect data and store them, the key to a database's function is the part about organizing and **indexing** data such that things are easier to find.
 
-## Why do we use data
+Moving away from the library analogy, databases are "just" software. For example, I have a folder on my computer called "screenshots." My screenshots folder might be considered my database of screenshots that I've taken. On any modern computer, folders are generally outfitted with some additional functionality like the ability to sort, organize, and arrange the items within them. Because of my computer's indexing system, I can search for filenames within the folder (e.g. "cat gifs") and get a filtered selection of items who's name or metadata might contain those keywords. In this case, my computer and the "folder" itself is the software that acts like my database for my screenshots (the data). 
 
-## Databases as software
+So if databases are *just* software, what does this mean for us in web development and programming more generally? Well, this means that your database can be as simple, for example, as a `JSON` file called `myFavoriteRestaurants.json` that contains a list of your favorite restaurants, where each entry contains the name, address, and the time you last visited. Anytime that you decide you want to go to dinner, you can check your `myFavoriteRestaurants.json` file and **query** for key words like "Brooklyn" or "Manhattan" to help narrow **search**. You can **add** new entries to your `myFavoriteRestaurants.json` when you go somewhere new, **update** existing entries when you visit them, and **delete** the restaurants who've become too hipster or expensive for your liking. Starting to see my point? Along with organizing your data, a database provides functionality for **searching**, **retrieving**, **adding**, **deleting**, and **updating** data that are part of the database. For the case of this `myFavoriteRestaurants.json` it is likely this list is relatively small so you can easily work with it *in-memory* in a text editor using JavaScript code in the Browser or in Node.js. But what if you have millions of favorite restaurants, or hundreds of millions? What if your list was so long that there'd be no way for you to even store that file on your machine? What would you do then?
 
-## Databases as a service
+This is where more robust database software comes in handy. We will eventually talk about [MongoDB]() as our main "production grade" database for our web applications (e.g. allows us to handle massive amounts of data), but first, we will briefly discuss what are common features of database software that make them important for us.
+
+## Why do we use database software?
+
+As mentioned above, we can run into limits of handling and storing data as flat files and *in-memory*. This is where database softwares come into handy. There are tons of different database softwares (now just referred to as "databases") out there. Each has its use cases and is optimized for different tasks (e.g. real-time vs. big data analysis vs. X, Y, Z). In general however, most/all databases have the following in common:
+* indexing
+* querying
+
+### Indexing
+
+The secret sauce of databases is in the way that they are able to **index** data. A [database index](https://en.wikipedia.org/wiki/Database_index), "is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space to maintain the index data structure. Indexes are used to quickly locate data without having to search every row in a database table every time a database table is accessed." (Wikipedia). When we say, "a databases ability to index data" we are referring to specific functionalities (e.g. functions written by programers) in the database itself that keep track of data in an efficient way. There are very impressive indexing algorithms out there and if you study computer science or engineering of some kind you quite likely will have encountered these in your studies. Lucky for us, a lot of other people have thought a lot about this and have come up with solutions so we can focus on other things (e.g. like building cool projects).
+
+Indexes can be made on properties like text - e.g. user names - or even spatial properties like coordinates. 
+
+### Querying
+
+Databases can be queried in ways that allow for data retrieval based on specific properties.  
+
+
+
+## Database services
 
 
 ## NoSQL Databases
@@ -38,11 +80,12 @@ Joey's Tree Database
 +----------------------------------------|
 ```
 
-Where `document#001` might look something like:
+Where `New York` is the collection and `document#001` might look something like:
 
 ```json
 {_id:"a1b2c3d4e5g6", address:"370 jay st., brooklyn", species:"Maple"}
 ```
+
 
 
 ### NeDB
