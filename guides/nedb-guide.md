@@ -60,3 +60,10 @@ $ npm install nedb
 
 ## Removing
 
+## Learn by Example
+
+* [Data Selfie App with NeDB](https://github.com/joeyklee/data-selfie-app)
+* [The Weather Here App with NeDB](https://github.com/joeyklee/the-weather-here)
+* [CRUD API - P5, Express, NeDB](https://github.com/joeyklee/simple-express-api)
+* [Data & APIs, Coding Train](https://github.com/CodingTrain/Intro-to-Data-APIs-JS)
+
