@@ -4,6 +4,21 @@
 
 This is a guide to some database services that can be a database hosting service. 
 
+## Table of Contents
+
+- [Database Services Guide](#database-services-guide)
+  - [About](#about)
+  - [Table of Contents](#table-of-contents)
+  - [Services](#services)
+  - [MongoDB Atlas](#mongodb-atlas)
+    - [What is MongoDB Atlas?](#what-is-mongodb-atlas)
+    - [Setting up MongoDB Atlas](#setting-up-mongodb-atlas)
+      - [Register](#register)
+      - [Create a new project](#create-a-new-project)
+      - [Create a cluster](#create-a-cluster)
+      - [Manage your connections](#manage-your-connections)
+      - [Choosing a connection method](#choosing-a-connection-method)
+  - [Firebase:](#firebase)
 
 ## Services
 
@@ -15,7 +30,46 @@ This is a guide to some database services that can be a database hosting service
 
 ## MongoDB Atlas
 
-TBD
+### What is MongoDB Atlas?
+
+### Setting up MongoDB Atlas
+
+#### Register
+
+Register an account with [MongoDB Atlas](https://www.mongodb.com/download-center).
+
+![Mongodb atlas 00](../assets/mongodb-atlas/mongodb-atlas-00.png)
+![Mongodb atlas 00-1](../assets/mongodb-atlas/mongodb-atlas-00-1.png)
+
+#### Create a new project
+
+In your admin panel, you will **create a new project**.
+
+![Mongodb atlas 01](../assets/mongodb-atlas/mongodb-atlas-01.png)
+![Mongodb atlas 02](../assets/mongodb-atlas/mongodb-atlas-02.png)
+
+
+![Mongodb atlas 03](../assets/mongodb-atlas/mongodb-atlas-03.png)
+
+#### Create a cluster
+![Mongodb atlas 04](../assets/mongodb-atlas/mongodb-atlas-04.png)
+
+
+![Mongodb atlas 05](../assets/mongodb-atlas/mongodb-atlas-05.png)
+![Mongodb atlas 06](../assets/mongodb-atlas/mongodb-atlas-06.png)
+![Mongodb atlas 07](../assets/mongodb-atlas/mongodb-atlas-07.png)
+
+#### Manage your connections
+![Mongodb atlas 08](../assets/mongodb-atlas/mongodb-atlas-08.png)
+![Mongodb atlas 09](../assets/mongodb-atlas/mongodb-atlas-09.png)
+![Mongodb atlas 10](../assets/mongodb-atlas/mongodb-atlas-10.png)
+
+#### Choosing a connection method
+
+![Mongodb atlas 11](../assets/mongodb-atlas/mongodb-atlas-11.png)
+![Mongodb atlas 12](../assets/mongodb-atlas/mongodb-atlas-12.png)
+
+
 
 ## Firebase:
 * Flavio Copes has a great tutorial on this:
