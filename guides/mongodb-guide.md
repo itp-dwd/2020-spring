@@ -42,6 +42,8 @@ The MongoDB Guide!
   - [Creating Data](#creating-data)
   - [Updating Data](#updating-data)
   - [Deleting Data](#deleting-data)
+    - [Build your front-end user interface](#build-your-front-end-user-interface)
+    - [Finished product:](#finished-product)
   - [Learn By Example](#learn-by-example)
 
 
@@ -626,6 +628,26 @@ And the response you will get is:
 ```json
 {"message":"successfully removed item","data":"{\"_id\":\"5e5d74d7bc1558327caf8d17\",\"todo\":\"do laundry\",\"__v\":0}"}
 ```
+
+### Build your front-end user interface
+
+Now the time has come to build your front-end user interface. This is not the focus of this guide, so you can see the code files for this here:
+* **public/js/main.js**:
+  * [public/js/main.js](https://glitch.com/edit/#!/joeyklee-todo-app-mongodb?path=public/js/main.js:1:0)
+* **public/styles/main.css**:
+  * [public/styles/main.css](https://glitch.com/edit/#!/joeyklee-todo-app-mongodb?path=public/styles/main.css:1:0)
+* **views/index.html**:
+  * [views/index.html](https://glitch.com/edit/#!/joeyklee-todo-app-mongodb?path=views/index.html:1:0)
+
+
+### Finished product:
+
+![a simple todo app](../assets/mongodb-guide-03.png)
+
+* Todo App:
+  * [Code](https://glitch.com/edit/#!/joeyklee-todo-app-mongodb)
+  * [Demo](https://joeyklee-todo-app-mongodb.glitch.me/)
+
 
 ## Learn By Example
 
