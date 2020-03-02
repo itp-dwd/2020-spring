@@ -91,7 +91,20 @@ Our focus in this class is NoSQL databases for the reason that they are generall
 
 ### Data Models
 
-TBD
+Databases generally rely on having [structured data models](https://en.wikipedia.org/wiki/Data_model) to create predictability and standardization for the data that will live inside of them. You can think of it this way: data models allow you to define what goes in and what comes out. 
+
+As an example, a data model or a data **schema** might look something like this:
+
+```js
+{
+  "latitude": Number,
+  "longitude": Number,
+  "address": String,
+  "name": String
+}
+```
+
+By defining what *kinds* of data you expect to be associated with a given property in your database, you help to ensure that your data inputs and outputs are all the same **type**. Data models also allow your databases to do intelligent indexing like we discussed above. 
 
 
 ## Database services
