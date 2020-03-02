@@ -130,7 +130,19 @@ You can download and install the [Studio 3T](https://studio3t.com/download/) App
 
 # MongoDB with Node.js/Express.js
 
+In this class, we will be interfacing with MongoDB databases. Essentially our task as developers is to connect the dots between our client side interfaces and the data living in our our databases through the APIs we design and build.
+
+As you have seen in the [NeDB guide](./nedb-guide.md), you can create Express APIs that allow you to interface with different databases. Depending on the database that you connect to, the syntax and structure will change, sometimes slightly, other times more dramatically. 
+
+When interfacing with MongoDB, we will be writing our server-side code to:
+1. Connect with a MongoDB server hosted either locally or remotely.
+2. CREATE, READ, UPDATE, and DELETE data stored in the MongoDB database that is being hosted locally or remotely.
+
+For this guide, we assume that you will be connecting to a remote MongoDB instance hosted by MongoDB Atlas.
+
 ## MongoDB Atlas: Hosting your database on the web
+
+Before continuing please be sure to set up MongoDB Atlas as detailed in the [Database services guide - MongoDB Atlas](./guides/../database-services-guide.md#mongodb-atlas).
 
 ### Project Settings with .env
 
