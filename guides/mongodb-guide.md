@@ -23,9 +23,18 @@ The MongoDB Guide!
     - [MongoDB via Commandline](#mongodb-via-commandline)
 - [MongoDB with Node.js/Express.js](#mongodb-with-nodejsexpressjs)
   - [MongoDB Atlas: Hosting your database on the web](#mongodb-atlas-hosting-your-database-on-the-web)
-    - [Project Settings with .env](#project-settings-with-env)
-    - [Glitch Settings](#glitch-settings)
-  - [Simplifying with Mongoose.js, the mongodb adapter](#simplifying-with-mongoosejs-the-mongodb-adapter)
+    - [Todo App: Project scaffold](#todo-app-project-scaffold)
+    - [Setup](#setup)
+      - [Scaffold the app](#scaffold-the-app)
+      - [Install your dependencies](#install-your-dependencies)
+      - [Define your environment variables and configuration](#define-your-environment-variables-and-configuration)
+        - [.gitignore](#gitignore)
+        - [config.js](#configjs)
+        - [.env](#env)
+        - [package.json](#packagejson)
+    - [Add boilerplate html to **views/index.html**](#add-boilerplate-html-to-viewsindexhtml)
+    - [Add your "hello world" Express App](#add-your-%22hello-world%22-express-app)
+    - [Defining API Endpoints](#defining-api-endpoints)
   - [Data Models](#data-models)
   - [Querying](#querying)
   - [Creating](#creating)
@@ -144,12 +153,279 @@ For this guide, we assume that you will be connecting to a remote MongoDB instan
 
 Before continuing please be sure to set up MongoDB Atlas as detailed in the [Database services guide - MongoDB Atlas](./guides/../database-services-guide.md#mongodb-atlas).
 
-### Project Settings with .env
+### Todo App: Project scaffold
 
-### Glitch Settings
+Scaffold your project like so
+```txt
+todo-app/
+  .env
+  .gitignore
+  package.json
+  index.js
+  config.js
+  public/
+    js/
+      main.js
+    styles/
+      main.css
+    assets/
+  views/
+    index.html
+  models/
+    todo.js
+  node_modules/
+```
+
+**Where**:
+* **.env**: *file*
+  * The `.env` file defines variables that will be picked up by your `process.env` variable. The variables you define here are generally things you want to **keep private** from the public. This includes the url to your **MongoDB atlas** server url.
+* **.gitignore**: *file*
+  * includes files and folders you want to ignore
+  ```
+  # ignore all those dependencies
+  node_modules
+  # ignore weird mac files
+  .DS_Store
+  $ ignore the .env file with your secret info
+  .env
+  ```
+* **package.json**: *file*
+  * generated using: `npm init`
+* **index.js**: *file*
+  * where your server code will live
+* **config.js**: *file*
+  * This is where you will store your configuration variables from your 
+* **public/**: *directory*
+  * includes public assets like your client facing javascript and css styles and images
+* **models/**: *directory*
+  * the directory where your database schema will live.
+  * **models/todo.js**: *file*
+    * we will write some javascript here that defines our database model for our todo data
+* **views/**: *directory*
+  * includes any index.html views that you will send to the client
+
+### Setup
+
+#### Scaffold the app
+
+Scaffold the app by adding the following
+```sh
+~ $ cd Desktop
+(desktop) $ mkdir todo-app
+(desktop) $ cd todo-app
+(todo-app) $ npm init
+(todo-app) $ touch .env .gitignore index.js config.js
+(todo-app) $ mkdir public public/js public/styles public/assets models views
+(todo-app) $ touch views/index.html models/todo.js public/js/main.js public/styles/main.css
+```
+
+#### Install your dependencies
+
+In your terminal:
+```sh
+$ npm install express morgan mongoose dotenv
+$ npm install nodemon -D
+```
+
+#### Define your environment variables and configuration
+
+##### .gitignore
+* Set which things you want to ignore in `.gitignore`:
+  ```txt
+  # ignore all those dependencies
+  node_modules
+  # ignore weird mac files
+  .DS_Store
+  $ ignore the .env file with your secret info
+  .env
+  ```
+
+##### config.js
+* define your `config.js`. Here we define 2 **key/value** pairs, one for `PORT` and the other for `MONGODB_URI`:
+  ```js
+  require('dotenv').config();
+  module.exports = {
+    PORT: process.env.PORT || 3000,
+    MONGODB_URI: process.env.MONGODB_URI || 'mongodb://localhost:27017/todo-app'
+  }
+  ```
+  * we use the `require('dotenv').config()` to pull any environment variables defined in our `.env` file.
+  
+##### .env
+* add your MongoDB Atlas URL to the `.env` file:
+  ```
+  MONGODB_URI='mongodb+srv://<yourUserName>:<yourPassword>@dwd-projects-ksn8b.gcp.mongodb.net/<yourCollectionName>?retryWrites=true&w=majority'
+  ```
+  * the `MONGODB_URI=` to the URL defined in:
+    ![The URL that you'll need to pick up](../assets/mongodb-atlas/mongodb-atlas-12.png) 
+
+##### package.json
+* add your `start` and `dev` scripts to the `package.json`:
+  ```json
+  {
+    "name": "todo-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node index.js", 
+      "dev": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "mongoose": "^5.9.2",
+      "morgan": "^1.9.1"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.2"
+    }
+  }
+  ```  
+  * Notice under `"scripts"`:
+    ```json
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node index.js", 
+      "dev": "nodemon index.js"
+    },
+    ```
+
+### Add boilerplate html to **views/index.html**
+
+```html
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/main.js">
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+```
+
+### Add your "hello world" Express App
+
+In your **index.js**:
+```js
+const fs = require('fs');
+const path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const config = require('./config');
+
+const PORT = config.PORT;
+
+// Handle data in a nice way
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+const publicURL = path.resolve(`${__dirname}/public`);
+
+// Set your static server
+app.use(express.static(publicURL));
+
+// Set your static html file
+app.get("/", (req, res) => {
+  res.sendFile( path.resolve(__dirname + "/views/index.html"))
+});
+
+// ---- ADD YOUR API ENDPOINTS HERE ----
+
+// Start listening
+app.listen(PORT, () => {
+  console.log(`see the magic: http://localhost:${PORT}`);
+})
+```
+
+Now run:
+
+```sh
+(todo-app) $ npm run dev
+```
+
+You should see:
+
+![Hello world site served](../assets/mongodb-guide-01.png);
 
 
-## Simplifying with Mongoose.js, the mongodb adapter
+### Defining API Endpoints
+
+We are going to create a CRUD style API with the following endpoints:
+* `/api/v1/todos`
+  * GET
+  * POST
+* `/api/v1/todos:id`
+  * PUT
+  * DELETE
+  
+Before we add our MongoDB into the mix, let's define our API endpoints in `index.js`. Where you see the comment `// ---- ADD YOUR API ENDPOINTS HERE ----`, add the following:
+
+```js
+// ---- ADD YOUR API ENDPOINTS HERE ----
+// GET: "api/v1/todos"
+app.get("/api/v1/todos", async (req, res) => {
+  try{
+    res.json({})
+  } catch(error){
+    console.error(error);
+    res.error(error);
+  }
+});
+
+// POST: "api/v1/todos"
+app.post("/api/v1/todos", async (req, res) => {
+  try{
+    res.json({})
+  } catch(error){
+    console.error(error);
+    res.error(error);
+  }
+});
+
+// PUT: "api/v1/todos:id"
+app.put("/api/v1/todos:id", async (req, res) => {
+  try{
+    res.json({})
+  } catch(error){
+    console.error(error);
+    res.error(error);
+  }
+});
+
+// DELETE: "api/v1/todos:id"
+app.delete("/api/v1/todos:id", async (req, res) => {
+  try{
+    res.json({})
+  } catch(error){
+    console.error(error);
+    res.error(error);
+  }
+});
+```
+
+Now if you navigate to: `http://localhost:3000/api/v1/todos`, a `GET` request will be triggered and you should see an empty JSON file is returned:
+
+```json
+{}
+```
+
+![Empty json is returned](../assets/mongodb-guide-02.png)
+
+Hooray! If this is working, then your API is working! The next steps are to:
+* connect to mongodb
+* define a data model
+* start defining the API routes
 
 ## Data Models
 
