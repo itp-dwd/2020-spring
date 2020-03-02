@@ -18,6 +18,7 @@ This is a guide to some database services that can be a database hosting service
       - [Create a cluster](#create-a-cluster)
       - [Manage your connections](#manage-your-connections)
       - [Choosing a connection method](#choosing-a-connection-method)
+    - [Glitch & MongoDB Atlas](#glitch--mongodb-atlas)
   - [Firebase:](#firebase)
 
 ## Services
@@ -95,6 +96,20 @@ This is a guide to some database services that can be a database hosting service
         ```
         mongodb+srv://dwd-admin:<password>@dwd-projects-ksn8b.gcp.mongodb.net/empty-tree-db?retryWrites=true&w=majority
         ```
+
+### Glitch & MongoDB Atlas
+
+The thing with MongoDB Atlas is that it wants you to whitelist IP addresses for security reasons. However, [Glitch.com]() uses a *range of IP addresses* so there's not really a good way to tell MongoDB Atlas which IP address to allow connections to. This is documented in this thread on ["What IPs must I whitelist so my Glitch Project cna access my MongoDB Database"](https://support.glitch.com/t/what-ips-must-i-whitelist-so-my-glitch-project-can-access-my-mongodb-database/7617/8). 
+
+However, there is one solution to this which is to whitelist ALL IP addresses:
+
+* Go to your **network access tab**, select **add IP address**:
+  ![Network access tab](../assets/mongodb-atlas/mongodb-atlas-13.png)
+* Add `0.0.0.0/0` which will add all IP addresses:
+  ![Adding whitelist to all IP addresses](../assets/mongodb-atlas/mongodb-atlas-14.png)
+* Confirming adding all IP addresses
+  ![Confirm adding all IP Addresses](../assets/mongodb-atlas/mongodb-atlas-15.png)
+
 
 
 
