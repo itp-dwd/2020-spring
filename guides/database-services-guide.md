@@ -18,7 +18,7 @@ This is a guide to some database services that can be a database hosting service
       - [Create a cluster](#create-a-cluster)
       - [Manage your connections](#manage-your-connections)
       - [Choosing a connection method](#choosing-a-connection-method)
-    - [Glitch & MongoDB Atlas](#glitch--mongodb-atlas)
+    - [Glitch & MongoDB Atlas: Whitelist all IP Addresses](#glitch--mongodb-atlas-whitelist-all-ip-addresses)
     - [Examples](#examples)
   - [Firebase:](#firebase)
 
@@ -35,6 +35,8 @@ This is a guide to some database services that can be a database hosting service
 ### What is MongoDB Atlas?
 
 ### Setting up MongoDB Atlas
+
+These steps will take you through how to set up MongoDB Atlas and point you to tips to get your Express applications up and running.
 
 #### Register
 
@@ -80,6 +82,8 @@ This is a guide to some database services that can be a database hosting service
 * **Add a user**: this is important. You will add a database "user" which will be essential for when you connect to your database from your server-side Express.js application. By adding you **username** and **password** you will be able to connect remotely via Node.js from another server. This username and password become rolled into the URL of the MongoDB Atlas database you've just created.
   ![Mongodb atlas 11](../assets/mongodb-atlas/mongodb-atlas-11.png)
 
+  * NOTE: you can later [whitelist all IP Addresses for use in Glitch](glitch--mongodb-atlas-whitelist-all-ip-addresses)
+
 * Behold! The MongoDB Atlas URL to your database! You can use this URL to connect from your Express.js application.
   ![Mongodb atlas 12](../assets/mongodb-atlas/mongodb-atlas-12.png)
 
@@ -98,7 +102,7 @@ This is a guide to some database services that can be a database hosting service
         mongodb+srv://dwd-admin:<password>@dwd-projects-ksn8b.gcp.mongodb.net/empty-tree-db?retryWrites=true&w=majority
         ```
 
-### Glitch & MongoDB Atlas
+### Glitch & MongoDB Atlas: Whitelist all IP Addresses
 
 The thing with MongoDB Atlas is that it wants you to whitelist IP addresses for security reasons. However, [Glitch.com]() uses a *range of IP addresses* so there's not really a good way to tell MongoDB Atlas which IP address to allow connections to. This is documented in this thread on ["What IPs must I whitelist so my Glitch Project cna access my MongoDB Database"](https://support.glitch.com/t/what-ips-must-i-whitelist-so-my-glitch-project-can-access-my-mongodb-database/7617/8). 
 
