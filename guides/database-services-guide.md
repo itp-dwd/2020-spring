@@ -19,6 +19,7 @@ This is a guide to some database services that can be a database hosting service
       - [Manage your connections](#manage-your-connections)
       - [Choosing a connection method](#choosing-a-connection-method)
     - [Glitch & MongoDB Atlas](#glitch--mongodb-atlas)
+    - [Examples](#examples)
   - [Firebase:](#firebase)
 
 ## Services
@@ -110,7 +111,22 @@ However, there is one solution to this which is to whitelist ALL IP addresses:
 * Confirming adding all IP addresses
   ![Confirm adding all IP Addresses](../assets/mongodb-atlas/mongodb-atlas-15.png)
 
+### Examples
 
+* [Sample App: Empty Tree Database](https://glitch.com/edit/#!/empty-tree-db-mongodb?path=index.js:68:11) | [Demo](https://empty-tree-db-mongodb.glitch.me/)
+  * Some highlight points:
+    * `config.js`:
+      ```js
+      require('dotenv').config();
+      module.exports = {
+        PORT: process.env.PORT || 3000,
+        MONGODB_URI: process.env.MONGODB_URI || 'mongodb://localhost:27017/empty-tree-db',
+      }
+      ```
+    * `.env`:
+      ```
+      MONGODB_URI='mongodb+srv://dwd-admin:<yourpassword>@dwd-projects-ksn8b.gcp.mongodb.net/empty-tree-db?retryWrites=true&w=majority'
+      ```
 
 
 ## Firebase:
