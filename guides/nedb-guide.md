@@ -137,6 +137,9 @@ db.find({}).sort({ name: 1 }).exec((err, docs) => {
 ```
 
 ## Updating
+When updating a document, there are different ways to specify *how* you update the document:
+
+1. Replace **all attributes** of the document
 ```js
 // The syntax for updating is 
 // (1) Find the documents you want to update
@@ -150,6 +153,24 @@ const options = {
 };
 
 db.update({ name: "sausage" }, { name: "Italian sausage" }, options, (err, numAffected, affectedDocuments) => {
+  // ...
+});
+```
+
+2. Replace **specified attributes** of the document, using `$set`
+```js
+// The syntax for updating is 
+// (1) Find the documents you want to update
+// (2) Specify the new attributes
+// (3) Options
+// (4) Callback when this operation is done
+const options = {
+  returnUpdatedDocs: true, //defaults to false, tells NeDB to return updated docs
+  multi: false, // defaults to false, tells NeDB that this operation can affect multiple documents
+  upsert: false // defaults to false, if true, NeDB will insert a new document if your find returns no documents
+};
+
+db.update({ name: "sausage" }, {$set: { name: "Italian sausage" } }, options, (err, numAffected, affectedDocuments) => {
   // ...
 });
 ```
