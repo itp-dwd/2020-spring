@@ -15,7 +15,27 @@ This week, we will be putting all of the pieces together: `design → front end 
 * Sessions/cookies
 * array functions
 
+***
+***
+***
 
+## STUDIO: 
+
+### Express Simple Auth
+
+* ↳ [Express Simple Auth Guide]()
+
+***
+***
+***
+
+## Final Project: 
+
+* ↳ [Link to Assignment](../assignments/06_final-project.md)
+
+***
+***
+***
 
 
 <!-- 
