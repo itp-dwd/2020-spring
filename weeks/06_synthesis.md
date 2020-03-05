@@ -10,6 +10,10 @@ This week, we will be putting all of the pieces together: `design → front end 
 * MongoDB
 * Deployment to MongoDB Atlas
 * Deployment to Heroku
+* Advanced database - related different documents
+* Adding authentication
+* Sessions/cookies
+* array functions
 
 
 
