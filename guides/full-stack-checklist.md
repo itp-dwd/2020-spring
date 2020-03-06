@@ -1,6 +1,6 @@
 # Full Stack Checklist
 
-This guide serves as a checklist for the things you've learned how to use, or learned about in this class.
+This guide serves as a review of all of the technological things we've learned in this class!
 
 ## Front End
 - [ ]  HTML
@@ -57,7 +57,7 @@ This guide serves as a checklist for the things you've learned how to use, or le
     - [ ]  Async foundations: Fetch API / AJAX (XHR)
         - [ ]  callbacks and the event loop
             - [ ]  Events: [https://www.taniarascia.com/understanding-events-in-javascript/](https://www.taniarascia.com/understanding-events-in-javascript/)
-        - [ ]  AJAX, XHR, Fetch
+        - [ ]  AJAX, XHR, `fetch` API
         - [ ]  Promises & Async/Await:
             - [ ]  `Promise.all`: [https://www.taniarascia.com/promise-all-with-async-await/](https://www.taniarascia.com/promise-all-with-async-await/)
     - [ ]  Browser API
@@ -82,10 +82,38 @@ This guide serves as a checklist for the things you've learned how to use, or le
         - [ ]  HTTP
 - [ ]  DevTools:
     - [ ]  Making your way around the browser dev tools for development
-
+ 
 ## Back End
 - [ ] Node.js
+  - [ ] `require()` and `module.exports`
+  - [ ] Core modules
+    - [ ] `fs`
+    - [ ] `path`
   - [ ] npm
-  - [ ] Express.js
-  - [ ] Isomorphic fetch
-  - [ ] RESTful APIs
+    - [ ] [http://npmjs.com](http://npmjs.com)
+    - [ ] `package.json`
+    - [ ] `node_modules/`
+  - [ ] APIs
+    - [ ] Express.js
+    - [ ] Isomorphic fetch
+    - [ ] RESTful APIs
+  - [ ] `.env` file and environment variables
+
+## DevOps
+- [ ] Terminal/Unix/Linux
+- [ ] Version Control
+  - [ ] Git CLI
+  - [ ] GitHub Desktop
+  - [ ] GitHub
+  - [ ] `.gitignore`
+- [ ] Documentation
+  - [ ] Markdown/`README.md`
+- [ ] Hosting Platforms
+  - [ ] Glitch
+  - [ ] Heroku
+
+## Databases
+- [ ] CRUD
+- [ ] NeDB
+- [ ] MongoDB
+- [ ] MongoDB Atlas
