@@ -53,11 +53,6 @@ What is guide is not:
 
 `express-basic-auth` is an Express.js module that is a "Simple plug & play HTTP basic auth middleware for Express."
 
-How it works:
-
-1. ...
-2. ...
-3. ...
 
 ![Express basic auth screenshot](../assets/express-basic-auth-01.png)
 
@@ -183,10 +178,13 @@ function getUnauthorizedResponse(req) {
   return 'not authorized';
 }
 
+// PASSWORD PROTECT YOUR APP
+app.use(challengeAuth);
+
 /****************************
  * your view
  ****************************/
-app.get('/', challengeAuth, (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'views/index.html'));
 });
 
@@ -197,7 +195,7 @@ app.get('/', challengeAuth, (req, res) => {
 /**
  * GET /api
  */
-app.get('/api/v1/hellos', challengeAuth, (req, res) => {
+app.get('/api/v1/hellos', (req, res) => {
   db.find({}, (err, doc) => {
     if (err) {
       console.log(err);
@@ -210,7 +208,7 @@ app.get('/api/v1/hellos', challengeAuth, (req, res) => {
 /**
  * POST /api
  */
-app.post('/api/v1/hellos', challengeAuth, (req, res) => {
+app.post('/api/v1/hellos', (req, res) => {
   console.log(req.body);
   db.insert(req.body, (err, doc) => {
     if (err) {
@@ -232,7 +230,6 @@ app.use((req, res) => {
 app.listen(config.PORT, () => {
   console.log(`see the magic at http://localhost:${config.PORT}`);
 });
-
 ```
 
 ### Fill out your views
@@ -364,6 +361,8 @@ function getUnauthorizedResponse(req) {
 * we set the **authorizer** to the `myAuthorizer()` function that you can see defined.
 * we set the authorization type to **challenge:true** which allows us to make the dropdown menu appear to ask for the user's credentials.
 * we set a function named `getUnauthroizedResponse()` to be called if the right credentials aren't fulfilled.
+
+Note: that **the order that you add middleware in Express is important**. If you want your ENTIRE application to be protected, you need to add your basic-auth middleware **BEFORE all of your API routes**. Any API endpoints that are defined before you add your basic-auth middleware will not be protected!
 
 And voila! Just like that you have created an app that requires you - the admin - the pass in your **USERNAME** and **PASSWORD** to see the app in all it's glory.
 

@@ -66,7 +66,6 @@ This guide serves as a review of all of the technological things we've learned i
             - [ ]  Media Capture and Streams
             - [ ]  LocalStorage, indexedDB
                 - [ ]  LocalStorage: [https://www.taniarascia.com/how-to-use-local-storage-with-javascript/](https://www.taniarascia.com/how-to-use-local-storage-with-javascript/)
-            - [ ]  Drag and Drop API
             - [ ]  Fetch API
             - [ ]  Canvas
     - [ ]  Closure and `this`:
@@ -76,8 +75,6 @@ This guide serves as a review of all of the technological things we've learned i
         - [ ]  hoisting
         - [ ]  event bubbling
         - [ ]  scope prototype
-        - [ ]  Shadow DOM
-        - [ ]  strict
         - [ ]  DNS
         - [ ]  HTTP
 - [ ]  DevTools:
@@ -97,10 +94,11 @@ This guide serves as a review of all of the technological things we've learned i
     - [ ] Express.js
     - [ ] Isomorphic fetch
     - [ ] RESTful APIs
-  - [ ] `.env` file and environment variables
+  - [ ] `.env` file, `dotenv`, and environment variables
 
 ## DevOps
 - [ ] Terminal/Unix/Linux
+  - [ ] `cd`, `mkdir`, `touch`, `ls`, `pwd`, `cat`
 - [ ] Version Control
   - [ ] Git CLI
   - [ ] GitHub Desktop
