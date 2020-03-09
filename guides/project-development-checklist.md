@@ -8,9 +8,11 @@
   - [Databases](#databases)
   - [Deployment](#deployment)
 - [Snippets](#snippets)
+  - [Boilerplate express app scaffold](#boilerplate-express-app-scaffold)
   - [HTML Boilerplate](#html-boilerplate)
   - [CSS Boilerplate](#css-boilerplate)
   - [JavaScript Boilerplate](#javascript-boilerplate)
+  - [Add nodemon as a devDependency](#add-nodemon-as-a-devdependency)
   - [Network calls to an api living at the same base url](#network-calls-to-an-api-living-at-the-same-base-url)
   - [Included in .env](#included-in-env)
   - [included in .gitignore](#included-in-gitignore)
@@ -50,32 +52,33 @@
 
 
 ## Server-side
-- start with running `npm init` to create a **package.json**
-- **package.json**
-    - Always include in [scripts: “start”:”node server.js”](#example-packagejson)
-    - It is also helpful to include in your scripts: “dev”:”nodemon server.js” - to install nodemon as a devDependency do: “npm install nodemon -D”
-    - ALWAYS install your dependencies using `npm install packageName` so that they get listed as dependencies in your package.json 
-- Setting your environment variables in **.env**:
-    - anything that you want to keep secret like the URL to your database.
-    - variables to set in your **.env**:
-      
-    - the variables defined in **.env** will show up as `process.env.<the name of your variable>`
-    - Use all caps to make your variables identifiable.
-- Setting up your **config.js**:
-  - Use `npm install dotenv` to install the node library to read in your .env file
-  - Always read your **.env** variables to a **config.js**. Use **config.js** then in your **server.js** file to make your env variables accessible to your application.
-- Setting your **.gitignore**
-- Always put your app.listen() at the end of your server.js
+
+| ✅ | Feature/command | Description |
+| :----- | ----- | ----------- |
+| ☑️ | `$ npm init` | creates a new node project by generating a **package.json**|
+| ☑️ | **package.json** | Always include in [scripts: “start”:”node server.js”](#example-packagejson) // ALWAYS install your dependencies using `npm install packageName` so that they get listed as dependencies in your package.json // add [nodemon as a devDependency](#add-nodemon-as-a-devdependency) |
+| ☑️ | .env | Setting your environment variables //anything that you want to keep secret like the URL to your database. // the variables defined in **.env** will show up as `process.env.<the name of your variable>` //  Use all caps to make your variables identifiable. |
+| ☑️ | **config.js** | Use `npm install dotenv` to install the node library to read in your .env file // Always read your **.env** variables to a **config.js**. Use **config.js** then in your **server.js** file to make your env variables accessible to your application.  |
+| ☑️ | Boilerplate express app| See [here for your boilerplate express app scaffold](#boilerplate-express-app-scaffold) |
+
 
 ## Databases
 
+| ✅ | Feature/command | Description |
+| :----- | ----- | ----------- | 
+| ☑️ | NeDB | [NeDB Guide](./mongodb-guide.md) |
+| ☑️ | MongoDB | [MongoDB Guide](./mongodb-guide.md) |
+| ☑️ | Cloud hosted MongoDB | [Database Services Guide](./database-services-guide.md) |
+
 
 ## Deployment
-* Web server / API
-  * [Glitch]()
-  * [Heroku]()
-* Database server:
-  * [MongoDB Atlas]()
+
+| ✅ | Feature/command | Description |
+| :----- | ----- | ----------- | 
+| ☑️ | [Glitch](https://glitch.com/) | Web server / API - Platform as a service |
+| ☑️ | [Heroku](https://heroku.com) | Web server / API - Platform as a service |
+| ☑️ | [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) | database as a service |
+
 
 
 ***
@@ -83,6 +86,28 @@
 ***
 
 # Snippets
+
+## Boilerplate express app scaffold
+
+```
+todo-app/
+  .env
+  .gitignore
+  package.json
+  index.js
+  config.js
+  public/
+    js/
+      main.js
+    styles/
+      main.css
+    assets/
+  views/
+    index.html
+  models/
+    todo.js
+  node_modules/
+```
 
 ## HTML Boilerplate
 
@@ -120,6 +145,21 @@ a,a:link,a:visited{color:black;text-decoration:none}
 window.addEventListener('DOMContentLoaded', async() => {
   // your javascript code will go below here
 });
+```
+
+## Add nodemon as a devDependency
+
+```sh
+$ npm install nodemon -D
+```
+
+and add it to your `"scripts"` in **package.json**
+
+```json
+"scripts": {
+  "start":"node index.js",
+  "dev":"nodemon index.js"
+}
 ```
 
 ## Network calls to an api living at the same base url
