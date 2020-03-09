@@ -75,8 +75,6 @@ This guide serves as a review of all of the technological things we've learned i
         - [ ]  hoisting
         - [ ]  event bubbling
         - [ ]  scope prototype
-        - [ ]  Shadow DOM
-        - [ ]  strict
         - [ ]  DNS
         - [ ]  HTTP
 - [ ]  DevTools:
