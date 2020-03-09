@@ -1,4 +1,4 @@
-# Express Simple Auth Guide
+# Express Basic Auth Guide
 
 ## About
 
