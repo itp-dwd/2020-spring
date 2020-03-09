@@ -47,11 +47,6 @@ What is guide is not:
 
 `express-basic-auth` is an Express.js module that is a "Simple plug & play HTTP basic auth middleware for Express."
 
-How it works:
-
-1. ...
-2. ...
-3. ...
 
 ![Express basic auth screenshot](../assets/express-basic-auth-01.png)
 
@@ -76,6 +71,21 @@ module.exports = {
     PORT: process.env.PORT || 3000,
 }
 ```
+
+**server.js**
+```js
+const config = require("./config.js");
+const express = require("express");
+const app = express();
+const basicAuth = require("express-basic-auth");
+// ...
+
+app.use(basicAuth({
+    users: { [config.USERNAME]: config.PASSWORD }
+}));
+```
+
+Note that the order that you add middleware in Express is important. If you add basic auth right before `app.listen`, then all of your endpoints will be protected. If you add endpoints *after* you add the `basicAuth` middleware, then those endpoints will **not* be protected.
 
 ## Multiple users?
 
