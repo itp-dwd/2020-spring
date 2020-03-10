@@ -1,19 +1,20 @@
 # Week 06: Synthesis
 
 ## Slides
-* ↳ [Link to Week 6 Slides: Synthesis]()
+* ↳ [Link to Week 6 Slides: Synthesis](https://docs.google.com/presentation/d/1Nl0KF8DtjUFsAAM6PXFkFB1SnMVBqUBiAGLwCmtSHwU/edit?usp=sharing)
 
 ## About
 
 This week, we will be putting all of the pieces together: `design → front end development → back end development → databases → deployment`.
 
-* MongoDB
-* Deployment to MongoDB Atlas
-* Deployment to Heroku
-* Advanced database - related different documents
-* Adding authentication
-* Sessions/cookies
-* array functions
+## Guides
+* [Databases Workbook](https://github.com/itp-dwd/databases-workbook)
+* [MongoDB Atlas Guide](../guides/database-services-guide.md)
+* [Databases Guide](../guides/databases-guide.md)
+* [MongoDB Guide](../guides/mongodb-guide.md)
+* [Full Stack Checklist](../guides/full-stack-checklist.md) - Checklist of everything we've covered in class
+* [Project Development Checklist](../guides/project-development-checklist.md) - Checklist for all of the things to make sure you've done for the final
+* [Express Simple Auth Guide](../guides/express-basic-auth-guide.md)
 
 ***
 ***
@@ -23,7 +24,7 @@ This week, we will be putting all of the pieces together: `design → front end 
 
 ### Express Simple Auth
 
-* ↳ [Express Simple Auth Guide]()
+* ↳ [Express Simple Auth Guide](../guides/express-basic-auth-guide.md)
 
 ***
 ***
