@@ -44,7 +44,7 @@ You must have a `README.md` that contains:
 
 As a result of remote classes due to coronavirus, we are going to ask you to do the following:
 **BEFORE**:
-1. Using [OBS - Open Broadcast Software](https://obsproject.com/), make a MAXIMUM 3-minute video presenting your project. In this video, you will:
+1. Following the [Screen Recording Guide](../guide/../guides/screen-recording.md), make a MAXIMUM 3-minute video presenting your project. In this video, you will:
    1. Introduce yourself: "Hello my name is Joey and I am a X year at NYU's ITP Program."
    2. Introduce your project: "In this video, I am presenting my project for Dynamic Web Development 2020. My project is a web application that does X, Y, and Z. Let me show you how it works."
    3. Show your project and talk through what you are doing. 
