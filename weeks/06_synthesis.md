@@ -1,11 +1,17 @@
 # Week 06: Synthesis
 
 ## Slides
-* ↳ [Link to Week 6 Slides: Synthesis]()
+* ↳ [Link to Week 6 Slides: Synthesis](https://docs.google.com/presentation/d/1Nl0KF8DtjUFsAAM6PXFkFB1SnMVBqUBiAGLwCmtSHwU/edit?usp=sharing)
+
+With Special Guest: Alex Qin: 
+* Alex Qin // http://alexq.in/ 
+  * Alex runs Code Cooperative - https://codecooperative.org/about - a program that teaches people who are affected by incarceration how to code. Cassie and I hope that they will give you another perspective on where you might be able to apply your skills and talents.
 
 ## About
 
 This week, we will be putting all of the pieces together: `design → front end development → back end development → databases → deployment`.
+
+## Topics:
 
 * MongoDB
 * Deployment to MongoDB Atlas
@@ -23,7 +29,7 @@ This week, we will be putting all of the pieces together: `design → front end 
 
 ### Express Simple Auth
 
-* ↳ [Express Simple Auth Guide]()
+* ↳ [Express Simple Auth Guide](../guides/express-basic-auth-guide.md)
 
 ***
 ***
