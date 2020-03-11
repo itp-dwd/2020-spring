@@ -41,13 +41,36 @@ You must have a `README.md` that contains:
 * next steps
 
 ### Part 4: Presentation
-On March 23rd, there will be in-class presentations. They will be **6 minutes** each, plus **2 minutes** for feedback and questions. They will be timed so that we can get through everyone!
 
+As a result of remote classes due to coronavirus, we are going to ask you to do the following:
+**BEFORE**:
+1. Using [OBS - Open Broadcast Software](https://obsproject.com/), make a MAXIMUM 3-minute video presenting your project. In this video, you will:
+   1. Introduce yourself: "Hello my name is Joey and I am a X year at NYU's ITP Program."
+   2. Introduce your project: "In this video, I am presenting my project for Dynamic Web Development 2020. My project is a web application that does X, Y, and Z. Let me show you how it works."
+   3. Show your project and talk through what you are doing. 
+   4. Cite and reference your work: "This project is built on Node.js and Express.js, Glitch.com for hosting, and MongoDB Atlas for database hosting. (and any additional acknowledgements you want to give, wink wink, nudge nudge)". 
+   5. Conclude your presentation: "This concludes my presentation. Thank you for tuning in. Good bye."
+2. You will upload your video to Youtube or vimeo (your choice) and submit the URL using the usual assignment submission form **along with your github repo and glitch project**. 
+
+**DURING**:
+1. We will tune in to Zoom which is our remote classroom meeting application (we will send out the zoom info closer to the date)
+2. Your instructor will walk through each of the videos and play them during our usual session time. 
+3. We will have a shared google doc where you and your classmates will all provide feedback to each other during the video as it plays. 
+4. Your instructor will make some verbal comments and also highlight some of your classmate feedback. 
+5. We will conclude our class. 
+
+**AFTER**:
+1. You will receive feedback and comments on your respective grading Documents. 
+
+
+<s>On March 23rd, there will be in-class presentations. They will be **6 minutes** each, plus **2 minutes** for feedback and questions. They will be timed so that we can get through everyone!
 There will also be guest critics:
 * Section 1, Joey's section
 * Section 2, Cassie's section
   * [Jenn Schiffer](http://jennmoney.biz/), Director of Community Engineering at Glitch
   * [Myles Borins](https://twitter.com/MylesBorins), Google Cloud Developer Advocate and Node.js Contributor 
+
+</s>
 
 ## Submission
 
