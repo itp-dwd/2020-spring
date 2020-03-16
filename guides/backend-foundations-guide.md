@@ -796,8 +796,8 @@ Adapted from [Rails Routing from the Outside In](https://guides.rubyonrails.org/
 
 When creating an API, by convention, certain endpoints match with certain CRUD resource actions. Here's a helpful table:
 
-| HTTP Verb	| Path | Controller Function	| Used for |
-| --------- | ---- | -------------------- | -------- |
+| HTTP Verb	| Path | Controller Function | Used for     |
+| --------- | ---- | ------------------- | ------------ |
 | `GET` | `/toppings`	| `toppings#getToppings` | get a list of all toppings |
 | `GET` | `/toppings?q=<query>`	| `toppings#getToppings` | get a filtered list of all toppings |
 | `POST`| `/toppings`	| `toppings#createTopping`	| create a new topping |
