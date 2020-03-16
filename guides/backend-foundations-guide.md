@@ -54,6 +54,7 @@ Before continuing, you should make sure to have explored the following guides an
   - [EXPRESS API STRUCTURE](#express-api-structure)
   - [API ROUTES: PART 1 - HTTP VERBS](#api-routes-part-1---http-verbs)
     - [HTTP Verbs:](#http-verbs)
+  - [CRUD Conventions](#crud-conventions)
   - [Introduction to CRUD with persistence: Pizza Topping API](#introduction-to-crud-with-persistence-pizza-topping-api)
     - [SETUP](#setup-1)
     - [The "Model": Reading and Writing from a JSON file](#the-%22model%22-reading-and-writing-from-a-json-file)
@@ -789,6 +790,22 @@ HTTP/HTTPS is one of the main protocols that allow us to communicate across the 
 In Express.js we define in our code *how we expect* people to communicate with the server. As the designer and developer of your server's API, you will be creating the routes where you want people to interface with your server (and your data).
 
 Hopefully, this makes sense conceptually. Let's now walk through how this translates into code using an example
+
+## CRUD Conventions
+Adapted from [Rails Routing from the Outside In](https://guides.rubyonrails.org/routing.html#crud-verbs-and-actions).
+
+When creating an API, by convention, certain endpoints match with certain CRUD resource actions. Here's a helpful table:
+
+| HTTP Verb	| Path | Controller Function	| Used for |
+| --------- | ---- | -------------------- | -------- |
+| `GET` | `/toppings`	| `toppings#getToppings` | get a list of all toppings |
+| `GET` | `/toppings?q=<query>`	| `toppings#getToppings` | get a filtered list of all toppings |
+| `POST`| `/toppings`	| `toppings#createTopping`	| create a new topping |
+| `GET` | `/toppings/:id`	| `toppings#getTopping`	| get a single topping |
+| `PATCH/PUT` | `/toppings/:id` | `toppings#updateTopping` | update a specific topping |
+| `DELETE` | `/toppings/:id`| `toppings#destroyTopping` | delete a specific topping |
+
+Often, you will find that the actions your API needs to do fall outside of the CRUD actions. That's okay! CRUD is simply an organizational starting point, but does not need to be the *only* type of endpoints.
 
 ## Introduction to CRUD with persistence: Pizza Topping API
 
