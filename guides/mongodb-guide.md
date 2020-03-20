@@ -309,7 +309,7 @@ $ npm install nodemon -D
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./styles/main.js">
+    <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
     <h1>hello world</h1>
@@ -325,7 +325,6 @@ In your **index.js**:
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
 const config = require('./config');
 
@@ -336,8 +335,7 @@ const PORT = config.PORT;
 // --- connect to your collection ---
 
 // Handle data in a nice way
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+app.use(express.json());
 const publicURL = path.resolve(`${__dirname}/public`);
 
 // Set your static server
