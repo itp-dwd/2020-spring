@@ -30,6 +30,25 @@ Guest Reviewer: Yining Shi - [@yining1023](https://1023.io)
 
 ### Section 2: Cassie's Section
 
+* Group 1:
+   * Julie
+   * Yongkun
+   * Ji
+   * Ruixuan
+   * Zoe
+   * Zeyao
+   * Ashwita
+   * Yiting
+* Quick Break
+   * Jason
+   * Dawn
+   * Simone
+   * Beste
+   * Abby
+   * Tingyu
+   * Christina
+   * Rebecca
+
 
 
 ## Next Steps
