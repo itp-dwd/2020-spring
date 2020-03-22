@@ -15,19 +15,18 @@ Guest Reviewer: Yining Shi - [@yining1023](https://1023.io)
     * Julian
     * Elizabeth
     * Sarah
-    * Neta
     * Zack
-    * Alvaro
+    * Neta
+    * Henry
 * Quick break
 * Group 2:
     * Lillian
     * Elena
-    * Paulami 
     * Wen Chen
-    * Henry
+    * Paulami 
+    * Alvaro
     * Themis
     * Rachel
-
 
 ### Section 2: Cassie's Section
 
