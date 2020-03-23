@@ -11,22 +11,22 @@ Please check your emails for the Zoom room info.
 Guest Reviewer: Yining Shi - [@yining1023](https://1023.io)
 
 * Group 1:
-    * Maya
-    * Julian
-    * Elizabeth
-    * Sarah
-    * Zack
-    * Neta
-    * Henry
+    * Maya - [Presentation]() | [Repo]()
+    * Julian - [Presentation]() | [Repo]()
+    * Elizabeth - [Presentation](https://www.youtube.com/watch?v=hBtl36URvp4&feature=youtu.be) | [Repo]()
+    * Sarah - [Presentation]() | [Repo]()
+    * Zack - [Presentation]() | [Repo]()
+    * Neta - [Presentation]() | [Repo]()
+    * Henry - [Presentation]() | [Repo]()
 * Quick break
 * Group 2:
-    * Lillian
-    * Elena
-    * Wen Chen
-    * Paulami 
-    * Alvaro
-    * Themis
-    * Rachel
+    * Lillian - [Presentation]() | [Repo]()
+    * Elena - [Presentation]() | [Repo]()
+    * Wen Chen - [Presentation]() | [Repo]()
+    * Paulami - [Presentation]() | [Repo]()
+    * Alvaro - [Presentation]() | [Repo]()
+    * Themis - [Presentation](https://www.youtube.com/watch?v=11yXDBP00xk&feature=youtu.be) | [Repo]()
+    * Rachel - [Presentation](https://www.youtube.com/watch?v=GQG_W5NManI&feature=youtu.be) | [Repo]()
 
 ### Section 2: Cassie's Section
 
