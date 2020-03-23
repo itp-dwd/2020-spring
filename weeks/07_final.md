@@ -4,6 +4,10 @@ Alas we've arrived at our final meeting! Thank you for all your hard work.
 
 Please check your emails for the Zoom room info. 
 
+## Course Evaluations
+
+If you have not already, please fill out the **Course Evaluations in Albert**.
+
 ## Final Project Presentations
 
 ### Section 1: Joey's Section
@@ -11,19 +15,19 @@ Please check your emails for the Zoom room info.
 Guest Reviewer: Yining Shi - [@yining1023](https://1023.io)
 
 * Group 1:
-    * Maya - [Presentation]() | [Repo]()
+    * Maya - [Presentation](https://vimeo.com/400029799) | [Repo]()
     * Julian - [Presentation]() | [Repo]()
     * Elizabeth - [Presentation](https://www.youtube.com/watch?v=hBtl36URvp4&feature=youtu.be) | [Repo]()
-    * Sarah - [Presentation]() | [Repo]()
+    * Sarah - [Presentation](https://youtu.be/gCwgPvSb4XU) | [Repo]()
     * Zack - [Presentation]() | [Repo]()
     * Neta - [Presentation]() | [Repo]()
-    * Henry - [Presentation]() | [Repo]()
+    * Henry - [Presentation](https://vimeo.com/399769540) | [Repo]()
 * Quick break
 * Group 2:
     * Lillian - [Presentation]() | [Repo]()
-    * Elena - [Presentation]() | [Repo]()
+    * Elena - [Presentation](https://www.youtube.com/watch?v=wKZ9cbiERiI) | [Repo]()
     * Wen Chen - [Presentation]() | [Repo]()
-    * Paulami - [Presentation]() | [Repo]()
+    * Paulami - [Presentation](https://www.youtube.com/watch?v=HDFDubWNhrU&feature=youtu.be) | [Repo]()
     * Alvaro - [Presentation]() | [Repo]()
     * Themis - [Presentation](https://www.youtube.com/watch?v=11yXDBP00xk&feature=youtu.be) | [Repo]()
     * Rachel - [Presentation](https://www.youtube.com/watch?v=GQG_W5NManI&feature=youtu.be) | [Repo]()
