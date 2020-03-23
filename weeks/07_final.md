@@ -44,6 +44,7 @@ Guest Reviewer: Yining Shi - [@yining1023](https://1023.io)
    * Ashwita
    * Yiting
 * Quick Break
+* Group 2:
    * Jason
    * Dawn
    * Simone
