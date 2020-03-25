@@ -15,22 +15,22 @@ If you have not already, please fill out the **Course Evaluations in Albert**.
 Guest Reviewer: Yining Shi - [@yining1023](https://1023.io)
 
 * Group 1:
-    * Maya - [Presentation](https://vimeo.com/400029799) | [Repo]()
-    * Julian - [Presentation]() | [Repo]()
-    * Elizabeth - [Presentation](https://www.youtube.com/watch?v=hBtl36URvp4&feature=youtu.be) | [Repo]()
-    * Sarah - [Presentation](https://youtu.be/gCwgPvSb4XU) | [Repo]()
-    * Zack - [Presentation]() | [Repo]()
-    * Neta - [Presentation]() | [Repo]()
-    * Henry - [Presentation](https://vimeo.com/399769540) | [Repo]()
+    * Maya - [Presentation](https://vimeo.com/400029799) | [Repo](https://github.com/mayapruitt/Thesis_2020)
+    * Julian - [Presentation](https://www.youtube.com/watch?v=QQHi4SgirS4&feature=youtu.be) | [Repo](https://github.com/juliantisomathews/biodesign)
+    * Elizabeth - [Presentation](https://www.youtube.com/watch?v=hBtl36URvp4&feature=youtu.be) | [Repo](https://github.com/blatinegra/assignment-4)
+    * Sarah - [Presentation](https://youtu.be/gCwgPvSb4XU) | [Repo](https://github.com/sarahliriano/diary-final-r)
+    * Zack - [Presentation](https://cuinjune-?mongo-synth.glitch.me/) | [Repo](https://github.com/cuinjune/mongo-synth)
+    * Neta - [Presentation](https://youtu.be/7-Aiut1pkfk ) | [Repo](https://github.com/netanoir/black-photo-booth)
+    * Henry - [Presentation](https://vimeo.com/399769540) | [Repo](https://github.com/henrywang95/restart2020)
 * Quick break
 * Group 2:
-    * Lillian - [Presentation]() | [Repo]()
+    * Lillian - [Presentation](#) | [Repo](https://github.com/lillianritchie/DWD-FINAL)
     * Elena - [Presentation](https://www.youtube.com/watch?v=wKZ9cbiERiI) | [Repo]()
-    * Wen Chen - [Presentation]() | [Repo]()
-    * Paulami - [Presentation](https://www.youtube.com/watch?v=HDFDubWNhrU&feature=youtu.be) | [Repo]()
-    * Alvaro - [Presentation]() | [Repo]()
-    * Themis - [Presentation](https://www.youtube.com/watch?v=11yXDBP00xk&feature=youtu.be) | [Repo]()
-    * Rachel - [Presentation](https://www.youtube.com/watch?v=GQG_W5NManI&feature=youtu.be) | [Repo]()
+    * Wen Chen - [Presentation](#) | [Demo](https://wenchen1114-dwd-gay-right-time-line.glitch.me/)
+    * Paulami - [Presentation](https://www.youtube.com/watch?v=HDFDubWNhrU&feature=youtu.be) | [Repo](https://github.com/Paulami/feelings-log)
+    * Alvaro - [Presentation](#) | [Repo](https://github.com/lacouture100/Dynamic-Web-Development-Final-Project)
+    * Themis - [Presentation](https://www.youtube.com/watch?v=11yXDBP00xk&feature=youtu.be) | [Repo](https://github.com/themiscadiz/Final-dwd)
+    * Rachel - [Presentation](https://www.youtube.com/watch?v=GQG_W5NManI&feature=youtu.be) | [Repo](https://github.com/raclim/love-app)
 
 ### Section 2: Cassie's Section
 
